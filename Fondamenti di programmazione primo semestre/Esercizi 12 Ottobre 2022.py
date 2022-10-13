@@ -102,7 +102,8 @@ def caesar_cypher(string: str, offset: int, decrypt: bool = False) -> str:
 
 
 def check_pwd(pwd: str) -> bool:
-    pass
+    if pwd >= 0 and pwd <= 9:
+        return pwd
 
 
 # Test funzioni
