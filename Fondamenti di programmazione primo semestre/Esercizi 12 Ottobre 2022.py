@@ -38,21 +38,30 @@ def strip_whitespace(string: str) -> str:
 # rimuovendo uno dei caratteri presi in input. Non ritornare stringhe vuote.
 # Usare solo costrutti del linguaggio e non librerie.
 def split_string(string: str, characters: str = '') -> List[str]:
-    risultato_siummico = string.split(' \t\r\n')
-    print(f"metodo split del sium: {risultato_siummico}")
     result = []
+    start = 0
     for x in range(len(string)):
-        if string[x] in characters and string[:x] not in result:
-            result.append(string[:x])
-    for y in range(len(result) - 1):
-        result.pop(y)
+        if string[x-3:x] == characters:
+            result.append(string[start: x-3])
+            start = x + 1
+    if not result:
+        result.append(string) 
     return result
 
 
 # Scrivere una funziona che si comporta come `str.replace()`.
 # Usare solo costrutti del linguaggio e non librerie.
 def replace_substring(string: str, find: str, replace: str) -> str:
-    pass
+    result = ""
+    x = 0
+    while x < len(string):
+        if string[x: x + len(find)] == find:
+                result += replace
+                x+=len(replace) - 1
+        else:
+            result += string[x]
+            x+=1
+    return result
 
 
 # Scrivere una funzione che codifica un messaggio con il cifrario di
@@ -109,19 +118,19 @@ def sum_squares(elements: List[int]) -> int:
 
 # Scrivere una funzione che ritorna il valore massimo degli elementi di una lista.
 def max_element(elements: List[int]) -> int:
-    pass
+    return max(elements)
 
 
 # Scrivere una funzione che rimuove i duplicati da una lista.
 # Commentare sul tempo di esecuzione.
 def remove_duplicates(elements: list) -> list:
-    pass
+    return set(elements)
 
 
 # Scrivere una funzione che si comporta come `reverse()`.
 # Usare solo costrutti del linguaggio e non librerie.
 def reverse_list(elements: list) -> list:
-    pass
+    return elements[::-1]
 
 
 # Scrivere una funzione `flatten_list()` che prende una lista che contiene
