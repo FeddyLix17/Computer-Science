@@ -45,7 +45,7 @@ def split_string(string: str, characters: str = '') -> List[str]:
             result.append(string[start: x-3])
             start = x + 1
     if not result:
-        result.append(string) 
+        result.append(string)
     return result
 
 
@@ -56,11 +56,11 @@ def replace_substring(string: str, find: str, replace: str) -> str:
     x = 0
     while x < len(string):
         if string[x: x + len(find)] == find:
-                result += replace
-                x+=len(replace) - 1
+            result += replace
+            x += len(replace) - 1
         else:
             result += string[x]
-            x+=1
+            x += 1
     return result
 
 
@@ -73,7 +73,21 @@ def replace_substring(string: str, find: str, replace: str) -> str:
 # fatto delle sole lettere dell'alfabeto inglese e spazi che non sono crittati.
 # Suggerimento: Sono utili le funzioni `ord()` e `chr()`.
 def caesar_cypher(string: str, offset: int, decrypt: bool = False) -> str:
-    pass
+    result = ""
+    if decrypt == True:
+        for x in range(len(string)):
+            if offset > 25:
+                result += chr((ord(string[x])+offset) % 25)
+            else:
+                result += chr(ord(string[x])+offset)
+        return result
+    else:
+        for x in range(len(string)):
+            if offset > -25:
+                result += chr((ord(string[x])-offset) % 25)
+        return result
+
+
 
 # Scrivere una funzione che controlla la validita' di una password.
 # La password deve avere:
@@ -113,7 +127,10 @@ print_test(check_pwd, "Aa@09asng2")
 
 # Scrivere una funzione che somma i quadrati degli elementi di una lista.
 def sum_squares(elements: List[int]) -> int:
-    pass
+    result = 0
+    for x in elements:
+        result+= x**2
+    return result
 
 
 # Scrivere una funzione che ritorna il valore massimo degli elementi di una lista.
@@ -139,7 +156,16 @@ def reverse_list(elements: list) -> list:
 # Usare la funzione `isinstance()` per determinare se un elemento è una lista.
 # Usare solo costrutti del linguaggio e non librerie.
 def flatten_list(elements: list) -> list:
-    pass
+    result = []
+    x = 0
+    while x < len(elements):
+        if isinstance(elements[x], list):
+            [result.append(elements[x][y]) for y in range(len(elements[x]))]
+            x+=len(elements[x])
+        else:
+            result.append(elements[x])
+            x += 1
+    return result
 
 
 # Test funzioni
