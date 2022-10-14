@@ -76,7 +76,7 @@ def caesar_cypher(string: str, offset: int, decrypt: bool = False) -> str:
     result = ""
     if decrypt == False:
         for x in range(len(string)):
-            if offset > 25:
+            if offset + (ord(x)- 97)> 25:
                 if string[x] == ' ':
                     result+= ' '
                     continue
