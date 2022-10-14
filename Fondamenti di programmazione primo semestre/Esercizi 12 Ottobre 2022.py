@@ -80,7 +80,7 @@ def caesar_cypher(string: str, offset: int, decrypt: bool = False) -> str:
                 if string[x] == ' ':
                     result+= ' '
                     continue
-                result += chr((97 + offset % 25))
+                result += chr(97 + offset - (123 - ord(string[x]) ))
             else:
                 if string[x] == ' ':
                     result += ' '
@@ -89,11 +89,11 @@ def caesar_cypher(string: str, offset: int, decrypt: bool = False) -> str:
         return result
     else:
         for x in range(len(string)):
-            if offset > 25:
+            if (ord(string[x]) - 97) - offset < 0:
                 if string[x] == ' ':
                     result += ' '
                     continue
-                result += chr((122 - offset % 25))
+                result += chr(122 - offset - (96 - ord(string[x])))
             else:
                 if string[x] == ' ':
                     result += ' '
