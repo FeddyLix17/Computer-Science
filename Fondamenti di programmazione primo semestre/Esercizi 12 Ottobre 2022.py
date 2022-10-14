@@ -74,17 +74,31 @@ def replace_substring(string: str, find: str, replace: str) -> str:
 # Suggerimento: Sono utili le funzioni `ord()` e `chr()`.
 def caesar_cypher(string: str, offset: int, decrypt: bool = False) -> str:
     result = ""
-    if decrypt == True:
+    if decrypt == False:
         for x in range(len(string)):
             if offset > 25:
-                result += chr((ord(string[x])+offset) % 25)
+                if string[x] == ' ':
+                    result+= ' '
+                    continue
+                result += chr((97 + offset % 25))
             else:
+                if string[x] == ' ':
+                    result += ' '
+                    continue
                 result += chr(ord(string[x])+offset)
         return result
     else:
         for x in range(len(string)):
-            if offset > -25:
-                result += chr((ord(string[x])-offset) % 25)
+            if offset > 25:
+                if string[x] == ' ':
+                    result += ' '
+                    continue
+                result += chr((122 - offset % 25))
+            else:
+                if string[x] == ' ':
+                    result += ' '
+                    continue
+                result += chr(ord(string[x]) -offset)
         return result
 
 
@@ -102,8 +116,20 @@ def caesar_cypher(string: str, offset: int, decrypt: bool = False) -> str:
 
 
 def check_pwd(pwd: str) -> bool:
-    if pwd >= 0 and pwd <= 9:
-        return pwd
+    checkalpha = 0
+    checknum = 0
+    if len(pwd) > 5 and len(pwd) < 17:
+        for x in pwd:
+            if (ord(x) > 96 and ord(x) < 123) or (ord(x) > 64 and ord(x) < 91):
+                checkalpha+=1
+        if checkalpha > 0:
+            for x in pwd:
+                if ord(x) > 47 and ord(x) < 58:
+                    checknum+=1
+            if checknum > 0:
+                if '$' in pwd or '@' in pwd or '#' in pwd:
+                    return True
+    return False
 
 
 # Test funzioni
