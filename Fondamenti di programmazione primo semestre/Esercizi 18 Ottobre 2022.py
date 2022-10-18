@@ -1,4 +1,5 @@
 # Ignorare le righe fino alla 31
+
 import sys
 from typing import Any, Callable, List
 
@@ -118,8 +119,18 @@ def remove_avg(a: list) -> list:
 
 
 def frequency(a: list) -> list:
-    pass
-
+    a.sort()
+    listcountnum = []
+    counterlist = 0
+    listresult = []
+    while counterlist < len(a):
+        listcountnum.append(a.count(a[counterlist]))
+        counterlist+= a.count(a[counterlist])
+    a = list(dict.fromkeys(a))
+    for x in range(len(a)):
+        temptupla = (a[x], listcountnum[x])
+        listresult.append(temptupla)
+    return listresult
 # Scrivere una funzione che restituisce True
 # se la lista è palindroma, o False altrimenti
 
@@ -135,7 +146,23 @@ def is_palindrome(a: list) -> bool:
 
 
 def is_sorted(a: list) -> bool:
-    pass
+    a = list(dict.fromkeys(a))
+    if len(a) <=1:
+        return True
+    crescente = False
+    decrescente = False
+    if a[0] > a[1]:
+        decrescente = True
+    else:
+        crescente = True
+    for x in range(1, len(a) - 1):
+        if a[x] > a[x+1]:
+            crescente = False
+        else:
+            decrescente = False
+        if not crescente and not decrescente:
+            return False
+    return True
 
 # Scrivere una funzione che restituisce True se una lista di interi
 # è composta da una prima parte ordinata in modo crescente, seguita
