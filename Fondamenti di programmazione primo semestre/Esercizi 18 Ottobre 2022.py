@@ -78,7 +78,11 @@ def tuple_ex(t: tuple) -> tuple:
 
 
 def intersect(a: list, b: list) -> list:
-    pass
+    result = []
+    for x in range(min(len(a), len(b))):
+        if a[x] in b and (a[x]and b[x]):
+            result.append(a[x])
+    return result
 
 # Scrivere una funzione che data una lista contenente valori >= 0,
 # crei una nuova lista contentente soltanto gli elementi della lista
@@ -93,7 +97,16 @@ def intersect(a: list, b: list) -> list:
 
 
 def remove_avg(a: list) -> list:
-    pass
+    result = []
+    tempsum = 0
+    for x in range(len(a)):
+        for y in range(x): tempsum+=a[y]
+        if x == 0:
+            continue
+        if a[x] > 2*(tempsum / x):
+            result.append(a[x])
+        tempsum = 0
+    return result
 
 # Data una lista di interi (ciascun intero è compreso fra 0 e 99), scrivere una
 # funzione che restituisca una lista di tuple (x, y),
