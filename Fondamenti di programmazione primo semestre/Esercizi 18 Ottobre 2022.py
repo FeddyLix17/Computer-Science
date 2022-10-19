@@ -174,7 +174,13 @@ def is_sorted(a: list) -> bool:
 
 
 def is_sorted_half(a: list) -> bool:
-    pass
+    if a[0] > a[1]:
+        if a[int(len(a) / 2)] > a[(int(len(a) / 2)) + 1]:
+            return False
+    else:
+        if a[int(len(a) / 2)] < a[int((len(a) / 2)) + 1]:
+            return False
+    return True
 
 
 # Test funzioni
