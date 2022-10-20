@@ -174,13 +174,18 @@ def is_sorted(a: list) -> bool:
 
 
 def is_sorted_half(a: list) -> bool:
+    decrescente = False
+    crescente = False
     if a[0] > a[1]:
-        if a[int(len(a) / 2)] > a[(int(len(a) / 2)) + 1]:
-            return False
+        decrescente = True
     else:
-        if a[int(len(a) / 2)] < a[int((len(a) / 2)) + 1]:
-            return False
-    return True
+        crescente = True
+    for x in range(1, len(a) - 1):
+        if a[x] < a[x + 1] and decrescente == True:
+            return True
+        if a[x] > a[x + 1] and crescente == True:
+            return True
+    return False
 
 
 # Test funzioni
