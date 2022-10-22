@@ -31,8 +31,11 @@ ATTENZIONE: quando caricate il file assicuratevi che sia nella codifica UTF8
 '''
 
 def ex1(int_seq, subtotal):
-    # Inserisci qui il tuo codice
-    pass
+    result, int_seq = 0, list(map(int, int_seq.replace(",", ""))) 
+    for startsec in range(len(int_seq)):
+        for endsec in range(len(int_seq), startsec, -1):
+            if sum(int_seq[startsec:endsec]) == subtotal: result += 1
+    return result
 
 
 
