@@ -31,13 +31,16 @@ ATTENZIONE: quando caricate il file assicuratevi che sia nella codifica UTF8
 '''
 
 def ex1(int_seq, subtotal):
-    start, end, risultati, int_seq = 0, 0, 0, list(map(int, int_seq.replace(",", "")))
+    start, end, risultati, zerodealer, int_seq = 0, 0, 0, 1, list(map(int, int_seq.replace(",", "")))
     min_length = float('inf')
     while end < len(int_seq):
-        while sum(int_seq[start:end]) >= 9:
-            if sum(int_seq[start:end]) == 9: risultati += 1
+        while sum(int_seq[start:end]) >= subtotal:
+            if sum(int_seq[start:end]) == subtotal: risultati += 1
             min_length = min(min_length, end-start+1)
-            start += 1
+            if sum(int_seq[start:end + zerodealer]) > sum(int_seq[start:end]): 
+                start += 1
+                zerodealer = 1 
+            else: zerodealer +=1
         end += 1
     return risultati
     #for startsec in range(len(int_seq)):
