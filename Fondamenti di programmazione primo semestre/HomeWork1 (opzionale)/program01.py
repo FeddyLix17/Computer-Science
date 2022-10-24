@@ -31,28 +31,18 @@ ATTENZIONE: quando caricate il file assicuratevi che sia nella codifica UTF8
 '''
 
 def ex1(int_seq, subtotal):
-    start, end, risultati, int_seq = 0, 0, 0, list(map(int, '3,0,4,0,3,1,0,1,0,1,0,0,5,0,4,2'.replace(",", "")))
-    peggiocasidestra, peggiocasisinistra = 1, 1
-    while end < len(int_seq):
-        while sum(int_seq[start:end + 1]) >= subtotal:
-            if sum(int_seq[start:end + 1]) == subtotal:
-                risultati += 1
-                peggiocasidestra, peggiocasisinistra = 1, 1
-                while (sum(int_seq[start:end + 1 + peggiocasidestra]) == subtotal) or (sum(int_seq[start - peggiocasisinistra:end + 1]) == subtotal):
-                    if sum(int_seq[start:end + 1 + peggiocasidestra]) == subtotal:
-                        peggiocasidestra += 1
-                        risultati += 1
-                    elif sum(int_seq[start - peggiocasisinistra:end + 1]) == subtotal:
-                        peggiocasisinistra -= 1
-                        risultati += 1
-            start += 1
+    start, end, risultati, int_seq = 0, 1, 0, map(int, int_seq.split(","))
+    int_seq = list(int_seq)
+    while end <= len(int_seq):
+        while sum(int_seq[start:end]) >= subtotal:
+            if sum(int_seq[start:end]) == subtotal:
+                risultati +=1
+                break
+            else:
+                start += 1
+                end = start
         end += 1
-    return int(risultati / 2)
-    #for startsec in range(len(int_seq)):
-    #    for endsec in range(len(int_seq), startsec, -1):
-    #        if sum(int_seq[startsec:endsec]) > subtotal or sum(int_seq[startsec:endsec]) < subtotal: continue
-    #        elif sum(int_seq[startsec:endsec]) == subtotal: result += 1
-
+    return risultati
 
 
 if __name__ == '__main__':
