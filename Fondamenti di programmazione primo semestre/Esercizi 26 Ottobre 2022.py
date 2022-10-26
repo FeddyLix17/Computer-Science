@@ -59,26 +59,29 @@ def int_to_string(integer: int) -> str:
 # non alfanumerici, a parte gli spazi, e convertire le parole in minuscolo.
 # Usare la funzione `isalnum()` per testare i caratteri.
 def word_frequency(string: str) -> List[Tuple[str, int]]:
-    string = [string.remove(x) for x in string if not x.isalnum and  x != " "]
-    string = [string.lower(x) for x in string]
-    string = string.split(" ")
-    return string
-    """ stuff fatte sul file temporaneo
-    string = "sE ou se"
-    string = [x for x in string.lower().split() if x.isalnum and  x != " "]
+    string = [x for x in string if x.isalnum() or x == " "]
+    string = "".join(str(x) for x in string)
+    string = [x for x in string.lower().split()]
+    result = []
     counter = 0
     while len(string) != 0:
-        print(string)
-        print(string.count(string[min(len(string) - 1, counter)]))
+        temptuple = string.count(string[min(len(string) - 1, counter)]) , string[min(len(string) - 1, counter)]
+        result.append(tuple(temptuple))
         string = [i for i in string if i != string[min(len(string) - 1, counter)]]
-        counter+= 1
-    """
+        counter += 1
+    return sorted(result)
 
 # Scrivere una funzione che data una stringa di numeri interi separati da spazi,
 # ritorna la lista ordinata dei numeri interi con frequenza massima.
 def number_frequency(string: str) -> int:
-    pass
-
+    tempstring = string.split()
+    counterstring = []
+    counter = 0
+    while len(tempstring) != 0:
+        counterstring.append(tempstring.count(tempstring[min(len(tempstring) - 1, counter)]))
+        tempstring = [i for i in tempstring if i != tempstring[min(len(tempstring) - 1, counter)]]
+    result = [int(x) for x in list(dict.fromkeys(string.split())) if string.count(x) == max(counterstring)]
+    return sorted(result)
 
 # Implementare una funzione *ricorsiva* che data una lista contenente valori
 # e sottoliste, ritorna una lista contenente tutti i valori. Ad esempio:
