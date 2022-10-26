@@ -1,5 +1,4 @@
 import math
-from unittest import result
 
 #calcoli
 #1
