@@ -87,7 +87,13 @@ def number_frequency(string: str) -> int:
 # e sottoliste, ritorna una lista contenente tutti i valori. Ad esempio:
 # [1, [2, 3]] => [1, 2, 3] e [1, [2, [3, 4]]] => [1, 2, 3, 4]
 def flatten_list(elements: list) -> list:
-    pass
+    for x in range(len(elements)):
+        if type(elements[x]) is list:
+            for y in elements[x]:
+                elements.append(y)
+            elements.remove(elements[x])
+            flatten_list(elements)
+    return sorted(elements)
 
 
 # Implementare una funzionalità equivalente a `dict.update()`, che data una
@@ -95,7 +101,11 @@ def flatten_list(elements: list) -> list:
 # dizionari di input. Per valori, si usano i valori nei dizionari di input
 # scegliendo quelli dei dizionari con indice superiore se presenti.
 def update_dict(dictionaries: List[dict]) -> dict:
-    pass
+    result = {}
+    for x in dictionaries:
+        for y, z in x.items():
+            result[y]=z
+    return result
 
 
 # Implementare una funzione che prende in input una lista di dizionari e ritorna
@@ -103,14 +113,38 @@ def update_dict(dictionaries: List[dict]) -> dict:
 # valori ritorna una lista con i valori presenti nei dizionari di input.
 # Si possono usare i set.
 def merge_dict(dictionaries: List[dict]) -> dict:
-    pass
+    result = {}
+    templist = []
+    for x in range(len(dictionaries)):
+        for y, z in dictionaries[x].items():
+            if x+1 < len(dictionaries) and y in dictionaries[x+1]:
+                templist.append(z)
+                templist.append(dictionaries[x+1].get(y))
+                result[y] = templist
+                dictionaries[x+1].pop(y)
+                templist = []
+            else:
+                templist.append(z)
+                result[y] = templist
+                templist = []
+    return result
 
 
 # Implementare una funzione che prende in input una lista di dizionari e ritorna
 # un dizionario le cui chiavi sono quelle presenti in tutti i dizionari e i cui
 # valori sono la lista di valori delle relative chiavi. Si possono usare i set.
 def intersect_dict(dictionaries: List[dict]) -> dict:
-    pass
+    result = {}
+    templist = []
+    for x in range(len(dictionaries)):
+        for y, z in dictionaries[x].items():
+            if x+1 < len(dictionaries) and y in dictionaries[x+1]:
+                templist.append(z)
+                templist.append(dictionaries[x+1].get(y))
+                result[y] = templist
+                dictionaries[x+1].pop(y)
+                templist = []
+    return result
 
 
 # Test funzioni
