@@ -28,6 +28,10 @@ numeri romani nel formato XKCD, e tornare i K valori maggiori in ordine decresce
 Implementate quindi le seguenti funzioni:
 """
 
+
+
+
+
 def decode_XKCD_tuple(xkcd_values : tuple[str, ...], k : int) -> list[int]:
     '''
     Riceve una lista di stringhe che rappresentano numeri nel formato XKCD
@@ -41,7 +45,11 @@ def decode_XKCD_tuple(xkcd_values : tuple[str, ...], k : int) -> list[int]:
     list[int]                   i k massimi valori ottenuti in ordine decrescente
     '''
     # INSERISCI QUI IL TUO CODICE
-    pass
+    result = []
+    for x in xkcd_values:
+      result.append(list_of_weights_to_number(xkcd_to_list_of_weights(x)))
+    return sorted(result[:k], reverse=True)
+
 
 
 def decode_value(xkcd : str ) -> int:
@@ -56,8 +64,7 @@ def decode_value(xkcd : str ) -> int:
     Esempio: '10010010010100511' -> 397
     '''
     # INSERISCI QUI IL TUO CODICE
-    pass
-
+    return list_of_weights_to_number(xkcd_to_list_of_weights(xkcd))
 
 def xkcd_to_list_of_weights(xkcd : str) -> list[int]:
     '''
@@ -72,7 +79,10 @@ def xkcd_to_list_of_weights(xkcd : str) -> list[int]:
     Esempio: '10010010010100511' -> [100, 100, 100, 10, 100, 5, 1, 1,]
     '''
     # INSERISCI QUI IL TUO CODICE
-    pass
+    xkcd = xkcd.replace('1', ' 1')
+    xkcd = xkcd.replace('5', ' 5').split()
+    xkcd = list(map(int, [x for x in xkcd]))
+    return xkcd
 
 
 def list_of_weights_to_number(weigths : list[int] ) -> int:
@@ -88,8 +98,14 @@ def list_of_weights_to_number(weigths : list[int] ) -> int:
     Esempio: [100, 100, 100, 10, 100, 5, 1, 1,] -> 397
     '''
     # INSERISCI QUI IL TUO CODICE
-    pass
-
+    result = 0
+    counter = 0
+    while counter < len(weigths) - 1:
+      if weigths[counter + 1] <= weigths[counter]: result += weigths[counter]
+      else: result -= weigths[counter]
+      counter += 1
+    result+=weigths[counter]
+    return result
 
 
 ###################################################################################
