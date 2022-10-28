@@ -1,0 +1,3 @@
+funzione xkcd_to_list_of_weights: presa la stringa in input, separo in modo appropriato ogni cifra costruendoci una lista sopra. Utilizzando la funzione map, converto ogni valore della lista ottenuta precedentemente da stringa a intero ritornando direttamente la nuova lista come risultato della funzione
+
+funzione list_of_weights_to_number: 
