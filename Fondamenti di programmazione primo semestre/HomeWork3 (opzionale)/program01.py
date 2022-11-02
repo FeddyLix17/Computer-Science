@@ -55,8 +55,7 @@ ATTENZIONE: quando caricate il file, assicuratevi che sia nella codifica UTF8
 
 
 def ex1(ftesto,a,b,n):
-    # inserite qui il vostro codice
-    pass
+    return tuple(f"ftesto: {ftesto}, a: {a}, b: {b}, n: {n}")
 
 
 
