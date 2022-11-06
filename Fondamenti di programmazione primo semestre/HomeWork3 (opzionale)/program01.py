@@ -55,8 +55,20 @@ ATTENZIONE: quando caricate il file, assicuratevi che sia nella codifica UTF8
 
 
 def ex1(ftesto,a,b,n):
-    return tuple(f"ftesto: {ftesto}, a: {a}, b: {b}, n: {n}")
-
+  aoao = {}
+  ftesto = open(ftesto, "r").read()
+  end = a
+  c = end
+  for start in range(len(ftesto) - a):
+      end= start + a
+      c = end
+      while end <= c + b - a:       
+          if ftesto.count(ftesto[start:end]) in aoao.keys(): aoao[ftesto.count(ftesto[start:end])] += [ftesto[start:end]]
+          else: aoao[ftesto.count(ftesto[start:end])] = [ftesto[start:end]]
+          end += 1
+  for key, value in aoao.items(): aoao[key] = set(value)
+  result = [tuple([x, list(aoao[x])]) for x in sorted(aoao.keys())]
+  return result
 
 
 
@@ -65,5 +77,5 @@ def ex1(ftesto,a,b,n):
 
 
 if __name__ == '__main__':
-    pass
-    # inserite qui i vostri test
+  testoo = open("ft1.txt", "r").read()
+  print(testoo)
