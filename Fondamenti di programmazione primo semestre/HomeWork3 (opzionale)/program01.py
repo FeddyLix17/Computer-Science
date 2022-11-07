@@ -77,5 +77,4 @@ def ex1(ftesto,a,b,n):
 
 
 if __name__ == '__main__':
-  testoo = open("ft1.txt", "r").read()
-  print(testoo)
+  pass
