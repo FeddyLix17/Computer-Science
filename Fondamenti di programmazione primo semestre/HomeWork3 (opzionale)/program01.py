@@ -56,19 +56,22 @@ ATTENZIONE: quando caricate il file, assicuratevi che sia nella codifica UTF8
 
 def ex1(ftesto,a,b,n):
   aoao = {}
-  ftesto = open(ftesto, "r").read()
+  ftesto = open(ftesto, "r").read().replace("\n", "")
   end = a
   c = end
+  result =[]
   for start in range(len(ftesto) - a):
-      end= start + a
+      end = start + a
       c = end
-      while end <= c + b - a:       
-          if ftesto.count(ftesto[start:end]) in aoao.keys(): aoao[ftesto.count(ftesto[start:end])] += [ftesto[start:end]]
-          else: aoao[ftesto.count(ftesto[start:end])] = [ftesto[start:end]]
-          end += 1
+      while end <= c + b - a and end < len(ftesto):       
+          if sum([ftesto[char:char+len(ftesto[start:end])] == ftesto[start:end] for char in range(len(ftesto)-len(ftesto[start:end]))]) in aoao.keys():  
+              aoao[sum([ftesto[char:char+len(ftesto[start:end])] == ftesto[start:end] for char in range(len(ftesto)-len(ftesto[start:end]))])]  += [ftesto[start:end]]
+          else: 
+              aoao[sum([ftesto[char:char+len(ftesto[start:end])] == ftesto[start:end] for char in range(len(ftesto)-len(ftesto[start:end]))])]  = [ftesto[start:end]]
+          end+= 1
   for key, value in aoao.items(): aoao[key] = set(value)
-  result = [tuple([x, list(aoao[x])]) for x in sorted(aoao.keys())]
-  return result
+  for x in sorted(aoao.keys()): result.append(tuple([x, list(aoao[x])]))
+  return result[:n]
 
 
 
