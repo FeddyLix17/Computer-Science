@@ -54,8 +54,6 @@ ATTENZIONE: quando caricate il file, assicuratevi che sia nella codifica UTF8
 '''
 
 
-def sium(ftesto, start, end):
-    return sum([ftesto[char:char+len(ftesto[start:end])] == ftesto[start:end] for char in range(len(ftesto)-len(ftesto[start:end]) + 1)])
 def ex1(ftesto,a,b,n):
   aoao, ftesto, result = {}, open(ftesto, "r").read().replace("\n", ""), []
   end = a
@@ -64,13 +62,21 @@ def ex1(ftesto,a,b,n):
     end = start + a
     c = end
     while end <= c + b - a and end < len(ftesto):
-      if ftesto[start:end] in list(aoao.values()):
-          pass
-      else:
-        tmp = sium(ftesto, start, end)
-        if tmp in aoao.keys(): aoao[tmp] += [ftesto[start:end]]
-        else: aoao[tmp] = [ftesto[start:end]]
-      end += 1
+        if ftesto[start:end] in sum(list(aoao.values()), []):
+            possiblyindex = [int(x) for x in (aoao.keys()) if ftesto[start:end] in aoao.get((x))]
+            tmp = int(possiblyindex[0])
+            tmp2 = list(aoao[tmp])
+            if tmp + 1 in list(aoao.keys()):
+                aoao[tmp + 1] += [ftesto[start:end]]
+                aoao[tmp] = [ele for ele in aoao[tmp] if ele != ftesto[start:end]]
+            else:
+                aoao[tmp + 1] = [ftesto[start:end]]
+                aoao[tmp] = [ele for ele in aoao[tmp] if ele != ftesto[start:end]]
+            if aoao[tmp] == None:
+                aoao[tmp] = []
+        else:
+            aoao[1] += [ftesto[start:end]]
+        end += 1
   for key in sorted(aoao): result.append(tuple([key, sorted(list(set(aoao.get(key))))]))
   return result[:n]
 
