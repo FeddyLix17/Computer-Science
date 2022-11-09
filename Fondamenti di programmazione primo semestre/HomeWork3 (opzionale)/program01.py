@@ -73,16 +73,14 @@ def ex1(ftesto,a,b,n):
             if tmp2 == None: tmp2 = []
             if tmp + 1 in list(aoao.keys()):
                 aoao[tmp + 1] += [ftesto[start:end]]
-                aoao[tmp] = tmp2
             else:
                 aoao[tmp + 1] = [ftesto[start:end]]
-                aoao[tmp] = tmp2
+            aoao[tmp] = tmp2
         else:
             aoao[1] += [ftesto[start:end]]
         end += 1
   for key in sorted(aoao):
-    if aoao[key] == []: continue
-    result.append(tuple([key, sorted(list(set(aoao.get(key))))]))
+    if aoao[key] != []: result.append(tuple([key, sorted(list(aoao.get(key)))]))
   return result[:n]
 
 
