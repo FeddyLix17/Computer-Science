@@ -58,26 +58,31 @@ def ex1(ftesto,a,b,n):
   aoao, ftesto, result = {}, open(ftesto, "r").read().replace("\n", ""), []
   end = a
   c = end
-  for start in range(len(ftesto) - a):
+  aoao[1] = []
+  for start in range(len(ftesto) - a + 1):
     end = start + a
     c = end
-    while end <= c + b - a and end < len(ftesto):
-        if ftesto[start:end] in sum(list(aoao.values()), []):
-            possiblyindex = [int(x) for x in (aoao.keys()) if ftesto[start:end] in aoao.get((x))]
-            tmp = int(possiblyindex[0])
-            tmp2 = list(aoao[tmp])
+    while end <= c + b - a and end < len(ftesto) + 1:
+        tmp3 = sum(list(aoao.values()), [])
+        if ftesto[start:end] in tmp3:
+            for x in (aoao.keys()):
+                if ftesto[start:end] in aoao.get((x)):
+                    tmp = int(x)
+                    break
+            tmp2 = list(set(list(aoao[tmp])) - set([ftesto[start:end]]))
+            if tmp2 == None: tmp2 = []
             if tmp + 1 in list(aoao.keys()):
                 aoao[tmp + 1] += [ftesto[start:end]]
-                aoao[tmp] = [ele for ele in aoao[tmp] if ele != ftesto[start:end]]
+                aoao[tmp] = tmp2
             else:
                 aoao[tmp + 1] = [ftesto[start:end]]
-                aoao[tmp] = [ele for ele in aoao[tmp] if ele != ftesto[start:end]]
-            if aoao[tmp] == None:
-                aoao[tmp] = []
+                aoao[tmp] = tmp2
         else:
             aoao[1] += [ftesto[start:end]]
         end += 1
-  for key in sorted(aoao): result.append(tuple([key, sorted(list(set(aoao.get(key))))]))
+  for key in sorted(aoao):
+    if aoao[key] == []: continue
+    result.append(tuple([key, sorted(list(set(aoao.get(key))))]))
   return result[:n]
 
 
