@@ -57,17 +57,16 @@ ATTENZIONE: quando caricate il file, assicuratevi che sia nella codifica UTF8
 def ex1(ftesto,a,b,n):
   aoao, ftesto, result = {}, open(ftesto, "r").read().replace("\n", ""), []
   end = a
-  c = end
-  aoao[1] = []
+  c, aoao[1] = end, []
   for start in range(len(ftesto) - a + 1):
     end = start + a
     c = end
+    tmp3 = sum(list(aoao.values()), [])
     while end <= c + b - a and end < len(ftesto) + 1:
-        tmp3 = sum(list(aoao.values()), [])
         if ftesto[start:end] in tmp3:
             for x in (aoao.keys()):
                 if ftesto[start:end] in aoao.get((x)):
-                    tmp = int(x)
+                    tmp = x
                     break
             tmp2 = list(set(list(aoao[tmp])) - set([ftesto[start:end]]))
             if tmp2 == None: tmp2 = []
@@ -79,9 +78,10 @@ def ex1(ftesto,a,b,n):
         else:
             aoao[1] += [ftesto[start:end]]
         end += 1
-  for key in sorted(aoao):
-    if aoao[key] != []: result.append(tuple([key, sorted(list(aoao.get(key)))]))
-  return result[:n]
+  for key, value in aoao.items():
+    
+    if value != []: result.append(tuple([key, sorted(list(value))]))
+  return result[:n - 1]
 
 
 
