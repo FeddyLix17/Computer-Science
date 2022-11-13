@@ -55,30 +55,30 @@ ATTENZIONE: quando caricate il file, assicuratevi che sia nella codifica UTF8
 
 
 def ex1(ftesto,a,b,n):
-  aoao, ftesto, result = {}, open(ftesto, "r").read().replace("\n", ""), []
+  dizionariotmp, ftesto, result = {}, open(ftesto, "r").read().replace("\n", ""), []
   end = a
-  c, aoao[1] = end, []
+  c, dizionariotmp[1] = end, []
   for start in range(len(ftesto) - a + 1):
     end = start + a
     c = end
-    tmp3 = sum(list(aoao.values()), [])
+    tmp3 = sum(list(dizionariotmp.values()), [])
     while end <= c + b - a and end < len(ftesto) + 1:
         if ftesto[start:end] in tmp3:
-            for x in (aoao.keys()):
-                if ftesto[start:end] in aoao.get((x)):
+            for x in (dizionariotmp.keys()):
+                if ftesto[start:end] in dizionariotmp.get((x)):
                     tmp = x
                     break
-            tmp2 = list(set(list(aoao[tmp])) - set([ftesto[start:end]]))
+            tmp2 = list(set(list(dizionariotmp[tmp])) - set([ftesto[start:end]]))
             if tmp2 == None: tmp2 = []
-            if tmp + 1 in list(aoao.keys()):
-                aoao[tmp + 1] += [ftesto[start:end]]
+            if tmp + 1 in list(dizionariotmp.keys()):
+                dizionariotmp[tmp + 1] += [ftesto[start:end]]
             else:
-                aoao[tmp + 1] = [ftesto[start:end]]
-            aoao[tmp] = tmp2
+                dizionariotmp[tmp + 1] = [ftesto[start:end]]
+            dizionariotmp[tmp] = tmp2
         else:
-            aoao[1] += [ftesto[start:end]]
+            dizionariotmp[1] += [ftesto[start:end]]
         end += 1
-  for key, value in aoao.items():
+  for key, value in dizionariotmp.items():
     
     if value != []: result.append(tuple([key, sorted(list(value))]))
   return result[:n - 1]
