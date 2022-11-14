@@ -45,4 +45,60 @@ la funzione most_frequent_chars("test01/A.txt") dovrà restituire la stringa
 '''
 
 def most_frequent_chars(filename: str) -> str:
+    txt = open("test01/A.txt", "r").read().split()
+    txt2 = open(txt[0], "r").read().split()
+    txt3 = open(txt2[0], "r").read().split()
+    dicfreq = {}
+    for x in range(1, len(max(txt, txt2, txt3, key=len))):
+        for y in range(len(max(txt[1:] + txt2[1:] + txt3[1:], key=len))):
+            if x > len(txt):
+                if y < len(txt2[x]):
+                    if txt2[x][y] in dicfreq.keys():
+                        dicfreq[txt2[x][y]] += 1
+                    else:
+                        dicfreq[txt2[x][y]] = 1
+                if y < len(txt3[x]):
+                    if txt3[x][y] in dicfreq.keys():
+                        dicfreq[txt3[x][y]] += 1
+                    else:
+                        dicfreq[txt3[x][y]] = 1
+            elif x > len(txt2):
+                if y < len(txt[x]):
+                    if txt[x][y] in dicfreq.keys():
+                        dicfreq[txt[x][y]] += 1
+                    else:
+                        dicfreq[txt[x][y]] = 1
+                if y < len(txt3[x]):
+                    if txt3[x][y] in dicfreq.keys():
+                        dicfreq[txt3[x][y]] += 1
+                    else:
+                        dicfreq[txt3[x][y]] = 1
+            elif x > len(txt3):
+                if y < len(txt[x]):
+                    if txt[x][y] in dicfreq.keys():
+                        dicfreq[txt[x][y]] += 1
+                    else:
+                        dicfreq[txt[x][y]] = 1
+                if y < len(txt2[x]):
+                    if txt2[x][y] in dicfreq.keys():
+                        dicfreq[txt2[x][y]] += 1
+                    else:
+                        dicfreq[txt2[x][y]] = 1
+            else:
+                if y < len(txt[x]):
+                    if txt[x][y] in dicfreq.keys():
+                        dicfreq[txt[x][y]] += 1
+                    else:
+                        dicfreq[txt[x][y]] = 1
+                if y < len(txt2[x]):
+                    if txt2[x][y] in dicfreq.keys():
+                        dicfreq[txt2[x][y]] += 1
+                    else:
+                        dicfreq[txt2[x][y]] = 1
+                if y < len(txt3[x]):
+                    if txt3[x][y] in dicfreq.keys():
+                        dicfreq[txt3[x][y]] += 1
+                    else:
+                        dicfreq[txt3[x][y]] = 1
+    print(dicfreq)
     return filename
