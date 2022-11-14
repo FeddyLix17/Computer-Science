@@ -45,12 +45,18 @@ la funzione most_frequent_chars("test01/A.txt") dovrà restituire la stringa
 '''
 
 def most_frequent_chars(filename: str) -> str:
-    txt = open(filename, "r").read().split()
-    txt2 = open(txt[0], "r").read().split()
-    txt3 = open(txt2[0], "r").read().split()
+    largetxt = []
+    a=0
+    txt = open(filename, encoding="UTF-8", mode = "r").read().split()
+    largetxt.append(txt)
+    while largetxt[a][0] != filename:
+        txt = open(largetxt[a][0], encoding="UTF-8", mode="r").read().split()
+        largetxt.append(txt)
+        a += 1
     dicfreq = {}
     result = ""
-    largetxt = list([txt[1:]] + [txt2[1:]] + [txt3[1:]])
+    for x in range(len(largetxt)):
+        largetxt[x].remove(largetxt[x][0])
     for x in range(len(largetxt)):
         for y in range(len(largetxt[x])):
             for z in range(len(largetxt[x][y])):
@@ -58,8 +64,7 @@ def most_frequent_chars(filename: str) -> str:
                     dicfreq[f"{largetxt[x][y][z]}{z}"] += 1
                 else:
                     dicfreq[f"{largetxt[x][y][z]}{z}"] = 1
-    dicfreq = {k: v for k, v in sorted(
-        dicfreq.items(), key=lambda item: (item[0][1], -item[1], item[0][0]))}
+    dicfreq = {k: v for k, v in sorted(dicfreq.items(), key=lambda item: (int(item[0][1:]), -item[1], item[0][0]))}
     a = 0
     for sium in dicfreq.keys():
         if sium.endswith(str(a)):
