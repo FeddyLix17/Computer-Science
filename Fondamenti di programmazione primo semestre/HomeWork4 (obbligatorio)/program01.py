@@ -45,7 +45,7 @@ la funzione most_frequent_chars("test01/A.txt") dovrà restituire la stringa
 '''
 
 def most_frequent_chars(filename: str) -> str:
-    txt = open("test01/A.txt", "r").read().split()
+    txt = open(filename, "r").read().split()
     txt2 = open(txt[0], "r").read().split()
     txt3 = open(txt2[0], "r").read().split()
     dicfreq = {}
