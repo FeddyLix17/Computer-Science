@@ -45,5 +45,4 @@ la funzione most_frequent_chars("test01/A.txt") dovrà restituire la stringa
 '''
 
 def most_frequent_chars(filename: str) -> str:
-    # SCRIVI QUI LA TUA SOLUZIONE
-    pass
+    return filename
