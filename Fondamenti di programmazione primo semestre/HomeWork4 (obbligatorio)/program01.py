@@ -45,20 +45,14 @@ la funzione most_frequent_chars("test01/A.txt") dovrà restituire la stringa
 '''
 
 def most_frequent_chars(filename: str) -> str:
-    largetxt = []
-    a=0
-    txt = open(filename, encoding="UTF-8", mode = "r").read().split()
+    largetxt, a, txt, dicfreq, result = [], 0, open(filename, encoding="UTF-8", mode="r").read().split(), {}, ""
     largetxt.append(txt)
     while largetxt[a][0] != filename:
         txt = open(largetxt[a][0], encoding="UTF-8", mode="r").read().split()
         largetxt.append(txt)
         a += 1
-    dicfreq = {}
-    result = ""
     for x in range(len(largetxt)):
-        largetxt[x].remove(largetxt[x][0])
-    for x in range(len(largetxt)):
-        for y in range(len(largetxt[x])):
+        for y in range(1,len(largetxt[x])):
             for z in range(len(largetxt[x][y])):
                 if f"{largetxt[x][y][z]}{z}" in dicfreq.keys():
                     dicfreq[f"{largetxt[x][y][z]}{z}"] += 1
