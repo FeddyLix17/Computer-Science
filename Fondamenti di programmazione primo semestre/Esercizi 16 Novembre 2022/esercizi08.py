@@ -3,7 +3,6 @@ from typing import Any, Callable, List, Tuple, Dict, Union
 import sys
 from unittest import result
 import images
-
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -37,8 +36,8 @@ def check_test(func: Callable, expected: Any, *args: List[Any]):
 # 3 1 0        2 1
 #              9 0
 def transpose(m : List[List[int]]) -> List[List[int]]:
-    pass
-
+    result = [[m[j][i] for j in range(len(m))] for i in range(len(m[0]))]
+    return result
 # Scrivere una funzione che date due matrici, restituisca una matrice
 # equivalente alla somma fra le due matrici.
 # Esempio:
@@ -48,7 +47,10 @@ def transpose(m : List[List[int]]) -> List[List[int]]:
 #     1 1 2        1 2 3       2 3 5
 # Restituire None se le due matrici non possono essere sommate.
 def matrix_matrix_sum(A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
-    pass
+    if len(A) != len(B) or len(A[0]) != len(B[0]):
+        return None
+    result = [[A[i][j] + B[i][j] for j in range(min(len(A[0]), len(B[0])))] for i in range(min(len(A), len(B)))]
+    return result
 
 # Scrivere una funzione che date due matrici, restituisca una matrice
 # equivalente al prodotto fra le due matrici.
@@ -59,7 +61,16 @@ def matrix_matrix_sum(A: List[List[int]], B: List[List[int]]) -> List[List[int]]
 #     1 1 2                    11 9 6
 # Restituire None se le due matrici non possono essere moltiplicate.
 def matrix_matrix_mul(A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
-    pass
+    if len(A[0]) != len(B):
+        return None
+    result = [[sum([A[i][k] * B[k][j] for k in range(len(A[0]))]) for j in range(len(B[0]))] for i in range(len(A))]
+    return result
+    for i in range(len(A)):
+        for j in range(len(B[0])):
+            for k in range(len(B)):
+                result[i][j] += A[i][k] * B[k][j]
+    return result
+
 
 # Definire una funzione che dato il nome di un file (img_in) contenente un'immagine,
 # calcola l'immagine rotata di 90 gradi a destra e invertita rispetto l'asse verticale.
