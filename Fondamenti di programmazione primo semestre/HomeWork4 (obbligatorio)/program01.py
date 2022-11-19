@@ -60,8 +60,8 @@ def most_frequent_chars(filename: str) -> str:
                     dicfreq[f"{largetxt[x][y][z]}{z}"] = 1
     dicfreq = {k: v for k, v in sorted(dicfreq.items(), key=lambda item: (int(item[0][1:]), -item[1], item[0][0]))}
     a = 0
-    for sium in dicfreq.keys():
-        if sium.endswith(str(a)):
-            result += sium[0]
+    for key in dicfreq.keys():
+        if key.endswith(str(a)):
+            result += key[0]
             a += 1 
     return result
