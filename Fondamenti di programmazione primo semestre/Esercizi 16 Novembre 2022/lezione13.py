@@ -107,11 +107,29 @@ def ruota_sx(img):
     # torno l'immagine ruotata
     return img2
 img_r = ruota_sx(img3)
+images.save(img_r, 'img1-rotatasium.png')
 images.visd(img_r)
 # --- PER CASA: rotazione destra
-def ruota_sx(img):
-    pass
+def ruota_dx(img):
+    altezza = len(img)
+    larghezza = len(img[0])
+    # creo una immagine con altezza e larghezza scambiate
+    img2 = crea_immagine(altezza, larghezza)
+    # per ogni pixel della immagine originale
+    for y, riga in enumerate(img):
+        for x, pixel in enumerate(riga):
+            # calcolo le coordinate della destinazione
+            X = y
+            Y = x 
+            # e copio il pixel
+            img2[Y][X] = pixel
+    # torno l'immagine ruotata
+    return img2
 
+
+img_r = ruota_dx(img3)
+images.save(img_r, 'img1-rotatasiumdestra.png')
+images.visd(img_r)
 
 # Disegnare una linea orizzontale o verticale
 def draw_h_line(img, x, y, x2, colore):
