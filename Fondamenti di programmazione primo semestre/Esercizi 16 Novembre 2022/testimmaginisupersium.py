@@ -1,3 +1,4 @@
+#Vari Valori colori
 # con valori tra 0 e 255 compresi (1 byte)
 # definiamo qualche colore
 black = 0, 0, 0
@@ -10,22 +11,26 @@ yellow = 255, 255, 0
 purple = 255, 0, 255
 grey = 128, 128, 128
 
-
+# Creazione di una immagine/matrice monocolore nel modo sbagliato
 import images
 def crea_immagine_errata(larghezza, altezza, colore):
     riga = [ colore ] * larghezza
     img = [ riga ] * altezza
     return img
 img2 = crea_immagine_errata(30, 40, blue)
+
 img2[5][7] = red # Coloro un solo pixel
-images.visd(img2) # e trovo una colonna rossa!!!
+
+images.visd(img2) # e trovo una colonna rossa invece di un solo pixel!!!
 ## LAVAGNA!
 
-
+# Creazione di una immagine/matrice monocolore nel modo corretto
+# crea_immagine ritorna un immagine monocolore nera
 def crea_immagine(larghezza, altezza, colore=black):
     return [ [ colore ]*larghezza
     for i in range(altezza)
     ]
+# mentre crea_imm crea un'immagine monocolore in base al parametro passatogli
 def crea_imm(L,H,C):
     img = []
     for y in range(H):
@@ -36,11 +41,12 @@ def crea_imm(L,H,C):
     return img
 img = crea_imm(30, 40, red)
 img5 = crea_immagine(50, 50)
+#test di prova per salvare immagini
 #images.save(img5, "sfondoNero.png")
 img[5][7] = blue # coloro un pixel
 images.visd(img)
 
-
+# come salvare un file png sul disco
 # Pixel = tuple[int,int,int]
 # Line = list[Pixel]
 # Picture = list[Line]
@@ -53,6 +59,7 @@ images.save(img3, 'img1-2.png')
 images.visd(img3)
 
 
+# Disegnare un pixel senza generare errori se le coordinate sono fuori dall'immagine
 # --- controllando le posizioni
 def draw_pixel(img, x, y, colore):
     # ricavo l'altezza e larghezza dell'immagine
@@ -65,8 +72,7 @@ def draw_pixel(img, x, y, colore):
 draw_pixel(img3, 100, 150, red)
 images.visd(img3)
 
-
-# --- usando try-except per catturare l'errore
+# usando try-except per catturare l'errore
 def draw_pixel(img, x, y, colore): 
     # mi preparo a catturare l'errore (try)
     try:
@@ -84,7 +90,7 @@ def draw_pixel(img, x, y, colore):
 draw_pixel(img3, -50, -50, red)
 images.visd(img3)
 
-
+# Rotazione dell'immagine di 90° a sinistra
 # X_destinazione = y_sorgente
 # Y_destinazione = larghezza_sorgente - 1 - x_sorgente
 def ruota_sx(img):
@@ -100,13 +106,16 @@ def ruota_sx(img):
             Y = larghezza -1 -x
             # e copio il pixel
             img2[Y][X] = pixel
-            # torno l'immagine ruotata
+    # torno l'immagine ruotata
     return img2
 img_r = ruota_sx(img3)
 images.visd(img_r)
 # --- PER CASA: rotazione destra
+def ruota_sx(img):
+    pass
 
 
+# Disegnare una linea orizzontale o verticale
 def draw_h_line(img, x, y, x2, colore):
     # scandisco le X da x a x2
     for X in range(x, x2+1):
@@ -130,8 +139,8 @@ images.visd(img)
 def draw_v_line(img, x, y, y2, colore):
     larghezza = len(img[0])
     altezza = len(img)
-    # la parte da disegnare ha estremi non maggiori di altezza-1 e non minori di 0
-    # una volta aggiustati gli estremi la si disegna
+        # la parte da disegnare ha estremi non maggiori di altezza-1 e non minori di 0
+        # una volta aggiustati gli estremi la si disegna
     for Y in range(y, y2+1):
         # riusiamo la draw_pixel che controlla di non sbordare
         draw_pixel(img, x, Y, colore)
@@ -160,7 +169,7 @@ def draw_slope(img, x1, y1, x2, y2, colore):
             y = m * x + y1
             # e disegno il pixel (con draw_pixel?)
             draw_pixel(img, x, y, colore)
-            # altrimenti per ciascuna y calcoliamo la x
+        # altrimenti per ciascuna y calcoliamo la x
         else:
             # semplicemente scambiando x e y nelle formule precedenti
             # mi assicuro che y1<y2
@@ -174,4 +183,84 @@ def draw_slope(img, x1, y1, x2, y2, colore):
                 # e disegno il pixel (con draw_pixel?)
                 draw_pixel(img, x, y, colore)
 draw_slope(img, 10,20, 100, 20, green)
+images.visd(img)
+
+
+# Disegnare un rettangolo vuoto
+def draw_empty_rectangle(img,x1,y1,x2,y2,colore):
+    # dobbiamo disegnare le 4 linee
+    draw_h_line(img, x1, y1, x2, colore)
+    draw_h_line(img, x1, y2, x2, colore)
+    draw_v_line(img, x1, y1, y2, colore)
+    draw_v_line(img, x2, y1, y2, colore)
+def draw_empty_rectangle(img,x1,y1,x2,y2,colore):
+    for x in range(x1, x2+1):
+        draw_pixel(img, x, y1, colore)
+        draw_pixel(img, x, y2, colore)
+    # oppure disegnare i pixel orizzontali
+    # e poi i verticali
+    for y in range(y1, y2+1):
+        draw_pixel(img, x1, y, colore)
+        draw_pixel(img, x2, y, colore)
+draw_empty_rectangle(img, 50, 50, 150, 150, yellow)
+images.visd(img)
+
+
+# Disegnare un rettangolo pieno
+# questa è facile
+def draw_rectangle(img, x1,y1, x2,y2, colore):
+    for x in range(x1, x2+1):
+        for y in range(y1, y2+1):
+            draw_pixel(img, x,y, colore)
+draw_rectangle(img, 30,50, 80, 120, purple)
+images.visd(img)
+
+
+# Disegnare un'ellisse
+# disegnamo una ellisse PIENA
+# --- con somma delle distanze dai fuochi <= D
+from math import sqrt, dist
+def draw_ellisse(img, x1, y1, x2, y2, D, colore):
+    larghezza = len(img[0])
+    altezza = len(img)
+    # scandisco tutti i pixel della immagine
+    for x in range(larghezza):
+        for y in range(altezza):
+            # per ciascuno calcolo le due distanze dai fuochi
+            D1 = dist((x,y), (x1,y1))
+            D2 = dist((x,y), (x2,y2)) # se la somma < D allora il pixel è DENTRO e lo coloro
+            if D1+D2 < D:
+                img[y][x] = colore
+            # altrimenti lo ignoro
+            # NOTA: non devo controllare se sono dentro l'immagine
+            # perchè scandisco SOLO i pixel della immagine
+# NOTA: D deve essere più grande della distanza tra i fuochi
+# TODO: si possono scandire meno pixel
+draw_ellisse(img, 50, 200, 90, 150, 100, cyan)
+images.visd(img)
+
+
+# Disegnare un'ellisse vuota
+def draw_ellisse_vuota(img, x1, y1, x2, y2, D, colore):
+    larghezza = len(img[0])
+    altezza = len(img)
+    # scandisco tutti i pixel della immagine
+    for x in range(larghezza):
+        for y in range(altezza):
+            # per ciascuno calcolo le due distanze dai fuochi
+            D1 = dist((x,y), (x1,y1))
+            D2 = dist((x,y), (x2,y2)) # se la somma - D è piccola sono sul bordo
+            if abs((D1+D2) - D) < 1 :
+                img[y][x] = colore
+            # altrimenti lo ignoro 
+# D deve essere più grande della distanza tra i fuochi
+draw_ellisse_vuota(img, 100, 100, 150, 150, 200, green)
+images.visd(img)
+
+
+# Disegnare un cerchio
+# cerchio = ellisse con entrambi i fuochi nello stesso punto e somma delle distanze = 2 
+# def draw_circle(img, x, y, r, colore): draw_ellisse(img, x, y, x, y, 2*r, colore)
+def draw_circle_vuoto(img, x, y, r, colore): draw_ellisse_vuota(img, x, y, x, y, 2*r, colore)
+draw_circle_vuoto(img, 150, 50, 30, red)
 images.visd(img)
