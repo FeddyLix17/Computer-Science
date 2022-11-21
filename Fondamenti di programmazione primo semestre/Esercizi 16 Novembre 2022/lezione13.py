@@ -117,9 +117,9 @@ def ruota_dx(img):
     img2 = crea_immagine(altezza, larghezza)
     # per ogni pixel della immagine originale
     for y, riga in enumerate(img):
-        for x, pixel in enumerate(riga):
+        for x, pixel in enumerate(riga, -1):
             # calcolo le coordinate della destinazione
-            X = y
+            X = altezza -1 -y
             Y = x 
             # e copio il pixel
             img2[Y][X] = pixel
