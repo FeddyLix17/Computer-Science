@@ -27,9 +27,7 @@ images.visd(img2) # e trovo una colonna rossa invece di un solo pixel!!!
 # Creazione di una immagine/matrice monocolore nel modo corretto
 # crea_immagine ritorna un immagine monocolore nera
 def crea_immagine(larghezza, altezza, colore=black):
-    return [ [ colore ]*larghezza
-    for i in range(altezza)
-    ]
+    return [ [ colore ] * larghezza for i in range(altezza) ]
 # mentre crea_imm crea un'immagine monocolore in base al parametro passatogli
 def crea_imm(L,H,C):
     img = []
@@ -40,9 +38,9 @@ def crea_imm(L,H,C):
         img.append(riga)
     return img
 img = crea_imm(30, 40, red)
-img5 = crea_immagine(50, 50)
+img5 = crea_immagine(50, 50, black)
 #test di prova per salvare immagini
-#images.save(img5, "sfondoNero.png")
+images.save(img5, "sfondoNero.png")
 img[5][7] = blue # coloro un pixel
 images.visd(img)
 
@@ -51,7 +49,7 @@ images.visd(img)
 # Line = list[Pixel]
 # Picture = list[Line]
 # images.load(filename : str) -> Picture
-img3 = images.load('sfondoNero.png')
+img3 = images.load('img1.png')
 print(len(img3), len(img3[0])) # altezza e larghezza
 img3[40][30:250] = [red]*220 # coloriamo una fila di pixel
 # images.save(img : Picture, filename : str) -> None
@@ -132,7 +130,7 @@ def draw_h_line2(img, x, y, x2, colore):
         # una volta aggiustati gli estremi la si disegna
         for X in range(xmin, xmax+1):
             img[y][X] = colore
-img = images.load('3cime.png')
+img = images.load('img1.png')
 draw_h_line2(img, 30, 100, 200, red)
 images.visd(img)
 # lo stesso per una linea verticale
