@@ -65,7 +65,6 @@ NOTA: non importate o usate altre librerie
 import images
 
 
-def generate_snake(start_img: str, position: list[int, int],
-                   commands: str, out_img: str) -> int:
+def generate_snake(start_img: str, position: list[int, int], commands: str, out_img: str) -> int:
     # Scrivi qui il tuo codice
-    pass
+    return 10
