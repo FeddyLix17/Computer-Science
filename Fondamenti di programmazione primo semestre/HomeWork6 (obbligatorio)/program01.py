@@ -74,15 +74,19 @@ def draw_pixel(img, x, y, colore):
 
 def generate_snake(start_img: str, position: list[int, int], commands: str, out_img: str) -> int:
     # Scrivi qui il tuo codice
-    img, commands, snakelen = images.load(start_img), commands.split(), 1
+    img, commands, snakelen, nextmove, aoao = images.load(start_img), commands.split(), 1, 0, ""
+    aoaoao = len(commands)
     moveset = {'N': (0, -1), 'S': (0, 1), 'E': (1, 0), 'W': (-1, 0), 'NE': (1, -1), 'NW': (-1, -1), 'SE': (1, 1), 'SW': (-1, 1)}
-    while commands and img[position[0] + moveset[commands[0]][0]][position[1] + moveset[commands[0]][1]] != (255, 0, 0):
-        command = commands.pop(0)
+    while nextmove < len(commands) and img[position[0] + moveset[commands[nextmove]][0]][position[1] + moveset[commands[nextmove]][1]] != (255, 0, 0):
+        command = commands[nextmove]
         position = [position[0] + moveset[command][0], position[1] + moveset[command][1]]
-        if img[position[0]][position[1]] == (255, 165, 0):
+        #if nextmove == 12:
+        #    return img[position[0]][position[1]]
+        if img[position[0]][position[1]] == (255, 128, 0): 
             snakelen += 1
-        draw_pixel(img, position[0], position[1], (0, 255, 0))
-    #draw_pixel(img, moveset.get(), position[1], (0, 255, 0))
-    snake = []
+            aoao+="a"
+        draw_pixel(img, position[0], position[1], (128, 128, 128))
+        #images.save(img, out_img.replace("/output_end", f"/output_end{nextmove}"))
+        nextmove += 1
     images.save(img, out_img)
-    return snakelen
+    return snakelen, img[12][15]

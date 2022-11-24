@@ -80,7 +80,7 @@ def xkcd_to_list_of_weights(xkcd : str) -> list[int]:
     # INSERISCI QUI IL TUO CODICE
     xkcd = xkcd.replace('1', ' 1').replace('5', ' 5')
     xkcd = xkcd.split()
-    return list(map(int, [x for x in xkcd]))
+    return list(map(int, xkcd))
 
 
 def list_of_weights_to_number(weigths : list[int] ) -> int:
