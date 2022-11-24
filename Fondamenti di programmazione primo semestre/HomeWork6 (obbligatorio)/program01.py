@@ -82,8 +82,9 @@ def generate_snake(start_img: str, position: list[int, int], commands: str, out_
     draw_pixel(img, position[0], position[1], (128, 128, 128))
     while nextmove < len(commands) and img[position[0] + moveset[commands[nextmove]][0]][position[1] + moveset[commands[nextmove]][1]] != (255, 0, 0):
         command = commands[nextmove]
-        position = [position[0] + moveset[command]
-                    [0], position[1] + moveset[command][1]]
+        input('Press enter to continue')
+        images.save(img, out_img)
+        position = [position[0] + moveset[command][0], position[1] + moveset[command][1]]
         if img[position[1]][position[0]] == (255, 128, 0):
             snakelen += 1
         draw_pixel(img, position[0], position[1], (128, 128, 128))
