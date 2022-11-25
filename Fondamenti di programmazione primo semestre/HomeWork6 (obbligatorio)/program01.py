@@ -74,21 +74,24 @@ def draw_pixel(img, x, y, colore):
 
 
 def generate_snake(start_img: str, position: list[int, int], commands: str, out_img: str) -> int:
-    # Scrivi qui il tuo codice
-    img, commands, snakelen, nextmove = images.load(
-        start_img), commands.split(), 1, 0
+    img, commands, snakelen, nextmove = images.load(start_img), commands.split(), 1, 0
     all_positions = [position]
     moveset = {'N': (0, -1), 'S': (0, 1), 'E': (1, 0), 'W': (-1, 0), 'NE': (1, -1), 'NW': (-1, -1), 'SE': (1, 1), 'SW': (-1, 1)}
-    draw_pixel(img, position[0], position[1], (128, 128, 128))
-    while nextmove < len(commands) and img[position[0] + moveset[commands[nextmove]][0]][position[1] + moveset[commands[nextmove]][1]] != (255, 0, 0):
+    #draw_pixel(img, position[0], position[1], (128, 128, 128))
+    #command = commands[nextmove]
+    #position = [position[0] + moveset[command][0], position[1] + moveset[command][1]]
+    #all_positions.append(position)
+    #nextmove += 1
+    while nextmove < len(commands) and img[position[1]][position[0]] != (255, 0, 0):
+        #nextmove += 1
         command = commands[nextmove]
-        input('Press enter to continue')
-        images.save(img, out_img)
-        position = [position[0] + moveset[command][0], position[1] + moveset[command][1]]
-        if img[position[1]][position[0]] == (255, 128, 0):
-            snakelen += 1
+        #input('Press enter to continue')
+        #images.save(img, out_img)
+        #position = [position[0] + moveset[command][0], position[1] + moveset[command][1]]
+        if img[position[1]][position[0]] == (255, 128, 0): snakelen += 1
         draw_pixel(img, position[0], position[1], (128, 128, 128))
         all_positions.append(position)
+        position = [position[0] + moveset[command][0], position[1] + moveset[command][1]]
         nextmove += 1
     nextmove = len(all_positions) - snakelen
     while nextmove < len(all_positions):
