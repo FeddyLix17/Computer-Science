@@ -17,12 +17,13 @@ def draw_pixel(img, x, y, colore):
 def generate_snake(start_img: str, position: list[int, int], commands: str, out_img: str) -> int:
     img, commands, snakelen, nextmove, all_positions = images.load(start_img), commands.split(), 1, 0, [position]
     moveset = {'N': (0, -1), 'S': (0, 1), 'E': (1, 0), 'W': (-1, 0),'NE': (1, -1), 'NW': (-1, -1), 'SE': (1, 1), 'SW': (-1, 1)}
-    while nextmove < len(commands) and position not in all_positions[-snakelen:-1] and position != (0, 255, 0): 
+    while nextmove < len(commands) and img[position[1]][position[0]] != (0, 255, 0) and img[position[1]][position[0]] != (255, 0, 0): 
         #time.sleep(0.1)
         input()
-        images.save(img, out_img)
+        #images.save(img, out_img)
         command = commands[nextmove]
         draw_pixel(img, all_positions[-snakelen][0], all_positions[-snakelen][1], (128, 128, 128))
+        draw_pixel(img, position[0], position[1], (0, 255, 0))
         position = [position[0] + moveset[command][0], position[1] + moveset[command][1]]
         if position[0] < 0:
             position[0] = len(img[0]) - 1
@@ -34,15 +35,19 @@ def generate_snake(start_img: str, position: list[int, int], commands: str, out_
             position[1] = 0
         if img[position[1]][position[0]] == (255, 128, 0):
             snakelen += 1
-        draw_pixel(img, position[0], position[1], (0, 255, 0))
+            draw_pixel(img, all_positions[-snakelen][0], all_positions[-snakelen][1], (0, 255, 0))
+            #snakelen += 1
+        #draw_pixel(img, position[0], position[1], (0, 255, 0))
+            #draw_pixel(img, position[0], position[1], (0, 255, 0))
         all_positions.append(position)
+        images.save(img, out_img)
         nextmove += 1
         #command = commands[nextmove]
         #position = [position[0] + moveset[command][0], position[1] + moveset[command][1]]
 
-    if img[all_positions[-1][1]][all_positions[-1][0]] == (255, 0, 0):
-        all_positions.remove(all_positions[-1])
-    nextmove = len(all_positions) - snakelen
+    #if img[all_positions[-1][1]][all_positions[-1][0]] == (255, 0, 0):
+    #    all_positions.remove(all_positions[-1])
+    #nextmove = len(all_positions) - snakelen
     #images.save(img, out_img)
     return snakelen
 
