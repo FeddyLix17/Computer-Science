@@ -65,32 +65,24 @@ NOTA: non importate o usate altre librerie
 import images
 
 
-#def draw_pixel(img, x, y, colore):
-    #L, A = len(img[0]), len(img)
-    #if 0 <= x < L and 0 <= y < A:
-#        x = int(round(x))
-#        y = int(round(y))
-#        img[int(round(y))][int(round(x))] = colore
 
 
 def generate_snake(start_img: str, position: list[int, int], commands: str, out_img: str) -> int:
-    img, commands, snakelen, nextmove, all_positions = images.load(
-        start_img), commands.split(), 1, 0, [position]
+    img, commands, snakelen, nextmove, all_positions = images.load(start_img), commands.split(), 1, 0, [position]
     moveset = {'N': (0, -1), 'S': (0, 1), 'E': (1, 0), 'W': (-1, 0),'NE': (1, -1), 'NW': (-1, -1), 'SE': (1, 1), 'SW': (-1, 1)}
+    diagonals = {'NE': ('N', 'E'), 'NW': ('N', 'W'), 'SE': ('S', 'E'), 'SW': ('S', 'W')}
     img[position[1]][position[0]] = (128, 128, 128)
     command = commands[nextmove]
-    position = [position[0] + moveset[command]
-                [0], position[1] + moveset[command][1]]
+    position = [position[0] + moveset[command][0], position[1] + moveset[command][1]]
     nextmove += 1
     all_positions.append(position)
-    while nextmove < len(commands) and img[position[1]][position[0]] != (0, 255, 0) and img[position[1]][position[0]] != (255, 0, 0):
+    while nextmove < len(commands):
         #time.sleep(0.1)
         #input()
-        command = commands[nextmove]
+        if img[position[1]][position[0]] == (0, 255, 0) or img[position[1]][position[0]] == (255, 0, 0): break
+        command = commands[nextmove]    
         img[all_positions[-snakelen - 1][1]][all_positions[-snakelen - 1][0]] = (128, 128, 128)
         img[position[1]][position[0]] = (0, 255, 0)
-        #draw_pixel(img, all_positions[-snakelen - 1][0], all_positions[-snakelen - 1][1], (128, 128, 128))
-        #draw_pixel(img, position[0], position[1], (0, 255, 0))
         position = [position[0] + moveset[command][0], position[1] + moveset[command][1]]
         if position[0] < 0:
             position[0] = len(img[0]) - 1
@@ -100,8 +92,8 @@ def generate_snake(start_img: str, position: list[int, int], commands: str, out_
             position[1] = len(img) - 1
         elif position[1] >= len(img):
             position[1] = 0
-        if img[position[1]][position[0]] == (255, 128, 0):
-            snakelen += 1
+        if img[position[1]][position[0]] == (255, 128, 0): snakelen += 1
+        #if command in diagonals and (diagonals[command][0] in commands[nextmove-1] or diagonals[command][1] in commands[nextmove-1]): break
         all_positions.append(position)
         images.save(img, out_img)
         nextmove += 1
