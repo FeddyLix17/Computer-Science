@@ -64,8 +64,28 @@ NOTA: non importate o usate altre librerie
 
 import images
 
+def check_diagonal_cross(all_positions, position, nextmove, command, moveset, img):
+    diagonals = {'NE': ('N', 'E'), 'NW': ('N', 'W'), 'SE': ('S', 'E'), 'SW': ('S', 'W')}
+    if img[all_positions[-1][1]][all_positions[-1][1] + moveset[command][0]] == (0, 255, 0) and img[all_positions[-1][0]][all_positions[-1][0] + moveset[command][0]] == (0, 255, 0):
+        return False
+    return True
 
-
+def check_bordeless(position, img):
+    checked = 0
+    if position[0] < 0:
+        position[0] = len(img[0]) - 1
+        checked = 1
+    elif position[0] >= len(img[0]):
+        position[0] = 0
+        checked = 1
+    if position[1] < 0:
+        position[1] = len(img) - 1
+        checked = 1
+    elif position[1] >= len(img):
+        position[1] = 0
+        checked = 1
+    return checked
+        
 
 def generate_snake(start_img: str, position: list[int, int], commands: str, out_img: str) -> int:
     img, commands, snakelen, nextmove, all_positions = images.load(start_img), commands.split(), 1, 0, [position]
@@ -84,16 +104,11 @@ def generate_snake(start_img: str, position: list[int, int], commands: str, out_
         img[all_positions[-snakelen - 1][1]][all_positions[-snakelen - 1][0]] = (128, 128, 128)
         img[position[1]][position[0]] = (0, 255, 0)
         position = [position[0] + moveset[command][0], position[1] + moveset[command][1]]
-        if position[0] < 0:
-            position[0] = len(img[0]) - 1
-        elif position[0] >= len(img[0]):
-            position[0] = 0
-        if position[1] < 0:
-            position[1] = len(img) - 1
-        elif position[1] >= len(img):
-            position[1] = 0
+        check_bordeless(position, img)
         if img[position[1]][position[0]] == (255, 128, 0): snakelen += 1
-        #if command in diagonals and (diagonals[command][0] in commands[nextmove-1] or diagonals[command][1] in commands[nextmove-1]): break
+        if command in diagonals:
+            
+            if not check_diagonal_cross(all_positions, position, nextmove, command, moveset, img): break
         all_positions.append(position)
         images.save(img, out_img)
         nextmove += 1
