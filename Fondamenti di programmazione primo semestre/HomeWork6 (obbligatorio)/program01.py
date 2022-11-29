@@ -114,7 +114,7 @@ def generate_snake(start_img: str, position: list[int, int], commands: str, out_
         position = [position[0] + moveset[command][0], position[1] + moveset[command][1]]
         position, supercheck = check_bordeless(position, img)
         print(position)
-        supercheck = check_bordeless(position, img)
+        #supercheck = check_bordeless(position, img)
         if img[position[1]][position[0]] == (255, 128, 0):
             snakelen += 1
         all_positions.append(position)
