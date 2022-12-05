@@ -38,12 +38,14 @@ def es67(path):
         'txt' : 6
     """
     # inserite qui il vostro codice
+    dizionariodelsium = {}
+    minemass(path, dizionariodelsium)
+    for x in dizionariodelsium:
+        dizionariodelsium[x] = max(dizionariodelsium[x]) - min(dizionariodelsium[x])
+    return dizionariodelsium
     dizionario = {}
     minemass(path, dizionario)
     for k, v in dizionario.items():
-        if len(v) > 1:
-            dizionario[k] = max(v) - min(v)
-        else:
-            dizionario[k] = v[0]
-    return dizionario
+        dizionario[k] = max(v) - min(v)
+        return dizionario
 print(es67("A1"))
