@@ -54,10 +54,10 @@ ATTENZIONE: la funzione dumbothello o qualche altra
 funzione usata per la soluzione deve essere ricorsiva.
 
 '''
-
 def dumbothello(filename : str) -> tuple[int,int,int] :
     # il tuo programma va qui
-    pass
+    
+    return (0,0,0)
 
 if __name__ == "__main__":
     R = dumbothello("boards/01.txt")
