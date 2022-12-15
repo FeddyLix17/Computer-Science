@@ -56,51 +56,61 @@ funzione usata per la soluzione deve essere ricorsiva.
 '''
 
 def dumbothello_rec(board, player, a, b, c):
+  # la funzione deve essere ricorsiva
   if player == "B":
-    other_player = "W"
+    other = "W"
   else:
-    other_player = "B"
+    other = "B"
   if not any("." in row for row in board):
-    if sum(row.count("B") for row in board) > sum(row.count("W") for row in board):
-      a += 1
-    elif sum(row.count("B") for row in board) < sum(row.count("W") for row in board):
-      b += 1
-    else:
-      c += 1
     return a, b, c
-  for row in range(len(board)):
-    for col in range(len(board[0])):
-      if board[row][col] == ".":
-        if any(board[row][col + 1] == other_player for col in range(col + 1, len(board[0])) if 0 <= col + 1 < len(board[0])):
-          for col in range(col + 1, len(board[0])):
-            if board[row][col] == other_player:
-              board[row][col] = player
-            else:
-              break
-        if any(board[row][col - 1] == other_player for col in range(col - 1, -1, -1) if 0 <= col - 1 < len(board[0])):
-          for col in range(col - 1, -1, -1):
-            if board[row][col] == other_player:
-              board[row][col] = player
-            else:
-              break
-        if any(board[row + 1][col] == other_player for row in range(row + 1, len(board)) if 0 <= row + 1 < len(board)):
-          for row in range(row + 1, len(board)):
-            if board[row][col] == other_player:
-              board[row][col] = player
-            else:
-              break
-        if any(board[row - 1][col] == other_player for row in range(row - 1, -1, -1) if 0 <= row - 1 < len(board)):
-          for row in range(row - 1, -1, -1):
-            if board[row][col] == other_player:
-              board[row][col] = player
-            else:
-              break
-        if any(board[row + 1][col + 1] == other_player for row, col in zip(range(row + 1), range(col + 1, len(board[0]))) if 0 <= row + 1 < len(board) and 0 <= col + 1 < len(board[0])):
-          for row, col in zip(range(row + 1), range(col + 1, len(board[0]))):
-            if board[row][col] == other_player:
-              board[row][col] = player
-            else:
-              break
+  else:
+    for i in range(len(board)):
+      for j in range(len(board[i])):
+        if board[i][j] == ".":
+          if i > 0 and board[i - 1][j] == other:
+            for k in range(i - 1, -1, -1):
+              if board[k][j] == player:
+                board[i][j] = player
+                board[k][j] = player
+                a, b, c = dumbothello_rec(board, other, a, b, c)
+                board[i][j] = "."
+                board[k][j] = other
+                break
+              elif board[k][j] == ".":
+                break
+          if i < len(board) - 1 and board[i + 1][j] == other:
+            for k in range(i + 1, len(board)):
+              if board[k][j] == player:
+                board[i][j] = player
+                board[k][j] = player
+                a, b, c = dumbothello_rec(board, other, a, b, c)
+                board[i][j] = "."
+                board[k][j] = other
+                break
+              elif board[k][j] == ".":
+                break
+          if j > 0 and board[i][j - 1] == other:
+            for k in range(j - 1, -1, -1):
+              if board[i][k] == player:
+                board[i][j] = player
+                board[i][k] = player
+                a, b, c = dumbothello_rec(board, other, a, b, c)
+                board[i][j] = "."
+                board[i][k] = other
+                break
+              elif board[i][k] == ".":
+                break
+          if j < len(board[i]) - 1 and board[i][j + 1] == other:
+            for k in range(j + 1, len(board[i])):
+              if board[i][k] == player:
+                board[i][j] = player
+                board[i][k] = player
+                a, b, c = dumbothello_rec(board, other, a, b, c)
+                board[i][j] = "."
+                board[i][k] = other
+                break
+              elif board[i][k] == ".":
+                break
 def dumbothello(filename : str) -> tuple[int,int,int] :
   with open(filename, "r") as f:
     board = [line.strip().split() for line in f]
