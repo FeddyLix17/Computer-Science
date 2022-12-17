@@ -71,6 +71,7 @@ def check_board(board, player, players):
               piecetoeat += 1
         if piecetoeat > 0:
           otherpositionvalid.append((i, j))
+          piecetoeat = 0
   return otherpositionvalid
 
 
@@ -103,30 +104,39 @@ def place_disk(board, player, i, j):
         continue
       else:
         board[i + k][j + l] = player
+  print(f"stampo board dopo la mossa del giocatore {player} in {i}, {j}")
+  for x in range(len(board)):
+    print(board[x])
 
 
-def dumbothello_rec(board, player, a, b, c, players):
+
+def dumbothello_rec(board, player, a, b, c, players, ncalls):
+  print(f"chiamata ricorsiva numero {ncalls}")
+  for x in range(len(board)):
+    print(board[x])
   if len(check_board(board, player, players)) == 0:
     if len(check_board(board, players[player], players)) == 0:
-      return check_winner(board, a, b, c)
+      check_winner(board, a, b, c)
+    else:
+      dumbothello_rec(board, players[player], a, b, c, players)
   else:
     allcurrentdots = check_board(board, player, players)
     while allcurrentdots:
       x = allcurrentdots.pop()
       print(f"player {player} plays {x}")
-      recboard = board.copy()
+      recboard = board
       place_disk(recboard, player, x[0], x[1])
-      dumbothello_rec(recboard, players[player], a, b, c, players)    
-  return check_winner(recboard, a, b, c)
+      dumbothello_rec(recboard, players[player], a, b, c, players, ncalls + 1)    
+  return check_winner(board, a, b, c)
 
 
 
 def dumbothello(filename : str) -> tuple[int,int,int] :
-  filename, board, players = open(filename, "r"), [], {"B": "W", "W": "B"}
+  filename, board, players, ncall = open(filename, "r"), [], {"B": "W", "W": "B"}, 0
   for line in filename:
     board.append(line.split())
   filename.close()
-  return (dumbothello_rec(board, "B", 0, 0, 0, players))
+  return (dumbothello_rec(board, "B", 0, 0, 0, players, ncall))
 
 
 
