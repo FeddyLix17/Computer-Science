@@ -97,50 +97,56 @@ def check_winner(board, a, b, c):
     c += 1
   return (a, b, c)
 
-def place_disk(board, player, i, j):
+def place_disk(board, player, i, j, players):
   for k in range(-1, 2):
     for l in range(-1, 2):
       if not check_position(board,i + k, j + l):
         continue
-      else:
+      if board[i + k][j + l] == players[player]:
         board[i + k][j + l] = player
-  print(f"stampo board dopo la mossa del giocatore {player} in {i}, {j}")
-  for x in range(len(board)):
-    print(board[x])
+  board[i][j] = player
+  print(f"la board dopo la mossa di {player} in coordinate {i}, {j} è:")
+  for i in board:
+    print(i)
 
 
 
-def dumbothello_rec(board, player, a, b, c, players, ncalls, prevboard):
-  # have to save the board before the move and pass it to the next call of the function to avoid overwriting the board with the new move of the player and then check the winner with the new board and not the old one (the one before the move)
-  ncalls += 1
-  print(f"chiamata ricorsiva numero {ncalls}")
-  for x in range(len(board)):
-    print(board[x])
-  if len(check_board(board, player, players)) == 0:
-    if len(check_board(board, players[player], players)) == 0:
-      check_winner(board, a, b, c)
-    else:
-      dumbothello_rec(board, players[player], a, b, c, players)
-  else:
-    allcurrentdots = check_board(board, player, players)
-    while allcurrentdots:
-      x = allcurrentdots.pop()
-      print(f"player {player} plays {x}")
-      recboard = prevboard
-      place_disk(recboard, player, x[0], x[1])
-      
-      dumbothello_rec(recboard, players[player], a, b, c, players, ncalls, prevboard)    
+
+def dumbothello_rec(board, player, a, b, c, players, previousboard):
+  if not check_board(board, player, players):
+    print("mi sto arrestando")
+    a, b, c = check_winner(board, a, b, c)
+    board = previousboard
+    return (a, b, c)
+  possiblemove = check_board(board, player, players)
+  print(f"le possibili mosse di {player} sono {possiblemove}")
+  for i in possiblemove:
+    board = previousboard
+    x, y = i[0], i[1]
+    place_disk(board, player, x, y, players)
+    dumbothello_rec(board, players[player], a, b, c, players, board)
+  #return (a, b, c)
+    #dumbothello_rec(board, players[player], a, b, c, players, previousboard)
+    #board = previousboard
+  
+  
+  print("aoao del sium")
+  board = previousboard
+  #print previousboard
+  print("stampo previousboard")
+  for i in previousboard:
+    print(i)
   return check_winner(board, a, b, c)
 
 
 
 def dumbothello(filename : str) -> tuple[int,int,int] :
-  filename, board, players, ncall = open(filename, "r"), [], {"B": "W", "W": "B"}, 0
+  filename, board, players, = open(filename, "r"), [], {"B": "W", "W": "B"}
   for line in filename:
     board.append(line.split())
   filename.close()
-  return (dumbothello_rec(board, "B", 0, 0, 0, players, ncall, prevboard = board))
-
+  previousboard = board
+  return (dumbothello_rec(board, "B", 0, 0, 0, players, previousboard))
 
 
 
