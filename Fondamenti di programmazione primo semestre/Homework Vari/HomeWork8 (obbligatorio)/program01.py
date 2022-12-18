@@ -110,7 +110,9 @@ def place_disk(board, player, i, j):
 
 
 
-def dumbothello_rec(board, player, a, b, c, players, ncalls):
+def dumbothello_rec(board, player, a, b, c, players, ncalls, prevboard):
+  # have to save the board before the move and pass it to the next call of the function to avoid overwriting the board with the new move of the player and then check the winner with the new board and not the old one (the one before the move)
+  ncalls += 1
   print(f"chiamata ricorsiva numero {ncalls}")
   for x in range(len(board)):
     print(board[x])
@@ -124,9 +126,10 @@ def dumbothello_rec(board, player, a, b, c, players, ncalls):
     while allcurrentdots:
       x = allcurrentdots.pop()
       print(f"player {player} plays {x}")
-      recboard = board
+      recboard = prevboard
       place_disk(recboard, player, x[0], x[1])
-      dumbothello_rec(recboard, players[player], a, b, c, players, ncalls + 1)    
+      
+      dumbothello_rec(recboard, players[player], a, b, c, players, ncalls, prevboard)    
   return check_winner(board, a, b, c)
 
 
@@ -136,7 +139,7 @@ def dumbothello(filename : str) -> tuple[int,int,int] :
   for line in filename:
     board.append(line.split())
   filename.close()
-  return (dumbothello_rec(board, "B", 0, 0, 0, players, ncall))
+  return (dumbothello_rec(board, "B", 0, 0, 0, players, ncall, prevboard = board))
 
 
 
