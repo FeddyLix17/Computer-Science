@@ -112,41 +112,47 @@ def place_disk(board, player, i, j, players):
 
 
 
-def dumbothello_rec(board, player, a, b, c, players, previousboard):
-  if not check_board(board, player, players):
-    print("mi sto arrestando")
-    a, b, c = check_winner(board, a, b, c)
-    board = previousboard
-    return (a, b, c)
-  possiblemove = check_board(board, player, players)
-  print(f"le possibili mosse di {player} sono {possiblemove}")
-  for i in possiblemove:
-    board = previousboard
-    x, y = i[0], i[1]
-    place_disk(board, player, x, y, players)
-    dumbothello_rec(board, players[player], a, b, c, players, board)
-  #return (a, b, c)
-    #dumbothello_rec(board, players[player], a, b, c, players, previousboard)
-    #board = previousboard
+def dumbothello_rec(board, player, a, b, c, players, previousboard, allposiblemove):
+  if len(allposiblemove) == 0:
+    return check_winner(board, a, b, c)
+  # save board state before making a move
+  for i in range(len(board)):
+    for j in range(len(board[i])):
+      previousboard[i][j] = board[i][j]
+
+
   
-  
-  print("aoao del sium")
-  board = previousboard
-  #print previousboard
-  print("stampo previousboard")
-  for i in previousboard:
-    print(i)
-  return check_winner(board, a, b, c)
+
+
+
+  for i, j in allposiblemove:
+    board[i][j] = player
+    place_disk(board, player, i, j, players)
+    a, b, c = dumbothello_rec(board, players[player], a, b, c, players, previousboard, check_board(board, players[player], players))
+    
+
+
+
+
+  print("la fine della fine\n")
+  # restore board to previous state
+  for i in range(len(board)):
+    for j in range(len(board[i])):
+      board[i][j] = previousboard[i][j]
+  return (a, b, c)
+
+
 
 
 
 def dumbothello(filename : str) -> tuple[int,int,int] :
-  filename, board, players, = open(filename, "r"), [], {"B": "W", "W": "B"}
+  filename, board, players, previousboard = open(filename, "r"), [], {"B": "W", "W": "B"}, []
   for line in filename:
     board.append(line.split())
+    previousboard.append(line.split())
   filename.close()
-  previousboard = board
-  return (dumbothello_rec(board, "B", 0, 0, 0, players, previousboard))
+  allposiblemove = check_board(board, "B", players)
+  return (dumbothello_rec(board, "B", 0, 0, 0, players, previousboard, allposiblemove))
 
 
 
