@@ -110,35 +110,44 @@ def place_disk(board, player, i, j, players):
     print(i)
 
 
+def print_board(board):
+  for i in board:
+    print(i)
 
 
-def dumbothello_rec(board, player, a, b, c, players, previousboard, allposiblemove):
+
+def dumbothello_rec(board, player, a, b, c, players, previousboard , allposiblemove, depth = 0):
+  print(f"sono in profondità {depth}")
+  depth += 1  
+  print("stampo la board")
+  print_board(board)
+  print("stampo la previousboard")
+  print_board(previousboard)
+  print("=====================================")
+  
+  
+  
   if len(allposiblemove) == 0:
+    for i in range(len(board)):
+      for j in range(len(board[i])):
+        previousboard[i][j] = board[i][j]
+    print("sono in un nodo foglia")
     return check_winner(board, a, b, c)
-  # save board state before making a move
-  for i in range(len(board)):
-    for j in range(len(board[i])):
-      previousboard[i][j] = board[i][j]
-
-
   
 
-
-
   for i, j in allposiblemove:
+    # mi salvo la board in questo momento per poterla ripristinare dopo aver fatto la mossa
+    for i in range(len(board)):
+      for j in range(len(board[i])):
+        previousboard[i][j] = board[i][j]
     board[i][j] = player
     place_disk(board, player, i, j, players)
-    a, b, c = dumbothello_rec(board, players[player], a, b, c, players, previousboard, check_board(board, players[player], players))
-    
-
-
-
-
-  print("la fine della fine\n")
-  # restore board to previous state
+    a, b, c = dumbothello_rec(board, players[player], a, b, c, players, previousboard, check_board(board, players[player], players), depth)
+  # ripristino la board e la previousboard per il nodo padre
   for i in range(len(board)):
     for j in range(len(board[i])):
       board[i][j] = previousboard[i][j]
+  print("la fine della fine\n")
   return (a, b, c)
 
 
@@ -146,13 +155,14 @@ def dumbothello_rec(board, player, a, b, c, players, previousboard, allposiblemo
 
 
 def dumbothello(filename : str) -> tuple[int,int,int] :
-  filename, board, players, previousboard = open(filename, "r"), [], {"B": "W", "W": "B"}, []
-  for line in filename:
+  textinsidethefile, board, players, previousboard, depth = open(filename, "r"), [], {"B": "W", "W": "B"}, [], 0
+  for line in textinsidethefile:
     board.append(line.split())
     previousboard.append(line.split())
-  filename.close()
+    #previousboard.append((". " * len(line.split())).split())
+  textinsidethefile.close()
   allposiblemove = check_board(board, "B", players)
-  return (dumbothello_rec(board, "B", 0, 0, 0, players, previousboard, allposiblemove))
+  return (dumbothello_rec(board, "B", 0, 0, 0, players, previousboard, allposiblemove, depth))
 
 
 
