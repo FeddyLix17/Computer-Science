@@ -57,6 +57,9 @@ funzione usata per la soluzione deve essere ricorsiva.
 '''
 
 
+#from time import sleep
+
+
 def check_board(board, player, players):
   piecetoeat = 0
   otherpositionvalid = []
@@ -111,66 +114,43 @@ def place_disk(board, player, i, j, players):
   print("\n")
 
 
-def print_board(board):
-  for i in board:
-    print(i)
+class Node:
+  def __init__(self, board, depth, children):
+    self.board = board
+    self.depth = depth
+    self.children = children
 
-
-
-def dumbothello_rec(board, player, a, b, c, players, previousboard , allposiblemove, depth = 0):
-  print(f"sono in profondità {depth}")
+def dumbothello_rec(board, player, a, b, c, players, allposiblemove, depth = 0):
   depth += 1
-  print(f"le possibili mosse di {player} sono: {allposiblemove}\n")
   if len(allposiblemove) == 0:
-    print("sono in un nodo foglia")
-    return check_winner(board, a, b, c)
-  elif len (allposiblemove) > 1:
-    print("codice eseguito prima del for")
-    temporaryboard = []
-    for i in range(len(board)):
-      temporaryboard.append([])
-      for j in range(len(board[i])):
-        temporaryboard[i].append(board[i][j])
-    for i, j in allposiblemove:
-      print(f"torno dentro il for con profondità {depth}, mossa {i}, {j}, giocatore {player}, a = {a}, b = {b}, c = {c}")
-      print(f"la board prima la mossa di {player} in coordinate {i}, {j} è:")
-      print_board(temporaryboard)
-      temporaryboard[i][j] = player
-      place_disk(temporaryboard, player, i, j, players)
-    # contorllo la board dopo la mossa e se è completamente piena allora controllo chi ha vinto
-      a , b, c = dumbothello_rec(temporaryboard, players[player], a, b, c, players, previousboard, check_board(temporaryboard, players[player], players), depth)
+    a, b, c = check_winner(board, a, b, c)
   else:
-    print("codice eseguito prima del for")
-    temporaryboard = []
-    for i in range(len(board)):
-      temporaryboard.append([])
-      for j in range(len(board[i])):
-        temporaryboard[i].append(board[i][j])
-    i, j = allposiblemove[0]
-    print(f"torno dentro il for con profondità {depth}, mossa {i}, {j}, giocatore {player}, a = {a}, b = {b}, c = {c}")
-    print(f"la board prima la mossa di {player} in coordinate {i}, {j} è:")
-    print_board(temporaryboard)
-    temporaryboard[i][j] = player
-    place_disk(temporaryboard, player, i, j, players)
-    # contorllo la board dopo la mossa e se è completamente piena allora controllo chi ha vinto
-    if len(check_board(temporaryboard, players[player], players)) == 0:
-      print("sono in un nodo foglia nel for del sium")
-      return check_winner(temporaryboard, a, b, c)
-  print("codice eseguito dopo il for prima della fine di tutto")
+    # mi salvo il nodo corrente verificando in contemporanea se è una foglia o meno e se è una foglia verifico chi ha vinto e aggiorno i contatori a, b, c
+    currentnode = Node(board, depth, check_board(board, player, players))
+    for i in range(len(allposiblemove)):
+      # per ogni mossa possibile creo una nuova board e la passo alla ricorsione
+      newboard = []
+      for j in range(len(board)):
+        newboard.append(board[j].copy())
+      place_disk(newboard, player, allposiblemove[i][0], allposiblemove[i][1], players)
+      currentnode.children.append(Node(newboard, depth, check_board(newboard, players[player], players)))
+      if len(currentnode.children) == 0:
+        return check_winner(currentnode.board, a, b, c)
+      else:
+        a, b, c = dumbothello_rec(newboard, players[player], a, b, c, players, allposiblemove, depth)
+  
+  
+  
   return (a, b, c)
 
 
-
-
-
 def dumbothello(filename : str) -> tuple[int,int,int] :
-  textinsidethefile, board, players, previousboard, depth = open(filename, "r"), [], {"B": "W", "W": "B"}, [], 0
+  textinsidethefile, board, players, depth = open(filename, "r"), [], {"B": "W", "W": "B"}, 0
   for line in textinsidethefile:
     board.append(line.split())
-    previousboard.append(line.split())
   textinsidethefile.close()
   allposiblemove = check_board(board, "B", players)
-  return (dumbothello_rec(board, "B", 0, 0, 0, players, previousboard, allposiblemove, depth))
+  return (dumbothello_rec(board, "B", 0, 0, 0, players, allposiblemove, depth))
 
 
 
