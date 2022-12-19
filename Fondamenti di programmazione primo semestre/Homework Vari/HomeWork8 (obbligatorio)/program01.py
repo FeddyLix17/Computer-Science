@@ -108,6 +108,7 @@ def place_disk(board, player, i, j, players):
   print(f"la board dopo la mossa di {player} in coordinate {i}, {j} è:")
   for i in board:
     print(i)
+  print("\n")
 
 
 def print_board(board):
@@ -118,36 +119,44 @@ def print_board(board):
 
 def dumbothello_rec(board, player, a, b, c, players, previousboard , allposiblemove, depth = 0):
   print(f"sono in profondità {depth}")
-  depth += 1  
-  print("stampo la board")
-  print_board(board)
-  print("stampo la previousboard")
-  print_board(previousboard)
-  print("=====================================")
-  
-  
-  
+  depth += 1
+  print(f"le possibili mosse di {player} sono: {allposiblemove}\n")
   if len(allposiblemove) == 0:
-    for i in range(len(board)):
-      for j in range(len(board[i])):
-        previousboard[i][j] = board[i][j]
     print("sono in un nodo foglia")
     return check_winner(board, a, b, c)
-  
-
-  for i, j in allposiblemove:
-    # mi salvo la board in questo momento per poterla ripristinare dopo aver fatto la mossa
+  elif len (allposiblemove) > 1:
+    print("codice eseguito prima del for")
+    temporaryboard = []
     for i in range(len(board)):
+      temporaryboard.append([])
       for j in range(len(board[i])):
-        previousboard[i][j] = board[i][j]
-    board[i][j] = player
-    place_disk(board, player, i, j, players)
-    a, b, c = dumbothello_rec(board, players[player], a, b, c, players, previousboard, check_board(board, players[player], players), depth)
-  # ripristino la board e la previousboard per il nodo padre
-  for i in range(len(board)):
-    for j in range(len(board[i])):
-      board[i][j] = previousboard[i][j]
-  print("la fine della fine\n")
+        temporaryboard[i].append(board[i][j])
+    for i, j in allposiblemove:
+      print(f"torno dentro il for con profondità {depth}, mossa {i}, {j}, giocatore {player}, a = {a}, b = {b}, c = {c}")
+      print(f"la board prima la mossa di {player} in coordinate {i}, {j} è:")
+      print_board(temporaryboard)
+      temporaryboard[i][j] = player
+      place_disk(temporaryboard, player, i, j, players)
+    # contorllo la board dopo la mossa e se è completamente piena allora controllo chi ha vinto
+      a , b, c = dumbothello_rec(temporaryboard, players[player], a, b, c, players, previousboard, check_board(temporaryboard, players[player], players), depth)
+  else:
+    print("codice eseguito prima del for")
+    temporaryboard = []
+    for i in range(len(board)):
+      temporaryboard.append([])
+      for j in range(len(board[i])):
+        temporaryboard[i].append(board[i][j])
+    i, j = allposiblemove[0]
+    print(f"torno dentro il for con profondità {depth}, mossa {i}, {j}, giocatore {player}, a = {a}, b = {b}, c = {c}")
+    print(f"la board prima la mossa di {player} in coordinate {i}, {j} è:")
+    print_board(temporaryboard)
+    temporaryboard[i][j] = player
+    place_disk(temporaryboard, player, i, j, players)
+    # contorllo la board dopo la mossa e se è completamente piena allora controllo chi ha vinto
+    if len(check_board(temporaryboard, players[player], players)) == 0:
+      print("sono in un nodo foglia nel for del sium")
+      return check_winner(temporaryboard, a, b, c)
+  print("codice eseguito dopo il for prima della fine di tutto")
   return (a, b, c)
 
 
@@ -159,7 +168,6 @@ def dumbothello(filename : str) -> tuple[int,int,int] :
   for line in textinsidethefile:
     board.append(line.split())
     previousboard.append(line.split())
-    #previousboard.append((". " * len(line.split())).split())
   textinsidethefile.close()
   allposiblemove = check_board(board, "B", players)
   return (dumbothello_rec(board, "B", 0, 0, 0, players, previousboard, allposiblemove, depth))
