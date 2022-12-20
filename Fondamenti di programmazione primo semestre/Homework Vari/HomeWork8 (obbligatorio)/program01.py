@@ -120,25 +120,40 @@ class Node:
     self.depth = depth
     self.children = children
 
-def dumbothello_rec(board, player, a, b, c, players, allposiblemove, depth = 0):
+def dumbothello_rec(board, player, a, b, c, players, allposiblemove, depth = 0, allnode = []):
   depth += 1
+  allnode.append(Node(board, depth, []))
+  # se il nodo corrente è una foglia, allora ritorno la tripla (a, b, c) con i valori aggiornati
+  if len(allposiblemove) == 0:
+    a, b, c = check_winner(board, a, b, c)
+    return (a, b, c)
+  else:
+    for i in range(len(allposiblemove)):
+      board = allnode[depth -1].board
+      place_disk(board, player, allposiblemove[i][0], allposiblemove[i][1], players)
+      a, b, c = dumbothello_rec(board, players[player], a, b, c, players, allposiblemove, depth, allnode)
+  
+  '''
   if len(allposiblemove) == 0:
     a, b, c = check_winner(board, a, b, c)
   else:
-    # mi salvo il nodo corrente verificando in contemporanea se è una foglia o meno e se è una foglia verifico chi ha vinto e aggiorno i contatori a, b, c
-    currentnode = Node(board, depth, check_board(board, player, players))
     for i in range(len(allposiblemove)):
-      # per ogni mossa possibile creo una nuova board e la passo alla ricorsione
       newboard = []
       for j in range(len(board)):
         newboard.append(board[j].copy())
       place_disk(newboard, player, allposiblemove[i][0], allposiblemove[i][1], players)
-      currentnode.children.append(Node(newboard, depth, check_board(newboard, players[player], players)))
-      if len(currentnode.children) == 0:
-        return check_winner(currentnode.board, a, b, c)
-      else:
-        a, b, c = dumbothello_rec(newboard, players[player], a, b, c, players, allposiblemove, depth)
+      a, b, c = dumbothello_rec(newboard, players[player], a, b, c, players, allposiblemove, depth, allnode)
   
+  if len(allposiblemove) == 0:
+    a, b, c = check_winner(board, a, b, c)
+  else:
+    for i in range(len(allposiblemove)):
+      newboard = []
+      for j in range(len(board)):
+        newboard.append(board[j].copy())
+      place_disk(newboard, player, allposiblemove[i][0], allposiblemove[i][1], players)
+      a, b, c = dumbothello_rec(newboard, players[player], a, b, c, players, allposiblemove, depth, allnode)
+  '''
   
   
   return (a, b, c)
@@ -146,11 +161,12 @@ def dumbothello_rec(board, player, a, b, c, players, allposiblemove, depth = 0):
 
 def dumbothello(filename : str) -> tuple[int,int,int] :
   textinsidethefile, board, players, depth = open(filename, "r"), [], {"B": "W", "W": "B"}, 0
+  allnode = []
   for line in textinsidethefile:
     board.append(line.split())
   textinsidethefile.close()
   allposiblemove = check_board(board, "B", players)
-  return (dumbothello_rec(board, "B", 0, 0, 0, players, allposiblemove, depth))
+  return (dumbothello_rec(board, "B", 0, 0, 0, players, allposiblemove, depth, allnode))
 
 
 
