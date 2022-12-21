@@ -90,7 +90,7 @@ def check_winner(board, a, b, c):
     for j in range(len(board[i])):
       if board[i][j] == "B":
         b += 1
-      elif board[i][j] == "W":
+      if board[i][j] == "W":
         w += 1
   if b > w:
     a += 1
@@ -108,35 +108,29 @@ def place_disk(board, player, i, j, players, depth):
       if board[i + k][j + l] == players[player]:
         board[i + k][j + l] = player
   board[i][j] = player
-  print(f"profondità {depth}, la board dopo la mossa di {player} in coordinate {i}, {j} è:")
-  for i in board:
-    print(i)
-  print("\n")
+  
 
-
-def dumbothello_rec(board, player, a, b, c, players, allposiblemove, depth = 0, allnode = []):
+def dumbothello_rec(board, player, a, b, c, players, allposiblemove, depth = 0):
   depth += 1
   if len(allposiblemove) == 0:
-    return check_winner(board, a, b, c)
+    a,b,c = check_winner(board, a, b, c)
   else:
     for i in range(len(allposiblemove)):
       tempboard = []
       for j in board:
         tempboard.append(j.copy())
       place_disk(tempboard, player, allposiblemove[i][0], allposiblemove[i][1], players, depth)
-      print(f"mosse possibili per {players[player]}: {check_board(tempboard, players[player], players)}")
-      a, b, c = dumbothello_rec(tempboard, players[player], a, b, c, players, check_board(tempboard, players[player], players), depth, allnode)
+      a, b, c = dumbothello_rec(tempboard, players[player], a, b, c, players, check_board(tempboard, players[player], players), depth)
   return (a, b, c)
 
 
 def dumbothello(filename : str) -> tuple[int,int,int] :
   textinsidethefile, board, players, depth = open(filename, "r"), [], {"B": "W", "W": "B"}, 0
-  allnode = []
   for line in textinsidethefile:
     board.append(line.split())
   textinsidethefile.close()
   allposiblemove = check_board(board, "B", players)
-  return (dumbothello_rec(board, "B", 0, 0, 0, players, allposiblemove, depth, allnode))
+  return (dumbothello_rec(board, "B", 0, 0, 0, players, allposiblemove, depth, ))
 
 
 
