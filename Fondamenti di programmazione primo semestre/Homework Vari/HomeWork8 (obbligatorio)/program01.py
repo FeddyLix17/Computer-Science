@@ -100,7 +100,7 @@ def check_winner(board, a, b, c):
     c += 1
   return (a, b, c)
 
-def place_disk(board, player, i, j, players):
+def place_disk(board, player, i, j, players, depth):
   for k in range(-1, 2):
     for l in range(-1, 2):
       if not check_position(board,i + k, j + l):
@@ -108,54 +108,24 @@ def place_disk(board, player, i, j, players):
       if board[i + k][j + l] == players[player]:
         board[i + k][j + l] = player
   board[i][j] = player
-  print(f"la board dopo la mossa di {player} in coordinate {i}, {j} è:")
+  print(f"profondità {depth}, la board dopo la mossa di {player} in coordinate {i}, {j} è:")
   for i in board:
     print(i)
   print("\n")
 
 
-class Node:
-  def __init__(self, board, depth, children):
-    self.board = board
-    self.depth = depth
-    self.children = children
-
 def dumbothello_rec(board, player, a, b, c, players, allposiblemove, depth = 0, allnode = []):
   depth += 1
-  allnode.append(Node(board, depth, []))
-  # se il nodo corrente è una foglia, allora ritorno la tripla (a, b, c) con i valori aggiornati
   if len(allposiblemove) == 0:
-    a, b, c = check_winner(board, a, b, c)
-    return (a, b, c)
+    return check_winner(board, a, b, c)
   else:
     for i in range(len(allposiblemove)):
-      board = allnode[depth -1].board
-      place_disk(board, player, allposiblemove[i][0], allposiblemove[i][1], players)
-      a, b, c = dumbothello_rec(board, players[player], a, b, c, players, allposiblemove, depth, allnode)
-  
-  '''
-  if len(allposiblemove) == 0:
-    a, b, c = check_winner(board, a, b, c)
-  else:
-    for i in range(len(allposiblemove)):
-      newboard = []
-      for j in range(len(board)):
-        newboard.append(board[j].copy())
-      place_disk(newboard, player, allposiblemove[i][0], allposiblemove[i][1], players)
-      a, b, c = dumbothello_rec(newboard, players[player], a, b, c, players, allposiblemove, depth, allnode)
-  
-  if len(allposiblemove) == 0:
-    a, b, c = check_winner(board, a, b, c)
-  else:
-    for i in range(len(allposiblemove)):
-      newboard = []
-      for j in range(len(board)):
-        newboard.append(board[j].copy())
-      place_disk(newboard, player, allposiblemove[i][0], allposiblemove[i][1], players)
-      a, b, c = dumbothello_rec(newboard, players[player], a, b, c, players, allposiblemove, depth, allnode)
-  '''
-  
-  
+      tempboard = []
+      for j in board:
+        tempboard.append(j.copy())
+      place_disk(tempboard, player, allposiblemove[i][0], allposiblemove[i][1], players, depth)
+      print(f"mosse possibili per {players[player]}: {check_board(tempboard, players[player], players)}")
+      a, b, c = dumbothello_rec(tempboard, players[player], a, b, c, players, check_board(tempboard, players[player], players), depth, allnode)
   return (a, b, c)
 
 
