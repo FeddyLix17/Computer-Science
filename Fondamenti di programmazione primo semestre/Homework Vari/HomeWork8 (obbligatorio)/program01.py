@@ -57,12 +57,9 @@ funzione usata per la soluzione deve essere ricorsiva.
 '''
 
 
-#from time import sleep
-
-
 def check_board(board, player, players):
   piecetoeat = 0
-  otherpositionvalid = []
+  allvalidposition = []
   for i in range(len(board)):
     for j in range(len(board[i])):
       if board[i][j] == ".":
@@ -73,9 +70,9 @@ def check_board(board, player, players):
             if board[i + k][j + l] == players[player]:
               piecetoeat += 1
         if piecetoeat > 0:
-          otherpositionvalid.append((i, j))
+          allvalidposition.append((i, j))
           piecetoeat = 0
-  return otherpositionvalid
+  return allvalidposition
 
 
 
@@ -94,9 +91,9 @@ def check_winner(board, a, b, c):
         w += 1
   if b > w:
     a += 1
-  elif b < w:
+  if b < w:
     b += 1
-  else:
+  if b == w:
     c += 1
   return (a, b, c)
 
