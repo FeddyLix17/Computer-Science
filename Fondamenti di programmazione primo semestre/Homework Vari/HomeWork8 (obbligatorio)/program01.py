@@ -95,14 +95,13 @@ def check_winner(board, a, b, c):
     b += 1
   if b == w:
     c += 1
-  return (a, b, c)
+  return a, b, c
 
 def place_disk(board, player, i, j, players, depth):
   for k in range(-1, 2):
     for l in range(-1, 2):
-      if not check_position(board,i + k, j + l):
-        continue
-      if board[i + k][j + l] == players[player]:
+      if not check_position(board,i + k, j + l): continue
+      elif board[i + k][j + l] == players[player]:
         board[i + k][j + l] = player
   board[i][j] = player
   
@@ -111,6 +110,7 @@ def dumbothello_rec(board, player, a, b, c, players, allposiblemove, depth = 0):
   depth += 1
   if len(allposiblemove) == 0:
     a,b,c = check_winner(board, a, b, c)
+    return (a, b, c)
   else:
     for i in range(len(allposiblemove)):
       tempboard = []
@@ -118,19 +118,25 @@ def dumbothello_rec(board, player, a, b, c, players, allposiblemove, depth = 0):
         tempboard.append(j.copy())
       place_disk(tempboard, player, allposiblemove[i][0], allposiblemove[i][1], players, depth)
       a, b, c = dumbothello_rec(tempboard, players[player], a, b, c, players, check_board(tempboard, players[player], players), depth)
-  return (a, b, c)
+      tempboard = []
+  print("a finee \n  a = ", a, "\n  b = ", b, "\n  c = ", c, "\n")
+  # stampo la board finale
+  for i in range(len(board)):
+    for j in range(len(board[i])):
+      print(board[i][j], end = " ")
+    print()
+  print()
+  return a, b, c
 
 
 def dumbothello(filename : str) -> tuple[int,int,int] :
-  textinsidethefile, board, players, depth = open(filename, "r"), [], {"B": "W", "W": "B"}, 0
-  for line in textinsidethefile:
-    board.append(line.split())
+  textinsidethefile, players, board, depth = open(filename, "r"), {"B": "W", "W": "B"}, [], 0
+  for line in textinsidethefile: board.append(line.split())
   textinsidethefile.close()
   allposiblemove = check_board(board, "B", players)
-  return (dumbothello_rec(board, "B", 0, 0, 0, players, allposiblemove, depth, ))
+  return dumbothello_rec(board, "B", 0, 0, 0, players, allposiblemove, depth,)
 
 
 
 if __name__ == "__main__":
-    R = dumbothello("boards/01.txt")
-    print(R)
+    print(dumbothello("boards/boardelsiumm.txt"))
