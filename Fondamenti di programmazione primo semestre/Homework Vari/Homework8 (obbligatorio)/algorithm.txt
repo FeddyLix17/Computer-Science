@@ -1,0 +1,21 @@
+Ho spezzato il problema nelle seguenti parti:
+
+1. funzione check_board(), che controlla se la scacchiera è piena:
+    scorrendo tutta la scacchiera, SOLO ogni volta che trova un punto, controlla, 
+    in base al giocatore del turno corrente, se in tutte le caselle adiacenti 
+    c'è almeno una pedina dell'avversario, ritornando, 
+    in caso di uno o più riscontri con tale condizione,
+    una lista con le posizioni valide per il giocatore corrente 
+    
+2. funzione check_win(), che controlla se c'è una vittoria da parte di uno dei 2 giocatori, oppure un pareggio
+    richiamata in dumbotello_rec ogni volta che la funzione check_board() ritorna una lista vuota, 
+    semplicemente conto le pedine di ogni giocatore e aggiorno il contatore corrispondente
+
+
+3. funzione check_position(), che controlla se la posizione con cui stiamo interagendo è valida
+            
+4. funzione place_piece(), che piazza la/le pedina/e in base alle nostre esigenze
+                
+5. funzione dumbotello_rec(), vero motore del programma nonchè funzione ricorsiva
+                    
+ 6. funzione dumbotello(), che si occupa di chiamare la funzione ricorsiva e di stampare il risultato
