@@ -39,7 +39,7 @@ def check_winner(board, wins):
   if b == w:
     wins[2] += 1
 
-def place_disk(board, player, i, j, players, depth):
+def place_disk(board, player, i, j, players):
   for k in range(-1, 2):
     for l in range(-1, 2):
       if not check_position(board,i + k, j + l): continue
@@ -48,8 +48,7 @@ def place_disk(board, player, i, j, players, depth):
   board[i][j] = player
 
 
-def dumbothello_rec(board, player, wins, players, allposiblemove, depth = 0):
-  depth += 1
+def dumbothello_rec(board, player, wins, players, allposiblemove):
   if len(allposiblemove) == 0:
     check_winner(board, wins)
   else:
@@ -57,14 +56,15 @@ def dumbothello_rec(board, player, wins, players, allposiblemove, depth = 0):
       tempboard = []
       for j in board:
         tempboard.append(j.copy())
-      place_disk(tempboard, player, allposiblemove[i][0], allposiblemove[i][1], players, depth)
-      dumbothello_rec(tempboard, players[player], wins, players, check_board(tempboard, players[player], players), depth)
+      place_disk(tempboard, player, allposiblemove[i][0], allposiblemove[i][1], players)
+      dumbothello_rec(tempboard, players[player], wins, players, check_board(tempboard, players[player], players))
 
-def dumbothello(filename : str) -> tuple[int,int,int] :
-  textinsidethefile, players, board, depth = open(filename, "r"), {"B": "W", "W": "B"}, [], 0
+
+def dumbothello(filename : str) -> tuple[int,int,int]:
+  textinsidethefile, players, board = open(filename, "r"), {"B": "W", "W": "B"}, []
   for line in textinsidethefile: board.append(line.split())
   textinsidethefile.close()
   allposiblemove = check_board(board, "B", players)
   wins = [0, 0, 0]
-  dumbothello_rec(board, "B", wins, players, allposiblemove, depth,)
+  dumbothello_rec(board, "B", wins, players, allposiblemove)
   return tuple(wins)
