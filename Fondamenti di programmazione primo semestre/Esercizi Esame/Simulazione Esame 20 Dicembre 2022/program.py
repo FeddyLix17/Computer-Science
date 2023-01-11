@@ -18,9 +18,9 @@ To pass the exam you have to:
 
 The final score is the sum of the solved problems.
 """
-name       = "NAME"
-surname    = "SURNAME"
-student_id = "MATRICULATION NUMBER"
+name       = "Valerio"
+surname    = "Fontana"
+student_id = "2046790"
 
 #########################################
 
@@ -47,7 +47,7 @@ increasing order.
 '''
 def func1(string_list):
     # YOUR CODE HERE
-    pass
+    return 42
 
 # %%  ---- FUNC2 ----
 ''' func2: 2 points
