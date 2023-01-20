@@ -47,8 +47,7 @@ increasing order.
 '''
 def func1(string_list):
     # YOUR CODE HERE
-    return 42
-
+    return sorted([i for i in string_list if i[0] >= "A" and i[0] <= "Z"], key=len)
 # %%  ---- FUNC2 ----
 ''' func2: 2 points
 Define a function func2(pathname) that takes as input a string representing
@@ -66,8 +65,16 @@ Content of animals.txt:
 The call func2('animals.txt') returns {'cat':{'meaow', 'purr'}, 'dog':{'woof'}
 '''
 def func2(pathname):
-    # YOUR CODE HERE
-    pass
+    result = {}
+    testo = open(pathname).read().split("\n")
+    for x in testo:
+        if x.split()[0] in result.keys():
+            tmp = list(result[x.split()[0]])
+            tmp.append(x.split()[1])
+            result[x.split()[0]] = set(tmp)
+        else:
+            result[x.split()[0]] = {x.split()[1]}
+    return result
 
 # %%  ---- FUNC3 ----
 '''  func3: 2 points
@@ -81,9 +88,13 @@ The function has to return the maximum value of the built list.
 '''
 def func3(listA, listB, listC, pathname):
     # YOUR CODE HERE
-    pass
-
-    
+    result = []
+    with open(pathname, 'w') as fileditesto:
+        for x in range(len(listA)):
+            y = (listA[x]+ listB[x]) * listC[x]
+            result.append(y)
+            fileditesto.write(f"{y}\n")
+    return max(result)
 # %%  ---- FUNC4 ----
 """ func4: 6 points
 
@@ -117,10 +128,26 @@ for each sub problem. Compose everything together.
 """
 
 
-def func4(triangles):
-    # WRITE HERE YOUR CODE
-    pass
+def check_firts_couple_case_func4(ftupla):
+    if round(ftupla[0]**2, 3) != round((ftupla[1]**2) + (ftupla[2]**2), 3):
+        if round(ftupla[1]**2, 3) != round((ftupla[0]**2) + (ftupla[2]**2), 3):
+            if round(ftupla[2]**2, 3) != round((ftupla[0]**2) + (ftupla[1]**2), 3):
+                return False
+    return True
 
+
+def func4(triangles):
+    result = 0
+    listresult = []
+    for x in triangles:
+        if check_firts_couple_case_func4(x):
+            listresult.append(x)
+        else:
+            result += 1
+    triangles.clear()
+    for x in listresult:
+        triangles.append(x)
+    return result
 
 
 # %%  ---- FUNC5 ----
