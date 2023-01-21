@@ -43,9 +43,4 @@ def es67(path):
     for x in dizionariodelsium:
         dizionariodelsium[x] = max(dizionariodelsium[x]) - min(dizionariodelsium[x])
     return dizionariodelsium
-    dizionario = {}
-    minemass(path, dizionario)
-    for k, v in dizionario.items():
-        dizionario[k] = max(v) - min(v)
-        return dizionario
 print(es67("A1"))

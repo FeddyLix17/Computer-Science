@@ -232,7 +232,7 @@ or the list ['ade', 'bde', 'cde', 'dea', 'deb', 'dec', 'ab', 'ac', 'ba', 'bc', '
 """
 
 
-def generate_strings(n, strings, curr=[], index=0):
+def do_recursive_stuff_pt2(n, strings, curr=[], index=0):
     if index == n:
         if len(set(curr)) == len(curr):  # this line checks if the combination contains any duplicates
             return ["".join(curr)]
@@ -240,13 +240,13 @@ def generate_strings(n, strings, curr=[], index=0):
             return []
     res = []
     for i in range(len(strings)):
-        res += generate_strings(n, strings, curr + [strings[i]], index + 1)
+        res += do_recursive_stuff_pt2(n, strings, curr + [strings[i]], index + 1)
     return res
 
 
 def ex2(strings, n):
     # WRITE HERE YOUR CODE
-    return sorted(generate_strings(n, list(strings)), key=lambda x: (-len(x), x))
+    return sorted(do_recursive_stuff_pt2(n, list(strings)), key=lambda x: (-len(x), x))
 
 ###################################################################################
 if __name__ == '__main__':
