@@ -160,7 +160,11 @@ color of the pixel in position (0,0) of the new image.
 import images
 def func5(img, filename):
     # WRITE HERE YOUR CODE
-    pass
+    imgcopy = []
+    for x in range(len(img)):
+        imgcopy.append(img[x][::-1])
+    images.save(imgcopy, filename)
+    return imgcopy[0][0]
 
 
 
@@ -194,10 +198,20 @@ functions for each sub problem. Compose everything together.
 
 import os
 
+def do_recursive_stuff(directory, namefile, result):
+    for x in os.listdir(directory):
+        if os.path.isfile(f"{directory}/{x}"):
+            if x == namefile:
+                textinside = open(f"{directory}/{x}", 'r').read().split()
+                for i in range(len(textinside)):
+                    result[i] += int(textinside[i])
+        if os.path.isdir(f"{directory}/{x}"):
+            do_recursive_stuff(f"{directory}/{x}", namefile, result)
 
 def ex1(directory, namefile):
-    # WRITE HERE YOUR CODE
-    pass
+    result = [0] * len(open(f"{directory}/{os.listdir(directory)[0]}", 'r').read().split())
+    do_recursive_stuff(directory, namefile, result)
+    return result
 
 
 # %% Ex2
