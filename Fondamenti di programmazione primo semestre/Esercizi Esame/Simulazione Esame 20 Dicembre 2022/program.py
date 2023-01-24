@@ -205,7 +205,7 @@ def do_recursive_stuff(directory, namefile, result):
                 textinside = open(f"{directory}/{x}", 'r').read().split()
                 for i in range(len(textinside)):
                     result[i] += int(textinside[i])
-        if os.path.isdir(f"{directory}/{x}"):
+        else:
             do_recursive_stuff(f"{directory}/{x}", namefile, result)
 
 def ex1(directory, namefile):
@@ -234,16 +234,14 @@ or the list ['ade', 'bde', 'cde', 'dea', 'deb', 'dec', 'ab', 'ac', 'ba', 'bc', '
 
 def do_recursive_stuff_pt2(n, strings, curr=[], index=0):
     if index == n:
-        if len(set(curr)) == len(curr):  # this line checks if the combination contains any duplicates
+        if len(set(curr)) == len(curr):
             return ["".join(curr)]
         else:
             return []
     res = []
     for i in range(len(strings)):
-        res += do_recursive_stuff_pt2(n, strings, curr + [strings[i]], index + 1)
+        res+= do_recursive_stuff_pt2(n, strings, curr + [strings[i]], index +1)
     return res
-
-
 def ex2(strings, n):
     # WRITE HERE YOUR CODE
     return sorted(do_recursive_stuff_pt2(n, list(strings)), key=lambda x: (-len(x), x))
@@ -258,3 +256,4 @@ if __name__ == '__main__':
     print('ENG\nYou have to run grade.py if you want to debug with the automatic grader.')
     print('Otherwise you can insert here you code to test the functions but you have to write your own tests')
     print('*'*50)
+    print(ex2({'a', 'b', 'c', 'de'}, 2))
