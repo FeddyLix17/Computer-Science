@@ -14,6 +14,7 @@ def es80_rec(dir1, parole, profondita):
                             parole[word][0] += 1
                             if parole[word][1] < profondita:
                                 parole[word][1] = profondita
+                f.close()
     return parole 
 def es80(dir1, parole):
     '''
@@ -36,8 +37,11 @@ def es80(dir1, parole):
     (non sono presenti caratteri maiuscoli o segni di interpunzione)
     '''
     #inserisci qui il tuo codice
-    return es80_rec(dir1, {word: [0, 0] for word in parole}, 0)
-
+    result = es80_rec(dir1, {word: [0, 0] for word in parole}, 0)
+    for key in list(result.keys()):
+        if result[key][0] == 0:
+            del result[key]
+    return result
 if __name__ == '__main__':
     dir1 = input('Inserisci il path della directory: ')
     parole = set(input('Inserisci le parole da cercare: ').split())
