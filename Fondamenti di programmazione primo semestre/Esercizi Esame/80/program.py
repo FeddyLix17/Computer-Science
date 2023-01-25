@@ -4,10 +4,10 @@ import os
 
 def es80_rec(dir1, parole, profondita):
     for file in os.listdir(dir1):
-        if os.path.isdir(os.path.join(dir1, file)):
-            es80_rec(os.path.join(dir1, file), parole, profondita + 1)
+        if os.path.isdir(f"{dir1}/{file}"):
+            es80_rec(f"{dir1}/{file}", parole, profondita + 1)
         elif file.endswith('.txt'):
-            with open(os.path.join(dir1, file), 'r') as f:
+            with open(f"{dir1}/{file}", 'r') as f:
                 for line in f:
                     for word in line.split():
                         if word in parole:
