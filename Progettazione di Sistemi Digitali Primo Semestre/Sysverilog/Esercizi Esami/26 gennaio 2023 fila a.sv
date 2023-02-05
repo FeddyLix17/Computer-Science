@@ -3,9 +3,10 @@ module risoluzione_esercizio(
     output logic[1:0] y
 );
     logic net;
-always_ff @(posedge clk ) begin 
-    y[0] <= ~a;
-    net <= a;
-    y[1] <= net;
-end
+always_ff @(posedge clk )
+    begin 
+        y[0] <= ~a;
+        net <= a;
+        y[1] <= net;
+    end
 endmodule
