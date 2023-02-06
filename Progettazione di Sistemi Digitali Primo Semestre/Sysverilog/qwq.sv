@@ -1,18 +1,9 @@
-/*
-module sillyfunction(
-    input logic  a, b, c,
-    output logic y
-    );
-assign y = ~b & ~c | a & ~b;
-endmodule
-*/
-// do a hello world
 module hi(
-    input logic  a, b, c,
+    input logic[3:0] a
+    input logic [1:0] b,
     output logic y
     );
-    // display a message
-    initial begin
-        $display("Hello World");
-    end
+    always_comb
+    case (b)
+    
 endmodule
