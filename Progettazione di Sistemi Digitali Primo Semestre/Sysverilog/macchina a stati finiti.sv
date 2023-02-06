@@ -1,5 +1,7 @@
-module threeStatesFSM (input logic clk, reset,
-output logic q);
+module threeStatesFSM (
+    input logic clk, reset,
+    output logic q
+    );
 // definiamo i tre stati della FSM
 typedef enum logic [1:0] {S0, S1, S2} statetype;
 statetype state, nextstate;
