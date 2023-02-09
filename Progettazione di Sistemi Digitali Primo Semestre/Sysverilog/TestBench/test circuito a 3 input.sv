@@ -8,8 +8,7 @@ module sillyfunction (
 endmodule
 
 module testbench1 ();
-    logic a, b, c;
-    logic y;
+    logic a, b, c, y;
     // definizione del DUT
     sillyfunction dut (a, b, c, y );
     // applicazione degli input al DUT
@@ -37,16 +36,10 @@ module testbench1 ();
     // tavola della verità di A, B e C
     end
 endmodule
-
+/*
 module testbench2 ();
-  logic a, b, c;
-  logic y;
-  sillyfunction dut (
-      a,
-      b,
-      c,
-      y
-  );
+  logic a, b, c, y;
+  sillyfunction dut (a, b, c, y );
   initial begin
     // $display() mostra a schermo un messaggio
     a = 0;
@@ -81,3 +74,4 @@ module testbench2 ();
     if (y == 0) $display("Test 111 on gang!");
   end
 endmodule
+*/
