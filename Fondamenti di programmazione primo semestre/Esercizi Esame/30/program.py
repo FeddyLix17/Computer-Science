@@ -25,6 +25,8 @@ def es30(fname1,fname2,fname3):
     '''
     # inserisci qui il tuo codice
     result = ""
+    counter = 0
+    messospazio = False
     with open(fname2) as f:
             testo = f.read()
             testo = testo.split()
@@ -35,21 +37,29 @@ def es30(fname1,fname2,fname3):
     print(decrypter)
     with open(fname1) as f:
             testo = f.read()
+            testo = testo.split(" ")
             f.close()
     print(testo)
-    for i in range(0,len(testo),3):
-        print(testo[i:i+3], "\n")
-        if testo[i:i+2] in decrypter.keys():
-            print(testo[i:i+2])
-            result += decrypter[testo[i:i+2]]
-        elif testo[i:i+2] != '  ':
-            result += '?'
+    for i in testo:
+        if len(i) == 0:
+            if not messospazio:
+                result += " "
+                messospazio = True
         else:
-            result += testo[i:i+2]
-    print(testo)
+            messospazio = False
+            for j in range(0, len(i), 3):
+                if len (i[j:j+3]) == 3:
+                    if i[j:j+3] in decrypter.keys():
+                        result += decrypter[i[j:j+3]]
+                    else:
+                        result += "?"
+                        counter += 1
+                else:
+                    result += i[j:j+3]
     with open(fname3,'w') as f:
             f.write(result)
             f.close()
-    return testo.count('?')
+    print(result)
+    return counter
 
 print(es30('ftesto1.txt','ftesto1b.txt','risposta1.txt'))
