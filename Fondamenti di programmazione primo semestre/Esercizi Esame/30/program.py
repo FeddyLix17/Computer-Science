@@ -42,24 +42,25 @@ def es30(fname1,fname2,fname3):
     print(testo)
     for i in testo:
         if len(i) == 0:
-            if not messospazio:
-                result += " "
-                messospazio = True
+            result += " "
         else:
             messospazio = False
             for j in range(0, len(i), 3):
                 if len (i[j:j+3]) == 3:
                     if i[j:j+3] in decrypter.keys():
                         result += decrypter[i[j:j+3]]
-                    else:
+                    elif i[j:j+3] != "?":
+                        print(f"daje roma daje roma {i[j:j+3]}")
                         result += "?"
                         counter += 1
                 else:
                     result += i[j:j+3]
+            result += " "
+    result = result[:-1]
     with open(fname3,'w') as f:
             f.write(result)
             f.close()
     print(result)
     return counter
 
-print(es30('ftesto1.txt','ftesto1b.txt','risposta1.txt'))
+print(es30('ftesto2.txt','ftesto2b.txt','risposta2.txt'))
