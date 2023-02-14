@@ -1,0 +1,7 @@
+funzione xkcd_to_list_of_weights: presa la stringa in input, separo in modo appropriato ogni cifra costruendoci una lista sopra. Utilizzando la funzione map, converto ogni valore della lista ottenuta precedentemente da stringa a intero ritornando direttamente la nuova lista come risultato della funzione
+
+funzione list_of_weights_to_number: fermandomi al penultimo numero della lista, sommo o sottraggo al numero che devo ottenere ogni elemento della lista prendendo come criterio l'elemento successivo ad esso, come ad esempio nella nomenclatura romana se il numero successivo è maggiore vuol dire che sobbiamo sottrare
+
+funzione decode_value: servendomi delle due funzioni citate sopra partendo da una stringa in formato xkcd ottengo il numero decimale corrispondente
+
+funzione decode_XKCD_tuple: servendomi delle funzioni xkcd_to_list_of_weights e list_of_weights_to_number, prendo ogni argomento della tupla e aggiungo il suo numero decimale corrispondente ad una lista, ritornando come risultato infine solo i k valori decrescenti
