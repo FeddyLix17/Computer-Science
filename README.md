@@ -14,9 +14,8 @@ Oltre alle risorse da me rielaborate, voglio condividere anche la mia attuale pr
 Per qualsiasi domanda, o consiglio su come migliorare la repo:
 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/FedVlogger)
-[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FedVlogger17)
-[![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)](https://github.com/Ileriayo/markdown-badges)
-
+[![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/FedVlogger)
+[![discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discordapp.com/users/315821724639821829)
 ## <p align=center> 📖 Risorse elaborate durante il mio percorso </p>
 
 <details open>
@@ -26,8 +25,8 @@ Per qualsiasi domanda, o consiglio su come migliorare la repo:
 | :-----: | :----: | :-----------: | :----: |
 | [Calcolo Differenziale](https://github.com/FedVlogger17/Uni/tree/main/Calcolo%20Differenziale%20Primo%20Semestre) | Da sostenere | --/--/---- | --/-- |
 | [Progettazione di Sistemi Digitali](https://github.com/FedVlogger17/Uni/tree/main/Progettazione%20di%20Sistemi%20Digitali%20Primo%20Semestre) | Bocciato 😓 | 08/02/2023 | ins/30 ❌|
-| [Metodi Matematici per l'Informatica](../../raw/main/Primo%20Anno/Metodi%20Matematici%20per%20l'Informatica.pdf) | Da sostenere | --/--/---- | --/-- |
-| Fondamenti di Programmazione | Superato 🥳 | 26/01/2023 | 22/30 ✅ |
+| [Metodi Matematici per l'Informatica](https://github.com/FedVlogger17/Uni/tree/main/Primo%20Anno/Primo%20Semestre/Metodi%20Matematici%20per%20l'informatica) | Da sostenere | --/--/---- | --/-- |
+| [Fondamenti di Programmazione](https://github.com/FedVlogger17/Uni/tree/main/Primo%20Anno/Primo%20Semestre/Fondamenti%20di%20programmazione%20primo%20semestre) | Superato 🥳 | 26/01/2023 | 22/30 ✅ |
 </details>
 
 <details open>
@@ -35,8 +34,8 @@ Per qualsiasi domanda, o consiglio su come migliorare la repo:
 
 | Corso | Stato | Data | Voto |
 | :-----: | :----: | :-----------: | :----: |
-| [Calcolo Integrale](../../raw/main/Primo%20Anno/Calcolo%20Integrale.pdf) | Da sostenere | --/--/---- | --/-- |
-| [Architettura degli Elaboratori](../../raw/main/Primo%20Anno/Architettura%20degli%20Elaboratori.pdf) | Da sostenere | --/--/---- | --/-- |
-| [Introduzione agli Algoritmi](../../raw/main/Primo%20Anno/Introduzione%20agli%20Algoritmi.pdf) | Da sostenere | --/--/---- | --/-- |
-| [Metodologie di Programmazione](../../raw/main/Primo%20Anno/Metodologie%20di%20Programmazione.pdf) | Da Sostenere | --/--/---- | --/-- |
+| Calcolo Integrale | Da sostenere | --/--/---- | --/-- |
+| Architettura degli Elaboratori | Da sostenere | --/--/---- | --/-- |
+| Introduzione agli Algoritmi | Da sostenere | --/--/---- | --/-- |
+| Metodologie di Programmazione | Da Sostenere | --/--/---- | --/-- |
 </details>
