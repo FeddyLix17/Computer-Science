@@ -16,6 +16,7 @@ Per qualsiasi domanda, o consiglio su come migliorare la repo:
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/FedVlogger)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FedVlogger17)
 [![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)](https://github.com/Ileriayo/markdown-badges)
+
 ## <p align=center> 📖 Risorse elaborate durante il mio percorso </p>
 
 <details open>
@@ -30,12 +31,12 @@ Per qualsiasi domanda, o consiglio su come migliorare la repo:
 </details>
 
 <details open>
-<summary>Primo Anno - Secondo Semestre - A. A. 2021-22</summary>
+<summary> Primo Anno - Secondo Semestre - A. A. 2021-22 </summary>
 
-| Corso | Status | Aggiornati al |
-| ----- | :----: | :-----------: |
-| [Calcolo Integrale](../../raw/main/Primo%20Anno/Calcolo%20Integrale.pdf) | Completi | 28/05/2022 |
-| [Architettura degli Elaboratori](../../raw/main/Primo%20Anno/Architettura%20degli%20Elaboratori.pdf) | Quasi completi | 03/10/2022 |
-| [Introduzione agli Algoritmi](../../raw/main/Primo%20Anno/Introduzione%20agli%20Algoritmi.pdf) | Completi | 23/09/2022 |
-| [Metodologie di Programmazione](../../raw/main/Primo%20Anno/Metodologie%20di%20Programmazione.pdf) | Definizioni | 15/06/2022 |
+| Corso | Stato | Data | Voto |
+| :-----: | :----: | :-----------: | :----: |
+| [Calcolo Integrale](../../raw/main/Primo%20Anno/Calcolo%20Integrale.pdf) | Da sostenere | --/--/---- | --/-- |
+| [Architettura degli Elaboratori](../../raw/main/Primo%20Anno/Architettura%20degli%20Elaboratori.pdf) | Da sostenere | --/--/---- | --/-- |
+| [Introduzione agli Algoritmi](../../raw/main/Primo%20Anno/Introduzione%20agli%20Algoritmi.pdf) | Da sostenere | --/--/---- | --/-- |
+| [Metodologie di Programmazione](../../raw/main/Primo%20Anno/Metodologie%20di%20Programmazione.pdf) | Da Sostenere | --/--/---- | --/-- |
 </details>
