@@ -8,7 +8,7 @@
 
 Sulla falsariga della **[repository](https://github.com/Exyss/university-notes)** di **[Exyss](https://github.com/Exyss/)**, ho deciso di creare qualcosa di simile, ma con filosofia leggermente diversa.
 
-Oltre alle risorse da me rielaborate, voglio condividere anche la mia attuale progressione con gli esami in modo da far decidere al fruitore quanto prendere con le pinze o meno le risorse messe a disposizione per ogni esame
+Oltre alle risorse da me rielaborate, voglio condividere anche la mia attuale progressione con gli esami in modo da far decidere al fruitore quanto prendere con le pinze le risorse messe a disposizione per ogni esame
 > e perchè no, anche per dare di che parlare agli amanti dei pettegoli 😇
 
 Per qualsiasi domanda, o consiglio su come migliorare la repo:
