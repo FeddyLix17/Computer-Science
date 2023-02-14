@@ -23,8 +23,8 @@ Per qualsiasi domanda, o consiglio su come migliorare la repo:
 
 | Corso | Stato | Data | Voto |
 | :-----: | :----: | :-----------: | :----: |
-| [Calcolo Differenziale](https://github.com/FedVlogger17/Uni/tree/main/Calcolo%20Differenziale%20Primo%20Semestre) | Da sostenere | --/--/---- | --/-- |
-| [Progettazione di Sistemi Digitali](https://github.com/FedVlogger17/Uni/tree/main/Progettazione%20di%20Sistemi%20Digitali%20Primo%20Semestre) | Bocciato 😓 | 08/02/2023 | ins/30 ❌|
+| [Calcolo Differenziale](https://github.com/FedVlogger17/Uni/tree/main/Primo%20Anno/Primo%20Semestre/Calcolo%20Differenziale%20Primo%20Semestre) | Da sostenere | --/--/---- | --/-- |
+| [Progettazione di Sistemi Digitali](https://github.com/FedVlogger17/Uni/tree/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali%20Primo%20Semestre) | Bocciato 😓 | 08/02/2023 | ins/30 ❌|
 | [Metodi Matematici per l'Informatica](https://github.com/FedVlogger17/Uni/tree/main/Primo%20Anno/Primo%20Semestre/Metodi%20Matematici%20per%20l'informatica) | Da sostenere | --/--/---- | --/-- |
 | [Fondamenti di Programmazione](https://github.com/FedVlogger17/Uni/tree/main/Primo%20Anno/Primo%20Semestre/Fondamenti%20di%20programmazione%20primo%20semestre) | Superato 🥳 | 26/01/2023 | 22/30 ✅ |
 </details>
