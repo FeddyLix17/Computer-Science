@@ -19,7 +19,7 @@ Per qualsiasi domanda, correzione o consiglio su come migliorare la repo:
 ## <p align=center> 📖 Risorse elaborate durante il mio percorso </p>
 
 <details open>
-<summary>Primo Anno - Primo Semestre - A. A. 2022/2023</summary>
+<summary> Primo Anno - Primo Semestre - A. A. 2022/2023 </summary>
 
 | Corso | Stato | Data | Voto |
 | :-----: | :----: | :-----------: | :----: |
@@ -30,7 +30,7 @@ Per qualsiasi domanda, correzione o consiglio su come migliorare la repo:
 </details>
 
 <details open>
-<summary> Primo Anno - Secondo Semestre - A. A. 2021-22 </summary>
+<summary> Primo Anno - Secondo Semestre - A. A. 2022/2023 </summary>
 
 | Corso | Stato | Data | Voto |
 | :-----: | :----: | :-----------: | :----: |
