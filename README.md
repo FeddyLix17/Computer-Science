@@ -11,7 +11,7 @@ Sulla falsariga della **[repository](https://github.com/Exyss/university-notes)*
 Oltre alle risorse da me rielaborate, voglio condividere anche la mia attuale progressione con gli esami in modo da far decidere al fruitore quanto prendere con le pinze le risorse messe a disposizione per ogni esame
 > e perchè no, anche per dare di che parlare agli amanti dei pettegoli 😇
 
-Per qualsiasi domanda, o consiglio su come migliorare la repo:
+Per qualsiasi domanda, correzione o consiglio su come migliorare la repo:
 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/FedVlogger)
 [![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/FedVlogger)
