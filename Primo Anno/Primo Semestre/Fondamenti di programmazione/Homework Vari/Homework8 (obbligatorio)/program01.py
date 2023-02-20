@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 def check_board(board, player, players):
   piecetoeat = 0
   allvalidposition = []
