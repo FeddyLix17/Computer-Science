@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{listings}
+\usepackage{xcolor}
+\title{Code Conventions}
+\author{ZioFeddy 17}
+\date{February 2023}
+\definecolor{codeblue}{rgb}{0.2,0.4,0.6}
+\lstset{
+    language=Java,
+    basicstyle=\ttfamily\color{black},
+    keywordstyle=\bfseries\color{blue},
+    commentstyle=\itshape\color{codeblue},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+}
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\begin{lstlisting}[language=Java, numbers=left]
+public class HelloWorld {
+    public static void main(String[] args) {
+        // This is a comment
+        System.out.println("Hello, world!"); // This is a string
+    }
+}
+\end{lstlisting}
+\end{document}
