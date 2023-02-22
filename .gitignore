@@ -3,3 +3,7 @@
 *.pyc
 *.prof
 .DS_Store
+*.aux
+*.fdb_latexmk
+*.log
+*.gz
