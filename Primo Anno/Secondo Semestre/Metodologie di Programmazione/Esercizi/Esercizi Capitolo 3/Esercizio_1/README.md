@@ -1,6 +1,6 @@
 # <p align=center>Capitolo3 Esercizio 1 </p>
 Creare una classe Counter che rappresenti il funzionamento di un contatore. <br>
-Al suo internosarà presente un campo privato, di tipo intero, che memorizzi il suo valore attuale. <br> 
+Al suo interno sarà presente un campo privato, di tipo intero, che memorizzi il suo valore attuale. <br> 
 Dal punto di vista delle funzionalità, la classe conterrà:
 - Un metodo getValue che ritorni il valore attuale del contatore
 - Un metodo click che permetta l’incremento del campo di un’unità
@@ -18,3 +18,9 @@ La classe CounterTester dovrà:
 
 Consiglio: la classe Math offre il metodo max() che può essere utilizzato nella definizione di
 undo per evitare che il decremento porti ad avere un numero negativo
+
+<details closed>
+<summary> Soluzioni Personali </summary>
+</details>
+<details closed>
+<summary> Soluzioni professore </summary>
