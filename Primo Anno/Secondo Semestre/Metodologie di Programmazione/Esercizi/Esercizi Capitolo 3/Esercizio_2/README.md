@@ -8,3 +8,10 @@ La classe CounterTester riprenderà il comportamento di quella vista nell’eser
 La differenza risiederà nel fatto che il primo metodo chiamato sarà *setLimit*, il quale dovrà
 impostare il valore massimo del contatore a tre. <br>
 L’efficacia di questo limite dovrà essere accertata chiamando quattro volte di fila il metodo click e accertarsi che il valore attuale del contatore sia pari a tre.
+
+<details closed>
+<summary> Soluzioni Personali </summary>
+
+[Counter.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_2/src/Esercizio2/Counter.java) <br>
+[CounterTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_2/src/Esercizio2/CounterTester.java)
+</details>
