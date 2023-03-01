@@ -21,6 +21,9 @@ undo per evitare che il decremento porti ad avere un numero negativo
 
 <details closed>
 <summary> Soluzioni Personali </summary>
+
+[Counter.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_1/src/Esercizio1/Counter.java) <br>
+[CounterTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_1/src/Esercizio1/CounterTester.java)
 </details>
 <details closed>
 <summary> Soluzioni professore </summary>
