@@ -20,9 +20,9 @@ public class Solution {
         System.out.print("Inserire il terzo numero: ");
         double num3 = scanner.nextDouble();
 
-        if (num1 <= num2 && num2 <= num3) {
+        if (num1 < num2 && num2 < num3) {
             System.out.println("La sequenza è strettamente crescente.");
-        } else if (num1 >= num2 && num2 >= num3) {
+        } else if (num1 > num2 && num2 > num3) {
             System.out.println("La sequenza è strettamente decrescente.");
         } else {
             System.out.println("I numeri non appartengono ai casi precedenti.");
