@@ -1,18 +1,24 @@
-## Getting Started
+# <p align=center> Esercizio 4 <p>
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Data una stringa letta da input, controllare se la sua prima e seconda metà, 
+al netto del carattere centrale, siano uguali, stampando a video l’opportuno messaggio. <br>
 
-## Folder Structure
+**Consiglio**: per trovare la metà di una parola si può utilizzare il metodo 
+*length* della classe *String*. <br>
+**Esempio**: <br>
+*Enter a word (ENTER to terminate): **pianopforte*** <br>
+*The first and last half of your word differ* <br>
+*first = piano last = forte* <br> <br>
+*Enter a word (ENTER to terminate): **pianoppiano*** <br>
+*The first and last half of your word are the same* <br>
+*first = piano last = piano*
 
-The workspace contains two folders by default, where:
+<details closed>
+<summary> Soluzione Personale </summary>
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+</details>
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+<details closed>
+<summary> Soluzione Professore </summary>
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+</details>
