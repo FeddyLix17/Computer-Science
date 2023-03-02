@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) {
-        // Dati quattro numeri interi letti da input, verificare se essi siano uguali a coppie,
-        // stampando l’opportuno messaggio.
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Inserisci il primo numero: ");
