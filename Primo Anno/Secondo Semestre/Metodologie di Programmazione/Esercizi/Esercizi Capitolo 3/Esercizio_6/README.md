@@ -29,10 +29,14 @@ saldo risultante sia pari a 100.
 
 <summary> Soluzione Personale </summary>
 
+[BankAccount.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_6/src/Esercizio6/BankAccount.java) <br>
+[BankAccountTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_6/src/Esercizio6/BankAccountTester.java)
 </details>
 
 <details closed>
 
 <summary> Soluzione Professore </summary>
 
+[BankAccount.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_6/src/Esercizio6Prof/BankAccount.java) <br>
+[BankAccountTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_6/src/Esercizio6Prof/BankAccountTester.java)
 </details>
