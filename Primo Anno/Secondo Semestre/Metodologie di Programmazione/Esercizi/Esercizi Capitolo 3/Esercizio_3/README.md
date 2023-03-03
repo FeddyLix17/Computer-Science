@@ -29,10 +29,14 @@ suoi limiti chiamando più volte i metodi *Up* and *Down* a piacimento.
 
 <summary>Soluzione Personale</summary>
 
+[RangeInput.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_3/src/Esercizio3/RangeInput.java)<br>
+[RangeInputTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_3/src/Esercizio3/RangeInputTester.java)
+
 </details>
 
 <details closed>
 
 <summary>Soluzione Professore</summary>
 
+[TempControlSwitch.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_3/src/Esercizio3Prof/TempControlSwitch.java)
 </details>
