@@ -24,3 +24,19 @@ La classe *CircuitTester* dovrà essere costruita accertandosi che
 l’esecuzione consecutiva dello stesso *toggleSwitch* riporti lo stato
 dello switch corrispondente e della lampada a zero. Per controllare il contenuto dei diversi attributi durante i test, 
 stampare il valore ritornato dai metodi *get*.
+
+
+<details closed>
+
+<summary> Soluzione Personale</summary>
+
+[Circuit.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_4/src/Esercizio4/Circuit.java) <br>
+[CircuitTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_4/src/Esercizio4/CircuitTester.java)
+
+</details>
+
+<details closed>
+
+<summary> Soluzione Professore</summary>
+
+</details>
