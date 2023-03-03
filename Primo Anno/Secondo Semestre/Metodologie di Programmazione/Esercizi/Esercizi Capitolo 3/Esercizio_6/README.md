@@ -24,3 +24,15 @@ della classe depositando inizialmente un valore pari a mille.
 Successivamente, dovranno essere fatti due prelievi: uno da 500 e
 uno da 400. Stampare quindi il valore del saldo, accertandosi che il
 saldo risultante sia pari a 100.
+
+<details closed> 
+
+<summary> Soluzione Personale </summary>
+
+</details>
+
+<details closed>
+
+<summary> Soluzione Professore </summary>
+
+</details>
