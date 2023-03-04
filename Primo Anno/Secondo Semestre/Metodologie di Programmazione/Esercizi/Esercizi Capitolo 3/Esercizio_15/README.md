@@ -30,3 +30,22 @@ valore della posizione
 La classe *BugTester* creerà un insetto in posizione 10. <br>
 Successivamente, l’insetto effettuerà due movimenti, cambierà direzione e si muoverà un’ultima volta. <br>
 Stampare il valore della sua posizione finale, accertandosi che sia pari a 11.
+
+<details closed>
+
+<summary> Soluzione Personale </summary>
+
+[Bug.java]()
+[BugTester.java]()
+
+</details>
+
+<details closed>
+
+<summary> Soluzione Professore </summary>
+
+[Bug.java]()
+[BugTester.java]()
+[BugTester2.java]()
+
+</details>
