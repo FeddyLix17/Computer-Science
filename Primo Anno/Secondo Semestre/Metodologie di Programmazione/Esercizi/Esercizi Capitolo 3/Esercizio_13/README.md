@@ -28,3 +28,20 @@ al parametro fornito
 La classe *ProductTester* creerà un prodotto con un nome e un prezzo pari
 a 30, riducendolo di 5. <br>
 Successivamente, stamperà il suo nome ed il suo prezzo.
+
+<details closed>
+
+<summary> Soluzione Personale </summary>
+
+[Product.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_13/src/Esercizio13/Product.java)
+[ProductTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_13/src/Esercizio13/ProductTester.java)
+</details>
+
+<details closed>
+
+<summary> Soluzione Professore </summary>
+
+[Product.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_13/src/Esercizio13Prof/Product.java)
+[ProductPrinter.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_13/src/Esercizio13Prof/ProductPrinter.java)
+
+</details>
