@@ -1,6 +1,6 @@
 package Esercizio10;
 
-public class CashRegisterTest {
+public class CashRegisterTester {
     public static void main(String[] args) {
         CashRegister register = new CashRegister();
         register.recordPurchase(12.34);
