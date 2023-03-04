@@ -33,7 +33,7 @@ Successivamente, stamperà il suo nome ed il suo prezzo.
 
 <summary> Soluzione Personale </summary>
 
-[Product.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_13/src/Esercizio13/Product.java)
+[Product.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_13/src/Esercizio13/Product.java) <br>
 [ProductTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_13/src/Esercizio13/ProductTester.java)
 </details>
 
@@ -41,7 +41,7 @@ Successivamente, stamperà il suo nome ed il suo prezzo.
 
 <summary> Soluzione Professore </summary>
 
-[Product.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_13/src/Esercizio13Prof/Product.java)
+[Product.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_13/src/Esercizio13Prof/Product.java) <br>
 [ProductPrinter.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_13/src/Esercizio13Prof/ProductPrinter.java)
 
 </details>
