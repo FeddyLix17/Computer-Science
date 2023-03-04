@@ -39,3 +39,20 @@ destinatario, costruendo il corpo tramite l’inserimento di tre
 righe a piacere. <br>
 Stampare il contenuto della lettera per
 verificarne il corretto funzionamento.
+
+<details closed> 
+    <summary> Soluzione Personale </summary>
+
+[Letter.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_14/src/Esercizio14/Letter.java) <br>
+[LetterPrinter.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_14/src/Esercizio14/LetterPrinter.java)
+
+</details>
+
+
+<details closed> 
+    <summary> Soluzione Personale </summary>
+
+[Letter.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_14/src/Esercizio14Prof/Letter.java) <br>
+[LetterPrinter.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_14/src/Esercizio14Prof/LetterPrinter.java)
+
+</details>
