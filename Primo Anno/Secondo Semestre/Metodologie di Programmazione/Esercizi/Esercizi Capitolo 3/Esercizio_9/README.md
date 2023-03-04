@@ -40,11 +40,14 @@ dello scontrino tramite la *printReceipt*.
 
 <summary> Soluzione Personale </summary>
 
-
+[CashRegister.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_9/src/Esercizio9/CashRegister.java) <br>
+[CashRegisterTest.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_9/src/Esercizio9/CashRegisterTest.java)
 </details>
 
 <details closed>
 
 <summary> Soluzione Professore </summary>
 
+[CashRegister.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_9/src/Esercizio9Prof/CashRegister.java) <br>
+[CashRegisterTest.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_9/src/Esercizio9Prof/CashRegisterDemo.java)
 </details>
