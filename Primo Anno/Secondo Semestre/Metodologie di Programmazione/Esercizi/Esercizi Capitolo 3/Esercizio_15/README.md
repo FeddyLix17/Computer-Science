@@ -35,8 +35,8 @@ Stampare il valore della sua posizione finale, accertandosi che sia pari a 11.
 
 <summary> Soluzione Personale </summary>
 
-[Bug.java]()
-[BugTester.java]()
+[Bug.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_15/src/Esercizio15/Bug.java) <br>
+[BugTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_15/src/Esercizio15/BugTester.java)
 
 </details>
 
@@ -44,8 +44,8 @@ Stampare il valore della sua posizione finale, accertandosi che sia pari a 11.
 
 <summary> Soluzione Professore </summary>
 
-[Bug.java]()
-[BugTester.java]()
-[BugTester2.java]()
+[Bug.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_15/src/Esercizio15Prof/Bug.java) <br>
+[BugTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_15/src/Esercizio15Prof/BugTester.java) <br>
+[BugTester2.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_15/src/Esercizio15Prof/BugTester2.java) <br>
 
 </details>
