@@ -34,7 +34,7 @@ A fine viaggio, dovrà essere stampato il carburante residuo, accertandosi che s
 
 <summary> Soluzione Personale </summary>
 
-[Car.java]<https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_12/src/Esercizio12/Car.java()> <br>
+[Car.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_12/src/Esercizio12/Car.java) <br>
 [CarTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_12/src/Esercizio12/CarTester.java)
 </details>
 
