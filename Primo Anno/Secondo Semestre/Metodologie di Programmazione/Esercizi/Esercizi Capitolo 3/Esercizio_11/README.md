@@ -22,3 +22,19 @@ La classe *EmployeeTester* creerà un dipendente con nome e
 stipendio. <br>
 Quest’ultimo sarà successivamente aumentato del
 10%.
+
+<details closed>
+
+<summary> Soluzione Personale </summary>
+
+[Employee.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_11/src/Esercizio11/Employee.java) <br>
+[EmployeeTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_11/src/Esercizio11/EmployeeTester.java)
+</details>
+
+<details closed>
+
+<summary> Soluzione Professore </summary>
+
+[Employee.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_11/src/Esercizio11Prof/Employee.java) <br>
+[EmployeeTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_11/src/Esercizio11Prof/EmployeeTester.java)
+</details>
