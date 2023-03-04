@@ -12,15 +12,15 @@ lasciando invariata la semantica.
 <details closed> 
 <summary> Soluzione Personale </summary>
 
-[SavingsAccount.java]() <br>
-[SavingsAccountTester.java]()
+[SavingsAccount.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_8/src/Esercizio8/SavingsAccount.java) <br>
+[SavingsAccountTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_8/src/Esercizio8/SavingAccountTester.java)
 
 </details>
 
 <details closed>
 <summary> Soluzione Professore </summary>
 
-[SavingsAccount.java]() <br>
-[SavingsAccountTester.java]()
+[SavingsAccount.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_8/src/Esercizio8Prof/SavingsAccount.java) <br>
+[SavingsAccountTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_8/src/Esercizio8Prof/SavingsAccountTester.java)
 
 </details>
