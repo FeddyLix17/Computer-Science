@@ -29,12 +29,12 @@ momento delle due chiamate.
 <details closed>
 <summary> Soluzioni Personali </summary>
 
-[CashRegister.java]() <br>
-[CashRegisterTester.java]()
+[CashRegister.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_10/src/Esercizio10/CashRegister.java) <br>
+[CashRegisterTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_10/src/Esercizio10/CashRegisterTester.java)
 </details>
 <details closed>
 <summary> Soluzioni professore </summary>
 
-[CashRegister.java]() <br>
-[CashRegisterTester.java]()
+[CashRegister.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_10/src/Esercizio10Prof/CashRegister.java) <br>
+[CashRegisterTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_10/src/Esercizio10Prof/CashRegisterTester.java)
 </details>
