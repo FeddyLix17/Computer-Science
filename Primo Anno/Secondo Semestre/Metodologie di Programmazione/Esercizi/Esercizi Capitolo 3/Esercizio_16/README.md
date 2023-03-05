@@ -34,3 +34,22 @@ Successivamente, effettuerà 3 movimenti:
 Ai fini del corretto funzionamento, la sequenza delle posizioni
 della libellula dovrà essere la seguente: <br>
 5, 7.5, 3.75
+
+<details closed>
+
+<summary> Soluzione Personale </summary>
+
+[Moth.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_16/src/Esercizio16/Moth.java) <br>
+[MothTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_16/src/Esercizio16/MothTester.java)
+
+</details>
+
+<details closed>
+
+<summary> Soluzione Personale </summary>
+
+[Moth.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_16/src/Esercizio16Prof/Moth.java) <br>
+[MothTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_16/src/Esercizio16Prof/MothTester.java) <br>
+[MothTester2.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_16/src/Esercizio16Prof/MothTester2.java)
+
+</details>
