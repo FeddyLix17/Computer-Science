@@ -46,7 +46,7 @@ della libellula dovrà essere la seguente: <br>
 
 <details closed>
 
-<summary> Soluzione Personale </summary>
+<summary> Soluzione Professore </summary>
 
 [Moth.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_16/src/Esercizio16Prof/Moth.java) <br>
 [MothTester.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_16/src/Esercizio16Prof/MothTester.java) <br>
