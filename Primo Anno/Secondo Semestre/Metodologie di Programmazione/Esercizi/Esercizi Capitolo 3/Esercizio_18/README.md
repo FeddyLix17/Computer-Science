@@ -22,3 +22,21 @@ stato della lampadina
 Per testare la classe, scrivere un programma TestLampadina che
 crea un oggetto della classe Lampadina che ammetta un numero
 massimo di click deciso dall’utente e poi iterativamente offre all’utente la possibilità di invocare una delle due funzionalità (visualizzando l’esito dell’operazione, nel caso di stato()) o di terminare l’esecuzione.
+
+<details closed>
+
+<summary> Soluzione Personale </summary>
+
+[Lampadina.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_18/src/Esercizio18/Lampadina.java) <br>
+[TestLampadina.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_18/src/Esercizio18/TestLampadina.java)
+
+</details>
+
+<details closed>
+
+<summary> Soluzione Professore </summary>
+
+[Lampadina.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_18/src/Esercizio18Prof/Lampadina.java) <br>
+[TestLampadina.java](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_18/src/Esercizio18Prof/TestLampadina.java)
+
+</details>
