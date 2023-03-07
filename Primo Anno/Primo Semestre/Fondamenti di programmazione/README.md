@@ -1,4 +1,6 @@
-<img src="./python-logo.png"  style="display: block; margin: auto"> </img>
+<div text-align: center;>
+    <img src="./python-logo.png"  style="display: block; margin: auto"> </img>
+</div>
 
 # <p align=center> Fondamenti di programmazione </p>
 
