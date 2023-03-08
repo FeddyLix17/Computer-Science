@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./python-logo.png"> </img>
+    <img src="https://www.python.org/static/community_logos/python-logo-generic.svg"> </img>
 </div>
 
 # <p align=center> Fondamenti di programmazione </p>
