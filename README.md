@@ -6,17 +6,20 @@
 
 ### About me
 
-Sulla falsariga della **[repository](https://github.com/Exyss/university-notes)** di **[Exyss](https://github.com/Exyss/)**, ho deciso di creare qualcosa di simile, ma con filosofia leggermente diversa.
+Raggruppamento di tutte le risorse personali messe a disposizione per il percorso di studi del corso di laurea in [Informatica](https://corsidilaurea.uniroma1.it/it/corso/2022/29923/home) presso la [Sapienza Università di Roma](https://www.uniroma1.it/).
 
-Oltre alle risorse da me rielaborate, voglio condividere anche la mia attuale progressione con gli esami in modo da far decidere al fruitore quanto prendere con le pinze le risorse messe a disposizione per ogni esame
+> questa repository è rimasta privata all'incirca per tutto il primo semestre, ciò che mi ha fatto decidere di renderla pubblica è stato vedere più studenti del nostro corso condividere le loro risorse col solo scopo di aiutare gli altri ad affrontare gli esami in modo più sereno, senza alcun ritorno economico obbligatorio.
+
+In aggiunta voglio condividere anche la mia attuale progressione con gli esami, in modo da far decidere al fruitore quanto prendere con le pinze le risorse messe a disposizione per ogni esame.
 > e perchè no, anche per dare di che parlare agli amanti dei pettegoli 😇
 
-Per qualsiasi domanda, correzione o consiglio su come migliorare la repo:
+Per qualsiasi domanda, correzione o consiglio su come migliorare la repository:
 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/FedVlogger)
 [![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/FedVlogger)
 [![discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discordapp.com/users/315821724639821829)
-## <p align=center> 📖 Risorse elaborate durante il mio percorso </p>
+[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/fedvlogger17)
+## <p align=center> 📖 Risorse elaborate e categorizzate </p>
 
 <details open>
 <summary> Primo Anno - Primo Semestre - A. A. 2022/2023 </summary>
