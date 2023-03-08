@@ -1,5 +1,5 @@
-<div style="text-align: center;">
-  <img src="https://media.salonedellostudente.it/app/uploads/2020/07/16134905/sapienza-roma-logo-01.png" width="600" height="400" style="display: block; margin: auto"> </img>
+<div align="center">
+  <img src="https://media.salonedellostudente.it/app/uploads/2020/07/16134905/sapienza-roma-logo-01.png"> </img>
 </div>
 
 # <p align=center> Personal Uni Path - Computer Science Degree </p>
