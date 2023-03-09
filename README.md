@@ -10,7 +10,7 @@ Raggruppamento di tutte le risorse personali messe a disposizione per il percors
 
 > questa repository è rimasta privata all'incirca per tutto il primo semestre, ciò che mi ha fatto decidere di renderla pubblica è stato vedere più studenti del nostro corso condividere le loro risorse col solo scopo di aiutare gli altri ad affrontare gli esami in modo più sereno, senza alcun ritorno economico obbligatorio.
 
-In aggiunta voglio condividere anche la mia attuale progressione con gli esami, in modo da far decidere al fruitore quanto prendere con le pinze le risorse messe a disposizione per ogni esame.
+In aggiunta voglio condividere anche la mia attuale progressione con gli esami, in modo da far decidere al fruitore quanto prendere con le pinze tutte le risorse messe a disposizione.
 > e perchè no, anche per dare di che parlare agli amanti dei pettegoli 😇
 
 Per qualsiasi domanda, correzione o consiglio su come migliorare la repository:
