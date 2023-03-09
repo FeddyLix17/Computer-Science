@@ -1,7 +1,0 @@
-<div align="center">
-<img src="https://antmicro.com/blog/images/systemverilog.svg" width=500>
-</div>
-
-#### <p align="center"> SystemVerilog è un linguaggio hardware descrittivo estensore del Verilog, utilizzato per la descrizione e la verifica di sistemi hardware. A differenza del Verilog esso offre molte più funzionalità avanzate, come la programmazione ad oggetti, la gestione della memoria e la simulazione concorrente. Questo linguaggio viene utilizzato comunemente nell'industria della progettazione di sistemi elettronici per descrivere componenti hardware complessi, eseguire la verifica e simulare il comportamento del sistema prima della produzione fisica. In sintesi, SystemVerilog è uno strumento essenziale per la progettazione e la verifica di sistemi hardware avanzati. </p>
-Risorse utili:
-- __[SystemVeriLog Tutorial](https://www.chipverify.com/systemverilog/systemverilog-tutorial)__
