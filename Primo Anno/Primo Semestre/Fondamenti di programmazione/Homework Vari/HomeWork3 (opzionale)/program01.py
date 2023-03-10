@@ -63,6 +63,7 @@ def ex1(ftesto,a,b,n):
     c = end
     tmp3 = sum(list(dizionariotmp.values()), [])
     while end <= c + b - a and end < len(ftesto) + 1:
+      
         if ftesto[start:end] in tmp3:
             for x in (dizionariotmp.keys()):
                 if ftesto[start:end] in dizionariotmp.get((x)):
