@@ -8,11 +8,37 @@
 
 <summary> Homework 2022/2023 </summary>
 
-- [Homework 1]()
-- [Homework 2]()
-- [Homework 4]()
-- [Homework 6]()
-- [Homework 8]()
+- <details closed>
+    
+    <summary> Homework 1 </summary>
+
+    - []()
+
+    </details>
+
+- <details closed>
+
+    <summary> Homework 2 </summary>
+
+    </details>
+
+- <details closed>
+
+    <summary> Homework 4 </summary>
+
+    </details>
+
+- <details closed>
+
+    <summary> Homework 6 </summary>
+
+    </details>
+
+- <details closed>
+
+    <summary> Homework 8 </summary>
+
+    </details>
 
 </details>
 
