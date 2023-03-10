@@ -66,11 +66,19 @@
 
         <summary> Latch </summary>
 
+        - [D-Latch](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Latch/D%20latch.sv)
+
       </details>
     
     - <details closed>
 
         <summary> Flip-Flop </summary>
+
+        - [Resettable D-Flip-Flop Sync](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Flip%20Flop/Resettable%20D%20Flip-Flop%20Sync.sv)
+
+        - [Resettable D-Flip-Flop Async](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Flip%20Flop/Resettable%20D%20Flip-Flop%20Async.sv)
+
+        - [Enable Resettable D-Flip-Flop Async](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Flip%20Flop/Enable%20Resettable%20D%20Flip-Flop%20Async.sv)
 
       </details>
 
@@ -78,7 +86,17 @@
 
         <summary> Finite State Machine </summary>
 
+        - [FSM a 3 stati](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Macchine%20a%20Stati%20Finiti%20(FSM)/macchina%20a%20stati%20finiti.sv)
+
       </details>
+
+- <details closed>
+      
+    <summary> TestBench </summary>
+
+  - [TestBench a 3 input](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/TestBench/test%20circuito%20a%203%20input.sv)
+
+  </details>
 
   </details>
 
