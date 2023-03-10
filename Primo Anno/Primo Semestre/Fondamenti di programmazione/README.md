@@ -6,18 +6,24 @@
 
 <details closed>
 
-<summary> Soluzioni Personali Homework 2022/2023 </summary>
+<summary> Homework 2022/2023 </summary>
+
+- [Homework 1]()
+- [Homework 2]()
+- [Homework 4]()
+- [Homework 6]()
+- [Homework 8]()
 
 </details>
 
 <details closed>
 
-<summary> Soluzioni Personali Esercizi Laboratorio </summary>
+<summary> Esercizi Laboratorio 2022/2023 </summary>
 
 </details>
 
 <details closed>
 
-<summary> Soluzioni Personali Esercizi Eserciziario d'esame </summary>
+<summary> Esercizi Eserciziario d'esame </summary>
 
 </details>
