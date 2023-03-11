@@ -9,6 +9,8 @@
 
 <summary> Teoria </summary>
 
+- [Teoria.pdf](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Metodologie%20di%20Programmazione.pdf)
+
 </details>
 
 <details closed>
@@ -24,46 +26,47 @@
 - <details closed>
 
     <summary> Esercizi Capitolo 3</summary>
-    
-    - 3.1
 
-    - 3.2
+    - [Esercizio 1](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_1)
 
-    - 3.3
+    - [Esercizio 2](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_2)
 
-    - 3.4
+    - [Esercizio 3](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_3)
 
-    - 3.5
+    - [Esercizio 4](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_4)
 
-    - 3.6
+    - [Esercizio 5](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_5)
 
-    - 3.7
+    - [Esercizio 6](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_6)
 
-    - 3.8
+    - [Esercizio 7](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_7)
 
-    - 3.9
+    - [Esercizio 8](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_8)
 
-    - 3.10
+    - [Esercizio 9](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_9)
 
-    - 3.11
+    - [Esercizio 10](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_10)
 
-    - 3.12
+    - [Esercizio 11](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_11)
 
-    - 3.13
+    - [Esercizio 12](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_12)
 
-    - 3.14
+    - [Esercizio 13](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_13)
 
-    - 3.15
+    - [Esercizio 14](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_14)
 
-    - 3.16
+    - [Esercizio 15](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_15)
 
-    - 3.17
+    - [Esercizio 16](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_16)
 
-    - 3.18
+    - [Esercizio 17](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_17)
 
-    - 3.19
-    
-    - 3.20
+    - [Esercizio 18](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_18)
+
+    - [Esercizio 19](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_19)
+
+    - [Esercizio 20](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_20)
+
     </details>
 
 </details>
