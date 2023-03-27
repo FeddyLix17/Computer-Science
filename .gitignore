@@ -9,3 +9,8 @@
 *.gz
 *.aux
 *.class
+*.diff
+*.err
+*.comp
+*.nopass
+*.in
