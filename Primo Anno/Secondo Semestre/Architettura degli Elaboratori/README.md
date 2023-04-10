@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.freebiesupply.com/logos/large/2x/mips-logo-black-and-white.png"
+  <img src="https://images.anandtech.com/doci/12699/logo_678x452.png"
   width=400> </img>
 </div>
 
