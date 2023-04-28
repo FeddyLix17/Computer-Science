@@ -13,7 +13,6 @@
 *.err
 *.comp
 *.nopass
-*.in
 *.out
 *.pass
 *.html
