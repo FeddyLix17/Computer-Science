@@ -1,7 +1,7 @@
 ##########################################
 # INSERIRE I PROPRI DATI QUI
-# Nome: Valerio
-# Cognome:  Fontana
+# Nome:         Valerio
+# Cognome:      Fontana
 # Matricola:    2046790
 ##########################################
 
@@ -51,10 +51,10 @@ contaOccorrenze:
     addi $t0, $t0, 1                    # $t0 = $t0 + 1
     lb $a0 buffer($t0)                  # $a0 = buffer[$t0]
 
-    sub $a0, $a0, '0'                   # $a0 = valore numerico del carattere contenuto in $a0/buffer[$t0]
-    beqz $a0, NumeroUgualeAZero         # se $a0 == 0 allora salta a NumeroUgualeAZero
-    beq $a0, 1, NumeroUgualeAUno        # se $a0 == 1 allora salta a NumeroUgualeAUno
-    bltz $a0, EndLoop                # se $a0 < 0 allora salta a EndProgram
+    sub $a0, $a0, '0'                   # $a0 = equivalente valore numerico del carattere contenuto in $a0/buffer[$t0] (in questo caso o 0 o 1)
+    beqz $a0, NumeroUgualeAZero         # se $a0 == 0, incremento il numero di zeri presenti (quindi il registro $v0) di 1
+    beq $a0, 1, NumeroUgualeAUno        # se invece $a0 == 1, incrementa il numero di uni presenti (quindi il registro $v1) di 1
+    bltz $a0, EndLoop                   # una volta raggiunta la fine della sequenza di caratteri, salto a EndLoop
     j contaOccorrenze
 
 NumeroUgualeAZero:
