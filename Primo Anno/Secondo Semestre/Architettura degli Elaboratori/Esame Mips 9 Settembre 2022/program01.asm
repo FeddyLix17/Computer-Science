@@ -27,13 +27,13 @@ main:
 Solution:
     addi $t0, $t0, 1        # Incremento contatore
     sub $t1, $t0, 1         # $t1 = $t0 - 1
-    lb $a0, buffer($t0)     # $a0 = buffer[$t0]
-    lb $a1, buffer($t1)     # $a1 = buffer[$t1] = buffer[$t0 - 1]
-    sub $a0, $a0, '0'       # $a0 = valore numerico rappresentato dal carattere contenuto in $a0
-    sub $a1, $a1, '0'       # $a1 = valore numerico rappresentato dal carattere contenuto in $a1
-    bltz $a0, VerificaUltimoCarattere   # Se $a0 < 0, significa che ho finito di leggere la stringa
-    add $v1, $v1, $a1       # $v1 = $v1 + $a0
-    beq $a0, $a1, CoppiaCaratteriUguali  # Se $a0 == $a1, incremento il numero delle volte che la stringra pre
+    lb $t2, buffer($t0)     # $t2 = buffer[$t0]
+    lb $t3, buffer($t1)     # $t3 = buffer[$t1] = buffer[$t0 - 1]
+    sub $t2, $t2, '0'       # $t2 = valore numerico rappresentato dal carattere contenuto in $t2
+    sub $t3, $t3, '0'       # $t3 = valore numerico rappresentato dal carattere contenuto in $t3
+    bltz $t2, VerificaUltimoCarattere   # Se $t2 < 0, significa che ho finito di leggere la stringa
+    add $v1, $v1, $t3       # $v1 = $v1 + $t2
+    beq $t2, $t3, CoppiaCaratteriUguali  # Se $t2 == $t3, incremento il numero delle volte che la stringra pre
     j Solution
 
 CoppiaCaratteriUguali:
@@ -41,18 +41,19 @@ CoppiaCaratteriUguali:
     j Solution
 
 VerificaUltimoCarattere:
-    bgtz $a1, SommaUltimoCarattere
+    bgtz $t3, SommaUltimoCarattere
     j Fine
 
 SommaUltimoCarattere:
-    add $v1, $v1, $a1
+    add $v1, $v1, $t3
     j Fine
+
 Fine:
     # stampo $v0 e $v1 su 2 righe separate
-    move $a2, $v0
-    move $a3, $v1
+    move $t0, $v0
+    move $t1, $v1
     li $v0, 1
-    move $a0, $a2
+    move $a0, $t0
     syscall
 
     li $v0, 11
@@ -60,7 +61,7 @@ Fine:
     syscall
     
     li $v0, 1
-    move $a0, $a3
+    move $a0, $t1
     syscall
     
     li $v0, 10
