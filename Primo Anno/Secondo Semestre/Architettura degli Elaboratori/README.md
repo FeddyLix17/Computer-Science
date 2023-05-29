@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://images.anandtech.com/doci/12699/logo_678x452.png"
+  <img src="https://www.chibialiens.com/mips/res/Mips2.jpg"
   width=400> </img>
 </div>
 
