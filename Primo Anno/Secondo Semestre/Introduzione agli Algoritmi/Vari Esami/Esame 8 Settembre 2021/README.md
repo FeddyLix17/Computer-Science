@@ -3,7 +3,7 @@
 - ## Esercizio 1 (10 punti)
     Si consideri la seguente funzione:
 
-    ```python
+```python
     def Exam(n):
         tot = n                 # Θ(1)
         if n <= 4:              # Θ(1)   
@@ -15,9 +15,9 @@
             tot += j            # Θ(1)
             j += 1              # Θ(1)
         return tot + Exam(b)    # T(n/4)
-    ```
+```
 
-    - <b> a) </b> Si imposti la relazione di ricorrenza che ne 
+   - <b> a) </b> Si imposti la relazione di ricorrenza che ne 
     definisce il tempo di esecuzione giustificando l’equazione ottenuta.
 
         per trovare l'equazione di ricorrenza che ne deﬁnisce il tempo di esecuzione,
@@ -61,7 +61,7 @@
             \end{cases}
             $$
 
-    - <b> b) </b> Si risolva l’equazione usando il metodo dell’albero, dettagliando i passaggi del calcolo e giustiﬁcando ogni affermazione.
+   - <b> b) </b> Si risolva l’equazione usando il metodo dell’albero, dettagliando i passaggi del calcolo e giustiﬁcando ogni affermazione.
     <br> Ricavata l'equazione di ricorrenza nel punto a), si risolve con il metodo dell'albero
 
         <center>
@@ -98,7 +98,8 @@
             - al livello 2, il costo di un nodo è Θ(√n/16) + Θ(1) mentre il costo totale del livello è 4Θ(√n/16) + 4Θ(1)
             - al livello k, il costo di un nodo è Θ(√n/4<sup>k</sup>) + Θ(1) mentre il costo totale del livello è 2<sup>k</sup> (Θ(√n/4<sup>k</sup>) +
             Θ(1))
-            $$ 2^k(\Theta(\sqrt\frac{n}{4^k}) + \Theta(1)) $$
+            
+   $$ 2^k(\Theta(\sqrt\frac{n}{4^k}) + \Theta(1)) $$
             $$ 2^k(\sqrt\frac{n}{4^k} + 1) $$
             $$ 2^k(\frac{\sqrt n}{2^k} + 1) $$
             $$ \sqrt n + 2^k $$
@@ -116,9 +117,8 @@
         $$ \log_4(n) - 1 = k $$
         $$ k = \log_4(n) - 1 $$
 
-
-
-        si conclude che il numero di livelli è $\log_4(n) - 1$.
+    
+    si conclude che il numero di livelli è $\log_4(n) - 1$.
     <br> per trovare il costo totale dell'albero, si sommano i costi di tutti i livelli
     $$ \sum_{i=0}^{\log_4(n) - 1} \Theta(\sqrt{n} 2^i) $$
     $$ \sum_{i=0}^{\log_4(n) - 1} \sqrt{n} * 2^i $$
@@ -197,7 +197,7 @@
 
     - <b> b) </b> si scriva lo pseudocodice
     
-        ```python
+```python
         def intersezione(A, B, C):
             i = 0           #Θ(1)
             j = 0           #Θ(1)
@@ -217,8 +217,10 @@
                         j += 1
                     else:                               #Θ(1)
                         k += 1
-        ```
-    - <b> c) </b> si giustifichi formalmente il costo computazionale
+ ```
+       
+       
+   - <b> c) </b> si giustifichi formalmente il costo computazionale
 
         Praticamente tutte le istruzioni a eccezione del ciclo while hanno costo Θ(1), per determinare il costo effettivo si analizza quindi il costo del ciclo while. <br>
         
@@ -228,7 +230,7 @@
         Per definizione delle notazioni asintotiche ,se una funzione *f(n)* è sia in *Ω(n)* che in *O(n)*, allora sarà anche in *Θ(n)*, quindi il costo computazionale dell'algoritmo è $\Theta(n)$
         ed utilizza uno spazio di lavoro pari a $\Theta(1)$ in quanto lavora sugli array in input senza crearne di nuovi usando solo 3 indici.
 
-    - <b> d) </b> si dia un’idea di quello che accadrebbe al costo computazionale se si
+   - <b> d) </b> si dia un’idea di quello che accadrebbe al costo computazionale se si
     volesse generalizzarlo a Θ(n) array <br>
 
         Se si volesse generalizzare l’algoritmo per trovare l’intersezione di Θ(n) array ordinati di lunghezza n, chiaramente il costo computazionale aumenterebbe. <br>
@@ -263,7 +265,7 @@
         L'algoritmo termina quando si è visitato tutto l'albero
     
     - <b> b) </b> si scriva lo pseudocodice
-        ```python
+```python
         def scambia_fratelli(r):
             if r.left:
                 scambia_fratelli(r.left)
@@ -273,9 +275,9 @@
 
             if r.left and r.right:
                 r.left.val, r.right.val = r.right.val, r.left.v
-        ```
+```
 
-    - <b> c) </b> si giustifichi formalmente il costo computazionale <br>
+   - <b> c) </b> si giustifichi formalmente il costo computazionale <br>
     il costo computazionale dell'algoritmo è $\Theta(n)$ in quanto vengono
     semplicemente visitati tutti i nodi dell'albero una sola volta (in postorder) e le operazioni
     che vengono effettuare su di essi hanno costo Θ(1)
