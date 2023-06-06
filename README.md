@@ -35,8 +35,8 @@ Per qualsiasi domanda, correzione o consiglio su come migliorare la repository:
 
 | Corso | Stato | Data | Voto |
 | :-----: | :----: | :-----------: | :----: |
-| [Calcolo Integrale](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale) | Da sostenere | 24/03/2023 | 20/96 |
+| [Calcolo Integrale](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale) | Da confermare | 30/05/2023 | 21/30 🔄 |
 | [Architettura degli Elaboratori](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Architettura%20degli%20Elaboratori) | Da sostenere | --/--/---- | --/-- |
-| [Introduzione agli Algoritmi](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi) | Da preparare | --/--/---- | --/-- |
+| [Introduzione agli Algoritmi](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi) | Da sostenere | --/--/---- | --/-- |
 | [Metodologie di Programmazione](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione) | Da sostenere | --/--/---- | --/-- |
 </details>
