@@ -78,18 +78,11 @@ quindi bisognerà dimostrare che $\Theta(n\log_2(n)) è\ in\ O(n^{1.585 - \epsil
 si sceglie $\epsilon = 0.085$ <br>
 quindi rimane da dimostrare che $\Theta(n\log_2(n)) è\ in\ O(n^{1.5})$ <br>
 
-
 | n | 1 | 2 | 3 | 10 | 20 | 30 | 100 | 200 | 300 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | $\log_2(n)$ | 0 | 1 | 1.6 | 3.3 | 4.3 | 4.2 | 6.7 | 7.7 | 8.2 |
 | $n\log_2(n)$ | 0 | 2 | 4.7 | 33.2 | 86.4 | 147.3 | 664 | 1528 | 2469 |
 | $n^{1.5}$ | 1 | 2.8 | 5.2 | 31.6 | 89.4 | 164.3 | 1000 | 2828 | 5196 |
-
-da cui 
-
-$$
-    \lim_{n \to \infty} \frac{n^{1.5}}{n\log_2(n)} = +\infty
-$$
 
 dimostrato che $n^{1.5}$ cresce più velocemente di $n\log_2(n)$, quindi dimostrato che $\Theta(n\log_2(n)) è\ in\ O(n^{1.5})$ <br>
 si ricade nel primo caso del teorema principale con soluzione $T(n) = \Theta(n^{\log_2(3)}) \approx \Theta(n)$ <br>
@@ -108,31 +101,53 @@ $7$ e $8$, andrebbe restituito il $7$)
 
 <b> a) </b> si scriva lo pseudocodice opportunamente commentato
 
+prima di scrivere lo pseudocodice, si fanno delle osservazioni sul problema
+
+1. L'array è composto da interi non negativi distinti. Questa semplice frase ci da 2 informazioni che torneranno estremamente utili
+
+    - Non ci sarà più di un occorenza di uno stesso numero all'interno dell'array
+    - Non essendoci numeri negativi, e sapendo che quelli che ci interessano sono quelli **strettamente** minori di $100$
+
+avendo un limite *teorico* del massimo valore che può essere contenuto nell'array, si può utilizzare un array di supporto per contare le occorrenze dei numeri che ci interessano (proprio come accadrebbe nel [Counting_Sort](https://www.programiz.com/dsa/counting-sort)), ovvero quelli **strettamente** minori di $100$ <br>
+
 ```python
-def trova_terna(A): # Prendo in input un array A di interi non negativi distinti
+def trova_max_terna(A):
+    # Una prima differenza con il Counting_Sort è il ruolo dell'array di supporto.
+    # Nell'algoritmo di ordinamento contiene il numero di occorrenze del numero 
+    # corrispondente all'indice.
+    # Nell'algoritmo di questo esercizio siccome sappiamo che ogni numero non compare più di una volta,
+    # è come se l'array di appoggio fosse un array di booleani, dove se l'elemento è presente nell'array di partenza, 
+    # l'indice dell'array di appoggio corrispondente sarà 1. 
+    # Sempre nel nostro caso l'array di appoggio avrà dimensione 100, con gli indici che vanno da 0 a 99
+    Conta_occorrenze = [0] * 100
 
-    # imposto inizialmente il centro della terna a -1 
-    # in quanto è ciò che la funzione dovrà restituire se non trova nessuna terna
-    centro_terna = -1
+    # Inizializzo la variabile che conterrà il valore dell'elemento centrale della terna a -1
+    # in quanto se non dovessimo trovare nessuna terna che soddifà le proprietà richieste,
+    # il valore da restituire deve essere -1
+    max_terne = -1
 
-    # itero l'intero array confrontando ogni terna di elementi consecutivi possibile
-    for i in range(1, len(A) - 1):
-        # se trovo una terna con tutti e tre gli elementi minori di 100
-        # imposto il valore da restiture come il valore maggiore 
-        # tra il suo valore attuale e l'elemento centrale della terna
-        if A[i-1] < 100 and A[i] < 100 and A[i+1] < 100:
-            centro_terna = max(centro_terna, A[i])
+    # Itero tutti gli elementi dell'array di partenza
+    # e incremento di 1 l'indice corrispondente nell'array di appoggio
+    # se l'elemento dell'array di partenza corrente è strettamente minore di 100
+    for i in range(len(A)):
+        if A[i] < 100:
+            Conta_occorrenze[A[i]] += 1
 
-    return centro_terna
+    # Itero tutti gli elementi dell'array di appoggio
+    # e se dovessimo trovare una terna di elementi consecutivi uguali a 1
+    # ci basterà aggiornare la variabile max_terne con il valore massimo
+    # tra il suo valore corrente e l'indice corrente del for
+    for i in range(len(Conta_occorrenze) - 1):
+        if Conta_occorrenze[i - 1] == 1 and Conta_occorrenze[i] == 1 and Conta_occorrenze[i + 1] == 1:
+            max_terne = max(max_terne, i)
+
+    # una volta iterati tutti gli elementi dell'array di appoggio
+    # ritorno il valore di max_terne
+    return max_terne
 ```
-**Nota:** nella traccia del compito ci viene fornito un array A di esempio ed il valore che la funzione dovrebbe ritornare <br>
-ad esempio per l'array $A = [101, 5, 9, 31, 33, 10, 100, 4, 8, 32, 500, 11, 99]$ la funzione dovrebbe ritornare $32$ <br>
-si nota come in questo array le sequenze di tre numeri consecutivi minori di 100 sono $[5, 9, 31]$ , $[9, 31, 33]$ , $[31, 33, 10]$ , $[4, 8, 32]$  <br>
-con valori centrali rispettivamente $9$, $31$, $33$ ed $8$. <br>
-il massimo tra questi valori è $33$ che è il valore che la funzione dovrà ritornare
-a differenza del valore $32$ scritto nella traccia
 
-<b> b) </b> il costo computazionale dell'algoritmo è $\Theta(n)$ in quanto vengono semplicemente iterati tutti gli elementi dell'array una sola volta e le operazioni che vengono effettuare su di essi hanno costo $\Theta(1)$
+<b> b) </b> una cosa che non cambia rispetto al Counting_Sort è il costo computazionale dell'algoritmo, che rimane $\Theta(n + k)$, con $n$ numero di elementi dell'array di partenza e $k$ numero di elementi dell'array di appoggio, corrispondenti in questo caso al numero di elementi presenti nell'insieme [0, 99] (che è 100). Basta anche analizzare il codice per capire che il costo computazionale del primo ciclo for è $\Theta(n)$, mentre quello del secondo ciclo for è $\Theta(k)$. <br>
+Conoscendo il valore di $k$, si può concludere che il costo computazionale dell'algoritmo è $\Theta(n + k) = \Theta(n + 100) = \Theta(n)$ 
 
 - ## Esercizio 3 (10 punti)
 
