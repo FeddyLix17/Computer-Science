@@ -216,13 +216,15 @@ $$
 
 sostituendo $k$ nella nostra equazione di ricorrenza si ottiene
 
-$$
-    T(n) = T(n - 1) + T(n - (n - 1) - 1) + \Theta(1) \\
-    T(n) = T(n - 1) + T(n - n + 1 - 1) + \Theta(1) \\
-    T(n) = T(n - 1) + T(0) + \Theta(1) \\
-    T(n) = T(n - 1) + \Theta(1) + \Theta(1) \\
-    T(n) = T(n - 1) + \Theta(1) \\
-$$
+$$ T(n) = T(n - 1) + T(n - (n - 1) - 1) + \Theta(1) $$
+
+$$ T(n) = T(n - 1) + T(n - n + 1 - 1) + \Theta(1) $$
+
+$$ T(n) = T(n - 1) + T(0) + \Theta(1) $$
+
+$$ T(n) = T(n - 1) + \Theta(1) + \Theta(1) $$
+
+$$ T(n) = T(n - 1) + \Theta(1) $$
 
 l'equazione di ricorrenza semplificata sarà $T(n) = T(n - 1) + \Theta(1)$ per $k = n - 1$ <br>
 
@@ -230,11 +232,11 @@ scegliendo un metodo a piacere (in quanto non ne è richiesto uno in particolare
 ad esempio quello iterativo, si analizza l'andamento dell'equazione dopo alcune chiamate ricorsive
 (di cui indicheremo il numero con $z$)
 
-$$
-    T(n) = T(n - 1) + \Theta(1) \hspace{5.35cm}  per\ z=1\\
-    T(n) = [T(n - 2) + \Theta(1)] + \Theta(1) \hspace{4cm}  per\ z=2\\
-    T(n) = [T(n - 3) + \Theta(1) + \Theta(1)] + \Theta(1) \hspace{3cm}  per\ z=3\\
-$$
+$$ T(n) = T(n - 1) + \Theta(1) \iff per\ z=1 $$
+
+$$ T(n) = [T(n - 2) + \Theta(1)] + \Theta(1) \iff  per\ z=2 $$
+
+$$ T(n) = [T(n - 3) + \Theta(1) + \Theta(1)] + \Theta(1) \iff  per\ z=3 $$
 
 la cui generalizzazione diventa $T(n) = T(n - z) + z\Theta(1) \implies T(n) = T(n - z) + \Theta(z)$ <br>
 
@@ -246,11 +248,12 @@ $$
 
 sostituendo $z$ nella nostra equazione di ricorrenza si ottiene
 
-$$
-    T(n) = T(n - n) + \Theta(n) \\
-    T(n) = T(0) + \Theta(n) \\
-    T(n) = \Theta(1) + \Theta(n) \\
-    T(n) = \Theta(n)
-$$
+$$ T(n) = T(n - n) + \Theta(n) $$
+
+$$ T(n) = T(0) + \Theta(n) $$
+
+$$ T(n) = \Theta(1) + \Theta(n) $$
+
+$$ T(n) = \Theta(n) $$
 
 si conclude che il costo computazionale dell'algoritmo è $\Theta(n)$
