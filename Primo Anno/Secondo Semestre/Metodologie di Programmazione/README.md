@@ -5,11 +5,9 @@
 
 # <p align="center"> Metodologie di Programmazione </p>
 
-<details closed> 
+<details closed>
 
-<summary> Teoria </summary>
-
-- [Teoria.pdf](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Metodologie%20di%20Programmazione.pdf)
+<summary> Esami Precedenti </summary>
 
 </details>
 
