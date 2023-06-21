@@ -1,7 +1,4 @@
-<div align="center">
-  <img src="https://www.chibialiens.com/mips/res/Mips2.jpg"
-  width=400> </img>
-</div>
+![Logo Architettura degli Elaboratori](https://i1.wp.com/semiengineering.com/wp-content/uploads/2019/08/Binary-CPU-iStock-901627692-07-24-19.jpg?fit=788%2C443&ssl=1)
 
 # <p align="center"> Architettura degli Elaboratori </p>
 

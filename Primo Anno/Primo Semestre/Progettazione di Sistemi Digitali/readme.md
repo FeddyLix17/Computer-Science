@@ -1,8 +1,6 @@
-<div align="center">
-<img src="https://antmicro.com/blog/images/systemverilog.svg" width=500>
-</div>
+![Logo Progettazione di Sistemi Digitali](https://antmicro.com/blog/images/systemverilog.svg)
 
-# <p align="center"> **Progettazione di Sistemi Digitali** </p>
+# <p align="center"> Progettazione di Sistemi Digitali </p>
 
 <details closed>
 
