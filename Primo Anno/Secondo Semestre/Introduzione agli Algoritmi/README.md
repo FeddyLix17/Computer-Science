@@ -1,9 +1,9 @@
-<center> 
+<div align="center"> 
 
 ![Logo Introduzione agli Algoritmi](https://www.vagdevitechnologies.com/wp-content/uploads/2022/12/data-structures-and-algorithms.jpg)
 # Introduzione agli Algoritmi
 
-</center>
+<div>
 
 <details closed>
 	<summary> Esami Precedenti </summary>
