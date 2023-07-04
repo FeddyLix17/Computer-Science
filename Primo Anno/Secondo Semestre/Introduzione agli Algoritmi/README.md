@@ -96,7 +96,7 @@
 		<summary> Gennaio </summary>
 
     	- [Walkthrough Esame 17 Gennaio 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2023/Gennaio/Esame%2017%20Gennaio%202023)
-    	- [Walkthrough Esame 31 Gennaio 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2023/Gennaio/Esame%2031%20Gennaio%202023) (*da completare*)
+    	- [Walkthrough Esame 31 Gennaio 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2023/Gennaio/Esame%2031%20Gennaio%202023)
 
 		</details>
 
