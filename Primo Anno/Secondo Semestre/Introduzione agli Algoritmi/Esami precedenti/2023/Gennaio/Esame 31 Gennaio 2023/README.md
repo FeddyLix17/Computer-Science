@@ -1,4 +1,4 @@
-# <p align="center"> Esame 3 Marzo 2023 </p>
+# <p align="center"> Esame 31 Gennaio 2023 </p>
 
 ## Esercizio 1
 Si consideri il seguente algoritmo ricorsivo che, dato un array $A$ di dimensione
@@ -25,7 +25,7 @@ def IndiciValori(A, sx, dx):
 - si hanno $2$ chiamate ricorsive alla fine con parametro $\Large \frac{n}{2}$
 - si analizzano attentamente i $2$ cicli for annidati per determinarne il loro costo
 - il primo ciclo for ha un range che va da $sx$ a $centro$ eseguendo $centro - sx + 1$ iterazioni
-- il secondo ciclo for ha un range che va da $centro + 1$ a $dx$ eseguendo $ dx - centro - 1$ iterazioni
+- il secondo ciclo for ha un range che va da $centro + 1$ a $dx$ eseguendo $dx - centro - 1$ iterazioni
 
 per il momento il loro costo *teorico* è $\Large \Theta((centro - sx + 1) *(dx - centro -1))$
 
@@ -69,7 +69,7 @@ con caso base $\Large T(1) = \Theta(1)$ (ovvero quando $\Large sx \geq dx$, cond
 
 <div align="center">
 
-\-$\Large T(n) = 2T(\frac{n}{2}) + \Theta(n^2),\ n > 1$
+\- $\Large T(n) = 2T(\frac{n}{2}) + \Theta(n^2),\ n > 1$
 
 \- $\Large T(1) = \Theta(1),\ n \leq 1$
 
@@ -86,31 +86,31 @@ con caso base $\Large T(1) = \Theta(1)$ (ovvero quando $\Large sx \geq dx$, cond
     
     avendo $\Large n^{\log_b a} = n^{\log_2 2} = n$, si ricade nel terzo caso poichè
 
-    $\Large f(n) = \Theta(n^2)$ è in $\Large \Omega(n^{log_b a + \epsilon})$ con $\Large \epsilon > 0$ (ad esempio $\Large \epsilon = 1$)
+    $\Large f(n) = \Theta(n^2)$ è in $\Large \Omega(n^{log_b(a) + \epsilon})$ con $\Large \epsilon > 0$ (ad esempio $\Large \epsilon = 1$)
 
-    viene anche rispettata la seconda condizione del terzo caso $\Large a*f(\frac{n}{b}) \leq c*f(n)$
+    viene anche rispettata la seconda condizione del terzo caso $\Large a\*f(\frac{n}{b}) \leq c\*f(n)$
     
     con $\Large 0 < c < 1$ in quanto $\Large 2*\Theta((\frac{n}{2})^2) \leq c*\Theta(n^2)$
 
     ad esempio scegliendo $\Large c = \frac{1}{2}$ si ha
 
-    $$
-        \Large 2*\Theta((\frac{n}{2})^2) \leq \frac{1}{2}*\Theta(n^2)
-    $$
+$$
+    \Large 2*\Theta((\frac{n}{2})^2) \leq \frac{1}{2}*\Theta(n^2)
+$$
 
-    $$ 
-        \Large 2*\Theta((\frac{n}{2})^2) \leq \frac{1}{2}*\Theta(n^2)
-    $$
+$$ 
+    \Large 2*\Theta((\frac{n}{2})^2) \leq \frac{1}{2}*\Theta(n^2)
+$$
 
-    $$ 
-        \Large 2\Theta(\frac{n^2}{4}) \leq \Theta(\frac{n^2}{2})
-    $$
+$$ 
+    \Large 2\Theta(\frac{n^2}{4}) \leq \Theta(\frac{n^2}{2})
+$$
 
-    $$ 
-        \Large \Theta(\frac{n^2}{2}) \leq \Theta(\frac{n^2}{2})
-    $$
+$$ 
+    \Large \Theta(\frac{n^2}{2}) \leq \Theta(\frac{n^2}{2})
+$$
 
-    concludendo che $\Large T(n) = \Theta(n^2)$
+concludendo che $\Large T(n) = \Theta(n^2)$
 
 - **Metodo dell'albero**
 
@@ -133,21 +133,21 @@ con caso base $\Large T(1) = \Theta(1)$ (ovvero quando $\Large sx \geq dx$, cond
 
     il costo totale sarà dato dalla somma di tutti i costi dei livelli, ovvero
 
-    $$ 
-        \Large \sum_{i=0}^{\log_2(n)} \Theta((\frac{n}{2^i})^2)
-    $$
+$$ 
+    \Large \sum_{i=0}^{\log_2(n)} \Theta((\frac{n}{2^i})^2)
+$$
 
-    $$ 
-        \Large \Theta(n^2) *\sum_{i=0}^{\log_2(n)} \Theta(\frac{1}{2^{2i}})
-    $$
+$$ 
+    \Large \Theta(n^2) *\sum_{i=0}^{\log_2(n)} \Theta(\frac{1}{2^{2i}})
+$$
 
-    $$ 
-        \Large \Theta(n^2) *\sum_{i=0}^{\log_2(n)} (\frac{1}{4^i})
-    $$
+$$ 
+    \Large \Theta(n^2) *\sum_{i=0}^{\log_2(n)} (\frac{1}{4^i})
+$$
 
-    $$ 
-        \Large \Theta(n^2)
-    $$
+$$ 
+    \Large \Theta(n^2)
+$$
 
 anche tramite l'utilizzo di un secondo metodo si conferma che $\Large T(n) = \Theta(n^2)$
 
@@ -262,11 +262,11 @@ $$
     \Large T(n) = T(n-1) + \Theta(1)
 $$
 
-con caso base $T(0) = \Theta(1)$ (ovvero quando $p = None$ e quindi la lista è vuota)
+con caso base $\Large T(0) = \Theta(1)$ (ovvero quando $\Large p = None$ e quindi la lista è vuota)
 
 <div align="center">
 
-\-$\Large T(n) = T(n-1) + \Theta(1),\ n > 1$
+\- $\Large T(n) = T(n-1) + \Theta(1),\ n > 1$
 
 \- $\Large T(0) = \Theta(1),\ n \leq 1$
 
@@ -288,7 +288,7 @@ $$
     \Large T(n) = T(n-k) + k*\Theta(1)
 $$
 
-si arriva al caso base quando $n-k = 0 \implies k = n$ da cui
+si arriva al caso base quando $\Large n-k = 0 \implies k = n$ da cui
 
 $$ 
     \Large T(n) = T(n - n) + n*\Theta(1)
@@ -306,4 +306,4 @@ $$
     \Large T(n) = \Theta(n)
 $$
 
-viene cosi rispettato il vincolo di costo computazionale $O(n)$ richiesto dall'esercizio.
+viene cosi rispettato il vincolo di costo computazionale $\Large O(n)$ richiesto dall'esercizio.
