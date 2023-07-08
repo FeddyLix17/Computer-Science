@@ -112,7 +112,14 @@
 
     	- [Walkthrough Esame 7 Giugno 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2023/Giugno/Esame%207%20Giugno%202023)
 
-  	</details>
+		</details>
+
+    - <details closed>
+		<summary> Luglio </summary>
+
+    	- [Walkthrough Esame 5 Luglio 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2023/Luglio/Esame%205%20Lulgio%202023)
+
+		</details>
 
 	</details>
 
