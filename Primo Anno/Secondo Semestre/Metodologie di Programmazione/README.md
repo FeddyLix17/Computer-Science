@@ -1,9 +1,9 @@
-<center>
+<div align="center">
 
 ![Logo Metodologie di Programmazione](https://logos-world.net/wp-content/uploads/2022/07/Java-Symbol.png)
 # Metodologie di Programmazione
 
-</center>
+</div>
 
 <details closed>
 	<summary> Esami Precedenti </summary>
@@ -15,6 +15,18 @@
 		<summary> Maggio </summary>
 
 		- [Walkthrough Esame 19 Maggio 2021](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2021/Maggio/Esame%2019%20Maggio%202021)
+
+		</details>
+
+	</details>
+
+- <details closed>
+	<summary> 2023 </summary>
+
+	- <details closed>
+		<summary> Giugno </summary>
+
+    	- [Walkthrough Esame 13 Giugno 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2023/Giugno/Esame%2013%20Giugno%202023)
 
 		</details>
 

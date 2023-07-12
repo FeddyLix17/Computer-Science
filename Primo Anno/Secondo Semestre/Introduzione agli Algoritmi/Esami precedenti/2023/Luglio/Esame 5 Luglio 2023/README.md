@@ -217,20 +217,20 @@ $$
     \Large - T(n) = T(n - 2) + \Theta(1)
 $$
 
-unito al caso base, nel quale si rientrerà quando la lunghezza della lista sarà 1, (ovvero quando si arriva all'ultimo nodo della lista)
+unito al caso base, nel quale si rientrerà quando la lunghezza della lista sarà 0, (ovvero quando si finisce di scorrere la lista o quando si arriva ad un nodo che non presenta un nodo successivo accorpabile ad esso)
 
 $$
-    \Large - T(n) = \Theta(1),\ n = 1
+    \Large - T(n) = \Theta(1),\ n = 0
 $$
 
 si ottiene l'equazione di ricorrenza finale
 
 $$
-    \Large - T(n) = T(n - 2) + \Theta(1),\ n > 1
+    \Large - T(n) = T(n - 2) + \Theta(1),\ n \geq 1
 $$
 
 $$
-    \Large - T(n) = \Theta(1),\ n = 1
+    \Large - T(n) = \Theta(1),\ n = 0
 $$
 
 usando il metodo iterativo si sviluppa la ricorrenza
@@ -253,36 +253,33 @@ $$
     \Large T(n) = T(n - 2k) + k\Theta(1)
 $$
 
-verrà ragginto il caso base quando $\Large n - 2k = 1$, da cui
+verrà ragginto il caso base quando $\Large n - 2k = 0$, da cui
 
 $$
-    \Large n - 2k = 1
-$$
-
-$$
-    \Large n = 2k + 1
+    \Large n - 2k = 0
 $$
 
 $$
-    \Large {n - 1} = 2k
+    \Large n = 2k
 $$
 
+
 $$
-    \Large \frac{n - 1}{2} = k \implies k = \frac{n - 1}{2}
+    \Large \frac{n}{2} = k \implies k = \frac{n}{2}
 $$
 
 sostituendo k nell'equazione di ricorrenza
 
 $$
-    \Large T(n) = T(n - 2(\frac{n - 1}{2})) + \frac{n - 1}{2}\Theta(1)
+    \Large T(n) = T(n - 2(\frac{n }{2})) + \frac{n}{2}\Theta(1)
 $$
 
 $$
-    \Large T(n) = T(n - n + 1) + \Theta(\frac{n - 1}{2})
+    \Large T(n) = T(n - n) + \Theta(\frac{n}{2})
 $$
 
 $$
-    \Large T(n) = T(1) + \Theta(n)
+    \Large T(n) = T(0) + \Theta(n)
 $$
 
 $$
