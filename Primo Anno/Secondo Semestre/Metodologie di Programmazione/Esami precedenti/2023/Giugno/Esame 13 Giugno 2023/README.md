@@ -14,7 +14,7 @@ L’assegnazione dei punti alle risposte è la seguente:
 
 Al fine del superamento della soglia è necessario totalizzare un punteggio di almeno 5 punti.
 
-**(a)** Quale dei seguenti è un esempio corretto di creazione di una sottoclasse in Java?
+### **(a)** Quale dei seguenti è un esempio corretto di creazione di una sottoclasse in Java?
 
 - *class* **MyFrame** *extends* **Jframe** ✅
 
@@ -26,7 +26,7 @@ La risposta corretta è "*class* **MyFrame** *extends* **Jframe**".
 
 Per creare una sottoclasse in Java si usa la parola chiave *extends* e non *implements*, usata invece per implementare un'interfaccia.
 
-**(b)** Lo statement "*new String[] {"Metodologie", "Di", "Programmazione"};*":
+### **(b)** Lo statement "*new String[] {"Metodologie", "Di", "Programmazione"};*":
 
 - Non è sintatticamente corretto 
 
@@ -61,7 +61,7 @@ Output:
 */
 ```
 
-**(c)** l’uso dell’istruzione “*break*” in un blocco “*switch*”:
+### **(c)** l’uso dell’istruzione “*break*” in un blocco “*switch*”:
 
 - Permette di continuare l’esecuzione del blocco
 
@@ -73,7 +73,7 @@ La risposta corretta è "Interrompe l’esecuzione del blocco".
 
 In un blocco *switch*, l'istruzione *break* serve per interrompere l'esecuzione del blocco passando all'istruzione successiva ad esso, altrimenti verrebbe eseguito anche tutto il codice successivo al *case* che ha soddisfatto la condizione del blocco prima di passare all'istruzione successiva al blocco.
 
-**(d)** Le code convention in Java prevedono che:
+### **(d)** Le code convention in Java prevedono che:
 
 - Il nome delle classi cominci con lettera minuscola, mentre quello dei metodi con la maiuscola
 - Il nome delle classi cominci con lettera maiuscola, mentre quello dei metodi con la minuscola ✅
@@ -83,7 +83,7 @@ L’opzione corretta è "Il nome delle classi cominci con lettera maiuscola, men
 
 In Java, le *code convention* prevedono che il nome delle classi cominci con una lettera maiuscola (ad esempio, *MyClass*) mentre il nome dei metodi cominci con una lettera minuscola (ad esempio, *myMethod*).
 
-**(e)** Il metodo *public* *static* *Class* **forName(*String* className)**:
+### **(e)** Il metodo *public* *static* *Class* **forName(*String* className)**:
 
 - Restituisce l’oggetto *Class* che rappresenta la classe dal nome **className** ✅
 
@@ -199,7 +199,7 @@ public void applyInterest(double interestRate)
 ```
 Realizzare un programma di collaudo (test) per verificare la correttezza dell’implementazione.
 
-Il programma dovrà creare un conto con un saldo iniziale di $\$500$, effettuare un prelievo di $\$200$, un deposito di $\$100$ e applicare un interesse del $5\%$ all’importo presente sul conto se il saldo supera $\$1000$.
+Il programma dovrà creare un conto con un saldo iniziale di $500\$$, effettuare un prelievo di $200\$$, un deposito di $100\$$ e applicare un interesse del $5$% all’importo presente sul conto se il saldo supera $1000\$$.
 
 ```java
 public class BankAccount {
@@ -317,6 +317,7 @@ public class TestProdotto {
                 // divido la riga in base al carattere ','
                 // cosi da avere ogni campo separato in una lista
                 String[] CampiRiga = riga.split(",");
+
                 // per poi creare un nuovo oggetto Prodotto
                 // assegnandogli i correcti parametri
                 String NomeProdotto = CampiRiga[0];
@@ -330,7 +331,6 @@ public class TestProdotto {
         }
 
         // finito di leggere il file, si procede con le operazioni richieste
-
         // visualizzo la lista dei prodotti nella categoria Shoes
         System.out.println("Lista dei prodotti nella categoria Shoes:");
         for (Prodotto prodotto : ListaProdotti) {
