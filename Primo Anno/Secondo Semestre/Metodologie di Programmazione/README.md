@@ -37,6 +37,13 @@
 
 		</details>
 
+	- <details closed>
+		<summary> Luglio </summary>
+
+    	- [Walkthrough Esame 13 Luglio 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2023/Luglio/Esame%2013%20Luglio%202023)
+
+		</details>
+
 	</details>
 
 </details>
