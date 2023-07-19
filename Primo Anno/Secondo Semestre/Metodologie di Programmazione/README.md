@@ -5,51 +5,39 @@
 
 </div>
 
-<details closed>
-	<summary> Esami Precedenti </summary>
 
-- <details closed>
-	<summary> 2021 </summary>
+## About 🔎
 
-	- <details closed>
-		<summary> Maggio </summary>
+Il corso di Metodologie di Programmazione mira all'apprendimento dei concetti della programmazione orientata agli oggetti mediante il linguaggio di programmazione Java.
 
-		- [Walkthrough Esame 19 Maggio 2021](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2021/Maggio/Esame%2019%20Maggio%202021)
+In linea di massima, verranno affrontati i seguenti argomenti
 
-		</details>
+- I concetti fondamentali della programmazione orientata agli oggetti (SOLID)
 
-	</details>
+- classi e oggetti
 
-- <details closed>
-	<summary> 2023 </summary>
+- incapsulamento
 
-	- <details closed>
-		<summary> Maggio </summary>
+- ereditarietà
 
-		- [Walkthrough Esame 17 Maggio 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2023/Maggio/Esame%2017%20Maggio%202023)
+- polimorfismo
 
-		</details>
+- binding statico e dinamico
 
-	- <details closed>
-		<summary> Giugno </summary>
+- i design pattern
 
-    	- [Walkthrough Esame 13 Giugno 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2023/Giugno/Esame%2013%20Giugno%202023)
+- La programmazione funzionale
 
-		</details>
+## Materiale 📚
 
-	- <details closed>
-		<summary> Luglio </summary>
+- [Slide del corso](https://classroom.google.com/u/1/c/NTkzNzA4NTg3MDU5?cjc=j3msarm)
 
-    	- [Walkthrough Esame 13 Luglio 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2023/Luglio/Esame%2013%20Luglio%202023)
+## Esercizi 📝
 
-		</details>
-
-	</details>
-
-</details>
+Una volta alla settimana viene svolta un'attività di laboratorio, in cui vengono proposti degli esercizi da svolgere in autonomia.
 
 <details closed>
-	<summary> Esercizi </summary>
+	<summary> <strong> Esercizi </strong> </summary>
 
 - <details closed>
 	<summary> Esercizi Capitolo 2</summary>
@@ -138,5 +126,49 @@
     - [Esercizio 20](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_20)
 
     </details>
+
+</details>
+
+Di seguito sono riportati dei piccoli walkthrough di alcune prove scritte precedenti realizzati al fine di rafforzare le soluzioni già presenti o andare a colmare la dove non siano presenti.
+<details closed>
+	<summary> <strong> Esami Precedenti </strong> </summary>
+
+- <details closed>
+	<summary> 2021 </summary>
+
+	- <details closed>
+		<summary> Maggio </summary>
+
+    	- [Walkthrough Esame 19 Maggio 2021](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2021/Maggio/Esame%2019%20Maggio%202021)
+
+  		</details>
+
+	</details>
+
+- <details closed>
+	<summary> 2023 </summary>
+
+	- <details closed>
+		<summary> Maggio </summary>
+
+    	- [Walkthrough Esame 17 Maggio 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2023/Maggio/Esame%2017%20Maggio%202023)
+
+		</details>
+
+	- <details closed>
+		<summary> Giugno </summary>
+
+		- [Walkthrough Esame 13 Giugno 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2023/Giugno/Esame%2013%20Giugno%202023)
+
+		</details>
+
+	- <details closed>
+		<summary> Luglio </summary>
+
+		- [Walkthrough Esame 13 Luglio 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2023/Luglio/Esame%2013%20Luglio%202023)
+
+		</details>
+
+	</details>
 
 </details>
