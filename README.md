@@ -17,7 +17,7 @@ Per qualsiasi domanda, correzione o consiglio su come migliorare la repository:
 [![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/FedVlogger)
 [![discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discordapp.com/users/315821724639821829)
 [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/fedvlogger17)
-## <p align=center> 📖 Risorse elaborate e categorizzate </p>
+## <p align=center> 📖 Risorse categorizzate </p>
 
 <details open>
 <summary> Primo Anno - Primo Semestre - A. A. 2022/2023 </summary>
