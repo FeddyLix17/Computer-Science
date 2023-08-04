@@ -80,7 +80,7 @@ Il corso di Introduzione agli Algoritmi
 	- <details closed>
 		<summary> Settembre </summary>
 
-    	- [Walkthrough Esame 15 Settembre 2022](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2022/Settembre/Esame%2015%20Settembre%202022) (*todo*)
+    	- [Walkthrough Esame 15 Settembre 2022](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2022/Settembre/Esame%2015%20Settembre%202022)
 
 		</details>
 
