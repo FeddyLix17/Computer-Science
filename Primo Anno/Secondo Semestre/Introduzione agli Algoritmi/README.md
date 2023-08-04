@@ -5,6 +5,10 @@
 
 </div>
 
+## About 🔎
+
+Il corso di Introduzione agli Algoritmi 
+
 <details closed>
 	<summary> Esami Precedenti </summary>
 
