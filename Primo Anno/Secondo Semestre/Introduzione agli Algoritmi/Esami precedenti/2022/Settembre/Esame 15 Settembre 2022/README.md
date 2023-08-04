@@ -34,6 +34,7 @@ $\Large n^{\log_b(a)}$ sarà uguale a $\Large n^{\log_2(2)} = n$.
 Si ricade così nel primo caso del teorema della ricorrenza, poichè segliendo ad esempio $\Large \epsilon = 0.5$
 
 si dimostra come $\Large f(n) = O(\sqrt{n})$ sia uguale a
+
 $$
     \Large O(n^{\log_b(a) - \epsilon})
 $$
@@ -189,7 +190,7 @@ def es2(A):
 
 **c)** si giustifichi il costo computazionale
 
-Il costo computazionale dell'algoritmo è determinato dal ciclo while (dato che tutte le altre operazioni hanno costo $\Large \Theta(1)$).
+Il costo computazionale dell'algoritmo è determinato dal ciclo while (dato che tutte le altre operazioni hanno costo $\Large \Theta(1)$ ).
 
 Si analizza quindi il comportamento del ciclo while
 
@@ -274,7 +275,7 @@ Si analizza il il costo di entrambe le funzioni
 
     - dal caso generale, in cui sono presenti
 
-        - un'istruzione elementare (costo $\Theta(1)$)
+        - un'istruzione elementare (costo $\Theta(1)$ )
         - due chiamate ricorsive, (una per il sotto-albero sinistro e una per il sotto-albero destro) con rispettivi costi $T(k)$ e $T(n-k-1)$, dove
 
             - $k$ è il numero di nodi del sotto-albero sinistro
