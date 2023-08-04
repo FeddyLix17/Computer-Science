@@ -265,3 +265,93 @@ def es3_InOrder(r, A):
 ```
 
 **c)** si giustifichi il costo computazionale
+
+Si analizza il il costo di entrambe le funzioni
+
+- **es3_InOrder**: l'equazione di ricorrenza è determinata
+
+    - dal caso base, ovvero quando il nodo è nullo, con costo $\Large \Theta(1)$
+
+    - dal caso generale, in cui sono presenti
+
+        - un'istruzione elementare (costo $\Theta(1)$)
+        - due chiamate ricorsive, (una per il sotto-albero sinistro e una per il sotto-albero destro) con rispettivi costi $T(k)$ e $T(n-k-1)$, dove
+
+            - $k$ è il numero di nodi del sotto-albero sinistro
+            - e $n-k-1$ è il numero di nodi del sotto-albero destro.
+
+    Per determinarne il costo, si analizzano caso migliore e caso peggiore:
+
+- **caso peggiore**: l'albero è completamente sbilanciato, quindi quando tutti i nodi sono aggregati o nel sottoalbero sinistro o nel sottoalbero destro, ovvero quando $\Large k = 0$ oppure $\Large n - k - 1 = 0$, sostituendo i valori nell'equazione di ricorrenza si ottiene la medesima equazione di ricorrenza del caso migliore
+
+per $\Large k = 0$
+
+$$
+\Large T(n) = T(0) + T(n - 0 - 1) + \Theta(1) = T(n - 1) + \Theta(1)
+$$
+
+per $\Large n - k - 1 = 0$ (ovvero $\Large k = n - 1$)
+
+$$
+    \Large T(n) = T(n - 1) + T(0) + \Theta(1) = T(n - 1) + \Theta(1)
+$$
+
+usando il metodo iterativo per risolvere l'equazione di ricorrenza, si ottiene
+
+$$
+    \Large T(n) = T(n - 1) + \Theta(1) = [T(n - 2) + \Theta(1)] + \Theta(1)
+$$
+
+$$
+    \Large T(n) = \{[T(n - 3) + \Theta(1)] + \Theta(1)\} + \Theta(1)
+$$
+
+generalizzando con una variabile ausiliaria $k$ in
+
+$$
+    \Large T(n) = T(n - k) + k\Theta(1)
+$$
+
+verrà raggiunto il caso base quando $\Large n - k = 0$, ovvero quando $\Large k = n$, da cui
+
+$$
+   \Large T(n) = T(n - n) + n\Theta(1) = T(0) + n\Theta(1) = \Theta(1) + n\Theta(1) = \Theta(n)
+$$
+
+- **caso migliore**: l'albero è completo, quindi quando ogni nodo padre ha esattamente 2 figli, ovvero quando sia il sottoalbero sinistro che il sottoalbero destro hanno $\Large \frac{n-1}{2}$ nodi, sostituendo i valori nell'equazione di ricorrenza si ottiene
+
+$$
+    \Large T(n) = T(\frac{n-1}{2}) + T(\frac{n-1}{2}) + \Theta(1) \approx 2T(\frac{n}{2}) + \Theta(1)
+$$
+
+utilizzando il metodo principale, si ricade nel primo caso
+
+$\Large T(n) = 2T(\frac{n}{2}) + \Theta(1)$ può essere rappresentata come $\Large T(n) = aT(\frac{n}{b}) + f(n)$
+
+con $\Large a = 2$, $\Large b = 2$ e $\Large f(n) = \Theta(1)$
+
+bisogna dimostrare, per qualche costante $\Large \epsilon > 0$, che $\Large f(n)$ sia in $\Large O(n^{\log_b(a)-\epsilon})$,
+
+dove $\Large n^{\log_b(a)} = n^{\log_2(2)} = n^1 = n$
+
+scegliendo $\Large \epsilon = 1$, $\Large n^{\log_b(a)-\epsilon}$ sarà uguale a $\Large n^0 = 1$, e sapendo che se $\Large f(n) = \Theta(1)$
+
+allora vale anche $\Large f(n) = O(1)$, concludendo che $\Large T(n) = \Theta(n^{\log_b(a)}) = \Theta(n)$
+
+avendo trovato come caso peggiore $\Large T(n) = O(n)$ e come caso migliore $\Large T(n) = \Omega(n)$, si conclude che il costo computazionale dell'algoritmo sia $\Large T(n) = \Theta(n)$
+
+si conclude che il costo computazionale della funzione sia $\Large \Theta(n)$
+
+- **es3**: il costo della funzione è principalmente determinato
+
+    - dal costo della funzione **es3_InOrder**, ovvero $\Large \Theta(n)$
+
+    - dal costo del ciclo for, con anch'esso costo $\Large \Theta(n)$, in quanto vengono eseguite per $\Large n$ volte delle operazioni elementari
+
+dunque il costo computazionale sarà dato da
+
+$$
+    \Large T(n) = \Theta(n) + \Theta(n) = \Theta(n)
+$$
+
+rispettando cosi la richiesta dell'esercizio
