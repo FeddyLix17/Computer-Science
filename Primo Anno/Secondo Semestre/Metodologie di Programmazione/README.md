@@ -5,7 +5,6 @@
 
 </div>
 
-
 ## About 🔎
 
 Il corso di Metodologie di Programmazione mira all'apprendimento dei concetti della programmazione orientata agli oggetti mediante il linguaggio di programmazione Java.

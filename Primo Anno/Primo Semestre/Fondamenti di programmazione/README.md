@@ -52,7 +52,7 @@ Esse consistono in esercizi da svolgere autonomamente e da consegnare entro una 
 Il superamento di tali prove intermedie è necessario per poter accedere alla prova scritta.
 
 È possibile visionare il regolamento completo [qui](https://q2a.di.uniroma1.it/regole-fp-22-23)
-> 
+
 <details closed>
     <summary> <strong> Homeworks 2022/2023 </strong> </summary>
 
