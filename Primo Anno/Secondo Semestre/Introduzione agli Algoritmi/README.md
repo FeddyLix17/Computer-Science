@@ -139,7 +139,7 @@ In linea generale, il corso approfondirà i seguenti argomenti:
 	- <details closed>
 		<summary> Ottobre </summary>
 
-    	- [Walkthrough Esame 25 Ottobre 2022](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2022/Ottobre/Esame%2025%20Ottobre%202022) (*todo*)
+    	- [Walkthrough Esame 25 Ottobre 2022](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2022/Ottobre/Esame%2025%20Ottobre%202022)
 
 		</details>
 
