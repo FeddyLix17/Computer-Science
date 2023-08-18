@@ -76,7 +76,7 @@ In linea generale, il corso approfondirà i seguenti argomenti:
 	- <details closed>
 		<summary> Giugno </summary>
 
-    	- [Walkthrough Esame 22 Giugno 2021](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2021/Giugno/Esame%2022%20Giugno%202021) (*todo*)
+    	- [Walkthrough Esame 22 Giugno 2021](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2021/Giugno/Esame%2022%20Giugno%202021)
 
 		</details>
 
