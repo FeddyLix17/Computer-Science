@@ -125,7 +125,7 @@ In linea generale, il corso approfondirà i seguenti argomenti:
 
     	- [Walkthrough Esame Giugno 2022](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2022/Giugno/Esame%20Giugno%202022) (*todo*)
 
-		- [Walkthrough Esame 27 Giugno 2022](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2022/Giugno/Esame%2027%20Giugno%202022) (*todo*)
+		- [Walkthrough Esame 27 Giugno 2022](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi/Esami%20precedenti/2022/Giugno/Esame%2027%20Giugno%202022)
 
 		</details>
 
