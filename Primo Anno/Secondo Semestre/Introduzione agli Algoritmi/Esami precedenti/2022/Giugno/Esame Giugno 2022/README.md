@@ -26,7 +26,7 @@ vengono individuati $\Large b = 4\ \text{e}\ \Large f(n) = \Theta(1)$.
 
 $\Large n^{\log_b(a)}$ sarà uguale a $\Large n^{\log_4(a)}$.
 
-Per ogni $\Large 0 < \epsilon <\log_4(a)$, si rientrerà nel primo caso del metodo principale (ovvero quello in cui $\Large f(n)$ sia in $\Large O(n^{\log_b(a) - \epsilon})$), con costo $\Large \Theta(n^{\log_4(a)})$.
+Per ogni $\Large 0 < \epsilon <\log_4(a)$, si rientrerà nel primo caso del metodo principale (ovvero quello in cui $\Large f(n)$ sia in $\Large O(n^{\log_b(a) - \epsilon})$ ), con costo $\Large \Theta(n^{\log_4(a)})$.
 
 Fino a quando $\Large n^{\log_4(a)} < n^2$, l'algoritmo ricorsivo sarà asintoticamente più efficiente di quello iterativo.
 
