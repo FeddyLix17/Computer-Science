@@ -1,6 +1,6 @@
 # <p align="center"> Esame 31 Gennaio 2021 </p>
 
-## Esercizio 1
+## <p align="center"> Esercizio 1 </p>
 
 Si consideri la seguente funzione:
 
@@ -19,23 +19,29 @@ def Exam(n):
     return tot
 ```
 
+---
+
 **a)** Si imposti la relazione di ricorrenza che ne definisce il tempo di esecuzione giustificando dettagliatamente l’equazione ottenuta
 
-il caso base verrà raggiunto quando $\Large n \leq 1$, con costo $\Large \Theta(1)$
+si rientrerà nel caso base per ogni $\Large n \leq 1$, con relativo costo $\Large \Theta(1)$
 
 $$
     \Large -T(n) = \Theta(1), \quad n \leq 1
 $$
 
-altrimenti, il costo sarà determinato
+il costo del caso generale, invece, sarà determinato
 
 - dal primo ciclo while
 
-- dal secondo ciclo while, annidato al primo
+- dal secondo ciclo while (annidato al primo)
 
-- dalla chiamata ricorsiva, presente sempre dentro al primo ciclo
+- dalla chiamata ricorsiva (annidata al primo ciclo)
 
-si analizza il comportamento del primo ciclo
+<br>
+
+- **primo while**
+
+    si analizza il suo comportamento
 
 <div align="center">
 
@@ -46,10 +52,6 @@ si analizza il comportamento del primo ciclo
 </div>
 
 il ciclo terminerà quando
-
-$$
-    \Large \frac{512}{2^i} < 2
-$$
 
 $$
     \Large \frac{512}{2^i} = 1
@@ -63,9 +65,11 @@ $$
     \Large log_2(512) = i \implies i = 9
 $$
 
-il costo del primo ciclo sarà costante, $\Large \Theta(9) \implies \Theta(1)$
+il costo del primo ciclo sarà uguale a $\Large \Theta(9) \implies \Theta(1)$
 
-si analizza ora il comportamento del secondo ciclo
+- **secondo while**
+
+    si analizza il suo comportamento
 
 <div align="center">
 
@@ -86,13 +90,13 @@ $$
     \Large i = \frac{n}{3}
 $$
 
-concludendo che il costo del ciclo sia $\Large \Theta(\frac{n}{3}) \implies \Theta(n)$
+il costo del secondo ciclo sarà uguale a $\Large \Theta(\frac{n}{3}) \implies \Theta(n)$
 
-la chiamata ricorsiva ha come parametro $\Large k$, il quale al termine del secondo ciclo while abbiamo visto essere uguale a $\Large \frac{n}{3}$, quindi il costo della chiamata ricorsiva sarà $\Large T(\frac{n}{3})$.
+- **chiamata ricorsiva**
 
-La chiamata ricorsiva, essendo dentro il primo ciclo while, verrà eseguita 9 volte, quindi il costo totale di tutte le chiamate ricorsive sarà $\Large 9T(\frac{n}{3})$
+    La chiamata ricorsiva ha come parametro $\Large k$, il quale al termine del secondo ciclo while sarà uguale a $\Large \frac{n}{3}$, il costo della singola chiamata ricorsiva sarà uguale a $\Large T(\frac{n}{3})$.
 
-il costo totale della funzione sarà quindi
+    La chiamata ricorsiva, essendo dentro il primo ciclo while, verrà eseguita 9 volte, quindi il costo totale delle chiamate ricorsive sarà uguale a $\Large 9T(\frac{n}{3})$.
 
 $$
     \Large - T(n) = 9T(\frac{n}{3}) + \Theta(n), \quad n > 1
@@ -102,6 +106,8 @@ $$
     \Large - T(n) = \Theta(1), \quad n \leq 1
 $$
 
+---
+
 **b)** Si risolva la ricorrenza usando il metodo principale o un altro metodo ricordando che
 
 $$
@@ -110,36 +116,36 @@ $$
 
 dettagliando i passaggi del calcolo e giustificando ogni affermazione
 
-si generalizza la ricorrenza in
+Generalizzando la ricorrenza in
 
 $$
     \Large T(n) = aT(\frac{n}{b}) + f(n)
 $$
 
-individuando $\Large a = 9$, $\Large b = 3$ e $\Large f(n) = \Theta(n)$.
+vengono individuati $\Large a = 9$, $\Large b = 3$ e $\Large f(n) = \Theta(n)$.
 
-$\Large n^{\log_b(a)}$ sarà uguale a $\Large n^{log_3(9)} = n^2$
+$\Large n^{\log_b(a)}$ sarà uguale a $\Large n^{log_3(9)} \implies n^2$
 
-si rientra nel primo caso del metodo principale, poiché per $\Large \epsilon = 1$ si ha che
+rientrando nel primo caso del metodo principale, poiché per $\Large \epsilon = 1$ si ha che
 
 $$
     \Large f(n) = \Theta(n^{log_b(a) - \epsilon}) \implies \Theta(n^{2 - 1}) \implies \Theta(n)
 $$
 
-quindi il costo totale della funzione sarà
+il costo totale della funzione sarà uguale a
 
 $$
     \Large T(n) = \Theta(n^{log_3(9)}) \implies \Theta(n^2)
 $$
 
-## Esercizio 2
+## <p align="center"> Esercizio 2 </p>
 
 Sia *A* un array di dimensione *n* e *B* un array ordinato di dimensione *m*,
 contenenti entrambi numeri interi.
 
 Si vuole trovare il numero di interi di *A* che non sono presenti in *B*.
 
-Progettare un algoritmo ricorsivo che risolva il problema con un costo computazionale asintotico strettamente inferiore a $\Theta(n*m)$.
+Progettare un algoritmo ricorsivo che risolva il problema con un costo computazionale asintotico strettamente inferiore a $\Large \Theta(n*m)$.
 
 Ad esempio:
 
@@ -149,52 +155,78 @@ l’algoritmo deve restituire 5 (i numeri in A e non in B sono infatti 1, 2, 2, 
 
 Dell’algoritmo proposto
 
-a) si dia la descrizione a parole,
+---
 
-Per ogni elemento di *A* si effettua una ricerca binaria di quest'ultimo in *B*, usando un contatore per tenere traccia del numero di elementi di *A* che non sono presenti in *B*, ritornandolo una volta finiti di scorrere gli elementi di *A*.
+a) si dia la descrizione a parole
 
-> **nota**: viene richiesto di progettare un algoritmo ricorsivo, in questo caso solo la funzione di *ricerca binaria* lo sarà, in quanto, per la funzione principale, implementare una soluzione *ricorsiva* rispetto ad una *iterativa* senza la
-possibilità di utilizzare più *variabili/strutture dati* ausiliarie risulta essere più tedioso.
+Per ogni elemento di *A* si effettua una ricerca binaria di quest'ultimo in *B*, usando un contatore per tenere traccia del numero di elementi di *A* che **non** sono presenti in *B*, ritornandolo una volta finiti di scorrere gli elementi di *A*.
 
-**b)** si scriva lo pseudocodice,
+> **nota**: viene richiesto di progettare un algoritmo ricorsivo, in questo caso solo la funzione di *ricerca binaria* lo sarà, in quanto, per la funzione principale, implementare una soluzione *ricorsiva* rispetto ad una *iterativa* senza la possibilità di utilizzare *strutture dati* di appoggio risulta essere più tedioso.
+
+---
+
+**b)** si scriva lo pseudocodice
 
 ```python
 def es2(A, B):
     cont = 0
     for i in range(len(A)):
-        if ric_bin(B, A[i]) == -1:
+        if ric_bin(B, A[i], 0, len(B) - 1) == -1:
             cont += 1
     return cont
 
-def ric_bin(B, x):
-    s = 0
-    d = len(B) - 1
-    while s < d:
-        m = (s + d) / 2        
-        if B[m] < x:
-            s = m + 1
-        elif B[m] > x:
-            d = m - 1
+def ric_bin(B, x, s, d):
+    m = (s + d) // 2
+    if d >= s:
+        if array[m] == x:
+            return m
+        elif array[m] > x:
+            return ric_bin(B, x, s, m - 1)
         else:
-            return 1
-    return - 1
+            return ric_bin(B, x, m + 1, d)
+    else:
+        return -1
 ```
 
-**c)** si giustifichi il costo computazionale.
+---
 
-si dimostra brevemente il costo della funzione di ricerca binaria
+**c)** si giustifichi il costo computazionale
 
-il costo di tale funzione è determinata dal numero di iterazioni del ciclo while, in quanto il resto delle operazioni sono elementari, si analizza quindi il comportamento del ciclo
+- ***ric_bin***
 
-<div align="center">
+    L'equazione di ricorrenza è data da
 
-| Iterazione | 0 | 1 | 2 | 3 | $\Large \dots$ | $k$ |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Lungezza array | $\Large m$ | $\Large \frac{m}{2}$ | $\Large \frac{m}{4}$ | $\Large \frac{m}{8}$ | $\Large \dots$ | $\Large \frac{m}{2^k}$ |
+$$
+    \Large - T(m) = T(\frac{m}{2}) + \Theta(1), \quad m > 1
+$$
 
-</div>
+$$
+    \Large - T(m) = \Theta(1), \quad m = 1
+$$
 
-il ciclo terminerà quando la lunghezza dell'array sarà uguale a 1 (ovvero quando $\Large s = d$)
+dove $\Large m$ è la lunghezza dell'array $\Large B$.
+
+Sviluppando la ricorrenza con il metodo iterativo
+
+$$
+    \Large T(m) = T(\frac{m}{2}) + \Theta(1)
+$$
+
+$$
+    \Large T(m) = T(\frac{m}{2^2}) + \Theta(1) + \Theta(1)
+$$
+
+$$
+    \Large T(m) = T(\frac{m}{2^3}) + \Theta(1) + \Theta(1) + \Theta(1)
+$$
+
+generalizzabile in
+
+$$
+    \Large T(m) = T(\frac{m}{2^k}) + k\Theta(1)
+$$
+
+Si rientrerà nel caso base quando
 
 $$
     \Large \frac{m}{2^k} = 1
@@ -208,23 +240,41 @@ $$
     \Large log_2(m) = k \implies k = log_2(m)
 $$
 
-il costo totale della funzione di ricerca binaria sarà quindi $\Large \Theta(log_2(m))$.
+il costo della funzione di sarà uguale a 
 
-il costo della funzione principale è invece determinato dal ciclo for, che scorre tutti gli elementi di *A*, quindi per $\Large n$ iterazioni compirà $\Large \Theta(log_2(m))$ operazioni al suo interno, da cui il costo
+$$ 
+    \Large T(m) = T(\frac{m}{2^{log_2(m)}}) + log_2(m)\Theta(1)
+$$
+
+$$
+    \Large T(m) = T(1) + \Theta(log_2(m))
+$$
+
+$$
+    \Large T(m) = \Theta(1) + \Theta(log_2(m))
+$$
+
+$$
+    \Large T(m) = \Theta(log_2(m))
+$$
+
+- ***es2***
+
+il costo della funzione è determinato dal ciclo for, il quale scorre tutti gli elementi di *A*, dunque per $\Large n$ iterazioni, dove $\Large n$ è la lunghezza dell'array $\Large A$, compirà $\Large \Theta(log_2(m))$ operazioni al suo interno, da cui
 
 $$
     \Large T(n) = n\Theta(log_2(m)) \implies \Theta(n*log_2(m))
 $$
 
-il costo sarà dunque strettamente inferiore a $\Large \Theta(n*m)$.
+rimanendo strettamente inferiore a $\Large \Theta(n*m)$.
 
-## Esercizio 3
+## <p align="center"> Esercizio 3 </p>
 
-Si consideri una lista *L*, in cui ogni elemento è un record a due campi,
+Si consideri una lista *L*, in cui ogni elemento è un record a due campi:
 
 - il campo *val* contenente un intero
 
-- ed il campo *next* con il puntatore al nodo seguente (*next* vale *None* per l’ultimo record della lista).
+- ed il campo *next* con il puntatore al nodo seguente (*next* vale *None* per l’ultimo record della lista)
 
 Bisogna contare i record della lista contenenti numeri pari.
 
@@ -232,12 +282,13 @@ Si consideri adesempio la lista *L*, per questa lista bisogna la risposta è 6
 
                     3 --> 5 --> 2 --> 4 --> 4 --> 8 --> 7 --> 7 --> 1 --> 9 --> 2 --> 2 --> None
 
-Progettare un algoritmo ricorsivo che, dato il puntatore *r* alla testa
-della lista effettui l’operazione di conteggio in tempo $\Large \Theta(n)$ dove n è il numero di elementi presenti nella lista.
+Progettare un algoritmo ricorsivo che, dato il puntatore *r* alla testa della lista effettui l’operazione di conteggio in tempo $\Large \Theta(n)$ dove n è il numero di elementi presenti nella lista.
 
 Dell’algoritmo proposto
 
-**a)** si dia la descrizione a parole,
+---
+
+**a)** si dia la descrizione a parole
 
 Si scorre ricorsivamente una sola volta tutta la lista, controllando ogni volta se il valore del campo *val* del record corrente è pari, tenendone traccia usando le chiamate ricorsive.
 
@@ -254,21 +305,17 @@ def es3(L):
 
 **c)** si giustifichi il costo computazionale risolvendo la ricorsione che viene fuori dall’algoritmo utilizzando uno dei metodi di soluzione visti a lezione.
 
-il caso base verrà raggiunto quando $\Large L = None$, ovvero quando la lungezza della lista sarà uguale a 0, con costo $\Large \Theta(1)$
+Si rientrerà nel caso base quando $\Large L = None$, ovvero quando la lungezza della lista sarà uguale a 0, con relativo costo $\Large \Theta(1)$.
 
 $$
     \Large -T(n) = \Theta(1), \quad n = 0
 $$
 
-altrimenti, il costo sarà determinato dalle 2 chiamate ricorsive.
+Il costo del caso generale, invece, sarà determinato dalle 2 chiamate ricorsive.
 
-Si nota come entrambe le chiamate ricorsive abbiano lo stesso parametro e di come ne venga eseguita solo una tra le 2 (a seconda del valore del campo *val* del record corrente), quindi si può dire che il costo totale delle chiamate ricorsive sia $\Large T(n-1)$.
+Entrambe le chiamate ricorsive presentano lo stesso parametro e ad ogni iterazione ne verrà eseguita solo una tra le 2 (a seconda del valore del campo *val* del record corrente), si può dire che il costo totale delle chiamate ricorsive sia $\Large T(n-1)$.
 
-$$
-    \Large -T(n) = T(n-1) + \Theta(1), \quad n \geq 1
-$$
-
-che aggiunta al caso base diventa
+L'equazione di ricorrenza sarà data da
 
 $$
     \Large -T(n) = T(n-1) + \Theta(1), \quad n \geq 1
@@ -278,25 +325,27 @@ $$
     \Large -T(n) = \Theta(1), \quad n = 0
 $$
 
-si decide di risolvere la ricorrenza usando il metodo iterativo, quindi si studia il comportamento delle chiamate ricorsive
+Si decide di risolvere la ricorrenza usando il metodo iterativo, sviluppando la ricorrenza
 
 $$
     \Large T(n) = T(n-1) + \Theta(1)
 $$
 
 $$
-    \Large T(n) = [T(n-2) + \Theta(1)] + \Theta(1) \implies T(n-2) + 2\Theta(1)
+    \Large T(n) = T(n-2) + \Theta(1) + \Theta(1)
 $$
 
 $$
-    \Large T(n) = \{[T(n-3) + \Theta(1)] + \Theta(1)\} + \Theta(1) \implies T(n-3) + 3\Theta(1)
+    \Large T(n) = T(n-3) + \Theta(1) + \Theta(1)\ + \Theta(1)
 $$
+
+generalizzabile in
 
 $$
     \Large T(n) = T(n-k) + k\Theta(1)
 $$
 
-il caso base verrà raggiunto quando
+Il caso base verrà raggiunto quando
 
 $$
     \Large n - k = 0
@@ -306,7 +355,7 @@ $$
     \Large k = n
 $$
 
-dunque il costo della funzione sarà uguale a
+il costo della funzione sarà uguale a
 
 $$
     \Large T(n) = T(n-n) + n\Theta(1)
@@ -317,5 +366,11 @@ $$
 $$
 
 $$
-    \Large T(n) = \Theta(1) + \Theta(n) \implies \Theta(n)
+    \Large T(n) = \Theta(1) + \Theta(n)
 $$
+
+$$
+    \Large T(n) = \Theta(n)
+$$
+
+
