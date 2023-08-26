@@ -1,92 +1,169 @@
 # <p align= "center"> Esame 13 Luglio 2021 </p>
 
-- ## Esercizio 1 (10 punti)
+## <p align= "center"> Esercizio 1 </p>
 
 Si consideri la seguente funzione:
 
 ```python
 def Exam(n):
-    if n <= 2: return 2 * n;                # Θ(1)
-    b = n/2;                                # Θ(1)
-    tot = n * n;                            # Θ(1)  
-    for i in range(1, n + 1):               # Θ(n)
-        for j in range(1, i + 1):           # Θ(n)
-            tot = tot + i - j;              # Θ(1)
-    for i = 1 to 4:                         # Θ(1)
-        for j = 1 to 4:                     # Θ(1)
-            if i = j: tot = tot + Exam(b)   # T(n/2)
-            else: tot = tot + i - j;        # Θ(1)
-    return tot                              # Θ(1)
+    if n <= 2:
+        return 2 * n
+    b = n/2
+    tot = n * n
+    for i in range(1, n + 1):
+        for j in range(1, i + 1):
+            tot = tot + i - j
+    for i in range(1, 5):
+        for j in range(1, 5):
+            if i = j:
+                tot = tot + Exam(b)
+            else:
+                tot = tot + i - j
+    return tot
 ```
 
-**a)** per impostare la relazione di ricorrenza si analizza il codice
+---
 
-1. nei primi 2 cicli for annidati, si analizza il loro comportamento per determinarne il costo. <br>
+**a)** Si imposti la relazione di ricorrenza che ne definisce il tempo di esecuzione
+giustificando l’equazione ottenuta
 
-- per $i = 1$, il ciclo for annidato viene eseguito 1 volte in quanto $j$ è già  uguale ad $i$
-- per $i = 2$, il ciclo for interno viene eseguito 2 volte (una con $j=1$, una con $j=2$)
-- per $i = 3$, il ciclo for interno viene eseguito 3 volte in quanto (una con $j=1$, una con $j=2$, una con $j=3$)
-- per $i = n$, il ciclo for interno viene eseguito n volte in quanto una con $j=1$, una con $j=2$, una con $j=3$, $...$ , una con $j=n$)
+Si rientrerà nel caso base per ogni $\Large N \leq 2$, con relativo costo $\Large \Theta(1)$.
 
-quindi il costo dei 2 cicli for annidati è pari a 
+Nel caso generale, invece, il costo sarà determinato
 
-$$ \sum_{i=1}^{n} i = \frac{n(n+1)}{2} = \frac{n^2}{2} + \frac{n}{2} = \Theta(n^2) $$
+- dal primo ciclo for
 
-2. negli altri 2 cicli for annidati avviene una chiamata ricorsiva, che di per se ha un costo pari a $T(\frac{n}{2})$ , ma essendo eseguita 4 volte (solo quando $i=j$), avrà un costo pari a  $4T(\frac{n}{2})$
+- dal secondo ciclo for, annidato al primo
 
-quindi la relazione di ricorrenza è $T(n) = 4T(n/2) + \Theta(n^2)$
+- dal terzo ciclo for
 
-con caso base  $T(2) = \Theta(1)$
+- dal quarto ciclo for, annidato al terzo
 
+- dalla chiamata ricorsiva, annidata al quarto ciclo for
 
+<br>
+
+- **primo for**
+
+  il ciclo eseguirà $\Large n$ iterazioni, da cui il costo $\Large \Theta(n)$ 
+
+- **secondo for**
+
+    il numero di iterazioni del ciclo dipenderà dal valore attuale di $\Large i$, ad esempio
+
+    - per $\Large i = 1$, il ciclo verrà eseguito 1 volta (in quanto $\Large j$ è già uguale ad $\Large i$)
+    - per $\Large i = 2$, il ciclo verrà eseguito 2 volte (una con $\Large j = 1$, una con $\Large = 2$)
+    - per $\Large i = 3$, il ciclo verrà eseguito 3 volte (una con $\Large j = 1$, una con $\Large j = 2$, una con $\Large j = 3$)
+
+    generalizzabile in
+  
 $$
-    \begin{cases}
-    T(n) = 4T(\frac{n}{2}) + \Theta(n^2)\\
-    T(1) = \Theta(1)
-    \end{cases}
-$$
-
-**b)** usando il metodo iterativo per risolvere la ricorrenza, si ha che:
-
-$$
-    T(n) = 4T(\tfrac{n}{2}) + \Theta(n^2)\\
-    T(n) = 4(4T(\tfrac{n}{2^2}) + \Theta(\tfrac{n}{2})^2) + \Theta(n^2)\\
-    = 4^2T(\tfrac{n}{2^2}) + 4\Theta(\tfrac{n}{2})^2 + \Theta(n^2)\\
-    = 4^2T(\tfrac{n}{2^2}) + \Theta(n^2) +\Theta(n^2)\\
-    = 4^2T(\tfrac{n}{2^2}) + 2\Theta(n^2)\\
-$$
-
-
-da cui la generalizzazione $T(n) = 4^kT(\tfrac{n}{2^k}) + k\Theta(n^2)$
-
-sapendo che $T(1) = \Theta(1)$, si ha che $\tfrac{n}{2^k} = 1 \implies n = 2^k \implies k = \log_2(n)$
-
-il costo totale è uguale a $T(n) = 4^{\log_2(n)}T(\tfrac{n}{2^{\log_2(n)}}) + \log_2(n)\Theta(n^2)$
-
-$$
-    T(n) = 2^{2\log_2(n)}T(1) + \Theta(n^2\log_2(n))\\
-    = 2^{2\log_2(n)}\Theta(1) + \Theta(n^2\log_2(n))\\
-    = \Theta(n^2) + \Theta(n^2\log_2(n))\\
-    = \Theta(n^2\log_2(n))
+    \Large \sum_{i=1}^{n} i
 $$
 
-
-**c)** per risolvere l'equazione di ricorrenza usando il metodo principale si generalizza in
+Trattandosi di una [progressione aritmetica](https://it.wikipedia.org/wiki/Progressione_aritmetica), il costo sarà uguale a
 
 $$
-    \begin{cases}
-        T(n) = aT(\tfrac{n}{b}) + f(n)\\
-        T(1) = \Theta(1)
-    \end{cases}
+    \Large \Theta(\frac{n(n+1)}{2}) \implies \Theta(\frac{n^2 + n}{2}) \implies \Theta(n^2 + n) \implies \Theta(n^2)
 $$
 
-dove $a = 4$, $b = 2$ e $f(n) = \Theta(n^2)$
+- **terzo for**
 
-si rientra nel caso in cui $f(n) = \Theta(n^{\log_b(a)})$ con $\log_b(a) = \log_2(4) = 2$
-il costo totale sarà quindi uguale a $T(n) = \Theta(n^2\log_2(n))$
+  il ciclo eseguirà $\Large 4$ iterazioni, da cui il costo $\Large \Theta(4) \implies \Theta(1)$
+
+- **quarto for**
+
+  il ciclo eseguirà $\Large 16$ iterazioni (ovvero per 4 volte eseguirà 4 iterazioni), da cui il costo $\Large \Theta(16) \implies \Theta(1)$
+
+- **chiamata ricorsiva**
+
+  la chiamata presenta come parametro $\Large b = \frac{n}{2}$, da cui il singolo costo $\Large T(\frac{n}{2})$.
+
+  Nonostante sia annidata al quarto ciclo for, la chiamata ricorsiva sarà ripetuta 4 volte invece di 16 (ovvero solo quando $\Large i = j$)
+
+$$
+    \Large - T(n) = 4T(\frac{n}{2}) + \Theta(n^2), \quad n > 2
+$$
+
+$$
+    \Large - T(n) = \Theta(1), \quad n \leq 2
+$$
+
+---
+
+**b)** Si risolva l’equazione usando il metodo iterativo, commentando opportunamente i passaggi del calcolo
+
+Sviluppando la ricorrenza si ottiene
+
+$$
+    \Large T(n) = 4T(\frac{n}{2}) + \Theta(n^2)
+$$
+
+$$
+    \Large T(n) = 4(4T(\frac{n}{2^2}) + \Theta(\frac{n}{2})^2) + \Theta(n^2)
+$$
+
+$$
+    \Large T(n) = 4^2T(\frac{n}{2^2}) + 4\Theta(\frac{n}{2})^2 + \Theta(n^2)
+$$
+
+$$
+    \Large T(n) = 4^2T(\frac{n}{2^2}) + \Theta(n^2) + \Theta(n^2)
+$$
+
+$$
+    \Large T(n) = 4^2T(\frac{n}{2^2}) + 2\Theta(n^2)
+$$
 
 
-- ## Esercizio 2 (10 punti)
+generalizzabile in
+
+$$
+    \Large T(n) = 4^kT(\frac{n}{2^k}) + k\Theta(n^2)
+$$
+
+Le chiamate ricorsive termineranno quando 
+
+$$
+    \Large \frac{n}{2^k} = 1 \implies n = 2^k \implies \log_2(n) = k \implies k = \log_2(n)
+$$
+
+il costo della funzione sarà uguale a 
+
+$$
+    \Large T(n) = 4^{\log_2(n)}T(\frac{n}{2^{\log_2(n)}}) + \log_2(n)\Theta(n^2)
+$$
+
+$$
+    \Large T(n) = 2^{2\log_2(n)}T(1) + \Theta(n^2 * \log_2(n))
+$$
+
+$$
+    \Large T(n) = 2^{2\log_2(n)}\Theta(1) + \Theta(n^2 * \log_2(n))
+$$
+
+$$
+    \Large T(n) = \Theta(n^2) + \Theta(n^2\log_2(n))
+$$
+
+$$
+    \Large T(n) = \Theta(n^2*\log_2(n))
+$$
+
+---
+
+**c)** Si risolva l’equazione usando il metodo principale, speciﬁcando quale caso del teorema si applica e perchè oppure per quale motivo non si può applicare il teorema
+
+generalizzando la ricorrenza in $\Large T(n) = aT(\tfrac{n}{b}) + f(n)$
+
+vengono individuati $\Large a = 4$, $\Large b = 2$ e $\Large  f(n) = \Theta(n^2)$.
+
+Si rientra nel secondo caso del metodo principale, poichè $\Large f(n) = \Theta(n^{\log_b(a)})$.
+
+Il costo della funzione sarà uguale a $\Large T(n) = \Theta(n^2*\log_2(n))$
+
+## <p align= "center"> Esercizio 2 </p>
+
 Progettare un algoritmo che, dato un array *A* di n interi distinti i cui
 elementi sono all’inizio in ordine crescente e da un certo punto in poi in ordine
 decrescente, restituisce in tempo *O(log n)* il massimo intero presente nell’array. <br>
