@@ -1,6 +1,6 @@
-# <p align= "center"> Esame 13 Luglio 2021 </p>
+# <p align="center"> Esame 13 Luglio 2021 </p>
 
-## <p align= "center"> Esercizio 1 </p>
+## <p align="center"> Esercizio 1 </p>
 
 Si consideri la seguente funzione:
 
@@ -162,107 +162,234 @@ Si rientra nel secondo caso del metodo principale, poichè $\Large f(n) = \Theta
 
 Il costo della funzione sarà uguale a $\Large T(n) = \Theta(n^2*\log_2(n))$
 
-## <p align= "center"> Esercizio 2 </p>
+<br>
+
+## <p align="center"> Esercizio 2 </p>
 
 Progettare un algoritmo che, dato un array *A* di n interi distinti i cui
 elementi sono all’inizio in ordine crescente e da un certo punto in poi in ordine
-decrescente, restituisce in tempo *O(log n)* il massimo intero presente nell’array. <br>
-Ad esempio: per *A = [8, 10, 20, 80, 100, 200, 400, 500, 3, 2, 1]* l’algoritmo deve
-restituire il valore *500*
+decrescente, restituisce in tempo $\Large O(log(n))$ il massimo intero presente nell’array.
 
-**a)** L’algoritmo da proggettare sfrutterà la ricerca binaria per trovare il punto in cui l’array passa da ordine crescente a ordine decrescente (nonchè valore massimo di quest'ultimo). <br> 
-1. S'impostano due puntatori, testa e coda, rispettivamente all'estremo destro e sinistro dell’array.
+Ad esempio:
 
-2. Si calcola l’indice mid come la media di testa e coda. <br> 
-Se l’elemento all’indice mid è maggiore dell’elemento successivo ad esso, significa che l'elemento più grande dell'array si trova tra la coda e mid, quindi s'imposta la testa = mid.
+per *A = [8, 10, 20, 80, 100, 200, 400, 500, 3, 2, 1]* l’algoritmo deve restituire il valore *500*.
 
-3. In caso contrario, l'elemento più grande dell'array si troverà tra mid + 1 e la testa, quindi s'imposta la coda a mid + 1.
+Dell’algoritmo proposto
 
-4. Questo processo viene ripetuto finché l'indice della coda non sarà uguale all'indice della testa (ovvero quando il sub-array sarà composto solo dall'elemento che stavamo cercando).
-5. A questo punto, l’algoritmo restituisce l’elemento trovato
+---
 
-**b)** 
+**a)** si dia la descrizione a parole
+
+È possibile fare uso della ricerca binaria per trovare il punto in cui l’array passa da ordine crescente a ordine decrescente (ovvero la posizione dell'elemento massimo presente).
+
+Usando 2 puntatori inizializzati rispettivamente all'estremo sinistro e destro dell'array, si controlla l'elemento centrale
+
+- Se l’elemento centrale è maggiore dell’elemento successivo ad esso, si continuerà a cercare l'elemento massimo nel sub-array sinistro (tra la coda e l'elemento precedente a quello centrale corrente) 
+
+- altrimenti, si continuerà a cercarlo nel sub-array destro (tra l'elemento successivo a quello centrale corrente e la testa) 
+
+Viene ripetuto lo stesso processo fino a quando non si otterrà un sub-array contente un unico elemento (quello ricercato), restituendolo come valore di ritorno della funzione.
+
+---
+
+**b)** si scriva lo pseudocodice
 
 ```python
-def find_max(A):
-    coda = 0
-    testa = len(A) - 1
-    while coda < testa:
-        mid = (coda + testa) / 2
-        if A[mid] > A[mid + 1]:
-            testa = mid
+def es2(A):
+    s = 0
+    d = len(A) - 1
+    while s < d:
+        m = (s + d) // 2
+        if A[m] > A[m + 1]:
+            d = m - 1
         else:
-            coda = mid + 1
-    return A[coda]
+            s = m + 1
+    return A[s]
 ```
 
-**c)** Per determinare la complessità dell'algoritmo, si analizza il ciclo while tenendo traccia della dimensione del sub-array in ogni iterazione. <br>
+---
 
-| k | 1 | 2 | 3 | ... |
-|:----------:|:----------:| :----------:| :----------:| :----------:|
-| len(A) | n | $\tfrac{n}{2}$ | $\tfrac{n}{4}$ | $\tfrac{n}{2^k}$ |
+**c)** si calcoli il costo computazionale
 
-ricordando che esso terminerà quando la lunghezza del sub-array sarà 1, si ha che
+Il costo rimane quello della ricerca binaria, ovvero $\Large \Theta(log(n))$, dimostrato brevemente di seguito.
+
+Il costo è determinato dal solo ciclo while, si analizza il suo comportamento
+
+<div align="center">
+
+| Iterazione | 0 | 1 | 2 | 3 | $\Large \dots$ | $\Large k$ |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Lunghezza sub-array | $\Large n$ | $\Large \frac{n}{2}$ | $\Large \frac{n}{4}$ | $\Large \frac{n}{8}$ | $\Large \dots$ | $\Large \frac{n}{2^k}$ |
+
+</div>
+
+il ciclo terminerà quando
 
 $$
-    \frac{n}{2^k} = 1 \implies n = 2^k \implies k = \log_2(n)
+    \Large \frac{n}{2^k} = 1 \implies n = 2^k \implies k = \log_2(n)
 $$
 
-quindi il costo totale sarà uguale a $\Theta(\log_2(n))$, o $O(\log_2(n))$ come richiesto dal testo
+il costo totale della funzione sarà uguale a $\Large \Theta(\log_2(n))$.
 
+Viene rispettato il vincolo di $\Large O(log(n))$ richiesto dal testo.
 
+<br>
 
-- ## Esercizio 3 (10 punti)
+## <p align= "center"> Esercizio 3 </p>
 
-Dato un albero binario *T*, radicato e con *n* nodi, deﬁniamo un nodo *u* di
-*T* equilibrato se il sottoalbero sinistro di *u* e il sottoalbero destro di *u* hanno
-entrambi lo stesso numero di nodi. <br>
-Progettare un algoritmo che, dato il puntatore *r* alla radice di un albero
-binario memorizzato tramite record e puntatori, restituisca in tempo *O(n)* il
-numero dei suoi nodi equilibrati.
+Dato un albero binario *T*, radicato e con *n* nodi, deﬁniamo un nodo *u* di *T* equilibrato se il sottoalbero sinistro di *u* e il sottoalbero destro di *u* hanno entrambi lo stesso numero di nodi.
 
-**a)** L’algoritmo da progettare sfrutterà una visita in post-ordine per scorrere l’albero e controllare se ogni nodo è equilibrato. <br>
+Progettare un algoritmo che, dato il puntatore *r* alla radice di un albero binario memorizzato tramite record e puntatori, restituisca in tempo $\Large O(n)$ il numero dei suoi nodi equilibrati.
 
-1. Per prima cosa l'algoritmo controlla se ci si trova su una foglia, in tal caso, restituisce una tupla contenente due zeri, indicando che non ci sono nodi e nessun nodo equilibrato nel sottoalbero radicato al nodo dato.
+---
 
-2. Se il nodo non è None, la funzione chiama ricorsivamente se stessa sui figli sinistro e destro del nodo corrente per ottenere il numero totale di nodi e il numero di nodi equilibrati nei rispettivi sottoalberi. <br>
-La funzione quindi calcola il numero totale di nodi e il numero di nodi equilibrati nel sottoalbero radicato al nodo corrente sommando i valori restituiti dalle chiamate ricorsive sui figli sinistro e destro. <br>
-Se il numero di nodi nei sottoalberi sinistro e destro è uguale, il conteggio dei nodi equilibrati viene incrementato di uno per includere il nodo corrente.
+**a)** si dia la descrizione a parole
 
-3. Infine, la funzione restituisce una tupla contenente il numero totale di nodi e il numero di nodi equilibrati nel sottoalbero radicato al nodo corrente.
+Si procede a visitare l'albero in post-order (ovvero visitando prima il sottoalbero sinistro, successivamente il sottoalbero destro ed infine il nodo corrente).
 
+Si tiene conto ricorsivamente, per ogni nodo, del numero di nodi dei suoi 2 sottoalberi rispettivamente, incrementando il numero di nodi equilibrati in caso siano uguali.
 
+Il tutto restituendo ogni volta il numero di nodi presente ed il numero di nodi equilibrati come coppia di valori. 
 
-**b)** 
+Il primo valore di questa coppia sarà quello richiesto dall'esercizio.
+
+---
+
+**b)** si scriva lo pseudocodice
 
 ```python
-def multiplecounter(r):
+def es3(r):    
     if r == None:
-        return (0, 0)
-    
-    nodi_sinistra, nodi_sinistra_bilanciati = multiplecounter(r.left)
-    nodi_destra, nodi_destra_bilanciati = multiplecounter(r.right)
-    nodi_totali = 1 + nodi_sinistra + nodi_destra
-    nodi_totali_bilanciati = nodi_sinistra_bilanciati + nodi_destra_bilanciati
+        return (0,0)
 
-    if nodi_sinistra == nodi_destra:
-        nodi_totali_bilanciati += 1
+    eqS, sx_nodes = es3(r.left)
+    eqD, dx_nodes = es3(r.right)
+    eq = eqS + eqD
 
-    return (nodi_totali, nodi_totali_bilanciati)
+    if sx_nodes == dx_nodes:
+        eq += 1
+    return eq, sx_nodes + dx_nodes + 1
 ```
 
+---
 
 **c)** si motivi il costo computazionale
 
-l'algoritmo visita ogni nodo dell'albero (in post-order) una volta sola, quindi il costo totale è uguale a $\Theta(n)$, o $O(n)$ come richiesto dal testo
+il costo è quello di una visita in *post-order*, con equazione di ricorrenza
 
-**Domanda:** Qual è il numero minimo e qual'è il numero massimo di nodi equilibrati che
-l’albero T pu`o avere? Motivare la risposta. <br>
+$$
+    \Large - T(n) = T(k) + T(n − k − 1) + \Theta(1), \quad n \geq 1
+$$
 
-Il numero minimo di nodi equilibrati in assoluto che un albero binario può avere è 0. <br>
-Ovviamente si tratta del caso estremo in cui l’albero sia vuoto (cioè non ha nodi). <br>
-Se in un caso più comune l’albero abbia almeno un nodo, allora il minor numero di nodi equilibrati che un albero binario non vuoto può avere è 1. <br>
-Ciò è dovuto al fatto che un albero binario non vuoto avrà almeno un nodo/almeno un nodo foglia e per definizione un nodo foglia è equilibrato (essendo che entrambi i loro sottoalberi sono vuoti, quindi hanno lo stesso numero di nodi (0)). <br>
+$$
+    \Large - T(n) = \Theta(1), \quad n = 0
+$$
 
-Il numero massimo di nodi equilibrati che un albero binario può avere è uguale al numero totale di nodi dell’albero stesso. <br>
-Si verifica quando l’albero è perfettamente bilanciato, quando tutti i livelli dell’albero sono completamente riempiti.
+dove
+
+- $\Large n$ è il numero di nodi dell'albero
+
+- $\Large k$ è il numero di nodi del sottoalbero sinistro
+
+- e $\Large n-k-1$ è il numero di nodi del sottoalbero destro
+
+Per determinarne il costo, si analizzano caso migliore e caso peggiore:
+
+- **caso peggiore**:
+
+    l'albero è completamente sbilanciato, quindi tutti i suoi nodi sono aggregati o nel sottoalbero sinistro o nel sottoalbero destro, ovvero quando
+
+$$
+    \Large k = 0 \vee n - k - 1 = 0
+$$
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • **$\Large k = 0$**
+
+$$
+    \Large T(n) = T(0) + T(n - 0 - 1) + \Theta(1) = T(n - 1) + \Theta(1)
+$$
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • **$\Large n - k - 1 = 0$**
+
+$$
+    \Large T(n) = T(n - 1) + T(0) + \Theta(1) = T(n - 1) + \Theta(1)
+$$
+
+sviluppando la ricorrenza, si ottiene
+
+$$
+    \Large T(n) = T(n - 1) + \Theta(1)
+$$
+
+$$
+    \Large T(n) = T(n - 2) + \Theta(1) + \Theta(1)
+$$
+
+$$
+    \Large T(n) = T(n - 3) + \Theta(1) + \Theta(1) + \Theta(1)
+$$
+
+generalizzabile in
+
+$$
+    \Large T(n) = T(n - k) + k\Theta(1)
+$$
+
+Verrà raggiunto il caso base quando
+
+$$
+    \Large n - k = 0
+$$
+
+$$
+    \Large k = n
+$$
+
+Il costo sarà uguale a
+
+$$
+   \Large T(n) = T(n - n) + n\Theta(1) \implies T(0) + n\Theta(1) \implies \Theta(1) + n\Theta(1) \implies \Theta(n)
+$$
+
+<br>
+
+- **caso migliore**:
+    l'albero è completo, quindi ogni nodo padre ha esattamente 2 figli, ovvero quando sia il sottoalbero sinistro che il sottoalbero destro presentano $\Large \frac{n-1}{2}$ nodi, sostituendo i valori nell'equazione di ricorrenza si ottiene
+
+$$
+    \Large T(n) = T(\frac{n-1}{2}) + T(\frac{n-1}{2}) + \Theta(1) \implies 2T(\frac{n}{2}) + \Theta(1)
+$$
+
+Generalizzando  la ricorrenza in
+
+$$
+    \Large T(n) = aT(\frac{n}{b}) + f(n)
+$$
+
+vengono individuati $\Large a = 2$, $\Large b = 2$ e $\Large f(n) = \Theta(1)$.
+
+$\Large n^{\log_b(a)}$ sarà uguale a $\Large n^{\log_2(2)} \implies n^1 \implies n$
+
+Si ricade nel primo caso del metodo principale, poichè per $\Large \epsilon = 1$, $\Large f(n)$ risulta essere in $\Large O(n^{\log_b(a)-\epsilon}) \implies O(n^1-1) \implies O(n^0) \implies O(1)$.
+
+Si conclude che
+
+$$
+    \Large T(n) = \Theta(n^{\log_b(a)}) = \Theta(n)
+$$
+
+Avendo trovato come caso peggiore $\Large T(n) = O(n)$ e come caso migliore $\Large T(n) = \Omega(n)$, per le proprietà della notazione asintotica il costo computazionale dell'algoritmo sarà uguale a
+
+$$
+    \Large T(n) = \Theta(n)
+$$
+
+Viene dunque rispettato il vincolo per il quale il costo computazionale dell’algoritmo debba essere uguale a $\Large O(n)$.
+
+Il valore massimo di nodi equilibrati che l’albero T può avere è n, poichè se l’albero binario è completo allora tutti i suoi nodi saranno equilibrati.
+
+Il valore minimo, invece, è 1.
+
+Se l'albero binario è sbilanciato o a destra o a sinistra, l'unico nodo equilibrato sarà la sua foglia.
+
+L'unico caso in cui il numero di nodi equilibrati sarà uguale a 0 è quando l'albero è vuoto.
