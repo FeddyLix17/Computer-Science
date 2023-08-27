@@ -1,172 +1,236 @@
 # <p align="center"> Esame 8 Settembre 2021 </p>
 
-- ## Esercizio 1 (10 punti)
-    Si consideri la seguente funzione:
+## <p align="center"> Esercizio 1 </p>
+
+Si consideri la seguente funzione:
 
 ```python
 def Exam(n):
-    tot = n                 # Θ(1)
-    if n <= 4:              # Θ(1)
+    tot = n
+    if n <= 4:
         return tot
-    b = n / 4               # Θ(1)
-    tot += Exam(b)          # T(n/4)
-    j = 1                   # Θ(1)
-    while j * j <= n:       # Θ(√n)
-        tot += j            # Θ(1)
-        j += 1              # Θ(1)
-   return tot + Exam(b)    # T(n/4)
+    b = n / 4
+    tot += Exam(b)
+    j = 1
+    while j * j <= n:
+        tot += j
+        j += 1
+   return tot + Exam(b)
 ```
 
-<b> a) </b>  per trovare l'equazione di ricorrenza che ne deﬁnisce il tempo di esecuzione,
-si analizza l'intero codice.
+---
 
-1. Le due chiamate ricorsive hanno hanno come parametro b, che è pari a $\frac{n}{4}$, quindi il loro tempo di esecuzione è $T(\frac{n}{4})$
-2. Il ciclo while ha come condizione di uscita j * j ≤ n, quindi per uscire $j^2$ dovrà essere uguale a $n + 1$, <br> ad ogni iterazione,
-etichettata con la lettera k, si nota la seguente relazione
+**a)** Si imposti la relazione di ricorrenza che ne definisce il tempo di esecuzione giustificando l’equazione ottenuta.
+
+Si rientrerà nel caso base per ogni $\Large n \leq 4$, con relativo costo $\Large \Theta(1)$.
+
+$$
+    \Large - T(n) = \Theta(1), \quad n \leq 4
+$$
+
+Per il caso generale, invece, il costo sarà determinato
+
+- dal ciclo while
+- dalle 2 chiamate ricorsive, rispettivamente prima e dopo il ciclo while
+
+<br>
+
+- **chiamate ricorsive**
+  
+  Le due chiamate hanno entrambe come parametro b,  pari a $\Large \frac{n}{4}$, il loro costo sarà uguale a $\Large 2*T(\frac{n}{4})$
+
+- **ciclo while**
+
+  si analizza il suo comportamento
+
+<div align="center">
 
 | k | 0 | 1 | 2 | 3 | . . . |
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | j | 1 | 2 | 3 | 4 | k + 1 |
-| j<sup>2</sup> |  1 | 4 | 9 | 16 | (k + 1)<sup>2</sup> |
+| $\Large j^2$|  1 | 4 | 9 | 16 | $(\Large k + 1)^2$ |
 
-s'imposta l'equazione
+</div>
 
-$$  (k + 1)^2 = n + 1 $$
-
-e risolvendola
-
-$$ 
-    k + 1 = \sqrt{n + 1} \implies
-    k = \sqrt{n + 1} - 1 \implies
-    k \approx \sqrt{n}
-$$ 
-
-si conclude che il costo del ciclo while è $\Theta(\sqrt n)$ <br>
-L'equazione di ricorrenza sarà data da
-
-$$ T(n) = T(\frac{n}{4}) + T(\frac{n}{4}) + \Theta(\sqrt n) = 2T(\frac{n}{4}) + Θ(\sqrt n)$$
+Il ciclo terminerà quando
 
 $$
-    \begin{cases}
-    T(n) = 2T(\frac{n}{4}) + Θ(\sqrt n)\\
-    T(1) = \Theta(1)
-    \end{cases}
+    \Large (k + 1)^2 > n
 $$
 
-<b> b) </b> Ricavata l'equazione di ricorrenza nel punto a), si risolve con il metodo dell'albero
+$$
+    \Large (k + 1)^2 = n + 1
+$$
 
+$$
+    \Large k + 1 = \sqrt{n + 1}
+$$
+
+$$
+    \Large k = \sqrt{n + 1} - 1
+$$
+
+il costo sarà uguale a $\Large \Theta(\sqrt{n + 1} - 1) \implies \Theta(\sqrt{n})$
+
+$$
+    \Large - T(n) = 2T(\frac{n}{4}) + \Theta(\sqrt{n}), \quad n > 4
+$$
+
+$$
+    \Large - T(n) = \Theta(1), \quad n \leq 4
+$$
+
+---
+
+**b)** Si risolva l’equazione usando il metodo dell’albero, dettagliando i passaggi del calcolo e giustificando ogni affermazione.
+
+Si sviluppa l'albero di ricorsione
 
                             T(n)                                                         Θ(√n)
                           /      \                                                      /     \
                          /        \                                                    /       \
                         /          \                                                  /         \
-                    T(n/4)        T(n/4)                                        Θ(√n/4)         Θ(√n/4)
+                    T(n/4)        T(n/4)                                        Θ(√(n/4))         Θ(√(n/4))
                    /      \      /      \                                      /       \       /       \
                   /        \    /        \                                    /         \     /         \
                  /          \  /          \                                  /           \   /           \
-               T(n/16)    ... ...       ...                              Θ(√n/4^2)      ... ...         ...
+               T(n/16)    ... ...       ...                              Θ(√(n/4^2))      ... ...         ...
 
-si nota che
+0. al livello 0, il costo è $\Large \Theta(\sqrt{n})$
+1. al livello 1, il costo di un nodo è  $\Large \Theta(\sqrt{\frac{n}{4}})$ mentre il costo totale del livello è $\Large 2\Theta(\sqrt{\frac{n}{4}}$
+2. al livello 2, il costo di un nodo è $\Large \Theta(\sqrt{\frac{n}{16}})$ mentre il costo totale del livello è $\Large 4\Theta(\sqrt{\frac{n}{16}})$
+3. al livello k, il costo di un nodo è $\Large \Theta(\sqrt{\frac{n}{4^k}})$ mentre il costo totale del livello sarà $\Large 2^k \Theta(\sqrt{\frac{n}{4^k}})$
 
-0. al livello 0, il costo è $\Theta(\sqrt n)$
-1. al livello 1, il costo di un nodo è  $\Theta(\frac{\sqrt n}{4})$ mentre il costo totale del livello è $4\Theta(\frac{\sqrt n}{4})$
-2. al livello 2, il costo di un nodo è $\Theta(\frac{\sqrt n}{16})$ mentre il costo totale del livello è $4\Theta(\frac{\sqrt n}{16})$
-3. al livello k, il costo di un nodo è $\Theta(\frac{\sqrt n}{4^k})$ mentre il costo totale del livello è $2^k \Theta(\frac{\sqrt n}{4^k})$
-            
-$$ 
-    2^k(\Theta(\sqrt\frac{n}{4^k}) \implies
-    2^k(\frac{\sqrt{n}}{2^k}) \implies
-    \sqrt n \implies
-    \Theta(\sqrt n) 
-$$
-
-per trovare l'esatto numero di livelli dell'albero, s'imposta  l'equazione 
+sviluppandolo diventa
 
 $$ 
-    \frac{n}{4^k} = 1 \implies
-    n = 4^k \implies
-    \log_4(n) = k \implies
-    k = \log_4(n) 
+    \Large 2^k (\sqrt{\frac{n}{4^k}})
 $$
 
-si conclude che il numero di livelli è $\log_4(n)$ <br>
+$$
+    \Large 2^k (\frac{\sqrt{n}}{2^{k}})
+$$
 
-per trovare il costo totale dell'albero, si sommano i costi di tutti i livelli
+$$
+    \Large \sqrt{n} 
+$$
+
+Le chiamate ricorsive termineranno quando
 
 $$ 
-    \sum_{i=0}^{\log_4(n) - 1} \sqrt{n} \implies
-    \sqrt{n} \sum_{i=0}^{\log_4(n) - 1} 1 \implies
-    \sqrt{n}\log_4(n)
+    \Large \frac{n}{4^k} = 1
 $$
 
-il costo totale dell'algoritmo sarà quindi $\Theta(\sqrt{n}\log_4(n))$
+$$
+    \Large n = 4^k
+$$ 
 
-- ## Esercizio 2 (10 punti)
+$$
+    \Large \log_4(n) = k \implies k = \log_4(n) 
+$$
 
-Progettare un algoritmo che, dati tre array $A$, $B$ e $C$ ordinati e contenenti ciascuno $n$ interi distinti, stampi in tempo $O(n)$ gli interi che compaiono nell’intersezione dei tre array. <br>
-L’algoritmo proposto deve utilizzare spazio di lavoro $\Theta(1)$. <br>
-Ad esempio: <br>
-per $A = [1, 2, 3, 4, 5, 6]$, $B = [1, 4, 5, 6, 8, 9]$ e $C = [2, 4,     6, 7, 8, 9]$ <br>
-l’algoritmo deve stampare gli elementi $4$ e $6$. <br>
+Il numero di livelli sarà uguale a $\Large \log_4(n)$.
+
+Il costo totale della funzione sarà dato dalla somma dei costi di tutti i livelli, ovvero
+
+$$ 
+    \Large \Theta(\sqrt{n} * \log_4(n)) \implies \Theta(\sqrt{n} * \log(n))
+$$
+
+<br>
+
+## <p align="center"> Esercizio 2 </p>
+
+Progettare un algoritmo che, dati tre array $A$, $B$ e $C$ ordinati e contenenti ciascuno $n$ interi distinti, stampi in tempo $O(n)$ gli interi che compaiono nell’intersezione dei tre array.
+
+L’algoritmo proposto deve utilizzare spazio di lavoro $\Theta(1)$.
+
+Ad esempio:
+
+per $A = [1, 2, 3, 4, 5, 6]$, $B = [1, 4, 5, 6, 8, 9]$ e $C = [2, 4, 6, 7, 8, 9]$
+
+l’algoritmo deve stampare gli elementi $4$ e $6$.
+
 Dell’algoritmo proposto:
 
-<b> a) </b> si dia la descrizione a parole <br>
+---
 
-L'algoritmo da proggettare è una variante dell'algoritmo di intersezione tra due array ordinati,  che sfrutta il fatto che gli array sono ordinati per scorrerli in modo lineare. <br>
-Si sfrutta la proprietà di intersezione tra due array ordinati, ovvero che se l'elemento di un array è maggiore dell'elemento dell'altro array ad uno stesso indice, allora bisognerà incrementare solo l'indice dell'elemento minore. <br>
-Bisogna riadattare questa proprietà per tre array, usando un terzo indice per scorrere il terzo array. <br>
+**a)** si dia la descrizione a parole
 
-1. Si inizializzano tre indici, $i$, $j$, e $k$, corrispondenti rispettivamente agli indici di $A$, $B$ e $C$, impostandoli a $0$
-2. Confronto gli elementi i $A[i]$, $B[j]$ e $C[k]
-3. Nel caso in cui tutti e 3 gli elementi siano uguali, si stampa l'elemento in questione incrementando successivamente tutti e 3 gli indici
-4. Nel caso invece in cui ci sia almeno un elemento diverso, viene calcolato il minor valore tra i 3 e si incrementa solo l'indice dell'array dove si trova quest'ultimo
-5. In questo modo anche se i 3 indici saranno uguali solo inizialmente non si corre il rischio di saltare un elemento che potrebbe essere nell'intersezione.
-6. Vengono ripetuti questi confronti con gli indici aggiornati man mano fino a quando uno degli indici supera la lunghezza dell'array.
-    
-<b> b) </b> 
+Si utilizzano 3 indici per scorrere i 3 array rispettivamente e fino a quando non si finirà di scorrerne almeno uno
+
+- se i 3 elementi presenti ai corrispettivi indici sono uguali, esso verrà stampato e i 3 indici saranno tutti incrementati
+
+- altrimenti, viene incrementato solo l'indice dell'elemento minore tra i 3 
+
+---
+
+**b)**  si scriva lo pseudocodice
     
 ```python
-def intersezione(A, B, C):
-    i = 0           #Θ(1)
-    j = 0           #Θ(1)
-    k = 0           #Θ(1)
-    while i < len(A) and j < len(B) and k < len(C):   #Θ(n)
+def es2(A, B, C):
+    i = 0
+    j = 0
+    k = 0
+    while i < len(A) and j < len(B) and k < len(C):
         if A[i] == B[j] and B[j] == C[k]:
             print(A[i])
             i += 1  
             j += 1  
             k += 1 
-        else:                                   #Θ(1)
-            minimo = min(A[i], B[j], C[k])
-            if minimo == A[i]:
+        else:
+            cur_min = min(A[i], B[j], C[k])
+            if cur_min == A[i]:
                 i += 1
-            elif minimo == B[j]:                
+            elif cur_min == B[j]:                
                 j += 1
             else:
                 k += 1
  ```
 
-<b> c) </b> Per determinare il costo effettivo si analizza il costo del ciclo while. <br>
-        
-1. Il caso migliore si verifica quando tutti e 3 gli array sono identici, quindi il ciclo while verrà eseguito $n$ volte, dove è rappresenta la lunghezza dell'array, con costo finale $\Omega(n)$
-2. Il caso peggiore si verifica quando gli array non hanno nessun elemento in comune tra tutti e 3, ma sapendo che ad ogni iterazione almeno un indice viene incrementato, si deduce che il ciclo while verrà eseguito al massimo $3n$ volte, con costo totale sarà $O(3n)$ = $O(n)$
+---
 
-Per definizione delle notazioni asintotiche, se una funzione $f(n)$ è sia in $\Omega(n)$ che in $O(n)$, allora sarà anche in $\Theta(n)$, quindi il costo computazionale dell'algoritmo è $\Theta(n)$
-ed utilizza uno spazio di lavoro pari a $\Theta(1)$ in quanto lavora sugli array in input senza crearne di nuovi usando solo 3 indici.
+**c)** si giustifichi formalmente il costo computazionale
 
-<b> d) </b> si dia un’idea di quello che accadrebbe al costo computazionale se si volesse generalizzarlo a $\Theta(n)$ array <br>
+Il costo dell'algoritmo è determinato dal ciclo while, del quale si analizzerà il comportamento di seguito
 
-Se si volesse generalizzare l’algoritmo per trovare l’intersezione di $\Theta(n)$ array ordinati di lunghezza $n$, chiaramente il costo computazionale aumenterebbe. <br>
-In questo caso, l’algoritmo avrebbe bisogno di $\Theta(n)$ indici, e ad ogni iterazione del ciclo while dovrebbe confrontare $\Theta(n)$ valori per trovarne il minimo o comunque per verificare se tutti gli elementi di quella iterazioni sono uguali o meno, aumentando il costo di ogni iterazione del ciclo while da $\Theta(1)$ a $\Theta(n)$ <br>
+- **caso migliore**
 
-1. Il caso migliore avrebbe costo $\Omega(n^2)$ in quanto dovremmo confrontare per n volte n elementi uguali
-2. Il caso peggiore avrebbe costo $O(n^3)$ in quanto dovremmo confrontare per n volte n elementi diversi, quindi n<sup>2</sup> volte per trovare il minimo aggiungte agli n controlli per trovare quale indice incrementare
+  Si verifica quando tutti e 3 gli array sono identici, per i quali verranno eseguite $\Large n$ iterazioni, dove $\Large n$ rappresenta la lunghezza dell'array, con costo $\Large \Omega(n)$
 
-- ## Esercizio 3 (10 punti)
+- **caso peggiore**
 
-Si consideri un albero binario radicato $T$ , i cui nodi hanno un campo valore contenente un intero. <br>
-Bisogna modiﬁcare l’albero in modo che i nodi fratelli scambino tra loro il valore. <br>
-Si consideri ad esempio l’albero $T$ in ﬁgura a sinistra, a destra viene riportato il risultato della modiﬁca di $T$. <br>
+  Si verifica quando gli array non hanno nessun elemento in comune tra loro, per i quali verranno eseguite al più $\Large 3*n$ iterazioni,  con costo  $\Large O(3n) \implies O(n)$
+
+Avendo trovato caso migliore $\Large \Omega(n)$ e caso peggiore $\Large O(n)$, per le proprietà della notazione asintotica, il costo computazionale dell'algoritmo sarà uguale a $\Theta(n)$.
+
+L'algoritmo utilizza uno spazio di lavoro pari a $\Theta(1)$ in quanto lavora in loco senza l'utilizzo di altre strutture dati.
+
+---
+
+**d)** si dia un’idea di quello che accadrebbe al costo computazionale se si volesse generalizzarlo a $\Large \Theta(n)$ array
+
+Se si volesse generalizzare l’algoritmo per trovare l’intersezione di $\Large \Theta(n)$ array ordinati di lunghezza $\Large n$, chiaramente il costo computazionale aumenterebbe.
+
+In questo caso, l’algoritmo avrebbe bisogno di $\Large \Theta(n)$ indici, e ad ogni iterazione del ciclo while dovrebbe confrontare $\Large \Theta(n)$ valori per trovarne il minimo o comunque per verificare che tutti gli elementi di quella iterazioni siano uguali o meno, aumentando il costo di ogni iterazione del ciclo while da $\Large \Theta(1)$ a $\Large \Theta(n)$.
+
+- **caso migliore**
+
+  Se tutti i $\Large \Theta(n)$ array fossero identici, il costo sarebbe di $\Large \Omega(n^2)$, in quanto bisognerebbe solo confrontare per n volte n elementi uguali
+
+- **caso peggiore**
+
+  Se invece tutti i $\Large \Theta(n)$ array non avessero nessun elemento in comune tra loro, costo sarebbe di $\Large O(n^3)$, in quanto bisognerebbe confrontare per n volte n elementi diversi, quindi $\Large n^2$ controlli per trovare il minimo aggiunte agli n controlli per trovare quale indice incrementare
+
+<br>
+
+## <p align="center"> Esercizio 3 </p>
+
+Si consideri un albero binario radicato $T$ , i cui nodi hanno un campo valore contenente un intero.
+
+Bisogna modiﬁcare l’albero in modo che i nodi fratelli scambino tra loro il valore.
+
+Si consideri ad esempio l’albero $T$ in ﬁgura a sinistra, a destra viene riportato il risultato della modiﬁca di $T$.
 
                             5                                                           5
                            / \                                                         / \            
@@ -179,25 +243,143 @@ Si consideri ad esempio l’albero $T$ in ﬁgura a sinistra, a destra viene rip
                           /     /   \                                                 /     /   \
                          5     1     4                                               5     4     1
 
-Progettare un algoritmo che, dato il puntatore $r$ alla radice di $T$ memorizzato tramite record e puntatori, effettui l’operazione di modiﬁca in tempo $O(n)$ dove $n$ è il numero di nodi presenti nell’albero. <br>
-Ogni nodo dell’albero è memorizzato in un record contenente il campo val con il valore del nodo e i campi $left$ e $right$ con i puntatori ai ﬁgli di sinistra e destra, rispettivamente. <br>
+Progettare un algoritmo che, dato il puntatore $r$ alla radice di $T$ memorizzato tramite record e puntatori, effettui l’operazione di modiﬁca in tempo $O(n)$ dove $n$ è il numero di nodi presenti nell’albero.
 
-<b> a) </b> L'algoritmo $scambia\ fratelli$ prende come input il puntatore $r$ alla radice dell'albero binario radicato $T$. <br> 
-L'algoritmo è ricorsivo e si basa sul fatto che se un nodo ha entrambi i figli, allora scambia i valori dei figli e richiama ricorsivamente la funzione prima sul figlio sinistro e poi sul figlio destro. <br>
-L'algoritmo termina quando tutto l'albero sarà stato visitato
-    
-<b> b) </b>
+Ogni nodo dell’albero è memorizzato in un record contenente il campo val con il valore del nodo e i campi $left$ e $right$ con i puntatori ai ﬁgli di sinistra e destra, rispettivamente.
+
+---
+
+**a)** si dia la descrizione a parole
+
+Viene visitato l'albero in post-order, ovvero visitando prima il sottoalbero sinistro, poi quello destro ed infine il nodo corrente
+
+Se il nodo corrente presenta entrambi i figli, allora vengono scambiati i corrispettivi valori.
+
+---
+
+**b)** si scriva lo pseudocodice
 
 ```python
-def scambia_fratelli(r):
+def es3(r):
     if r.left:
-        scambia_fratelli(r.left)
-
+        es3(r.left)
     if r.right:
-        scambia_fratelli(r.right)
-
+        es3(r.right)
     if r.left and r.right:
-        r.left.val, r.right.val = r.right.val, r.left.v
+        r.left.val, r.right.val = r.right.val, r.left.val
 ```
 
-<b> c) </b> il costo computazionale dell'algoritmo è $\Theta(n)$ in quanto vengono semplicemente visitati tutti i nodi dell'albero una sola volta (in postorder) e le operazioni che vengono effettuare su di essi hanno costo $\Theta(1)$
+---
+
+**c)** si giustifichi formalmente il costo computazionale
+
+il costo è quello di una visita in *post-order*, con equazione di ricorrenza
+
+$$
+    \Large - T(n) = T(k) + T(n − k − 1) + \Theta(1), \quad n \geq 1
+$$
+
+$$
+    \Large - T(n) = \Theta(1), \quad n = 0
+$$
+
+dove
+
+- $\Large n$ è il numero di nodi dell'albero
+
+- $\Large k$ è il numero di nodi del sottoalbero sinistro
+
+- e $\Large n-k-1$ è il numero di nodi del sottoalbero destro
+
+Per determinarne il costo, si analizzano caso migliore e caso peggiore:
+
+- **caso peggiore**:
+
+    l'albero è completamente sbilanciato, quindi tutti i suoi nodi sono aggregati o nel sottoalbero sinistro o nel sottoalbero destro, ovvero quando
+
+$$
+    \Large k = 0 \vee n - k - 1 = 0
+$$
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • **$\Large k = 0$**
+
+$$
+    \Large T(n) = T(0) + T(n - 0 - 1) + \Theta(1) = T(n - 1) + \Theta(1)
+$$
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • **$\Large n - k - 1 = 0$**
+
+$$
+    \Large T(n) = T(n - 1) + T(0) + \Theta(1) = T(n - 1) + \Theta(1)
+$$
+
+sviluppando la ricorrenza, si ottiene
+
+$$
+    \Large T(n) = T(n - 1) + \Theta(1)
+$$
+
+$$
+    \Large T(n) = T(n - 2) + \Theta(1) + \Theta(1)
+$$
+
+$$
+    \Large T(n) = T(n - 3) + \Theta(1) + \Theta(1) + \Theta(1)
+$$
+
+generalizzabile in
+
+$$
+    \Large T(n) = T(n - k) + k\Theta(1)
+$$
+
+Verrà raggiunto il caso base quando
+
+$$
+    \Large n - k = 0
+$$
+
+$$
+    \Large k = n
+$$
+
+Il costo sarà uguale a
+
+$$
+   \Large T(n) = T(n - n) + n\Theta(1) \implies T(0) + n\Theta(1) \implies \Theta(1) + n\Theta(1) \implies \Theta(n)
+$$
+
+<br>
+
+- **caso migliore**:
+    l'albero è completo, quindi ogni nodo padre ha esattamente 2 figli, ovvero quando sia il sottoalbero sinistro che il sottoalbero destro presentano $\Large \frac{n-1}{2}$ nodi, sostituendo i valori nell'equazione di ricorrenza si ottiene
+
+$$
+    \Large T(n) = T(\frac{n-1}{2}) + T(\frac{n-1}{2}) + \Theta(1) \implies 2T(\frac{n}{2}) + \Theta(1)
+$$
+
+Generalizzando  la ricorrenza in
+
+$$
+    \Large T(n) = aT(\frac{n}{b}) + f(n)
+$$
+
+vengono individuati $\Large a = 2$, $\Large b = 2$ e $\Large f(n) = \Theta(1)$.
+
+$\Large n^{\log_b(a)}$ sarà uguale a $\Large n^{\log_2(2)} \implies n^1 \implies n$
+
+Si ricade nel primo caso del metodo principale, poichè per $\Large \epsilon = 1$, $\Large f(n)$ risulta essere in $\Large O(n^{\log_b(a)-\epsilon}) \implies O(n^1-1) \implies O(n^0) \implies O(1)$.
+
+Si conclude che
+
+$$
+    \Large T(n) = \Theta(n^{\log_b(a)}) = \Theta(n)
+$$
+
+Avendo trovato come caso peggiore $\Large T(n) = O(n)$ e come caso migliore $\Large T(n) = \Omega(n)$, per le proprietà della notazione asintotica il costo computazionale dell'algoritmo sarà uguale a
+
+$$
+    \Large T(n) = \Theta(n)
+$$
+
+Viene dunque rispettato il vincolo per il quale il costo computazionale dell’algoritmo debba essere uguale a $\Large O(n)$.
