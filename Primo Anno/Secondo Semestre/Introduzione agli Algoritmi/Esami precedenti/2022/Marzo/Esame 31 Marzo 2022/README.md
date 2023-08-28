@@ -1,6 +1,6 @@
 # <p align="center"> Esame 31 Marzo 2022 </p>
 
-## Esercizio 1
+## <p align="center"> Esercizio 1 </p>
 
 Si consideri la seguente funzione:
 
@@ -23,21 +23,33 @@ def Exam(n):
 return tot
 ```
 
+---
+
 **a)** Si imposti la relazione di ricorrenza che ne definisce il tempo di esecuzione giustificando dettagliatamente l’equazione ottenuta
 
-si analizza ogni blocco di codice separatamente
-
-il caso base sarà raggiunto quando $\Large n \leq 1$ con conseguente costo $\Large \Theta(1)$, da cui 
+Si rientrerà nel caso base per ogni $\Large n \leq 1$ con relativo costo $\Large \Theta(1)$. 
 
 $$
     \Large T(n) = \Theta(1), \quad n \leq 1
 $$
 
-il costo del caso generale è invece determinato principalmente dai 3 cicli while e la chiamata ricorsiva annidata tra uno di essi
+Per il caso generale, invece, il costo sarà determinato
+
+- dal primo ciclo while
+
+- dal secondo ciclo while, annidato al primo
+
+- dal terzo ciclo while
+
+- dal ciclo for, annidato al terzo ciclo while 
+
+- e dalla chiamata ricorsiva, annidata al primo ciclo while
+
+<br>
 
 - **primo while**
 
-    il ciclo inizia con $\Large j = 63$, si analizza il suo comportamento dopo ogni iterazione
+  si analizza il suo comportamento
 
 <div align="center">
 
@@ -57,16 +69,15 @@ $$
     \Large z = \frac{63}{7} = 9
 $$
 
-il costo sarà dunque $\Large \Theta(9) \implies \Theta(1)$
-
+il suo costo sarà uguale a $\Large \Theta(9) \implies \Theta(1)$.
 
 ---
 
 - **secondo while**
 
-    *premessa*: il numero di volte che questo ciclo si ripeterà andrà moltiplicato per $9$ in quanto è annidato al primo ciclo
+    ***premessa***: il numero di volte che questo ciclo si ripeterà andrà moltiplicato per $9$ in quanto è annidato al primo ciclo
 
-    questo ciclo inizierà sempre con $\Large k = 0$, si analizza il suo comportamento dopo ogni iterazione
+    questo ciclo inizierà sempre con $\Large k = 0$, si analizza il suo comportamento
 
 <div align="center">
 
@@ -87,15 +98,13 @@ $$
     \Large z = \frac{n}{3}
 $$
 
-il costo sarà dunque $\Large \Theta(9*\frac{n}{3}) \implies \Theta(n)$
-
-***nota***: subito dopo essersi concluso questo ciclo, avverrà una chiamata ricorsiva, avente come parametro $\Large k = z = \frac{n}{3}$, e considerando che il primo ciclo while si ripeterà $\Large 9$ volte, il costo totale della chiamata ricorsiva da andare a sommare al costo degli altri cicli while sarà $\Large 9T(\frac{n}{3})$
+il suo costo sarà uguale a $\Large \Theta(9*\frac{n}{3}) \implies \Theta(n)$.
 
 ---
 
 - **terzo while**
 
-    il ciclo inizierà con $\Large k = \frac{n}{3}$, si analizza il suo comportamento dopo ogni iterazione
+  il ciclo inizierà con $\Large k = \frac{n}{3}$, si analizza il suo comportamento dopo ogni iterazione
 
 <div align="center">
 
@@ -115,48 +124,62 @@ $$
     \Large z = \frac{n}{3}
 $$
 
-il costo sarà dunque $\Large \Theta(\frac{n}{3})$
+il suo costo sarà uguale a $\Large \Theta(\frac{n}{3})$.
 
-in quest'ultimo ciclo while tuttavia è presente un ciclo for annidato, il quale eseguirà $\Large n-1$ iterazioni, con costo $\Large \Theta(n-1) \implies \Theta(n)$, quindi possiamo affermare che per $\Large \frac{n}{3}$ volte verrano eseguite $\Large n-1$ iterazioni, da cui il nuovo costo di quest'ultimo ciclo while
+- **ciclo for**
+
+  Annidato al terzo ciclo while, di per se eseguirà $\Large n-1$ iterazioni, con costo preso singolarmente uguale a $\Large \Theta(n-1) \implies \Theta(n)$, mentre il suo costo finale sarà uguale a
 
 $$
     \Large \frac{n}{3}\Theta(n-1) \implies \frac{n}{3}\Theta(n) \implies \Theta(\frac{n^2}{3}) \implies \Theta(n^2)
 $$
 
-analizzati tutti i blocchi di codice, possiamo affermare che il costo totale del caso generale sia
+- **chimata ricorsiva**
+
+  Eseguita subito dopo il secondo ciclo while ma comunque annidata al primo ciclo while, essa presenta come parametro $\Large k = z = \frac{n}{3}$, con costo preso singolarmente uguale a $\Large T(\frac{n}{3})$, mentre il suo costo finale sarà uguale a $\Large 9T(\frac{n}{3})$
 
 $$
-    \Large T(n) = 9T(\frac{n}{3}) + \Theta(n^2) + \Theta(n) \implies T(n) = 9T(\frac{n}{3}) + \Theta(n^2)
-$$
-
-che unito al caso base darà come equazione di ricorrenza finale
-
-$$
-    \Large -T(n) = 9T(\frac{n}{3}) + \Theta(n^2), \quad n > 1
+    \Large - T(n) = 9T(\frac{n}{3}) + \Theta(n^2), \quad n > 1
 $$
 
 $$
-    \Large -T(n) = \Theta(1), \quad n \leq 1
+    \Large - T(n) = \Theta(1), \quad n \leq 1
 $$
 
-**b)** Si risolva la ricorrenza usando il metodo dell’albero dettagliando i
-passaggi del calcolo e giustificando ogni affermazione
+---
 
-> per questioni di spazio qui a schermo, a differenza degli altri walkthrough in cui sviluppavo l'albero in modo grafico, in questo caso riporterò semplicemente il tutto in modo tabellare, al fine comunque di rimanere il più chiaro possibile
+**b)** Si risolva la ricorrenza usando il metodo dell’albero dettagliando i passaggi del calcolo e giustificando ogni affermazione
+
+> per questioni di spazio a schermo, a differenza degli altri walkthrough, in questo caso riporterò il tutto in modo tabellare, al fine comunque di rimanere il più chiaro possibile
 
 <div align="center">
 
-| livello | costo | nodi | costo totale |
+| livello | costo nodo | nodi | costo totale |
 | :---: | :---: | :---: | :---: |
-| $0$ | $\Large \Theta(n^2)$ | $1$ | $\Large \Theta(n^2)$ |
-| $1$ | $\Large \Theta(\frac{n^2}{3})$ | $9$ | $\Large 9\Theta(n^2)$ |
-| $2$ | $\Large \Theta(\frac{n^2}{9})$ | $81$ | $\Large 81\Theta(n^2)$ |
-| $3$ | $\Large \Theta(\frac{n^2}{27})$ | $729$ | $\Large 729\Theta(n^2)$ |
-| $\dots$ | $\dots$ | $\dots$ | $\dots$ |
-| $\Large z$ | $\Large \Theta(\frac{n^2}{3^z})$ | $\Large 3^z$ | $\Large 3^{2z}\Theta(n^2)$ |
+| $\Large 0$ | $\Large \Theta(n^2)$ | $\Large 1$ | $\Large \Theta(n^2)$ |
+| $\Large 1$ | $\Large \Theta((\frac{n}{3})^2)$ | $\Large 9$ | $\Large 9\Theta((\frac{n}{3})^2)$ |
+| $\Large 2$ | $\Large \Theta((\frac{n}{3^2})^2)$ | $\Large 81$ | $\Large 81\Theta((\frac{n}{3^2})^2)$ |
+| $\Large 3$ | $\Large \Theta((\frac{n}{3^3})^2)$ | $\Large 729$ | $\Large 729\Theta((\frac{n}{3^3})^2)$ |
+| $\Large \dots$ | $\Large \dots$ | $\Large \dots$ | $\Large \dots$ |
+| $\Large z$ | $\Large \Theta(\frac{n^2}{3^z})$ | $\Large 3^z$ | $\Large 3^{2z}\Theta((\frac{n}{3^z})^2)$ |
+
 </div>
 
-l'albero si fermerà quando
+che sviluppandola diventa
+
+$$
+    \Large 3^{2z}(\frac{n}{3^z})^2
+$$
+
+$$
+    \Large 3^{2z}(\frac{n^2}{3^{2z}})
+$$
+
+$$
+    \Large n^2
+$$
+
+verrà raggiunto l'ultimo livello dell'albero quando
 
 $$
     \Large \frac{n^2}{3^{2z}} = 1
@@ -184,7 +207,9 @@ $$
     \Large \Theta(n^2)\log_3(n) \implies \Theta(n^2\log(n))
 $$
 
-## Esercizio 2
+<br>
+
+## <p align="center"> Esercizio 2 </p>
 
 Dato un array ordinato $A$ di $n$ interi ed un intero $k$
 vogliamo sapere quante coppie in $A$ hanno somma $k$.
@@ -200,12 +225,13 @@ somma 10 sono infatti (0, 4), (1, 2), (1, 3), (2, 3)).
 
 Dell’algoritmo proposto:
 
+---
+
 **a)** si dia la descrizione a parole
 
 Vengono inizializzati il contatore delle coppie count e due indici a e b i quali punteranno rispettivamente ai 2 estremi dell’array.
 
-Succesivamente, fino a quando i due indici non punteranno allo stesso elemento,
-vengono effettuati i seguenti controlli:
+Succesivamente, fino a quando i due indici non punteranno allo stesso elemento:
 
 - se la somma degli elementi puntati è superiore a k, decremento l’indice b
 
@@ -217,9 +243,13 @@ vengono effettuati i seguenti controlli:
 
 - e l'indice a viene incrementato ﬁno a raggiungere un elemento diverso (maggiore) di quello attualmente puntato, o comunque fino raggiungere l'elemento precedente a quello puntato dall'indice b.
 
-viene tenuta traccia del numero di incrementi/decrementi effettuati mediante delle variabili ausiliarie x e y.
+viene tenuta traccia del numero di incrementi/decrementi effettuati mediante delle variabili ausiliarie rispettivamente x e y.
 
-- Se la coppia trovata inizialmente presenta gli elementi al loro interno uguali, bisognerà calcolare il numero di [combinazioni](https://www.youmath.it/lezioni/probabilita/calcolo-combinatorio/1216-combinazione-semplice.html) di 2 elementi presi da un insieme contenente x + 1 elementi, ovvero dal numero di decrementi + l'elemento corrente. <br> In questo caso y sarà sempre uguale a 1 quindi l'insieme sarà composto da x + y elementi. <br> Dunque bisognerà incrementrare count di $\Large {x+y \choose 2}$ <br> dove con $\Large {x+y \choose 2}$ si intende
+- Se la coppia trovata inizialmente presentava entrambi gli elementi al loro interno uguali, bisognerà calcolare il numero di [combinazioni](https://www.youmath.it/lezioni/probabilita/calcolo-combinatorio/1216-combinazione-semplice.html) di 2 elementi presi da un insieme contenente x + 1 elementi, ovvero dal numero di decrementi + l'elemento corrente.
+
+  In questo caso y sarà sempre uguale a 1 quindi l'insieme sarà composto da x + y elementi.
+
+  Dunque bisognerà incrementrare count di $\Large {x+y \choose 2}$, dove con $\Large {x+y \choose 2}$ si intende
 
 $$
     \Large \frac{(x + y)!}{2!(x + y - 2)!}
@@ -233,7 +263,10 @@ $$
     \Large \frac{(x + y)(x + y - 1)}{2}
 $$
 
-ad esempio, in un ipotetico array [1, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6] con k = 4, la coppia  di elementi uguali (1, 6) viene anche trovata
+<details closed>
+    <summary> <b> primo esempio </b> </summary>
+
+in un ipotetico array [1, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6] con k = 4, la coppia  di elementi uguali (1, 6) viene anche trovata
 
 - con (1,5), (1,4), (1,3), (1,2)
 
@@ -251,17 +284,22 @@ y in questo caso sarà sempre uguale a 1, poiché nonostante a non venga proprio
 
 riprendendo la formula
 
-$$
-    \Large \frac{(5 + 1)(5 + 1 - 1)}{2} = \frac{6 \cdot 5}{2} = 15
-$$
+<div align="center">
+    (5 + 1)(5 + 1 - 1) / 2 = (6 * 5) / 2 = 15
+</div>
+
+</details>
 
 - altrimenti, se la coppia trovata aveva elementi diversi, count verrà incrementato di $\Large x * y$, poichè
 
-    - per ogni incremento di a, ci saranno b combinazioni da conteggiare
+    - per ogni incremento di *a*, ci saranno *b* combinazioni da conteggiare
 
-    - o per ogni decremento di b, ci saranno a combinazioni da conteggiare
+    - o si può dire anche per ogni decremento di *b*, ci saranno *a* combinazioni da conteggiare
 
 entrambe le espressioni hanno lo stesso significato (si può usare quella che si preferisce).
+
+<details closed>
+    <summary> <b> secondo esempio </b> </summary>
 
 riprendendo l'array di esempio fornito dall'esercizio [1, 2, 2, 3, 4, 5, 5, 5, 8, 9, 9], con k = 7, viene trovata come prima coppia (1, 7), stavolta con gli elementi al loro interno diversi.
 
@@ -275,11 +313,15 @@ per un totale di 5 coppie uguali a quella puntata da a e b (che aggiunte alla co
 
 ciò viene conteggiato da b che è stato decrementato di $x = 3$ volte e da a che è stato incrementato di $y = 2$ volte, da cui
 
-$$
-    \Large x * y = 3 * 2 = 6
-$$
+<div align="center">
+    x * y = 3 * 2 = 6
+</div>
+
+</details>
 
 viene infine ritornato il valore di count.
+
+---
 
 **b)** si scriva lo pseudocodice
 
@@ -311,25 +353,27 @@ def es2(A, k):
     return count
 ```
 
+---
+
 **c)** si giustifichi il costo computazionale
 
 si analizzano caso peggiore e caso migliore
 
-- **caso peggiore**: l'array è composto da soli elementi uguali, quindi verranno eseguiti n - 1 decrementi/iterazioni prima di ritornare il valore di count, con costo computazionale pari a
+- **caso peggiore**: l'array è composto da soli elementi uguali la cui somma di coppie da come valore *k*, dove verranno eseguite n - 1 decrementi/iterazioni prima di ritornare il valore di count, con costo computazionale pari a
 
 $$
     \Large O(n - 1) \implies O(n)
 $$
 
-- **caso migliore**: l'array è composto da soli elementi diversi, quindi verranno eseguiti $\Large \frac{n - 1}{2}$ decrementi e $\Large \frac{n - 1}{2}$ incrementi, per un totale di n iterazioni prima di ritornare il valore di count, con costo computazionale pari a
+- **caso migliore**: l'array è composto da soli elementi diversi e nessuna coppia la cui somma di valori dia *k*, dove verranno eseguiti al più $\Large \frac{n}{2}$ decrementi e $\Large \frac{n}{2}$ incrementi, per un totale di n iterazioni prima di ritornare il valore di count, con costo computazionale pari a
 
 $$
     \Large \Omega(n)
 $$
 
-dato che la funzione è sia in $\Large O(n)$ che in $\Large \Omega(n)$, il suo costo computazionale sarà pari a $\Large \Theta(n)$
+dato che la funzione è sia in $\Large O(n)$ che in $\Large \Omega(n)$, per le proprietà della notazione asintotica, il suo costo computazionale sarà uguale a $\Large \Theta(n)$.
 
-## Esercizio 3
+## <p align="center"> Esercizio 3 </p>
 
 Si consideri una lista a puntatori *L*, in cui ogni elemento è un record a tre campi:
 
@@ -356,6 +400,8 @@ Lo spazio di lavoro dell’algoritmo proposto deve essere $O(1)$ (in altri termi
 
 Dell’algoritmo proposto:
 
+---
+
 **a)** si dia la descrizione a parole
 
 Viene iterata una prima volta la lista in modo da poter ricavare il puntatore all'ultimo elemento della lista, denominato sotto una variabile ausiliaria *d*.
@@ -373,6 +419,8 @@ Viene visitata la lista da entrambe le estremità finchè
 > la terza condizione potrebbe anche essere sostituita con "il nodo precedente al nodo puntato dal puntatore destro è diverso al nodo puntato dal puntatore sinistro"
 
 ritornando *SI* se dovessere venire violata la prima o la terza condizione, *NO* se dovessere venire violata la seconda.
+
+---
 
 **b)** si scriva lo pseudocodice
 
@@ -396,6 +444,8 @@ def es3(s):
         s = s.next
         d = d.prec
 ```
+
+---
 
 **c)** si giustifichi il costo computazionale
 
