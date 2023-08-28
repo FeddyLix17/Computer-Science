@@ -64,7 +64,7 @@ L’algoritmo deve avere costo computazionale $O(n)$.
 
 Ad esempio, per *A = [1, 3, 5, 2, 9, 3, 3, 1, 6]*
 
-- con *s = 7* l’algoritmo deve restituire la coppia $(2, 3)$ (ci sono infatti in A tre sottoarray con valore 7 le cui coppie nell’ordine da sinistra a destra sono $(2, 3), (5, 7), (7, 8)$).
+- con *s = 7* l’algoritmo deve restituire la coppia $(2, 3)$ (ci sono infatti in A tre sottoarray con valore 7 le cui coppie nell’ordine da sinistra a destra sono $(2, 3), (5, 7), (7, 8)$ ).
 
 - con *s = 21* l’algoritmo deve restituire *None* in quanto *A* non ha sottoarray con valore 21.
 
@@ -118,7 +118,7 @@ $$
     \Large O(2n) \implies O(n)
 $$
 
----
+<br>
 
 ## <p align="center"> Esercizio 3 </p>
 
@@ -128,8 +128,7 @@ Si consideri una lista concatenata dove ogni nodo ha 2 campi,
 
 - ed il campo *next* con il puntatore al nodo seguente (*next* vale *None* per l’ultimo nodo della lista).
 
-Bisogna aggiornare i puntatori della lista in modo da creare una nuova lista
-priva dei nodi con valore superiore a 10 e in cui i nodi rimanenti appaiono in ordine inverso rispetto all’originale.
+Bisogna aggiornare i puntatori della lista in modo da creare una nuova lista priva dei nodi con valore superiore a 10 e in cui i nodi rimanenti appaiono in ordine inverso rispetto all’originale.
 
 Ad esempio per la lista di seguito a sinistra la funzione deve restituire la lista di seguito a destra:
 
