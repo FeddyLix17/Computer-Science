@@ -1,6 +1,6 @@
 # <p align="center"> Esame 31 Gennaio 2023 </p>
 
-## Esercizio 1
+## <p align="center"> Esercizio 1 </p>
 Si consideri il seguente algoritmo ricorsivo che, dato un array $A$ di dimensione
 $n$, verifica se esistono due indici diversi $\Large i$ e $\Large j$ compresi nell’intervallo $\Large [0, n − 1]$ tali che $\Large A[i] = j$ e $\Large A[j] = i$:
 
@@ -19,6 +19,8 @@ def IndiciValori(A, sx, dx):
     trovato2 = IndiciValori(A, centro + 1, dx)
     return trovato or trovato1 or trovato2
 ```
+
+---
 
 **a)** per impostare l'equazione di ricorrenza si analizza il codice
 
@@ -74,6 +76,8 @@ con caso base $\Large T(1) = \Theta(1)$ (ovvero quando $\Large sx \geq dx$, cond
 \- $\Large T(1) = \Theta(1),\ n \leq 1$
 
 </div>
+
+---
 
 **b)** i 2 metodi scelti per risolvere l'equazione di ricorrenza sono il metodo principale e il metodo dell'albero
 
@@ -151,7 +155,9 @@ $$
 
 anche tramite l'utilizzo di un secondo metodo si conferma che $\Large T(n) = \Theta(n^2)$
 
-## Esercizio 2
+<br>
+
+## <p align="center"> Esercizio 2 </p>
 Scrivere un algoritmo *ElementoPiuFrequente* che, dato un array $A$ di $n$ interi, compresi tra $1$ e $10n$ restiuisce il valore più presente all’interno dell’array, a parità di occorrenze va restituito il valore minimo.
 
 Ad esempio, se $A = [2, 6, 8, 5, 2, 3, 6, 8, 9, 5, 8, 1, 2]$, allora la risposta è $2$ in quanto $2$ ed $8$ sono gli unici valori che compaiono $3$ volte all’interno dell’array, mentre gli altri valori compaiono al più 2 volte.
@@ -159,6 +165,8 @@ Ad esempio, se $A = [2, 6, 8, 5, 2, 3, 6, 8, 9, 5, 8, 1, 2]$, allora la risposta
 Il costo computazionale dell’algoritmo proposto deve essere $\Theta(n)$.
 
 Dell’algoritmo proposto:
+
+---
 
 **a)** si scriva lo pseudocodice opportunamente commentato
 
@@ -206,11 +214,15 @@ def ElementoPiuFrequente(A):
     return elemento # Θ(1)
 ```
 
+---
+
 **b)** si giustifichi il costo computazionale
 
-il costo computazionale dell'algoritmo è $\Large Theta(n)$ in quanto si itera l'array $\Large A$ una sola volta, e per ogni iterazione si eseguono operazioni in tempo costante $\Large \Theta(1)$.
+il costo computazionale dell'algoritmo è $\Large \Theta(n)$ in quanto si itera l'array $\Large A$ una sola volta, e per ogni iterazione si eseguono operazioni in tempo costante $\Large \Theta(1)$.
 
-## Esercizio 3
+<br>
+
+## <p align="center"> Esercizio 3 </p>
 Sia $\Large L$ una lista concatenata semplicemente puntata data tramite il puntatore $\Large p$ alla sua testa e contenenti chiavi intere positive.
 
 Ogni record è composto da due campi:
@@ -227,6 +239,8 @@ Ad esempio, per la lista $p\Large  \rightarrow 1 \rightarrow 2 \rightarrow 3 \ri
 si noti che anche il record contenente l’informazione $6$ soddisfa la richiesta di avere la chiave pari alla somma dei precedenti, ma il record contenente 3 lo precede.
 
 Dell’algoritmo proposto:
+
+---
 
 **a)** si scriva lo pseudocodice opportunamente commentato
 
@@ -248,6 +262,8 @@ def SommaPrecedenti(p, somma):
     # e la somma dei nodi precedenti più la chiave del nodo corrente
     return SommaPrecedenti(p.next, somma + p.key) # T(n-1)
 ```
+
+---
 
 **(b)** si giustiﬁchi il costo computazionale trovando e risolvendo l’equazione di ricorrenza.
 
