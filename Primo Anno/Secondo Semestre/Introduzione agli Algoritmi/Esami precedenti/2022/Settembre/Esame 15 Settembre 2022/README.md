@@ -1,11 +1,13 @@
 # <p align="center"> Esame 15 Settembre 2022 </p>
 
-## Esercizio 1
+## <p align="center"> Esercizio 1 </p>
 
 Si supponga di avere un algoritmo speciale in grado di eseguire la fusione di
 due sottoarray ordinati di $\Large \frac{n}{2}$ elementi ciascuno in $\Large O(\sqrt{n})$ operazioni.
 
 Quanto sarebbe, in questo caso, il costo computazionale dell’algoritmo di Merge Sort?
+
+---
 
 **a)** Si imposti la relazione di ricorrenza che definisce il tempo di esecuzione giustificando dettagliatamente l’equazione ottenuta
 
@@ -18,6 +20,8 @@ $$
 $$
     \Large -\ T(1) = \Theta(1), \quad n = 1
 $$
+
+---
 
 **b)** Si risolva la ricorrenza usando due metodi a scelta, dettagliando i passaggi del calcolo e giustiﬁcando ogni affermazione
 
@@ -142,9 +146,10 @@ $$
 $$
     \Large T(n) = \Theta(n) + \Theta(n)  - \Theta(\sqrt{n}) = \Theta(n)
 $$
+
 viene così confermato che il costo computazionale dell'algoritmo sia $\Large \Theta(n)$.
 
-## Esercizio 2
+## <p align="center"> Esercizio 2 </p>
 
 Sia dato un array $A$ contenente $n$ interi distinti e ordinati in modo crescente.
 
@@ -154,6 +159,8 @@ posizione più a sinistra nell’array per cui si ha $A[i] \neq i$, l’algoritm
 Ad esempio, per $A = [0, 1, 2, 3, 4]$ l’algoritmo deve restituire $-1$, per $A = [0, 5, 6, 20, 30]$ la risposta deve essere $1$ e per $A = [-3, 1, 2, 3, 6]$ la risposta deve essere $0$.
 
 Dell’algoritmo proposto:
+
+---
 
 **a)** si dia la descrizione a parole
 
@@ -165,6 +172,8 @@ Ciò serve anche a sapere che per ogni altro elemento uguale al suo indice prese
     - se il valore dell'elemento corrente è uguale al suo indice, la ricerca proseguirà nel sub-array di destra
     - altrimenti, la ricerca proseguirà nel sub-array di sinistra
 - vengono ripetuti i passaggi fino a quando non si ha un sub-array con un unico elemento, ritornando -1 se quest'ultimo è uguale al suo indice, altrimenti viene ritornato l'indice dell'elemento di quel sub-array (come richiesto dall'esercizio).
+
+---
 
 **b)** si scriva lo pseudocodice
 
@@ -188,6 +197,8 @@ def es2(A):
     return i
 ```
 
+---
+
 **c)** si giustifichi il costo computazionale
 
 Il costo computazionale dell'algoritmo è determinato dal ciclo while (dato che tutte le altre operazioni hanno costo $\Large \Theta(1)$ ).
@@ -206,7 +217,10 @@ il ciclo while terminerà quando $\Large i = j$, ovvero quando la lunghezza del 
 
 Viene dunque rispettato il costo dell'algoritmo richiesto dall'esercizio, ovvero $\Large O(\log(n))$.
 
-## Esercizio 3
+<br>
+
+## <p align="center"> Esercizio 3 </p>
+
 Progettare un algoritmo che, dato il puntatore alla radice di un albero binario $T$ avente per chiavi degli interi, veriﬁca se l’albero è un albero binario di ricerca.
 
 Ad esempio, l’algoritmo per l’albero sulla sinistra deve restituire *True* mentre per l’albero sulla destra deve restituire *False* (infatti nel sottoalbero di sinistra del nodo con chiave 3 è presente un nodo con chiave 4)
@@ -227,6 +241,8 @@ numero di nodi dell’albero.
 
 Dell’algoritmo proposto
 
+---
+
 **a)** si dia la descrizione a parole
 
 Un *albero binario di ricerca (Binary Search Tree)* è un albero binario in cui i nodi sono organizzati in modo tale che, per ogni nodo
@@ -235,6 +251,8 @@ Un *albero binario di ricerca (Binary Search Tree)* è un albero binario in cui 
 - e tutti i nodi del sottoalbero destro abbiano chiavi maggiori della chiave del nodo.
 
 Per verificare che l'albero rispetti queste proprietà, lo si visita
+
+---
 
 **b)** si scriva lo pseudocodice
 
@@ -265,11 +283,15 @@ def es3_InOrder(r, A):
     es3_InOrder(r.right, A)
 ```
 
+---
+
 **c)** si giustifichi il costo computazionale
 
 Si analizza il il costo di entrambe le funzioni
 
-- **es3_InOrder**: l'equazione di ricorrenza è determinata
+- **es3_InOrder**:
+
+  l'equazione di ricorrenza è determinata
 
     - dal caso base, ovvero quando il nodo è nullo, con costo $\Large \Theta(1)$
 
@@ -281,7 +303,9 @@ Si analizza il il costo di entrambe le funzioni
             - $k$ è il numero di nodi del sotto-albero sinistro
             - e $n-k-1$ è il numero di nodi del sotto-albero destro.
 
-    Per determinarne il costo, si analizzano caso migliore e caso peggiore:
+- **es3**:
+
+  Per determinarne il costo, si analizzano caso migliore e caso peggiore:
 
 - **caso peggiore**: l'albero è completamente sbilanciato, quindi quando tutti i nodi sono aggregati o nel sottoalbero sinistro o nel sottoalbero destro, ovvero quando $\Large k = 0$ oppure $\Large n - k - 1 = 0$, sostituendo i valori nell'equazione di ricorrenza si ottiene la medesima equazione di ricorrenza del caso migliore
 
