@@ -1,6 +1,6 @@
 # <p align="center"> Esame 13 Gennaio 2022 </p>
 
-## Esercizio 1
+## <p align="center"> Esercizio 1 </p>
 
 Si consideri la seguente funzione:
 
@@ -16,19 +16,35 @@ def Exam(n):
     return tot + Exam(n − j)
 ```
 
+---
+
 **a)** Si imposti la relazione di ricorrenza che ne definisce il tempo di esecuzione giustificando dettagliatamente l’equazione ottenuta
 
-viene raggiunto il caso base quando $\Large n <= 1$, con costo $\Large \Theta(1)$, da cui
+Si rientrerà nel caso base per ogni $\Large n \leq 1$, con relativo costo $\Large \Theta(1)$.
 
 $$
-    -\Large T(n) = \Theta(1), \quad n <= 1
+    -\Large T(n) = \Theta(1), \quad n \leq 1
 $$
 
-altrimenti, il costo sarà determinato dalla chiamata ricorsiva (di cui analizzeremo il parametro successivamente) e dal ciclo while, del quale verrà studiato il comportamento di seguito
+Per il caso generale, invece, il costo sarà determinato
 
+- dalla chiamata ricorsiva
+
+-  e dal ciclo while
+
+<br>
+
+- **ciclo while**
+
+  si analizza il suo comportamento
+
+<div align="center">
+    
 | Iterazione | 0 | 1 | 2 | 3 | $\Large \dots$ | $k$ |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | $\Large j$ | 80 | 78 | 76 | 74 | $\Large \dots$ | $\Large 80 - 2k$ |
+
+</div>
 
 il ciclo terminerà quando
 
@@ -48,33 +64,37 @@ $$
     \Large k = 39
 $$
 
-il costo del ciclo sarà costante, ovvero indipendente dalla dimensione dell'input, pari a
+il costo del ciclo sarà uguale a
 
 $$
     \Large \Theta(39) \implies 39 \Theta(1) \implies \Theta(1)
 $$
 
-il costo della chiamata ricorsiva sarà determinato dal parametro $\Large n - j$, dove
+- **chiamata ricorsiva**
+
+  La chiamata presenta come parametro $\Large n - j$, dove
 
 $$
     \Large j = 80 - 2*39 = 80 - 78 = 2
 $$
 
-quindi il costo della chiamata ricorsiva sarà pari a
+il costo della chiamata sarà uguale a
 
 $$
     \Large T(n - j) = T(n - 2)
 $$
 
-per concludere, la relazione di ricorrenza sarà data da
+<br>
 
 $$
-    \Large -T(n) = T(n - 2) + \Theta(1), \quad n > 1
+    \Large - T(n) = T(n - 2) + \Theta(1), \quad n > 1
 $$
 
 $$
-    \Large -T(n) = \Theta(1), \quad n <= 1
+    \Large - T(n) = \Theta(1), \quad n \leq 1
 $$
+
+---
 
 **b)** Si risolva la ricorrenza usando il metodo dell’albero dettagliando i passaggi del calcolo e giustiﬁcando ogni affermazione
 
@@ -91,7 +111,7 @@ $$
 
 dove k indica il livello in cui ci si trova (considerando il primo livello come livello 0)
 
-di raggiungerà l'ultimo livello dell'albero quando
+verrà raggiunto l'ultimo livello dell'albero quando
 
 $$
     \Large n - 2k = 1
@@ -115,7 +135,7 @@ $$
     \Large \Theta(\frac{n - 1}{2}) \implies \Theta(\frac{n}{2}) \implies \Theta(n)
 $$
 
-## Esercizio 2
+## <p align="center"> Esercizio 2 </p>
 
 Abbiamo due array ordinati *A* e *B* di n interi distinti;
 
@@ -133,19 +153,23 @@ Il costo computazionale dell’algoritmo deve essere asintoticamente strettament
 
 Dell’algoritmo proposto
 
+---
+
 **a)** si dia la descrizione a parole
 
-Usando due indici si scorrono gli array partendo dall'estremità di destra.
+Usando due indici si scorrono gli array partendo dalle loro rispettive estremità di destra.
 
-Fino a quando non si raggiunge l'estremità di sinistra di uno dei due array, vengono effettuati i seguenti controlli:
+Fino a quando non si raggiunge l'estremità di sinistra di almeno uno dei due array:
 
 - se il valore assoluto della differenza tra l'elemento puntato da *dA* e l'elemento puntato da *dB* è minore o uguale a 3, la funzione restituirà 1
 
 - altrimenti, vuol dire che la differenza tra i 2 elementi è strettamente maggiore di 3, quindi si procede a decrementare l'indice dell'array che punta all'elemento di valore maggiore, in modo da avvicinarsi al valore dell'altro array
 
-si decide arbitrariamente di decrementare l'indice del primo array, in caso di valori uguali puntati dagli indici.
+> ***nota***: si decide arbitrariamente di decrementare l'indice del primo array, in caso di valori uguali puntati dagli indici.
 
 Qualora non dovesse venire trovata nessuna coppia di valori tali che $\Large |x - y| \leq 3$, la funzione restituirà 0.
+
+---
 
 **b)** si scriva il codice in pseudocodice
 
@@ -167,9 +191,11 @@ def es2(A, B):
     return 0
 ```
 
+---
+
 **c)** si giustifichi il costo computazionale
 
-ad ogni iterazione del ciclo while, uno dei 2 indici viene decrementato di 1, il caso peggiore in cui si può incorrere è quello in cui non venga mai trovata una coppia di valori tali che $\Large |x - y| \leq 3$, compiendo cosi tutte e le $\Large 2n$ iterazioni, da cui il suo costo computazionale
+Ad ogni iterazione del ciclo while, uno dei 2 indici viene decrementato di 1, il caso peggiore in cui si può incorrere è quello in cui non venga mai trovata una coppia di valori tali che $\Large |x - y| \leq 3$, compiendo cosi al più $\Large 2n$ iterazioni, da cui il suo costo computazionale
 
 $$
     \Large \Theta(2n) \implies \Theta(n)
@@ -177,10 +203,9 @@ $$
 
 rientrando cosi nel vincolo di costo computazionale richiesto dal testo dell'esercizio.
 
-## Esercizio 3
+## <p align="center"> Esercizio 3 </p>
 
-Si consideri una lista non vuota *L*, in cui ogni elemento è un record a due
-campi,
+Si consideri una lista non vuota *L*, in cui ogni elemento è un record a due campi,
 
 - il campo *val* contenente un intero
 
@@ -201,15 +226,21 @@ Lo spazio di lavoro dell’algoritmo deve essere $O(1)$.
 
 Dell’algoritmo proposto
 
+---
+
 **a)** si dia la descrizione a parole
 
 Si scorre la lista partendo dalla testa, fino a quando non si raggiunge l'ultimo elemento.
 
 Ad ogni iterazione del ciclo while, viene effettuato il seguente controllo:
 
-- se il valore del nodo attualmente puntato da *r* è uguale al valore del suo nodo successivo, allora il nodo corrente punterà al nodo successivo del nodo successivo, in modo da eliminare il duplicato
+- se il valore del nodo attualmente puntato da *r* è uguale al valore del suo nodo successivo, allora il nodo corrente punterà al nodo successivo del nodo successivo, in modo da eliminarne il duplicato
 
 - altrimenti, vuol dire che il valore del nodo attualmente puntato da *r* è diverso dal valore del suo nodo successivo, quindi si procede a far puntare *r* al nodo successivo (in modo da avanzare nella lista)
+
+---
+
+**b)** si scriva lo pseudocodice
 
 ```python
 def es3(r):
@@ -220,11 +251,15 @@ def es3(r):
             r = r.next
 ```
 
+---
+
 **c)** si giustifichi il costo computazionale
 
-il numero di iterazioni del ciclo while è pari al numero di elementi presenti nella lista, da cui il costo computazionale $\Large \Theta(n)$
+il numero di iterazioni del ciclo while è pari al numero di elementi presenti nella lista, da cui il costo computazionale $\Large \Theta(n)$.
 
 **d)** si scriva lo pseudocodice di un algoritmo ricorsivo che risolve il problema
+
+---
 
 ```python
 def es3(r):
