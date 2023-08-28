@@ -1,6 +1,6 @@
 # <p align="center"> Esame 25 Ottobre 2022 </p>
 
-## Esercizio 1
+## <p align="center"> Esercizio 1 </p>
 
 Si consideri la seguente funzione:
 
@@ -19,6 +19,8 @@ def es1(n):
         u+= 1
     return a + es1(n/2) + u
 ```
+
+---
 
 **a)** Si imposti la relazione di ricorrenza che ne definisce il tempo di esecuzione giustificando dettagliatamente l’equazione ottenuta.
 
@@ -130,6 +132,8 @@ $$
     \Large -T(n) = \Theta(1), \quad n \leq 1
 $$
 
+---
+
 **b)** Qualora sia possibile, risolvere la ricorrenza utilizzando il teorema principale dettagliando il caso del teorema ed i passaggi logici.
 
 Se il teorema principale non è applicabile spiegarne il motivo.
@@ -163,7 +167,10 @@ per verificare l'applicabilità del teorema principale, si analizzano tutti i ca
 si conclude dunque che il teorema principale non è applicabile per la seguente equazione di ricorrenza.
 
 > per avere una dimostrazione grafica di quanto riportato sopra, si possono usare siti come [Geogebra](https://www.geogebra.org/calculator) o simili
-## Esercizio 2
+
+<br>
+
+## <p align="center"> Esercizio 2 </p>
 
 Sia $A$ un array di $n$ elementi con $n$ pari, contenente uno stesso numero di interi pari ed interi dispari.
 
@@ -184,6 +191,8 @@ L’algoritmo deve avere costo computazionale $O(n)$ e deve utilizzare uno spazi
 
 Dell’algoritmo proposto:
 
+---
+
 **a)** si dia la descrizione a parole
 
 Si utilizzano 2 indici, $\Large p$ e $\Large d$, per scorrere rispettivamente le posizioni pari e dispari dell'array, applicando il seguenti controlli:
@@ -195,6 +204,8 @@ Si utilizzano 2 indici, $\Large p$ e $\Large d$, per scorrere rispettivamente le
 - altrimenti, si rientra nel caso in cui si hanno un valore pari in posizione dispari e un valore dispari in posizione pari, dunque si scambiano i valori contenuti in A[p] e A[d], e si passano ad esaminare le posizioni pari e dispari successive.
 
 questi passaggi saranno ripetuti fino a quando non si raggiungerà la fine dell'array, ritornando così un riarrangiamento valido.
+
+---
 
 **b)** si scriva lo pseudocodice
 
@@ -214,6 +225,8 @@ def es2(A):
     return A
 ```
 
+---
+
 **c)** si giustiﬁchi il costo computazionale
 
 il costo dell'algoritmo è determinato principalmente dal ciclo while, in quanto le operazioni al suo interno e all'esterno sono tutte elementari
@@ -232,7 +245,9 @@ si analizzano caso peggiore e caso migliore
 
 si conclude dunque che il costo dell'algoritmo sia $\Large \Theta(n)$ rispettando i vincoli richiesti dall'esercizio.
 
-## Esercizio 3
+<br>
+
+## <p align="center"> Esercizio 3 </p>
 
 Si consideri una lista a puntatori circolare $L$ data tramite un puntatore $p$ ad un suo elemento.
 
@@ -262,22 +277,29 @@ Progettare un algoritmo iterativo che, dato il puntatore $p$ ad un nodo della li
 
 Dell’algoritmo proposto:
 
+---
+
 **a)** si dia la descrizione a parole
 
 si scorre l'intera lista utilizzando i campi $next$ di ogni nodo, confrontando il valore key di ogni nodo con il valore minimo trovato fino a quel momento, aggiornandolo se necessario e ritornandolo al termine dello scorrimento.
+
+---
 
 **b)** si scriva lo pseudocodice
 
 ```python
 def es3(p):
-    t = p.key       # testa della lista
-    Min = p.key     # valore minimo attuale
-    p = p.next      # mi preparo a scorrere la lista
-    while p.key! = t:  # finché non torno alla testa
-        Min = min(p.key, x)   # aggiorno il valore minimo attuale (se necessario)
-        p = p.next         # passo al nodo successivo
-    return Min             # ritorno il valore minimo della lista
+    t = p.key
+    minimo = p.key
+    p = p.next
+    while p.key != t:
+        if p.key < minimo:
+            minimo = p.key
+        p = p.next
+    return minimo
 ```
+
+---
 
 **c)** si giustiﬁchi il costo computazionale
 
