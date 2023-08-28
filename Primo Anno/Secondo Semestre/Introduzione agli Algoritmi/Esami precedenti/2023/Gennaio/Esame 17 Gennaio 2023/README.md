@@ -1,6 +1,7 @@
 # <p align="center"> Esame 17 Gennaio 2023 </p>
 
-## Esercizio 1
+## <p align="center"> Esercizio 1 </p>
+
 Per la soluzione di un certo problema disponiamo di un
 algoritmo iterativo con costo computazionale $\Large \Theta(n^3)$.
 
@@ -19,6 +20,7 @@ dove $\Large a$ è una certa costante intera positiva con $\Large a \geq 2$.
 Determinare quale sia il valore massimo che la costante intera a può avere perchè l’algoritmo ricorsivo risulti asintoticamente più eﬃciente dell’algoritmo iterativo di cui disponiamo
 
 ---
+
 si risolve inizialmente la ricorrenza:
 
 generalizzando l'equazione in $\Large T(n) = a*T(\frac{n}{b}) + f(n)$
@@ -44,19 +46,21 @@ siccome per $\Large a \geq 2$ troveremo sempre un valore di $\Large \epsilon > 0
 
 si conclude come per far si che l'algoritmo risulti asintoticamente più efficiente di $\Large \Theta(n^3)$, $\Large a$ debba essere necessariamente $\Large \leq 7$.
 
+<br>
 
-## Esercizio 2
+## <p align="center"> Esercizio 2 </p>
+
 Dati due arrays $\Large A$ e $\Large B$, rispettivamente di $\Large n$ ed $\Large m$ interi distinti, con $\Large m < n$, si vuole sapere se l’array $\Large A$ contenga l’array $\Large B$ come sottoarray.
 
-Ad esempio, se $\Large A = [5, 9, 1, 3, 4, 8, 2]$, per $\Large B = [3, 4, 8]$ la risposta è SI mentre per
-$\Large B = [3, 8, 2]$ o B = $[\Large 9, 6, 8]$ la risposta è NO
+Ad esempio, se $\Large A = [5, 9, 1, 3, 4, 8, 2]$, per $\Large B = [3, 4, 8]$ la risposta è SI mentre per $\Large B = [3, 8, 2]$ o B = $[\Large 9, 6, 8]$ la risposta è NO
 
-Progettare un algoritmo che, dati gli arrays $\Large A$ e $\Large B$, restituisca $\Large 1$ se la risposta
-al problema è SI, $\Large 0$ altrimenti. 
+Progettare un algoritmo che, dati gli arrays $\Large A$ e $\Large B$, restituisca $\Large 1$ se la risposta al problema è SI, $\Large 0$ altrimenti. 
 
 Il costo computazionale dell’algoritmo deve essere $\Large O(n)$
 
 Dell’algoritmo proposto:
+
+---
 
 **a)** si dia la descrizione a parole
 
@@ -70,6 +74,8 @@ che gli elementi di $\Large A$ e $\Large B$ coincidano.
 Se non sono stati trovati elementi diversi tra loro durante tutto lo scorrimento di $\Large B$, la funzione restituisce $\Large 1$, anche se non dovesse essere stato concluso lo scorrimento di $\Large A$.
 
 In qualsiasi altro caso, ad esempio se il primo elemento di $\Large B$ non sia proprio presente in $\Large A$, o se sono stati trovati elementi diversi tra loro durante lo scorrimento in parallelo, la funzione restituisce $\Large 0$.
+
+---
 
 **b)** si scriva lo pseudocodice
 
@@ -86,13 +92,17 @@ def es2(A, B):
     return 0
 ```
 
+---
+
 **c)** si giustiﬁchi il costo computazionale
 
 Il caso peggiore si ha quando $\Large A$ non contiene $\Large B$ come sottoarray, dovendo scorrere tutto $\Large A$ una sola volta per verificarlo, effettuando tutte operazioni con costo costante $\Large \Theta(1)$ per ogni elemento.
 
 Dunque viene rispettato il vincolo di costo computazionale $\Large O(n)$.
 
-## Esercizio 3
+<br>
+
+## <p align="center"> Esercizio 3 </p>
 
 Sia dato un albero binario $\Large T$, in cui ogni nodo $\Large p$ ha
 tre campi:
@@ -109,6 +119,8 @@ Il costo computazionale dell’algoritmo deve essere $\Large O(n)$, dove n è il
 
 Dell’algoritmo proposto:
 
+---
+
 **a)** si dia la descrizione a parole
 
 Per verificare che tutti i nodi dell'albero abbiano lo stesso valore, si controlla che il valore del nodo corrente sia uguale a quello dei suoi figli, se presenti.
@@ -118,6 +130,8 @@ Si visita l'albero in pre-order, dunque visitando prima il nodo corrente, poi il
 Ogni volta che si arriva ad una foglia, se tutti i nodi visitati fino a quel momento avevano lo stesso valore, si restituisce $\Large 1$, altrimenti $\Large 0$.
 
 Ciò garantisce che, se tutti i nodi presentano lo stesso valore, la funzione restituirà $\Large 1$ mentre se ci dovessere essere anche solo un nodo con valore diverso dagli altri, la funzione dovrà restituire necessariamente $\Large 0$.
+
+---
 
 **b)** si scriva lo pseudocodice
 
@@ -131,6 +145,9 @@ def es3(p):
         return 0
     return es3(p.sx) and es3(p.dx)
 ```
+
+---
+
 **c)** si giustifichi il costo computazionale
 
 il costo computazionale dell'algoritmo  quello di una visita completa di un albero, riconducibile alla seguente equazione di ricorrenza
