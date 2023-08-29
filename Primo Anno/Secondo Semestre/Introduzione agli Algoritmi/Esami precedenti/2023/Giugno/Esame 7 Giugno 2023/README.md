@@ -1,6 +1,7 @@
 # <p align="center"> Esame 7 Giugno 2023 </p>
 
-## Esercizio 1
+## <p align="center"> Esercizio 1 </p>
+
 Si consideri la seguente funzione:
 ```python
 def Es1(n):
@@ -13,41 +14,65 @@ def Es1(n):
     return s + Es1(n − 1)
 ```
 
+---
+
 **a)** Si analizza il codice per impostare la relazione di ricorrenza che ne definisce il tempo di esecuzione
 
-- si rientra nel caso base per $\Large n < 5$, con costo $\Large \Theta(1)$, quindi $\Large T(n) = \Theta(1)$ per $\Large n < 5$
-- altrimenti, il costo della funzione è dato dalla somma del costo del ciclo *while* e quello della singola chiamata ricorsiva con parametro $\Large n-1$
+Si rientrerà nel caso base per ogni $\Large n < 5$, con relativo costo $\Large \Theta(1)$.
 
-il ciclo while ha inizio con $\Large k = n$, e termina quando $\Large k = 1$, utilizzando una variabile ausiliaria $\Large z$ per indicare il numero di iterazioni del ciclo, si analizza il valore di $\Large k$ dopo ogni iterazione:
+$$
+    \Large T(n) = \Theta(1)$, \quad n < 5
+$$
+
+Per il caso generale, invece, il costo della funzione sarà determinato
+
+- dal ciclo *while*
+
+- e dalla singola chiamata ricorsiva
+
+<br>
+
+- **ciclo while**
+
+  Si analizza il suo comportamento
 
 <div align="center">
 
-| Iterazione | 0 | 1 | 2 | 3 | ... | $z$ |
+| Iterazione | 0 | 1 | 2 | 3 | $\Large \dots$ | $\Large z$ |
 |:----------:| :---: | :---: | :---: | :---: | :---: | :---: |
-| $k$ | $n$ | $\Large\frac{n}{3}$ | $\Large\frac{n}{3^2}$ | $\Large\frac{n}{3^3}$ | ... | $\Large\frac{n}{3^z}$ |
+| $\Large k$ | $\Large n$ | $\Large \frac{n}{3}$ | $\Large \frac{n}{3^2}$ | $\Large \frac{n}{3^3}$ | $\Large \dots$ | $\Large \frac{n}{3^z}$ |
 
 </div>
 
-il ciclo termina quando $\Large k = 1$, ovvero quando $\Large \frac{n}{3^z} = 1$
+il ciclo terminerà quando
 
 $$
-\Large \frac{n}{3^z} = 1 \implies n = 3^z \implies z = \log_3(n)
+    \Large \frac{n}{3^z} = 1
 $$
 
-trovato il numero di iterazioni del ciclo while in relazione all'input $\Large n$, si conclude che il costo di quest'ultimo sia logaritmico, ovvero $\Large \Theta(\log(n))$.
-Unito al costo della singola chiamata ricorsiva con parametro $\Large n-1$, si ottiene l'equazione
+$$
+    \Large n = 3^z
+$$
 
-$\Large T(n) = T(n-1) + \Theta(\log(n))$ per $\Large n \geq 5$.
+$$
+    \Large \log_3(n) = z \implies z = \log_3(n)
+$$
 
-In conclusione, la relazione di ricorrenza che definisce il tempo di esecuzione della funzione sarà data da
+Il suo costo sarà uguale a $\Large \Theta(\log(n))$.
 
-<div align="center">
+- **chiamata ricorsiva**
 
-\- $\Large T(n) = T(n-1) + \Theta(\log(n))$ , $\Large n \geq 5$
+  La chiamata presenta come parametro $\Large n-1$, da cui il costo $\Large T(n-1)
 
-\- $\Large T(n) = \Theta(1)$ , $\Large n < 5$
+$$
+    \Large - T(n) = T(n-1) + \Theta(\log(n)), \quad n \geq 5
+$$
 
-</div>
+$$
+    \Large - T(n) = \Theta(1), \quad n < 5
+$$
+
+---
 
 **b)** Si risolve la ricorrenza con la possibilità di utilizzare un metodo a scelta tra quelli trattati durante il corso, si sceglie di usare il metodo iterativo
 
@@ -58,44 +83,60 @@ $$
 $$
 
 $$
-    \Large T(n) = [T(n-2) + \Theta(\log(n-1))] + \Theta(\log(n))
+    \Large T(n) = T(n-2) + \Theta(\log(n-1)) + \Theta(\log(n))
 $$
 
 $$
-    \Large T(n) = \{[T(n-3) + \Theta(\log(n-2))] + \Theta(\log(n-1))\} + \Theta(\log(n))
+    \Large T(n) = T(n-3) + \Theta(\log(n-2)) + \Theta(\log(n-1)) + \Theta(\log(n))
 $$
 
-generalizzabile usando una variabile ausiliare $k$ in 
+generalizzabile in 
 
 $$
     \Large T(n) = T(n-k) + \sum_{i=0}^{k-1} \Theta(\log(n-i))
 $$
 
-verrà raggiunto il caso base quando $\Large n-k < 5$, ovvero quando $\Large n - k = 4$ da cui $\Large k = n - 4$
+Si rientrerà nell caso base quando 
 
 $$
-    \Large T(n) = T(n - (n - 4)) + \sum_{i=0}^{n-4-1} \Theta(\log(n-i))
-$$
-
-$$
-    \Large T(n) = T(4) + \sum_{i=0}^{n-5} \Theta(\log(n-i))
+    \Large n - k = 1
 $$
 
 $$
-    \Large T(n) = \Theta(1) + \sum_{i=0}^{n-5} \Theta(\log(n-i))
+    \Large  - k =  -n + 1
 $$
 
 $$
-    \Large T(n) = \Theta(1) + [log(n) + log(n-1) + log(n-2) + ... + log(5)]
+    \Large k = n - 1
 $$
 
-per le proprietà dei logaritmi $\Large log(a) + log(b) = log(ab)$, quindi la sommatoria estesa può essere riscritta come $\Large log(n(n-1)(n-2)...(5)) = log(\Large\frac{n!}{4!})$, in quanto bisogna escludere $\Large log(4), log(3), log(2)$ e $\Large log(1)$ ottendendo infine $\Large T(n) = \Theta(1) + \Theta(log(\Large\frac{n!}{4!}))$ = $\Theta(log(n!))$
+Sostituendo k nell'equazione
 
-usando [l'approssimazione di Stirling](https://math.stackexchange.com/questions/140961/why-is-logn-on-log-n), si dimostra che $\Large log(n!) = \Theta(nlog(n))$,
+$$
+    \Large T(n) = T(n - (n - 1)) + \sum_{i=0}^{n-1-1} \Theta(\log(n-i))
+$$
 
-concludendo che $\Large T(n) = \Theta(nlog(n))$
+$$
+    \Large T(n) = T(1) + \sum_{i=0}^{n-1} \Theta(\log(n-i))
+$$
 
-## Esercizio 2
+$$
+    \Large T(n) = \Theta(1) + \sum_{i=0}^{n-1} \Theta(\log(n-i))
+$$
+
+$$
+    \Large T(n) = \Theta(1) + [log(n) + log(n-1) + log(n-2) + ... + log(1)]
+$$
+
+per le proprietà dei logaritmi $\Large log(a) + log(b) = log(a*b)$, quindi la sommatoria estesa può essere riscritta come $\Large log(n(n-1)(n-2)...(1)) = log(n!)$, ottendendo infine $\Large T(n) = \Theta(1) + \Theta(log(n!)) \implies \Theta(log(n!))$
+
+usando [l'approssimazione di Stirling](https://math.stackexchange.com/questions/140961/why-is-logn-on-log-n), si dimostra come $\Large log(n!)$ sia uguale a  $\Large \Theta(nlog(n))$,
+
+concludendo che $\Large T(n) = \Theta(n*log(n))$
+
+<br>
+
+## <p align="center"> Esercizio 2 </p>
 
 Dato un array $\Large A$ di $\Large n$ interi compresi tra $\Large 0$ a $\Large 50$, sapendo che nell’array sono certamente presenti dei duplicati, si vuole determinare la distanza massima tra le posizioni di due elementi duplicati in $\Large A$.
 
@@ -109,9 +150,11 @@ Ad esempio per $\Large A = [3, 3, 4, 6, 6, 3, 5, 5, 5, 6, 6, 9, 9, 1]$ i soli el
 
 quindi la risposta per l’array $\Large A$ è $\Large 7$.
 
-Progettare un algoritmo che, dato $\Large A$, in tempo $\Large \Theta(n)$ restituisca
-la distanza massima tra le posizioni con elementi duplicati.
+Progettare un algoritmo che, dato $\Large A$, in tempo $\Large \Theta(n)$ restituisca la distanza massima tra le posizioni con elementi duplicati.
+
 Dell’algoritmo proposto:
+
+---
 
 **a)** si scriva lo pseudocodice opportunamente commentato
 
@@ -145,11 +188,14 @@ def es2(A):
     # finito di scorrere A, restituisco la distanza massima trovata
     return m
 ```
+
+---
+
 **b)** si giustifichi il costo computazionale
 
 il costo computazionale dell'algoritmo è $\Large \Theta(n)$, in quanto si scorre l'array $\Large A$ una sola volta, eseguendo operazioni elementari, quindi tutte con costo $\Large \Theta(1)$, per ogni elemento di $\Large A$
 
-## Esercizio 3
+## <p align="center"> Esercizio 3 </p>
 
 Dato il puntatore $\Large r$ al nodo radice di un albero binario non vuoto, progettare un algoritmo ricorsivo che in tempo $\Large \Theta(n)$ calcoli il numero di nodi che hanno esatta mente $\Large 2$ figli e chiave pari.
 
@@ -172,10 +218,12 @@ l’algoritmo deve restituire $\Large 2$, per la presenza dei nodi con chiavi $\
 
 L’albero è memorizzato tramite puntatori e record di tre campi:
 
-- il campo key contenente il valore
-- ed i campi left e right con i puntatori al figlio sinistro e al figlio destro, rispettivamente (questi puntatori valgono None in mancanza del figlio).
+- il campo *key* contenente il valore
+- ed i campi *left* e *right* con i puntatori al figlio sinistro e al figlio destro, rispettivamente (questi puntatori valgono None in mancanza del figlio).
 
 Dell’algoritmo proposto:
+
+---
 
 **a)** si scriva lo pseudocodice opportunamente commentato
 
@@ -202,6 +250,9 @@ def es3(r):
     # sottoalbero destro e del nodo corrente
     return a + es3(r.left) + es3(r.right)
 ```
+
+---
+
 **b)** si giustifichi il costo computazionale
 
 il costo computazionale dell'algoritmo è appunto quello di una visita completa di un albero in post-ordine, riconducibile alla seguente equazione di ricorrenza
