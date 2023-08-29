@@ -1,7 +1,6 @@
 # <p align="center"> Esame 5 Luglio 2023 </p>
 
-
-## Esercizio 1
+## <p align="center"> Esercizio 1 </p>
 
 Si consideri la seguente funzione
 
@@ -18,10 +17,11 @@ def es1(n):
     return s
 ```
 
+---
+
 **a)** La relazione di ricorrenza sarà data da
 
 - il costo delle 2 chiamate ricorsive, con parametri $\Large \frac{n}{4}$ e $\Large m - \frac{n}{4}$, dove $\Large m = \frac{n}{2}$, da cui il secondo parametro sarà $\Large \frac{n}{2} - \frac{n}{4} \implies \frac{2n - n}{4} \implies \frac{n}{4}$ <br> <br> il costo di queste 2 chiamate ricorsive sarà quindi $\Large 2T\left(\frac{n}{4}\right)$
-
 
 - il costo del ciclo while, determinato dalla condizione di uscita $\Large i * i > n$, usando una variabile ausiliaria $k$ si analizza il suo comportamento
 
@@ -60,7 +60,9 @@ $$
     - T(n) = \Theta(1),\ n \leq 4
 $$
 
-** b)** Si prova a risolvere la ricorrenza usando il metodo principale
+---
+
+**b)** Si prova a risolvere la ricorrenza usando il metodo principale
 
 generalizzando la ricorrenza in $\Large T(n) = aT\left(\frac{n}{b}\right) + f(n)$,
 
@@ -72,18 +74,21 @@ si rientra nel caso in cui $\Large f(n) = \Theta (n^{\log_b a})$, quindi nel sec
 
 il costo totale dell'algoritmo sarà quindi $\Large T(n) = \Theta (n^{\log_b a} \log n) = \Theta (\sqrt{n} \log n)$
 
-## Esercizio 2
+<br>
+
+## <p align="center"> Esercizio 2 </p>
 
 In un array ordinato $A$ di $n$ interi compaiono tutti gli interi da $0$ a $n-2$.
 
 Esiste dunque nell'array un unico elemento duplicato.
-
 
 Si progetti un algoritmo ITERATIVO che, dato $A$, in tempo $\Theta(log(n))$ restituisca l'elemento duplicato.
 
 Ad esempio, per $A = [0, 1, 2, 3, 4, 4, 5, 6, 7]$ l'algoritmo deve restituire 4.
 
 Dell'algoritmo proposto:
+
+---
 
 a) si scriva il codice python opportunamente commentato
 
@@ -123,14 +128,15 @@ def es2(A):
     return A[left]
 ```
 
+---
+
 **b)** si giustifichi il costo computazionale
 
 il costo computazionale dell'algoritmo è regolato principalmente dal ciclo while, in quanto il resto delle operazioni sono tutte con costo $\Theta(1)$
 
 - il ciclo while ha come condizione di uscita $\Large left < right$, ovvero quando la lunghezza dell'array n sarà 1 con left e right che puntano alla stessa posizione
 
-si analizza la lunghezza dell'array ad ogni iterazione del ciclo while
-usando una variabile ausiliaria $k$
+si analizza la lunghezza dell'array ad ogni iterazione del ciclo while usando una variabile ausiliaria $k$
 
 <div align="center">
 
@@ -154,9 +160,11 @@ $$
     \Large \log_2(n) = k \implies k = \log_2(n)
 $$
 
-il costo del ciclo while, nonchè costo finale dell'algoritmo, sarà quindi $\Large \Theta(\log_2(n))$
+il costo del ciclo while, nonchè costo finale dell'algoritmo, sarà quindi $\Large \Theta(\log_2(n))$.
 
-## Esercizio 3
+<br>
+
+## <p align="center"> Esercizio 3 </p>
 
 Data una lista puntata, diremo che i due record che occupano le posizioni (2i -1)-esima e 2i-esima (i>=1) vengono accorpati eliminando dalla lista quello in posizione pari, e trasformando la chiave del record in posizione dispari nella somma dei due elementi accorpati.
 
@@ -176,6 +184,8 @@ Ad esempio, la lista seguente va modificata come in figura:
                                 5 --------> 4 ---------> 7
 
 dell'algoritmo proposto:
+
+---
 
 a) si scriva lo pseudocodice opportunamente commentato
 
@@ -206,6 +216,8 @@ def es3(p):
     # con puntatore alla sua testa
     return p
 ```
+
+---
 
 **b)** si giustifichi il costo computazionale
 
@@ -286,4 +298,4 @@ $$
     \Large T(n) = \Theta(1) + \Theta(n) \implies \Theta(n)
 $$
 
-viene rispettata la richiesta di costo $\Large \Theta(n)$ dell'algoritmo
+viene rispettata la richiesta di costo $\Large \Theta(n)$ dell'algoritmo.
