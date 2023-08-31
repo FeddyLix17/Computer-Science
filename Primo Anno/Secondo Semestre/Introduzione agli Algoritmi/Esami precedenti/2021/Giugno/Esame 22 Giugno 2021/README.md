@@ -28,7 +28,7 @@ si giustiﬁchi l’equazione ottenuta, e la si risolva usando il metodo iterati
 Si rientrerà nel caso base quando $\Large n = 1$, ma essendo verificata la condizione successivamente all'esecuzione del ciclo while, il suo costo invece di essere $\Large \Theta(1)$ sarà $\Large \Theta(log(k))$ (successivamente dimostrato).
 
 $$
-    \Large -T(n) = \Theta(log(k)), \quad n = 1
+    \Large - T(n) = \Theta(log(k)), \quad n = 1
 $$
 
 Nel caso generale, invece, il costo sarà determinato
@@ -77,7 +77,7 @@ $$
 
 ---
 
-Si procede a risolvere la ricorrenza con il metodo iterativo.
+- **metodo iterativo**
 
 $$
     \Large T(n, k) = T(n - 1, k) + \Theta(log(k))
@@ -110,6 +110,140 @@ $$
 $$
     \Large T(n, k) = \Theta(log(k)) + \Theta(n * log(k)) \implies \Theta(n * log(k))
 $$
+
+---
+
+- **metodo di sostituzione**
+
+  Si ipotizza la soluzione $\Large \Theta(n * log(k))$, bisogna dimostrare che l'algoritmo sia in $\Large O(n * log(k))$ e in $\Large \Omega(n * log(k))$.
+
+  Si rimuove la notazione asintotica
+
+$$
+    \Large - T(n, k) = T(n - 1, k) + log(k) * \Theta(1), \quad n > 1
+$$
+
+$$
+    \Large - T(n, k) = log(k) * \Theta(1), \quad n = 1
+$$
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diventa
+
+$$
+    \Large - T(n, k) = T(n - 1, k) + log(k) * c, \quad n > 1
+$$
+
+$$
+    \Large - T(n, k) = log(k) * d, \quad n = 1
+$$
+
+---
+
+Per $\Large O(n * log(k))$ bisogna dimostrare che
+
+$$
+    \Large T(n, k) \leq e * n * log(k)
+$$
+
+per qualche costante $\Large e > 0$
+
+- **caso base** $\Large n = 1$
+
+$$
+    \Large d * log(k) \leq e * log(k) \implies d \leq e
+$$
+
+- **passo induttivo**
+
+$$
+    \Large T(n - 1, k) + log(k) * c \leq e * n * log(k)
+$$
+
+sempre per ipotesi, se diamo per vero che $\Large T(n, k) \leq e * n * log(k)$, allora anche $\Large T(n - 1, k) \leq e * (n - 1) * log(k)$ sarà vero.
+
+Sostituendolo nell'equazione diventa
+
+$$
+    \Large e * (n - 1) * log(k) + log(k) * c \leq e * n * log(k)
+$$
+
+$$
+    \Large (e * n - e) * log(k) + log(k) * c \leq e * n * log(k)
+$$
+
+$$
+    \Large e * n * log(k) - e * log(k) + log(k) * c \leq e * n * log(k)
+$$
+
+$$
+    \Large log(k) * c \leq e * n * log(k) - e * n * log(k) + e * log(k)
+$$
+
+$$
+    \Large log(k) * c \leq e * log(k)
+$$
+
+$$
+    \Large c \leq e
+$$
+
+viene dunque dimostrato che per ogni $\Large e > 0$ tale che $\Large e \geq c \wedge e \geq d$, la funzione sarà in $\Large O(n * log(k))$.
+
+---
+
+Per $\Large \Omega(n * log(k))$ bisogna dimostrare che
+
+$$
+    \Large T(n, k) \geq f * n * log(k)
+$$
+
+per qualche costante $\Large f > 0$
+
+- **caso base** $\Large n = 1$
+
+$$
+    \Large d * log(k) \geq f * log(k) \implies d \geq f
+$$
+
+- **passo induttivo**
+
+$$
+    \Large T(n - 1, k) + log(k) * c \geq f * n * log(k)
+$$
+
+sempre per ipotesi, se diamo per vero che $\Large T(n, k) \geq f * n * log(k)$, allora anche $\Large T(n - 1, k) \geq f * (n - 1) * log(k)$ sarà vero.
+
+Sostituendolo nell'equazione diventa
+
+$$
+    \Large f * (n - 1) * log(k) + log(k) * c \geq f * n * log(k)
+$$
+
+$$
+    \Large (f * n - f) * log(k) + log(k) * c \geq f * n * log(k)
+$$
+
+$$
+    \Large f * n * log(k) - f * log(k) + log(k) * c \geq f * n * log(k)
+$$
+
+$$
+    \Large log(k) * c \geq f * n * log(k) - f * n * log(k) + f * log(k)
+$$
+
+$$
+    \Large log(k) * c \geq f * log(k)
+$$
+
+$$
+    \Large c \geq f
+$$
+
+viene dunque dimostrato che per ogni $\Large e > 0$ tale che $\Large e \leq c \wedge f \geq d$, la funzione sarà in $\Large \Omega(n * log(k))$.
+
+Per le proprietà della notazione asintotica, avendo dimostrato che la funzione è sia in $\Large O(n * log(k))$ che in $\Large \Omega(n * log(k))$, si può affermare che il suo costo sia uguale a $\Large \Theta(n * log(k))$.
+
+<br>
 
 ## <p align="center"> Esercizio 2 </p>
 
