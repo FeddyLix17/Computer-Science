@@ -1,6 +1,6 @@
 <div align="center">
 
-![Logo Metodologie di Programmazione](https://logos-world.net/wp-content/uploads/2022/07/Java-Symbol.png)
+![Logo Metodologie di Programmazione](https://static.wikia.nocookie.net/logopedia/images/a/aa/Minecraft-java-logo.png/revision/latest?cb=20190316052713)
 # Metodologie di Programmazione
 
 </div>
@@ -41,88 +41,88 @@ Una volta alla settimana viene svolta un'attività di laboratorio, in cui vengon
 - <details closed>
 	<summary> Esercizi Capitolo 2</summary>
 
-	- [Esercizio 1](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_1)
+	- [Esercizio 1](./Esercizi/Esercizi%20Capitolo%202/Esercizio_1)
 
-	- [Esercizio 2](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_2)
+	- [Esercizio 2](./Esercizi/Esercizi%20Capitolo%202/Esercizio_2)
 
-	- [Esercizio 3](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_3)
+	- [Esercizio 3](./Esercizi/Esercizi%20Capitolo%202/Esercizio_3)
 
-	- [Esercizio 4](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_4)
+	- [Esercizio 4](./Esercizi/Esercizi%20Capitolo%202/Esercizio_4)
 
-	- [Esercizio 5](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_5)
+	- [Esercizio 5](./Esercizi/Esercizi%20Capitolo%202/Esercizio_5)
 
-	- [Esercizio 6](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_6)
+	- [Esercizio 6](./Esercizi/Esercizi%20Capitolo%202/Esercizio_6)
 
-	- [Esercizio 7](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_7)
+	- [Esercizio 7](./Esercizi/Esercizi%20Capitolo%202/Esercizio_7)
 
-	- [Esercizio 8](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_8)
+	- [Esercizio 8](./Esercizi/Esercizi%20Capitolo%202/Esercizio_8)
 
-	- [Esercizio 9](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_9)
+	- [Esercizio 9](./Esercizi/Esercizi%20Capitolo%202/Esercizio_9)
 
-	- [Esercizio 10](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_10)
+	- [Esercizio 10](./Esercizi/Esercizi%20Capitolo%202/Esercizio_10)
 
-	- [Esercizio 11](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_11)
+	- [Esercizio 11](./Esercizi/Esercizi%20Capitolo%202/Esercizio_11)
 
-	- [Esercizio 12](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_12)
+	- [Esercizio 12](./Esercizi/Esercizi%20Capitolo%202/Esercizio_12)
 
-	- [Esercizio 13](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_13)
+	- [Esercizio 13](./Esercizi/Esercizi%20Capitolo%202/Esercizio_13)
 
-	- [Esercizio 14](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_14)
+	- [Esercizio 14](./Esercizi/Esercizi%20Capitolo%202/Esercizio_14)
 
-	- [Esercizio 15](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_15)
+	- [Esercizio 15](./Esercizi/Esercizi%20Capitolo%202/Esercizio_15)
 
-	- [Esercizio 16](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_16)
+	- [Esercizio 16](./Esercizi/Esercizi%20Capitolo%202/Esercizio_16)
 
-	- [Esercizio 17](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_17)
+	- [Esercizio 17](./Esercizi/Esercizi%20Capitolo%202/Esercizio_17)
 
-	- [Esercizio 18](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_18)
+	- [Esercizio 18](./Esercizi/Esercizi%20Capitolo%202/Esercizio_18)
 
-	- [Esercizio 19](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%202/Esercizio_19)
+	- [Esercizio 19](./Esercizi/Esercizi%20Capitolo%202/Esercizio_19)
 
     </details>
 
 - <details closed>
     <summary> Esercizi Capitolo 3</summary>
 
-    - [Esercizio 1](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_1)
+    - [Esercizio 1](./Esercizi/Esercizi%20Capitolo%203/Esercizio_1)
 
-    - [Esercizio 2](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_2)
+    - [Esercizio 2](./Esercizi/Esercizi%20Capitolo%203/Esercizio_2)
 
-    - [Esercizio 3](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_3)
+    - [Esercizio 3](./Esercizi/Esercizi%20Capitolo%203/Esercizio_3)
 
-    - [Esercizio 4](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_4)
+    - [Esercizio 4](./Esercizi/Esercizi%20Capitolo%203/Esercizio_4)
 
-    - [Esercizio 5](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_5)
+    - [Esercizio 5](./Esercizi/Esercizi%20Capitolo%203/Esercizio_5)
 
-    - [Esercizio 6](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_6)
+    - [Esercizio 6](./Esercizi/Esercizi%20Capitolo%203/Esercizio_6)
 
-    - [Esercizio 7](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_7)
+    - [Esercizio 7](./Esercizi/Esercizi%20Capitolo%203/Esercizio_7)
 
-    - [Esercizio 8](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_8)
+    - [Esercizio 8](./Esercizi/Esercizi%20Capitolo%203/Esercizio_8)
 
-    - [Esercizio 9](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_9)
+    - [Esercizio 9](./Esercizi/Esercizi%20Capitolo%203/Esercizio_9)
 
-    - [Esercizio 10](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_10)
+    - [Esercizio 10](./Esercizi/Esercizi%20Capitolo%203/Esercizio_10)
 
-    - [Esercizio 11](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_11)
+    - [Esercizio 11](./Esercizi/Esercizi%20Capitolo%203/Esercizio_11)
 
-    - [Esercizio 12](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_12)
+    - [Esercizio 12](./Esercizi/Esercizi%20Capitolo%203/Esercizio_12)
 
-    - [Esercizio 13](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_13)
+    - [Esercizio 13](./Esercizi/Esercizi%20Capitolo%203/Esercizio_13)
 
-    - [Esercizio 14](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_14)
+    - [Esercizio 14](./Esercizi/Esercizi%20Capitolo%203/Esercizio_14)
 
-    - [Esercizio 15](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_15)
+    - [Esercizio 15](./Esercizi/Esercizi%20Capitolo%203/Esercizio_15)
 
-    - [Esercizio 16](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_16)
+    - [Esercizio 16](./Esercizi/Esercizi%20Capitolo%203/Esercizio_16)
 
-    - [Esercizio 17](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_17)
+    - [Esercizio 17](./Esercizi/Esercizi%20Capitolo%203/Esercizio_17)
 
-    - [Esercizio 18](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_18)
+    - [Esercizio 18](./Esercizi/Esercizi%20Capitolo%203/Esercizio_18)
 
-    - [Esercizio 19](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_19)
+    - [Esercizio 19](./Esercizi/Esercizi%20Capitolo%203/Esercizio_19)
 
-    - [Esercizio 20](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esercizi/Esercizi%20Capitolo%203/Esercizio_20)
+    - [Esercizio 20](./Esercizi/Esercizi%20Capitolo%203/Esercizio_20)
 
     </details>
 
@@ -138,7 +138,7 @@ Di seguito sono riportati dei piccoli walkthrough di alcune prove scritte preced
 	- <details closed>
 		<summary> Maggio </summary>
 
-    	- [Walkthrough Esame 19 Maggio 2021](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2021/Maggio/Esame%2019%20Maggio%202021)
+    	- [Walkthrough Esame 19 Maggio 2021](./Esami%20precedenti/2021/Maggio/Esame%2019%20Maggio%202021)
 
   		</details>
 
@@ -150,24 +150,30 @@ Di seguito sono riportati dei piccoli walkthrough di alcune prove scritte preced
 	- <details closed>
 		<summary> Maggio </summary>
 
-    	- [Walkthrough Esame 17 Maggio 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2023/Maggio/Esame%2017%20Maggio%202023)
+    	- [Walkthrough Esame 17 Maggio 2023](./Esami%20precedenti/2023/Maggio/Esame%2017%20Maggio%202023)
 
 		</details>
 
 	- <details closed>
 		<summary> Giugno </summary>
 
-		- [Walkthrough Esame 13 Giugno 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2023/Giugno/Esame%2013%20Giugno%202023)
+		- [Walkthrough Esame 13 Giugno 2023](./Esami%20precedenti/2023/Giugno/Esame%2013%20Giugno%202023)
 
 		</details>
 
 	- <details closed>
 		<summary> Luglio </summary>
 
-		- [Walkthrough Esame 13 Luglio 2023](https://github.com/FedVlogger17/Uni-Notes/tree/main/Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione/Esami%20precedenti/2023/Luglio/Esame%2013%20Luglio%202023)
+		- [Walkthrough Esame 13 Luglio 2023](./Esami%20precedenti/2023/Luglio/Esame%2013%20Luglio%202023)
 
 		</details>
 
 	</details>
 
 </details>
+
+<div align="center">
+
+[***Torna alla Home***](../../../)
+
+</div>

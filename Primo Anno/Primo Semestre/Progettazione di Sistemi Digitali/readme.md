@@ -1,6 +1,10 @@
+<div align="center">
+
 ![Logo Progettazione di Sistemi Digitali](https://antmicro.com/blog/images/systemverilog.svg)
 
-# <p align="center"> Progettazione di Sistemi Digitali </p>
+# Progettazione di Sistemi Digitali
+
+</div>
 
 <details closed>
 
@@ -100,9 +104,13 @@
 
 </details>
 
-
-
 - [Forum](https://github.com/sapienzastudentsnetwork/psd2223) per confrontarsi sulle soluzioni degli esercizi forniti dal professore
 - [DigitalJS](https://digitaljs.tilk.eu): piattaforma per sintetizzare i circuiti scritti in *SystemVeriLog*
   - [DigitalJS for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=yuyichao.digitaljs): sua relativa estensione per l'editor di testo *Visual Studio Code*
 - [EdaPlayground](https://www.edaplayground.com/): piattaforma molto utile per gli utenti Windows in quanto provvista dei più famosi compilatori di codice *SystemVeriLog*
+
+<div align="center">
+
+[***Torna alla Home***](../../../)
+
+</div>

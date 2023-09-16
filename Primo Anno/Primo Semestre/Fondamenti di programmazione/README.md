@@ -190,3 +190,9 @@ Una volta alla settimana viene svolta un'esercitazione in laboratorio, in cui ve
 - [Forum Q2a](https://q2a.di.uniroma1.it/) generale del corso
 
 - [Python Tutor](http://pythontutor.com/) : strumento molto utile per visualizzare visivamente l'esecuzione di un programma Python senza dover installare nessun software
+
+<div align="center">
+
+[***Torna alla Home***](../../../)
+
+</div>

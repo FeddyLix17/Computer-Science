@@ -1,6 +1,10 @@
+<div align="center">
+
 ![IconaCalcoloIntegrale](https://www.classup.it/db/img/corso/analisi_matematica_i_per_ingegneria_dellautomazione_1530006973.png)
 
-# <p align="center"> Calcolo integrale </p>
+# Calcolo integrale
+
+</div>
 
 ## About 🔎
 
@@ -26,7 +30,12 @@ Grazie al contributo di altri colleghi, sono stati raggruppati e categorizzati g
 
 - [Forum Esercizi](https://github.com/sapienzastudentsnetwork/calcint2223)
 
-
 ## Other 🔗
 
 [Formulario](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale/Formulario%20Esonero%2030%20Maggio%202023.pdf) esonero *30 maggio 2023 (equazioni differenziali)*
+
+<div align="center">
+
+[***Torna alla Home***](../../../)
+
+</div>
