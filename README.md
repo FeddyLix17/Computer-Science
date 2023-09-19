@@ -41,7 +41,7 @@ Per qualsiasi domanda, correzione o consiglio su come migliorare la repository:
 | :---: | :---: | :---: | :---: |
 | [Calcolo Integrale](./Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale) | Superato 🥳 | 14/06/2023 | 22/30 ✅ |
 | [Architettura degli Elaboratori](./Primo%20Anno/Secondo%20Semestre/Architettura%20degli%20Elaboratori) | Idoneo 🧗‍♂️ | 08/06/2023 | --/30 🔄 |
-| [Introduzione agli Algoritmi](./Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi) | Bocciato 😓 | 05/07/2023 | ins/30 ❌ |
+| [Introduzione agli Algoritmi](./Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi) | Superato 🥳 | 12/09/2023 | 29/30 ✅ |
 | [Metodologie di Programmazione](./Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione) | Superato 🥳 | 13/07/2023 | 18/30 ✅ |
 
 </details>
