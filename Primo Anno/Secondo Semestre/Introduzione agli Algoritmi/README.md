@@ -45,6 +45,7 @@ In linea generale, il corso approfondirà i seguenti argomenti:
 
 	- Liste puntate
 
+> [!NOTE]
 > per avere un'idea più precisa è possibile consultare il [programma ufficiale](https://twiki.di.uniroma1.it/twiki/view/Intro_algo/AD/ProgrammaDelCorso)
 
 ## Testi consigliati  dal docente📚
@@ -60,7 +61,7 @@ In linea generale, il corso approfondirà i seguenti argomenti:
 È possibile esercitarsi con gli esami degli anni precedenti, raggiungibili [qui](https://twiki.di.uniroma1.it/twiki/view/Intro_algo/AD/VecchiScritti)
 
 <details closed>
-	<summary> <b> Esami Precedenti </b> </summary>
+	<summary> <b> Walkthroughs Esami Precedenti </b> </summary>
 
 - <details closed>
 	<summary> 2021 </summary>

@@ -2,9 +2,9 @@
 	<img src="https://media.salonedellostudente.it/app/uploads/2020/07/16134905/sapienza-roma-logo-01.png"> </img>
 </div>
 
-# <p align=center> Uni Path - Computer Science Degree </p>
+<h1 align=center> Uni Path - Computer Science Degree </h1>
 
-### About 🔎
+## About 🔎
 
 Raggruppamento delle risorse personali per il percorso di laurea in [Informatica](https://corsidilaurea.uniroma1.it/it/corso/2022/29923/home) presso la [Sapienza Università di Roma](https://www.uniroma1.it/).
 
@@ -18,12 +18,11 @@ Per qualsiasi domanda, correzione o consiglio su come migliorare la repository:
 [![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/FedVlogger)
 [![discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discordapp.com/users/315821724639821829)
 
-<!--- [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/fedvlogger17) --->
+<h2 align=center> Risorse categorizzate 📖</h2>
 
-## <p align=center> Risorse categorizzate 📖</p>
+<div align="center">
 
-<details open>
-	<summary> Primo Anno - Primo Semestre - A. A. 2022/2023 </summary>
+<h3> Primo Anno - Primo Semestre - A. A. 2022/2023 </h3>
 
 | Corso | Stato | Data | Voto |
 | :---: | :---: | :---: | :---: |
@@ -32,10 +31,7 @@ Per qualsiasi domanda, correzione o consiglio su come migliorare la repository:
 | [Metodi Matematici per l'Informatica](./Primo%20Anno/Primo%20Semestre/Metodi%20Matematici%20per%20l'informatica) | Da preparare | --/--/---- | --/-- |
 | [Fondamenti di Programmazione](./Primo%20Anno/Primo%20Semestre/Fondamenti%20di%20programmazione) | Superato 🥳 | 26/01/2023 | 22/30 ✅ |
 
-</details>
-
-<details open>
-	<summary> Primo Anno - Secondo Semestre - A. A. 2022/2023 </summary>
+<h3> Primo Anno - Secondo Semestre - A. A. 2022/2023 </h3>
 
 | Corso | Stato | Data | Voto |
 | :---: | :---: | :---: | :---: |
@@ -44,4 +40,13 @@ Per qualsiasi domanda, correzione o consiglio su come migliorare la repository:
 | [Introduzione agli Algoritmi](./Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi) | Superato 🥳 | 12/09/2023 | 29/30 ✅ |
 | [Metodologie di Programmazione](./Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione) | Superato 🥳 | 13/07/2023 | 18/30 ✅ |
 
-</details>
+<h3> Secondo Anno - Primo Semestre - A. A. 2023/2024 </h3>
+
+| Corso | Stato | Data | Voto |
+| :---: | :---: | :---: | :---: |
+| [Algebra](./Secondo%20Anno/Primo%20Semestre/Algebra) | Da preparare | --/--/---- | --/-- |
+| [Calcolo delle Probabilità](./Secondo%20Anno/Primo%20Semestre/Calcolo%20delle%20Probabilità/) | Da preparare | --/--/---- | --/-- |
+| [Basi di Dati I](./Secondo%20Anno/Primo%20Semestre/Basi%20di%20Dati%20I) | Da preparare | --/--/---- | --/-- |
+| [Sistemi Operativi I](./Secondo%20Anno/Primo%20Semestre/Sistemi%20Operativi%20I) | Da preparare | --/--/---- | --/-- |
+
+</div>

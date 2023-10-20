@@ -32,8 +32,9 @@ In particolare, verranno approfonditi
 
 È possibile esercitarsi con gli esami scritti degli anni precedenti, raggiungibili [qui](https://github.com/sapienzastudentsnetwork/archelab2223)
 
+## Other 🔗
 <details closed> 
-	<summary> <strong> Prove MIPS precedenti </strong> </summary>
+	<summary> <strong> Walkthroughs esami MIPS precedenti </strong> </summary>
 
 - <details closed>
 	<summary> 2022 </summary>
