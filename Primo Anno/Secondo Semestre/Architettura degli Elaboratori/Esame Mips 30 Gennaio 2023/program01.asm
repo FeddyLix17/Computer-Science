@@ -2,7 +2,7 @@
 # INSERIRE I PROPRI DATI QUI
 # Nome:       Valerio
 # Cognome:    Fontana
-# Matricola:  2046790
+# Matricola:  
 ##########################################
 
 # NON MODIFICARE IL CODICE DA QUI...
