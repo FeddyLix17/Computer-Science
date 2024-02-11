@@ -15,7 +15,7 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
 > Per informazioni più dettagliate e aggiornate consiglio di consultare fonti ufficiali oppure il [sito](https://sapienzastudents.net/informatica/) realizzato dalla community di SapienzaStudentNetwork.
 
 > [!NOTE]  
-> Oltre alle risorse presenti ad esempio nei corsi di [Introduzione agli Algoritmi](./primo%20anno/secondo%20semestre/Introduzione%20agli%20Algoritmi) e di Calcolo [Differenziale](./primo%20anno/primo%20semestre/Calcolo%20Differenziale) / [Integrale](./primo%20anno/secondo%20semestre/Calcolo%20Integrale), potete trovare ulteriori contributi (anche di altri colleghi), presso le [varie repository](https://github.com/SapienzaStudentsNetwork) della medesima organizzazione.
+> Oltre alle risorse presenti ad esempio nei corsi di [Introduzione agli Algoritmi](./Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi) e di Calcolo [Differenziale](./Primo%20Anno/Primo%20Semestre/Calcolo%20Differenziale) / [Integrale](./Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale), potete trovare ulteriori contributi (anche di altri colleghi), presso le [varie repository](https://github.com/SapienzaStudentsNetwork) della medesima organizzazione.
 >
 > Per qualsiasi domanda, correzione o consiglio su come migliorare la repository:
 >
@@ -30,25 +30,25 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
 
 | primo semestre |
 | :---: |
-| [Calcolo Differenziale](./primo%20anno/primo%20semestre/Calcolo%20Differenziale) |
-| [Progettazione di Sistemi Digitali](./primo%20anno/primo%20semestre/Progettazione%20di%20Sistemi%20Digitali) |
-| [Metodi Matematici per l'Informatica](./primo%20anno/primo%20semestre/Metodi%20Matematici%20per%20l'informatica) |
-| [Fondamenti di Programmazione](./primo%20anno/primo%20semestre/Fondamenti%20di%20programmazione) |
+| [Calcolo Differenziale](./Primo%20Anno/Primo%20Semestre/Calcolo%20Differenziale) |
+| [Progettazione di Sistemi Digitali](./Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali) |
+| [Metodi Matematici per l'Informatica](./Primo%20Anno/Primo%20Semestre/Metodi%20Matematici%20per%20l'informatica) |
+| [Fondamenti di Programmazione](./Primo%20Anno/Primo%20Semestre/Fondamenti%20di%20programmazione) |
 
 | secondo semestre |
 | :---: |
-| [Calcolo Integrale](./primo%20anno/secondo%20semestre/Calcolo%20Integrale) |
-| [Architettura degli Elaboratori](./primo%20anno/secondo%20semestre/Architettura%20degli%20Elaboratori) |
-| [Introduzione agli Algoritmi](./primo%20anno/secondo%20semestre/Introduzione%20agli%20Algoritmi) |
-| [Metodologie di Programmazione](./primo%20anno/secondo%20semestre/Metodologie%20di%20Programmazione) |
+| [Calcolo Integrale](./Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale) |
+| [Architettura degli Elaboratori](./Primo%20Anno/Secondo%20Semestre/Architettura%20degli%20Elaboratori) |
+| [Introduzione agli Algoritmi](./Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi) |
+| [Metodologie di Programmazione](./Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione) |
 
 ### Secondo Anno - A. A. 2023/2024
 
 | primo semestre |
 | :---: |
-| [Algebra](./secondo%20anno/primo%20semestre/Algebra) |
-| [Calcolo delle Probabilità](./secondo%20anno/primo%20semestre/Calcolo%20delle%20Probabilità/) |
-| [Basi di Dati I](./secondo%20anno/primo%20semestre/Basi%20di%20Dati%20I) |
-| [Sistemi Operativi I](./secondo%20anno/primo%20semestre/Sistemi%20Operativi%20I) |
+| [Algebra](./Secondo%20Anno/Primo%20Semestre/Algebra) |
+| [Calcolo delle Probabilità](./Secondo%20Snno/Primo%20Semestre/Calcolo%20delle%20Probabilità/) |
+| [Basi di Dati I](./Secondo%20Anno/Primo%20Semestre/Basi%20di%20Dati%20I) |
+| [Sistemi Operativi I](./Secondo%20Anno/Primo%20Semestre/Sistemi%20Operativi%20I) |
 
 </div>
