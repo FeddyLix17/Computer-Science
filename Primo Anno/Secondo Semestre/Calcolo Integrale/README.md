@@ -8,7 +8,7 @@
 
 ## About 🔎
 
-Il corso di Calcolo Integrale mira a fornire strumenti di analisi matematica di base come
+Il corso di Calcolo Integrale prosegue con gli argomenti trattati nel corso di Calcolo Differenziale, focalizzandosi su
 
 - *serie numeriche e di potenze*, studiando la convergenza delle serie numeriche (approssimando, in alcuni casi, la loro somma), le serie di potenze e gli sviluppi in serie di Taylor delle funzioni elementari.
 
@@ -18,7 +18,7 @@ Il corso di Calcolo Integrale mira a fornire strumenti di analisi matematica di 
 
 ## Materiale 📚
 
-Tutto il materiale fornito dal docente è disponibile [qui](https://elearning.uniroma1.it/enrol/index.php?id=15354)
+Tutto il materiale fornito dal professore è disponibile nella sua pagina [moodle](https://elearning.uniroma1.it/enrol/index.php?id=15354)
 
 ## Esercizi 📝
 
@@ -26,13 +26,13 @@ Al fine del superamento del corso sono previste obbligatoriamente una prova scri
 
 Viene facoltativamente anche offerta la possibilità di essere esonerati dalla prova scritta, sostenendo degli esoneri durante il corso e totalizzando un punteggio complessivo minimo di almeno 48 punti (sui 96 totali possibili).
 
-Grazie al contributo di altri colleghi, sono stati raggruppati e categorizzati gran parte degli esercizi svolti durante il corso, in modo da poterli utilizzare per esercitarsi e prepararsi per l'esame.
-
-- [Forum Esercizi](https://github.com/sapienzastudentsnetwork/calcint2223)
+Potete trovare varie schede di esercizi assegnate durante le lezioni nella [repository](https://github.com/sapienzastudentsnetwork/calcint2223) dedicata.
 
 ## Other 🔗
 
-[Formulario](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale/Formulario%20Esonero%2030%20Maggio%202023.pdf) esonero *30 maggio 2023 (equazioni differenziali)*
+[Formulario terzo esonero](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale/Formulario%20Esonero%2030%20Maggio%202023.pdf) *30 maggio 2023 (equazioni differenziali)*
+
+<br>
 
 <div align="center">
 
