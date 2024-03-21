@@ -48,7 +48,7 @@ In linea generale, il corso approfondirà i seguenti argomenti:
 > [!NOTE]
 > per avere un'idea più precisa è possibile consultare il [programma ufficiale](https://twiki.di.uniroma1.it/twiki/view/Intro_algo/AD/ProgrammaDelCorso)
 
-## Testi consigliati  dal docente📚
+## Testi consigliati dal docente📚
 
 - [Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein, Introduzione agli algoritmi, Mc Graw Hill](https://github.com/saranshbht/msc-books/blob/master/M.Sc.%20CS%20Sem-1/Design%20and%20Analysis%20of%20Algorithms/Thomas%20H.%20Cormen%2C%20Charles%20E.%20Leiserson%2C%20Ronald%20L.%20Rivest%2C%20Clifford%20Stein%20-%20Introduction%20to%20algorithms%20%5Bsolutions%5D%20(2009%2C%20The%20MIT%20Press)%20-%20libgen.lc.pdf)
 
