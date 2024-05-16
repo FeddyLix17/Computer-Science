@@ -1,7 +1,7 @@
 <div align="center">
 	<img src="https://media.salonedellostudente.it/app/uploads/2020/07/16134905/sapienza-roma-logo-01.png"> </img>
 
-# Uni Path - Computer Science Degree
+# Computer Science Bachelor's degree
 
 </div>
 
@@ -26,82 +26,100 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
 
 ## Risorse categorizzate 📖🗂️
 
-### Primo Anno - A. A. 2022/2023
-
-<table align="left">
-    <tr>
-        <th> primo semestre </th>
-    </tr>
-    <tr>
-        <td> <a href="./Primo%20Anno/Primo%20Semestre/Calcolo%20Differenziale"> Calcolo Differenziale </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="./Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali"> Progettazione di Sistemi Digitali </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="./Primo%20Anno/Primo%20Semestre/Metodi%20Matematici%20per%20l'informatica"> Metodi Matematici per l'Informatica </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="./Primo%20Anno/Primo%20Semestre/Fondamenti%20di%20programmazione"> Fondamenti di Programmazione </a> </td>
-    </tr>
-</table>
-
-<table align="right">
-    <tr>
-        <th> secondo semestre </th>
-    </tr>
-    <tr>
-        <td> <a href="./Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale"> Calcolo Integrale </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="./Primo%20Anno/Secondo%20Semestre/Architettura%20degli%20Elaboratori"> Architettura degli Elaboratori </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="./Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi"> Introduzione agli Algoritmi </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="./Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione"> Metodologie di Programmazione </a> </td>
-    </tr>
-</table>
-
-<br> <br> <br> <br> <br> <br> <br> <br> <br>
-
-### Secondo Anno - A. A. 2023/2024
-
-<table align="left">
-    <tr>
-        <th> primo semestre </th>
-    </tr>
-    <tr>
-        <td> <a href="./Secondo%20Anno/Primo%20Semestre/Algebra"> Algebra </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="./Secondo%20Anno/Primo%20Semestre/Calcolo%20delle%20Probabilità"> Calcolo delle Probabilità </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="./Secondo%20Anno/Primo%20Semestre/Basi%20di%20Dati%20I"> Basi di Dati I </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="./Secondo%20Anno/Primo%20Semestre/Sistemi%20Operativi%20I"> Sistemi Operativi I </a> </td>
-    </tr>
-</table>
-
-<table align="right">
-    <tr>
-        <th> secondo semestre </th>
-    </tr>
-    <tr>
-        <td> <a href="./Secondo%20Anno/Secondo%20Semestre/Reti%20di%20Elaboratori"> Reti di Elaboratori </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="./Secondo%20Anno/Secondo%20Semestre/Progettazione%20di%20Algoritmi"> Progettazione di Algoritmi </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="./Secondo%20Anno/Secondo%20Semestre/Basi%20di%20Dati%20II"> Basi di dati II </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="./Secondo%20Anno/Secondo%20Semestre/Sistemi%20Operativi%20II"> Sistemi Operativi II </a> </td>
-    </tr>
-</table>
-
 </div>
+
+<table align="center">
+    <tr>
+        <td colspan="2" align="center">
+            <h3>Primo Anno - A. A. 2022/2023</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td align="center">primo semestre</td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Primo%20Anno/Primo%20Semestre/Calcolo%20Differenziale"> Calcolo Differenziale </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali"> Progettazione di Sistemi Digitali </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Primo%20Anno/Primo%20Semestre/Metodi%20Matematici%20per%20l'informatica"> Metodi Matematici per l'Informatica </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Primo%20Anno/Primo%20Semestre/Fondamenti%20di%20programmazione"> Fondamenti di Programmazione </a></td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td align="center">secondo semestre</td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale"> Calcolo Integrale </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Primo%20Anno/Secondo%20Semestre/Architettura%20degli%20Elaboratori"> Architettura degli Elaboratori </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi"> Introduzione agli Algoritmi </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione"> Metodologie di Programmazione </a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<table align="center">
+    <tr>
+        <td colspan="2" align="center">
+            <h3>Secondo Anno - A. A. 2023/2024</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td align="center">primo semestre</td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Secondo%20Anno/Primo%20Semestre/Algebra"> Algebra </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Secondo%20Anno/Primo%20Semestre/Calcolo%20delle%20Probabilità"> Calcolo delle Probabilità </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Secondo%20Anno/Primo%20Semestre/Basi%20di%20Dati%20I"> Basi di Dati I </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Secondo%20Anno/Primo%20Semestre/Sistemi%20Operativi%20I"> Sistemi Operativi I </a></td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td align="center">secondo semestre</td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Reti%20di%20Elaboratori"> Reti di Elaboratori </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Progettazione%20di%20Algoritmi"> Progettazione di Algoritmi </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Basi%20di%20Dati%20II"> Basi di dati II </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Sistemi%20Operativi%20II"> Sistemi Operativi II </a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
