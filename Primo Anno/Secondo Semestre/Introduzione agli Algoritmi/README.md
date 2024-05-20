@@ -8,7 +8,7 @@
 
 ## About 🔎
 
-Se il corso di [Fondamenti di Programmazione](https://github.com/FedVlogger17/Computer_Science/tree/main/Primo%20Anno/Primo%20Semestre/Fondamenti%20di%20programmazione) aveva l'obiettivo di insegnare la maggior parte delle basi per la scrittura di un programma, il corso di Introduzione agli Algoritmi punta a farlo in modo efficiente, studiando il codice da un punto di vista più teorico e matematico.
+Se il corso di [Fondamenti di Programmazione](../../Primo%20Semestre/Fondamenti%20di%20programmazione/) aveva l'obiettivo di insegnare la maggior parte delle basi per la scrittura di un programma, il corso di Introduzione agli Algoritmi punta a farlo in modo efficiente, studiando il codice da un punto di vista più teorico e matematico.
 
 In linea generale, il corso approfondirà i seguenti argomenti:
 
@@ -60,133 +60,80 @@ In linea generale, il corso approfondirà i seguenti argomenti:
 
 È possibile esercitarsi con gli esami degli anni precedenti, raggiungibili [qui](https://twiki.di.uniroma1.it/twiki/view/Intro_algo/AD/VecchiScritti)
 
-<details closed>
-	<summary> <b> Walkthroughs Esami Precedenti </b> </summary>
-
-- <details closed>
-	<summary> 2021 </summary>
-
-	- <details closed>
-		<summary> Gennaio </summary>
-
-    	- [Walkthrough Esame 31 Gennaio 2021](./Esami%20precedenti/2021/Gennaio/Esame%2031%20Gennaio%202021)
-
-		</details>
-
-	- <details closed>
-		<summary> Giugno </summary>
-
-    	- [Walkthrough Esame 22 Giugno 2021](./Esami%20precedenti/2021/Giugno/Esame%2022%20Giugno%202021)
-
-		</details>
-
-	- <details closed>
-		<summary> Luglio </summary>
-
-    	- [Walkthrough Esame 13 Luglio 2021](./Esami%20precedenti/2021/Luglio/Esame%2013%20Luglio%202021)
-
-		</details>
-
-	- <details closed>
-		<summary> Settembre </summary>
-
-    	- [Walkthrough Esame 8 Settembre 2021](./Esami%20precedenti/2021/Settembre/Esame%208%20Settembre%202021)
-
-		</details>
-
-	- <details closed>
-		<summary> Ottobre </summary>
-
-    	- [Walkthrough Esame 21 Ottobre 2021](./Esami%20precedenti/2021/Ottobre/Esame%2021%20Ottobre%202021)
-
-		</details>
-
-	</details>
-
-- <details closed>
-	<summary> 2022 </summary>
-
-	- <details closed>
-		<summary> Gennaio </summary>
-
-    	- [Walkthrough Esame 13 Gennaio 2022](./Esami%20precedenti/2022/Gennaio/Esame%2013%20Gennaio%202022)
-
-		</details>
-
-	- <details closed>
-		<summary> Marzo </summary>
-
-    	- [Walkthrough Esame 31 Marzo 2022](./Esami%20precedenti/2022/Marzo/Esame%2031%20Marzo%202022)
-
-		</details>
-
-	- <details closed>
-		<summary> Giugno </summary>
-
-    	- [Walkthrough Esame Giugno 2022](./Esami%20precedenti/2022/Giugno/Esame%20Giugno%202022)
-
-		- [Walkthrough Esame 27 Giugno 2022](./Esami%20precedenti/2022/Giugno/Esame%2027%20Giugno%202022)
-
-		</details>
-
-	- <details closed>
-		<summary> Settembre </summary>
-
-    	- [Walkthrough Esame 15 Settembre 2022](./Esami%20precedenti/2022/Settembre/Esame%2015%20Settembre%202022)
-
-		</details>
-
-	- <details closed>
-		<summary> Ottobre </summary>
-
-    	- [Walkthrough Esame 25 Ottobre 2022](./Esami%20precedenti/2022/Ottobre/Esame%2025%20Ottobre%202022)
-
-		</details>
-
-	</details>
-
-- <details closed>
-	<summary> 2023 </summary>
-
-	- <details closed>
-		<summary> Gennaio </summary>
-
-    	- [Walkthrough Esame 17 Gennaio 2023](./Esami%20precedenti/2023/Gennaio/Esame%2017%20Gennaio%202023)
-    	- [Walkthrough Esame 31 Gennaio 2023](./Esami%20precedenti/2023/Gennaio/Esame%2031%20Gennaio%202023)
-
-		</details>
-
-	- <details closed>
-		<summary> Marzo </summary>
-
-    	- [Walkthrough Esame 20 Marzo 2023](./Esami%20precedenti/2023/Marzo/Esame%2020%20Marzo%202023)
-
-		</details>
-
-	- <details closed>
-		<summary> Giugno </summary>
-
-    	- [Walkthrough Esame 7 Giugno 2023](./Esami%20precedenti/2023/Giugno/Esame%207%20Giugno%202023)
-
-		</details>
-
-	- <details closed>
-		<summary> Luglio </summary>
-
-    	- [Walkthrough Esame 5 Luglio 2023](./Esami%20precedenti/2023/Luglio/Esame%205%20Luglio%202023)
-
-		</details>
-
-    - <details closed>
-		<summary> Settembre </summary>
-
-    	- [Walkthrough Esame 12 Settembre 2023](./Esami%20precedenti/2023/Settembre/Esame%2012%20Settembre%202023)
-
-		</details>
-
-	</details>
-
-</details>
+<table align="center">
+    <tr>
+        <td colspan="3" align="center">
+            <h3>Walkthroughs  esami precedenti</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td align="center">2021</td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Esami%20precedenti/2021/Gennaio/Esame%2031%20Gennaio%202021"> 31 Gennaio </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Esami%20precedenti/2021/Giugno/Esame%2022%20Giugno%202021"> 22 Giugno </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Esami%20precedenti/2021/Luglio/Esame%2013%20Luglio%202021"> 13 Luglio </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Esami%20precedenti/2021/Settembre/Esame%208%20Settembre%202021"> 8 Settembre </a></td>
+                </tr>
+				<tr>
+					<td align="center"><a href="./Esami%20precedenti/2021/Ottobre/Esame%2021%20Ottobre%202021"> 21 Ottobre </a></td>
+				</tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td align="center">2022</td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Esami%20precedenti/2022/Gennaio/Esame%2013%20Gennaio%202022"> 13 Gennaio </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Esami%20precedenti/2022/Marzo/Esame%2031%20Marzo%202022"> 31 Marzo </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Esami%20precedenti/2022/Giugno/Esame%20Giugno%202022"> Giugno </a> -  <a href="./Esami%20precedenti/2022/Giugno/Esame%2027%20Giugno%202022"> 27 Giugno</a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./Esami%20precedenti/2022/Settembre/Esame%2015%20Settembre%202022"> 15 Settembre </a></td>
+                </tr>
+				<tr>
+					<td align="center"><a href="./Esami%20precedenti/2022/Ottobre/Esame%2025%20Ottobre%202022"> 25 Ottobre </a></td>
+				</tr>
+            </table>
+        </td>
+		<td>
+			<table>
+				<tr>
+					<td align="center">2023</td>
+				</tr>
+				<tr>
+					<td align="center"><a href="./Esami%20precedenti/2023/Gennaio/Esame%2017%20Gennaio%202023"> 17 Gennaio </a> - <a href="./Esami%20precedenti/2023/Gennaio/Esame%2031%20Gennaio%202023"> 31 Gennaio </a></td>
+				</tr>
+				<tr>
+					<td align="center"><a href="./Esami%20precedenti/2023/Marzo/Esame%2020%20Marzo%202023"> 20 Marzo </a></td>
+				</tr>
+				<tr>
+					<td align="center"><a href="./Esami%20precedenti/2023/Giugno/Esame%207%20Giugno%202023"> 7 Giugno </a></td>
+				</tr>
+				<tr>
+					<td align="center"><a href="./Esami%20precedenti/2023/Luglio/Esame%205%20Luglio%202023"> 5 Luglio </a></td>
+				</tr>
+				<tr>
+					<td align="center"><a href="./Esami%20precedenti/2023/Settembre/Esame%2012%20Settembre%202023"> 12 Settembre </a></td>
+			</table>
+		</td>
+	</tr>
+</table>
 
 ## Other 🔗
 

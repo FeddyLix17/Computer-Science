@@ -8,7 +8,7 @@
 
 ## About 🔎
 
-La seconda parte del corso di Basi di Dati si concentra su aspetti legati all'ingegneria del software, dando dei primi cenni in merito per poi arrivare a parlare di 
+La seconda parte del corso di Basi di Dati si concentra su aspetti legati all'ingegneria del software, dando dei primi cenni in merito per poi arrivare a parlare di
 
 - **Analisi concettuale dei requisiti**, mediante diagrammi UML
 

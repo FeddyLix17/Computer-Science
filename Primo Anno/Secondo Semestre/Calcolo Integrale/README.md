@@ -30,7 +30,7 @@ Potete trovare varie schede di esercizi assegnate durante le lezioni nella [repo
 
 ## Other 🔗
 
-[Formulario terzo esonero](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale/Formulario%20Esonero%2030%20Maggio%202023.pdf) *30 maggio 2023 (equazioni differenziali)*
+[Formulario terzo esonero](./Formulario%20Esonero%2030%20Maggio%202023.pdf) *30 maggio 2023 (equazioni differenziali)*
 
 <br>
 

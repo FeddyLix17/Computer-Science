@@ -8,11 +8,11 @@
 
 ## About 🔎
 
-Il corso di Algebra, a differenza dei corsi di calcolo [differenziale](https://github.com/FeddyLix17/Computer-Science/tree/main/Primo%20Anno/Primo%20Semestre/Calcolo%20Differenziale) e [integrale](https://github.com/FeddyLix17/Computer-Science/tree/main/Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale), si occupa di studiare le quantità numeriche e simboliche, gli insiemi intesi come strutture dati e le relazioni che legano questi ultimi, come operazioni, associazioni e applicazioni.
+Il corso di Algebra, a differenza dei corsi di calcolo [differenziale](../../../Primo%20Anno/Primo%20Semestre/Calcolo%20Differenziale/) e [integrale](../../../Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale/), si occupa di studiare le quantità numeriche e simboliche, gli insiemi intesi come strutture dati e le relazioni che legano questi ultimi, come operazioni, associazioni e applicazioni.
 
 In linea di massima ci si soffermerà su
 
-- ***l'algebra elementare***, approfondendo argomenti come 
+- ***l'algebra elementare***, approfondendo argomenti come
     - *gli Anelli* (intesi come strutture dati) di interi e polinomi, oppure lo studio dell'algoritmo di Euclide per il calcolo del massimo comun divisore
 
     - *le Relazioni*, in particolare quelle di equivalenza, da cui derivano ad esempio gli insiemi quoziente

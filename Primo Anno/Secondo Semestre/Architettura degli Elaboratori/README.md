@@ -32,95 +32,59 @@ In particolare, verranno approfonditi
 
 È possibile esercitarsi con gli esami scritti degli anni precedenti, raggiungibili [qui](https://github.com/sapienzastudentsnetwork/archelab2223)
 
-## Other 🔗
-<details closed> 
-	<summary> <strong> Walkthroughs esami MIPS precedenti </strong> </summary>
-
-- <details closed>
-	<summary> 2022 </summary>
-
-	- <details closed>
-		<summary> Giugno </summary>
-
-		- <details closed>
-			<summary> 10 Giugno 2022 </summary>
-
-			- [Traccia](./Esame%20Mips%2010%20Giugno%202022/README.pdf)
-			- [Solution.asm](./Esame%20Mips%2010%20Giugno%202022/program01.asm)
-
-			</details>
-
-		</details>
-
-	- <details closed>
-		<summary> Luglio </summary>
-
-		- <details closed>
-			<summary> 1 Luglio 2022 </summary>
-
-			- [Traccia](./Esame%20Mips%2010%20Giugno%202022/README.pdf)
-  			- [Solution.asm](./Esame%20Mips%2010%20Giugno%202022/program01.asm)
-
-			</details>
-
-		</details>
-
-	- <details closed>
-		<summary> Settembre </summary>
-
-		- <details closed>
-			<summary> 9 Settembre 2022 </summary>
-
-			- [Traccia](./Esame%20Mips%209%20Settembre%202022/README.pdf)
-			- [Solution.asm](./Esame%20Mips%209%20Settembre%202022/program01.asm)
-
-			</details>
-
-		</details>
-
-	</details>
-
-- <details closed>
-	<summary> 2023 </summary>
-
-	- <details closed>
-		<summary> Gennaio </summary>
-
-		- <details closed>
-			<summary> 24 Gennaio 2023 </summary>
-
-    		- [Traccia](./Esame%20Mips%2024%20Gennaio%202023/README.pdf)
-    		- [Solution.asm](./Esame%20Mips%2024%20Gennaio%202023/program01.asm)
-
-			</details>
-
-		- <details closed>
-			<summary> 30 Gennaio 2023 </summary>
-
-    		- [Traccia](./Esame%20Mips%2030%20Gennaio%202023/README.pdf)
-    		- [Solution.asm](./Esame%20Mips%2030%20Gennaio%202023/program01.asm)
-
-			</details>
-
-		</details>
-
-	- <details closed>
-		<summary> Marzo </summary>
-
-		- <details closed>
-    		<summary> 28 Marzo 2023 (simulazione) </summary>
-
-			- [Traccia](./Simulazione%20Opzionale%2028%20Marzo%202023/README.pdf)
-
-			- [Solution.asm](./Simulazione%20Opzionale%2028%20Marzo%202023/program01.asm)
-
-			</details>
-
-		</details>
-
-	</details>
-
-</details>
+<table align="center">
+    <tr>
+        <td colspan="2" align="center">
+            <h3>Walkthroughs esami MIPS precedenti</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table align="center">
+                <tr>
+                    <td colspan="3" align="center">2022</td>
+                </tr>
+                <tr>
+                    <td align="center"> 10 Giugno </td>
+     				<td> <a href="./Esame%20Mips%2010%20Giugno%202022/README.pdf"> traccia </a> </td>
+					<td> <a href="./Esame%20Mips%2010%20Giugno%202022/program01.asm"> asm </a> </td>
+                </tr>
+				<tr>
+					<td align="center"> 1 Luglio </td>
+					<td> <a href="./Esame%20Mips%2010%20Giugno%202022/README.pdf"> traccia </a> </td>
+					<td> <a href="./Esame%20Mips%2010%20Giugno%202022/program01.asm"> asm </a> </td>
+				</tr>
+				<tr>
+					<td align="center"> 9 Settembre </td>
+					<td> <a href="./Esame%20Mips%209%20Settembre%202022/README.pdf"> traccia </a> </td>
+					<td> <a href="./Esame%20Mips%209%20Settembre%202022/program01.asm"> asm </a> </td>
+				</tr>
+            </table>
+        </td>
+        <td>
+            <table align="center">
+                <tr>
+                    <td colspan="3" align="center">2023</td>
+                </tr>
+                <tr>
+                    <td align="center"> 24 Gennaio </td>
+					<td> <a href="./Esame%20Mips%2024%20Gennaio%202023/README.pdf"> traccia </a> </td>
+					<td> <a href="./Esame%20Mips%2024%20Gennaio%202023/program01.asm"> asm </a> </td>
+				</tr>
+				<tr>
+					<td align="center"> 30 Gennaio </td>
+					<td> <a href="./Esame%20Mips%2030%20Gennaio%202023/README.pdf"> traccia </a> </td>
+					<td> <a href="./Esame%20Mips%2030%20Gennaio%202023/program01.asm"> asm </a> </td>
+				</tr>
+				<tr>
+					<td align="center"> 28 Marzo (simulazione) </td>
+					<td> <a href="./Simulazione%20Opzionale%2028%20Marzo%202023/README.pdf"> traccia </a> </td>
+					<td> <a href="./Simulazione%20Opzionale%2028%20Marzo%202023/program01.asm"> asm </a> </td>
+				</tr>
+            </table>
+        </td>
+	</tr>
+</table>
 
 <div align="center">
 
