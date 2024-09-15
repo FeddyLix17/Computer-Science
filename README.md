@@ -112,7 +112,7 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
                     <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Progettazione%20di%20Algoritmi"> Progettazione di Algoritmi </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Basi%20di%20Dati%20II"> Basi di dati II </a></td>
+                    <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Basi%20di%20Dati%20II"> Basi di Dati II </a></td>
                 </tr>
                 <tr>
                     <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Sistemi%20Operativi%20II"> Sistemi Operativi II </a></td>
