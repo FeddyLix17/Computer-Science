@@ -114,14 +114,6 @@ Il corso di *Progettazione di Sistemi Digitali* fornisce
   </tr>
 </table>
 
-- <details closed>
-      
-    <summary> TestBench </summary>
-
-  - [TestBench a 3 input](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/TestBench/test%20circuito%20a%203%20input.sv)
-
-  </details>
-
 ## Other 🔗
 
 - [DigitalJS](https://digitaljs.tilk.eu) per sintetizzare i circuiti descritti in *SystemVeriLog*
