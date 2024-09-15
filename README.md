@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://media.salonedellostudente.it/app/uploads/2020/07/16134905/sapienza-roma-logo-01.png"> </img>
+	<img src="https://media.salonedellostudente.it/app/uploads/2020/07/16134905/sapienza-roma-logo-01.png" width="60%"> </img>
 
 # Computer Science Bachelor's degree
 
@@ -12,11 +12,9 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
 > [!WARNING]  
 > Le informazioni sui corsi riportate in questa repository riflettono la personale esperienza in un dato momento temporale, di conseguenza potrebbero cambiare nel tempo.
 >
-> Per informazioni più dettagliate e aggiornate consiglio di consultare fonti ufficiali oppure il [sito](https://sapienzastudents.net/informatica/) realizzato dalla community di SapienzaStudentNetwork.
+> Per informazioni più dettagliate e aggiornate consiglio di consultare fonti ufficiali oppure il [sito](https://sapienzastudents.net/informatica/) realizzato dalla community di [SapienzaStudentNetwork](https://github.com/SapienzaStudentsNetwork).
 
 > [!NOTE]  
-> Oltre alle risorse presenti ad esempio nei corsi di [Introduzione agli Algoritmi](./Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi) e di Calcolo [Differenziale](./Primo%20Anno/Primo%20Semestre/Calcolo%20Differenziale) / [Integrale](./Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale), potete trovare ulteriori contributi (anche di altri colleghi), presso le [varie repository](https://github.com/SapienzaStudentsNetwork) della medesima organizzazione.
->
 > Per qualsiasi domanda, correzione o consiglio su come migliorare la repository:
 >
 >[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/FeddyLix17)

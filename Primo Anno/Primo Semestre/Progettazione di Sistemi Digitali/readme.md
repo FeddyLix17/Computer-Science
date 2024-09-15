@@ -1,96 +1,118 @@
 <div align="center">
 
-![Logo Progettazione di Sistemi Digitali](https://antmicro.com/blog/images/systemverilog.svg)
+<img src="https://antmicro.com/blog/images/systemverilog.svg" width=60% >
 
 # Progettazione di Sistemi Digitali
 
 </div>
 
-<details closed>
+## About 🔎
 
-<summary> SystemVerilog </summary>
-  
-- <details closed>
+Il corso di *Progettazione di Sistemi Digitali* fornisce
 
-    <summary> Esercizi esami precedenti </summary>
+- una panoramica completa sul sistema numerico binario
 
-    - <details closed>
-        
-        <summary> 2022 </summary>
+- un'introduzione ai circuiti logici, sia combinatori che sequenziali, e la costruzione di blocchi costruttivi digitali tramite questi ultimi
 
-        - <details closed>
+- un'approfondimento sul linguaggio descrittivo dell'hardware *SystemVeriLog*, per poter codificare e sintetizzare i relativi circuiti digitali
 
-            <summary> gennaio </summary>
+## Testi consigliati dal docente📚
 
-            - [fila a](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Esercizi%20Esami/gennaio%202022%20fila%20a.sv)
+[Digital Design and Computer Architecture, $2^{nd}$ edition, 2012](https://moodle.tktk.ee/pluginfile.php/270005/mod_resource/content/1/Harris%20D.%20M.%2C%20Harris%20S.%20L.%20-%20Digital%20Design%20and%20Computer%20Architecture%2C%202nd%20Edition%20-%202012.pdf)
 
-            - [fila b](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Esercizi%20Esami/gennaio%202022%20fila%20b.sv)
-            
-          </details>
-          
-        - <details closed>
-            
-            <summary> febbraio </summary>
+## Lezioni 👨‍🏫
 
-            - [fila a](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Esercizi%20Esami/febbraio%202022%20fila%20a.sv)
+È possibile accedere a tutte le risorse usate durante le lezioni nel rispettivo [classroom](https://classroom.google.com/c/MTczNjk2NDI1MjI5?cjc=blb53dw)
 
-            - [fila b](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Esercizi%20Esami/febbraio%202022%20fila%20b.sv)
+## Esercizi 📝
 
-          </details>
+È possibile consultare esercizi e tracce di esami precedenti nella rispettiva [repository](https://github.com/sapienzastudentsnetwork/progettazione-di-sistemi-digitali) di [SapienzaStudentNetwork](https://github.com/sapienzastudentsnetwork/)
 
-    - <details closed>
-      
-        <summary> 2023 </summary>
-
-        - <details closed>
-
-            <summary> gennaio </summary>
-
-            - [fila a/b](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Esercizi%20Esami/gennaio%202023%20fila%20a-b.sv)
-
-          </details>
-
-        - <details closed>
-
-          <summary> febbraio </summary>
-
-          </details>
-
-      </details>
-
-  </details>
-
-- <details closed>
-
-    <summary> Circuiti Sequenziali </summary>
-
-    - <details closed>
-
-        <summary> Latch </summary>
-
-        - [D-Latch](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Latch/D%20latch.sv)
-
-      </details>
-    
-    - <details closed>
-
-        <summary> Flip-Flop </summary>
-
-        - [Resettable D-Flip-Flop Sync](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Flip%20Flop/Resettable%20D%20Flip-Flop%20Sync.sv)
-
-        - [Resettable D-Flip-Flop Async](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Flip%20Flop/Resettable%20D%20Flip-Flop%20Async.sv)
-
-        - [Enable Resettable D-Flip-Flop Async](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Flip%20Flop/Enable%20Resettable%20D%20Flip-Flop%20Async.sv)
-
-      </details>
-
-    - <details closed>
-
-        <summary> Finite State Machine </summary>
-
-        - [FSM a 3 stati](https://github.com/FedVlogger17/Uni-Notes/blob/main/Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali/Sysverilog/Macchine%20a%20Stati%20Finiti%20(FSM)/macchina%20a%20stati%20finiti.sv)
-
-      </details>
+<table align="center">
+    <tr>
+        <td colspan="4" align="center">
+            <h3>Implementazioni di compomenti <br> digitali in Systemverilog</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td align="center">Latch</td>
+                </tr>
+                <tr>
+                    <td align="center"> <a href="./Systemverilog/Latch/SR latch.sv"> SR latch </a> </td>
+                </tr>
+                <tr>
+                    <td align="center"> <a href="./Systemverilog/Latch/D latch.sv"> D latch </a> </td>
+                </tr>
+                <tr>
+                    <td align="center"> <a href="./Systemverilog/Latch/JK latch.sv"> JK latch </a> </td>
+                </tr>
+                <tr>
+                    <td align="center"> <a href="./Systemverilog/Latch/T latch.sv"> T latch </a> </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td align="center">Flip-Flop</td>
+                </tr>
+                <tr>
+                    <td align="center"> <a href="./Systemverilog/Flip Flop/SR flip-flop.sv"> SR flip-flop </a> </td>
+                </tr>
+                <tr>
+                    <td align="center"> <a href="./Systemverilog/Flip Flop/D flip-flop.sv"> D flip-flop </a> </td>
+                </tr>
+                <tr>
+                    <td align="center"> <a href="./Systemverilog/Flip Flop/JK flip-flop.sv"> JK flip-flop </a> </td>
+                </tr>
+                <tr>
+                    <td align="center"> <a href="./Systemverilog/Flip Flop/T flip-flop.sv"> T flip-flop </a> </td>
+                </tr>
+            </table>
+        </td>
+    <td>
+      <table>
+        <tr>
+          <td align="center">Finite State Machine</td>
+        </tr>
+        <tr>
+          <td align="center"> <a href="./Systemverilog/Macchine a Stati Finiti (FSM)/Mealy FSM.sv"> Mealy </a>, <a href="https://images.app.goo.gl/vjEfJL1uaThxQXBB6"> esempio </a> </td>
+        </tr>
+        <tr>
+          <td align="center"> <a href="./Systemverilog/Macchine a Stati Finiti (FSM)/Moore FSM.sv"> Moore </a>, <a href="https://images.app.goo.gl/h74KNVzLzM1qNs9W8"> esempio </a> </td>
+        </tr>
+        <tr>
+          <td align="center"> ... </td>
+        </tr>
+        <tr>
+          <td align="center"> ... </td>
+        </tr>
+      </table>
+    </td>
+    <td>
+            <table>
+                <tr>
+                    <td align="center"> Blocchi Digitali </td>
+                </tr>
+                <tr>
+                    <td align="center"> <a href="./Systemverilog/Blocchi Digitali/Adders.sv"> sommatori </a> </td>
+                </tr>
+                <tr>
+                    <td align="center"> <a href="./Systemverilog/Blocchi Digitali/Shifters.sv"> shifter </a> </td>
+                </tr>
+                <tr>
+                    <td align="center"> <a href="./Systemverilog/Blocchi Digitali/Multipliers.sv"> moltiplicatori </td>
+                </tr>
+                <tr>
+                    <td align="center"> <a href="./Systemverilog/Blocchi Digitali/Aritmetic Logic Unit.sv"> ALU </a> </td>
+                </tr>
+            </table>
+        </td>
+  </tr>
+</table>
 
 - <details closed>
       
@@ -100,14 +122,15 @@
 
   </details>
 
-  </details>
+## Other 🔗
 
-</details>
+- [DigitalJS](https://digitaljs.tilk.eu) per sintetizzare i circuiti descritti in *SystemVeriLog*
 
-- [Forum](https://github.com/sapienzastudentsnetwork/psd2223) per confrontarsi sulle soluzioni degli esercizi forniti dal professore
-- [DigitalJS](https://digitaljs.tilk.eu): piattaforma per sintetizzare i circuiti scritti in *SystemVeriLog*
-  - [DigitalJS for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=yuyichao.digitaljs): sua relativa estensione per l'editor di testo *Visual Studio Code*
-- [EdaPlayground](https://www.edaplayground.com/): piattaforma molto utile per gli utenti Windows in quanto provvista dei più famosi compilatori di codice *SystemVeriLog*
+- [EdaPlayground](https://www.edaplayground.com/) per compilare codice *SystemVeriLog*
+
+- [Boolean Algebra](https://www.boolean-algebra.com/) per semplificare espressioni booleane
+
+- [IEEE 754 Calculator](https://weitz.de/ieee/) per verificare i calcoli eseguiti con il medesimo standard
 
 <div align="center">
 
