@@ -18,7 +18,7 @@ Il corso di *Progettazione di Sistemi Digitali* fornisce
 
 ## Testi consigliati dal docente📚
 
-[Digital Design and Computer Architecture, $2^{nd}$ edition, 2012](https://moodle.tktk.ee/pluginfile.php/270005/mod_resource/content/1/Harris%20D.%20M.%2C%20Harris%20S.%20L.%20-%20Digital%20Design%20and%20Computer%20Architecture%2C%202nd%20Edition%20-%202012.pdf)
+[Digital Design and Computer Architecture, 2nd edition, 2012](https://moodle.tktk.ee/pluginfile.php/270005/mod_resource/content/1/Harris%20D.%20M.%2C%20Harris%20S.%20L.%20-%20Digital%20Design%20and%20Computer%20Architecture%2C%202nd%20Edition%20-%202012.pdf)
 
 ## Lezioni 👨‍🏫
 
