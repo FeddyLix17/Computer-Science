@@ -1,0 +1,3 @@
+Nome   Spese
+Luigi      100
+Mario    1000

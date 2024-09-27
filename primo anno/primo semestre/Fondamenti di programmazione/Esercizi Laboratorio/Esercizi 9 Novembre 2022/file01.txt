@@ -1,0 +1,4 @@
+"Ciao Luigi!", disse Mario.
+"Ciao Mario!", disse Luigi.
+"Ciao, ciao!", disse Mario.
+"Buongiorno!", disse Luigi.
