@@ -1,3 +1,0 @@
-Nome   Telefono
-Luigi         555-871612
-Mario    555-826781

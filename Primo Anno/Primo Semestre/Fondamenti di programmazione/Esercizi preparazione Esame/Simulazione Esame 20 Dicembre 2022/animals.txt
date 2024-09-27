@@ -1,3 +1,0 @@
-   cat     meaow
-   dog     woof
-   cat     purr
