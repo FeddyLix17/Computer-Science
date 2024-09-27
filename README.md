@@ -5,8 +5,6 @@
 
 </div>
 
-## About 🔎
-
 Raggruppamento delle risorse personali per il percorso di laurea in [Informatica](https://corsidilaurea.uniroma1.it/it/corso/2022/29923/home) presso la [Sapienza Università di Roma](https://www.uniroma1.it/).
 
 > [!WARNING]  
@@ -116,6 +114,62 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
                 </tr>
                 <tr>
                     <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Sistemi%20Operativi%20II"> Sistemi Operativi II </a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+> [!IMPORTANT]  
+> Al terzo anno si conclude il percorso obbligatorio con gli esami di
+>
+> - [Automi, Calcolabilità e Complessità](./terzo%20anno/primo%20semestre/Automi,%20Calcolabilità%20e%20Complessità/)
+> - e [Ingegneria del Software](./terzo%20anno/primo%20semestre/Ingegneria%20del%20Software/)
+>
+> successivamente, date le differenti [tipologie](https://sapienzastudents.net/it/info/terzo-anno/percorso-formativo/#legenda-curriculum) di scelte per il proprio percorso, gli esami successivamente riportati vanno considerati come inerenti a un percorso formativo tecnologico (con futuro tirocinio esterno).
+
+<table align="center">
+    <tr>
+        <td colspan="2" align="center">
+            <h3>Terzo Anno - A. A. 2024/2025</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td align="center">primo semestre</td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./terzo anno/primo semestre/Automi, Calcolabilità e Complessità/"> Automi, Calcolabilità e Complessità </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./terzo anno/primo semestre/Ingegneria del Software/"> Ingegneria del Software </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./terzo anno/primo semestre/Interazione Uomo-Macchina/"> Interazione Uomo-Macchina </a></td>
+                </tr>
+                <tr>
+                    <td align="center"><a href="./terzo anno/primo semestre/Programmazione per il Web/"> Programmazione per il Web </a></td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td align="center">secondo semestre</td>
+                </tr>
+                <tr>
+                    <td align="center"> --- </td>
+                </tr>
+                <tr>
+                    <td align="center"> --- </td>
+                </tr>
+                <tr>
+                    <td align="center"> --- </td>
+                </tr>
+                <tr>
+                    <td align="center"> --- </td>
                 </tr>
             </table>
         </td>
