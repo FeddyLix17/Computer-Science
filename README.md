@@ -126,7 +126,7 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
 > - [Automi, Calcolabilità e Complessità](./terzo%20anno/primo%20semestre/Automi,%20Calcolabilità%20e%20Complessità/)
 > - e [Ingegneria del Software](./terzo%20anno/primo%20semestre/Ingegneria%20del%20Software/)
 >
-> successivamente, date le differenti [tipologie](https://sapienzastudents.net/it/info/terzo-anno/percorso-formativo/#legenda-curriculum) di scelte per il proprio percorso, gli esami successivamente riportati vanno considerati come inerenti a un percorso formativo tecnologico (con futuro tirocinio esterno).
+> successivamente, date le differenti [tipologie](https://sapienzastudents.net/it/info/terzo-anno/percorso-formativo/#legenda-curriculum) di scelte per il proprio percorso, gli esami successivamente riportati vanno considerati come inerenti a un percorso formativo tecnologico.
 
 <table align="center">
     <tr>
