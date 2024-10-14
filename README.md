@@ -37,16 +37,16 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
                     <td align="center">primo semestre</td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Primo%20Anno/Primo%20Semestre/Calcolo%20Differenziale"> Calcolo Differenziale </a></td>
+                    <td align="center"><a href="./primo%20anno/primo%20semestre/Calcolo%20Differenziale"> Calcolo Differenziale </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Primo%20Anno/Primo%20Semestre/Progettazione%20di%20Sistemi%20Digitali"> Progettazione di Sistemi Digitali </a></td>
+                    <td align="center"><a href="./primo%20anno/primo%20semestre/Progettazione%20di%20Sistemi%20Digitali"> Progettazione di Sistemi Digitali </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Primo%20Anno/Primo%20Semestre/Metodi%20Matematici%20per%20l'informatica"> Metodi Matematici per l'Informatica </a></td>
+                    <td align="center"><a href="./primo%20anno/primo%20semestre/Metodi%20Matematici%20per%20l'informatica"> Metodi Matematici per l'Informatica </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Primo%20Anno/Primo%20Semestre/Fondamenti%20di%20programmazione"> Fondamenti di Programmazione </a></td>
+                    <td align="center"><a href="./primo%20anno/primo%20semestre/Fondamenti%20di%20programmazione"> Fondamenti di Programmazione </a></td>
                 </tr>
             </table>
         </td>
@@ -56,16 +56,16 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
                     <td align="center">secondo semestre</td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Primo%20Anno/Secondo%20Semestre/Calcolo%20Integrale"> Calcolo Integrale </a></td>
+                    <td align="center"><a href="./primo%20anno/secondo%20semestre/Calcolo%20Integrale"> Calcolo Integrale </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Primo%20Anno/Secondo%20Semestre/Architettura%20degli%20Elaboratori"> Architettura degli Elaboratori </a></td>
+                    <td align="center"><a href="./primo%20anno/secondo%20semestre/Architettura%20degli%20Elaboratori"> Architettura degli Elaboratori </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Primo%20Anno/Secondo%20Semestre/Introduzione%20agli%20Algoritmi"> Introduzione agli Algoritmi </a></td>
+                    <td align="center"><a href="./primo%20anno/secondo%20semestre/Introduzione%20agli%20Algoritmi"> Introduzione agli Algoritmi </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Primo%20Anno/Secondo%20Semestre/Metodologie%20di%20Programmazione"> Metodologie di Programmazione </a></td>
+                    <td align="center"><a href="./primo%20anno/secondo%20semestre/Metodologie%20di%20Programmazione"> Metodologie di Programmazione </a></td>
                 </tr>
             </table>
         </td>
@@ -85,16 +85,16 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
                     <td align="center">primo semestre</td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Secondo%20Anno/Primo%20Semestre/Algebra"> Algebra </a></td>
+                    <td align="center"><a href="./secondo%20anno/primo%20semestre/Algebra"> Algebra </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Secondo%20Anno/Primo%20Semestre/Calcolo%20delle%20Probabilità"> Calcolo delle Probabilità </a></td>
+                    <td align="center"><a href="./secondo%20anno/primo%20semestre/Calcolo%20delle%20Probabilità"> Calcolo delle Probabilità </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Secondo%20Anno/Primo%20Semestre/Basi%20di%20Dati%20I"> Basi di Dati I </a></td>
+                    <td align="center"><a href="./secondo%20anno/primo%20semestre/Basi%20di%20Dati%20I"> Basi di Dati I </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Secondo%20Anno/Primo%20Semestre/Sistemi%20Operativi%20I"> Sistemi Operativi I </a></td>
+                    <td align="center"><a href="./secondo%20anno/primo%20semestre/Sistemi%20Operativi%20I"> Sistemi Operativi I </a></td>
                 </tr>
             </table>
         </td>
@@ -104,16 +104,16 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
                     <td align="center">secondo semestre</td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Reti%20di%20Elaboratori"> Reti di Elaboratori </a></td>
+                    <td align="center"><a href="./secondo%20anno/secondo%20semestre/Reti%20di%20Elaboratori"> Reti di Elaboratori </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Progettazione%20di%20Algoritmi"> Progettazione di Algoritmi </a></td>
+                    <td align="center"><a href="./secondo%20anno/secondo%20semestre/Progettazione%20di%20Algoritmi"> Progettazione di Algoritmi </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Basi%20di%20Dati%20II"> Basi di Dati II </a></td>
+                    <td align="center"><a href="./secondo%20anno/secondo%20semestre/Basi%20di%20Dati%20II"> Basi di Dati II </a></td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./Secondo%20Anno/Secondo%20Semestre/Sistemi%20Operativi%20II"> Sistemi Operativi II </a></td>
+                    <td align="center"><a href="./secondo%20anno/secondo%20semestre/Sistemi%20Operativi%20II"> Sistemi Operativi II </a></td>
                 </tr>
             </table>
         </td>
