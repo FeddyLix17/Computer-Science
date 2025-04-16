@@ -1,12 +1,12 @@
 <div align="center">
 
-![Logo Programmazione per il Web](https://res.cloudinary.com/practicaldev/image/fetch/s--uIpecgnY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/31zi01ankvx91zpaobhx.png)
+![Logo Programmazione per il Web](https://www.apponix.com/storage/programimage/0RERRr1HwkJnpMGZSGLJ626HJsqvR2Jre7LGM9pJ.png)
 
 # Programmazione per il Web
 
-</div>
+[***clicca qui per scaricare gli appunti***](https://github.com/FeddyLix17/Computer-Science/raw/main/terzo%20anno/primo%20semestre/Programmazione%20per%20il%20Web/Programmazione%20per%20il%20Web.pdf)
 
-[***clicca qui per scaricare gli appunti personali***](./Programmazione%20per%20il%20Web.pdf)
+</div>
 
 ## About 🔎
 
@@ -35,11 +35,7 @@ un'applicazione web full-stack, in linea generale verranno approfonditi i seguen
 
 ## Esercizi 📝
 
-Tutte le risorse inerenti alla consegna degli esercizi sono raggiungibili [qui](http://gamificationlab.uniroma1.it/en/wasa/homeworks_delivery/)
-
-## Other 🔗
-
-- [Appunti personali](./Programmazione%20per%20il%20Web.pdf)
+Tutte le risorse inerenti alla consegna degli esercizi sono raggiungibili [qui](http://gamificationlab.uniroma1.it/en/wasa/homeworks_delivery/) <br> <br>
 
 <div align="center">
 

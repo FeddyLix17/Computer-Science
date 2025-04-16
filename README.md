@@ -1,28 +1,16 @@
 <div align="center">
-	<img src="https://media.salonedellostudente.it/app/uploads/2020/07/16134905/sapienza-roma-logo-01.png" width="60%"> </img>
+ <img src="https://simoneconcorsi.it/wp-content/uploads/2023/07/Concorso-diplomati-Sapienza-Roma-2023.png" width="60%"> </img>
 
 # Computer Science Bachelor's degree
 
 </div>
 
-Raggruppamento delle risorse personali per il percorso di laurea in [Informatica](https://corsidilaurea.uniroma1.it/it/corso/2022/29923/home) presso la [Sapienza Università di Roma](https://www.uniroma1.it/).
+Raggruppamento delle risorse personali per il percorso di laurea triennale in [Informatica](https://corsidilaurea.uniroma1.it/it/corso/2022/29923/home) presso la [Sapienza Università di Roma](https://www.uniroma1.it/).
 
 > [!WARNING]  
-> Le informazioni sui corsi riportate in questa repository riflettono la personale esperienza in un dato momento temporale, di conseguenza potrebbero cambiare nel tempo.
+> Riflettendo la personale esperienza in un dato momento temporale, i contenuti di ogni corso potrebbero <ins>oggettivamente</ins> cambiare nel tempo.
 >
 > Per informazioni più dettagliate e aggiornate consiglio di consultare fonti ufficiali oppure il [sito](https://sapienzastudents.net/informatica/) realizzato dalla community di [SapienzaStudentNetwork](https://github.com/SapienzaStudentsNetwork).
-
-> [!NOTE]  
-> Per qualsiasi domanda, correzione o consiglio su come migliorare la repository:
->
->[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/FeddyLix17)
-[![discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discordapp.com/users/315821724639821829)
-
-<div align="center">
-
-## Risorse categorizzate 📖🗂️
-
-</div>
 
 <table align="center">
     <tr>
@@ -121,12 +109,9 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
 </table>
 
 > [!IMPORTANT]  
-> Al terzo anno si conclude il percorso obbligatorio con gli esami di
+> Al terzo anno si conclude il percorso comune a tutti i colleghi con gli esami di [Automi, Calcolabilità e Complessità](./terzo%20anno/primo%20semestre/Automi,%20Calcolabilità%20e%20Complessità/) ed [Ingegneria del Software](./terzo%20anno/primo%20semestre/Ingegneria%20del%20Software/).
 >
-> - [Automi, Calcolabilità e Complessità](./terzo%20anno/primo%20semestre/Automi,%20Calcolabilità%20e%20Complessità/)
-> - e [Ingegneria del Software](./terzo%20anno/primo%20semestre/Ingegneria%20del%20Software/)
->
-> successivamente, date le differenti [tipologie](https://sapienzastudents.net/it/info/terzo-anno/percorso-formativo/#legenda-curriculum) di scelte per il proprio percorso, gli esami successivamente riportati vanno considerati come inerenti a un percorso formativo tecnologico.
+> Gli esami successivamente riportati afferiscono ad un percorso formativo [tecnologico](https://sapienzastudents.net/it/info/terzo-anno/percorso-formativo/#legenda-curriculum).
 
 <table align="center">
     <tr>
@@ -160,16 +145,16 @@ Raggruppamento delle risorse personali per il percorso di laurea in [Informatica
                     <td align="center">secondo semestre</td>
                 </tr>
                 <tr>
-                    <td align="center"> --- </td>
+                    <td align="center"><a href="./terzo anno/secondo semestre/AI Lab - Computer Vision and NLP"> AI Lab: Computer Vision and NLP </a></td>
                 </tr>
                 <tr>
-                    <td align="center"> --- </td>
+                    <td align="center"><a href="./terzo anno/secondo semestre/Sicurezza"> Sicurezza </a> (aka Cybersecurity) </td>
                 </tr>
                 <tr>
-                    <td align="center"> --- </td>
+                    <td align="center"><a href="./terzo anno/secondo semestre/Semantica"> Semantica </a></td>
                 </tr>
                 <tr>
-                    <td align="center"> --- </td>
+                    <td align="center"> Tesi / Tirocinio (WIP) </td>
                 </tr>
             </table>
         </td>
