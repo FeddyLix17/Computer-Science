@@ -1,5 +1,5 @@
 <div align="center">
- <img src="https://simoneconcorsi.it/wp-content/uploads/2023/07/Concorso-diplomati-Sapienza-Roma-2023.png" width="60%"> </img>
+ <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Uniroma1.svg/3840px-Uniroma1.svg.png?utm_source=it.wikipedia.org&utm_campaign=index&utm_content=thumbnail" width="65%"> </img>
 
 # Computer Science Bachelor's degree
 
@@ -109,7 +109,9 @@ Raggruppamento delle risorse personali per il percorso di laurea triennale in [I
 </table>
 
 > [!IMPORTANT]  
-> Al terzo anno si conclude il percorso comune a tutti i colleghi con gli esami di [Automi, Calcolabilità e Complessità](./terzo%20anno/primo%20semestre/Automi,%20Calcolabilità%20e%20Complessità/) ed [Ingegneria del Software](./terzo%20anno/primo%20semestre/Ingegneria%20del%20Software/).
+> Al terzo anno si conclude il percorso comune a tutti i colleghi con gli esami di
+> - [Automi, Calcolabilità e Complessità](./terzo%20anno/primo%20semestre/Automi,%20Calcolabilità%20e%20Complessità/) 
+> - ed [Ingegneria del Software](./terzo%20anno/primo%20semestre/Ingegneria%20del%20Software/)
 >
 > Gli esami successivamente riportati afferiscono ad un percorso formativo [tecnologico](https://sapienzastudents.net/it/info/terzo-anno/percorso-formativo/#legenda-curriculum).
 
