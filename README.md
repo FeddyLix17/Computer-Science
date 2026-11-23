@@ -3,8 +3,6 @@
 
 </div>
 
-Raggruppamento delle risorse personali per il percorso di laurea triennale in [Informatica](https://corsidilaurea.uniroma1.it/it/corso/2022/29923/home) presso la [Sapienza Università di Roma](https://www.uniroma1.it/).
-
 > [!WARNING]  
 > Riflettendo la personale esperienza in un dato momento temporale, i contenuti di ogni corso potrebbero <ins>oggettivamente</ins> cambiare nel tempo.
 >
