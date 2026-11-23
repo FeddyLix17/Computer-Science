@@ -1,8 +1,6 @@
 <div align="center">
  <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Uniroma1.svg/3840px-Uniroma1.svg.png?utm_source=it.wikipedia.org&utm_campaign=index&utm_content=thumbnail" width="65%"> </img>
 
-# Computer Science Bachelor's degree
-
 </div>
 
 Raggruppamento delle risorse personali per il percorso di laurea triennale in [Informatica](https://corsidilaurea.uniroma1.it/it/corso/2022/29923/home) presso la [Sapienza Università di Roma](https://www.uniroma1.it/).
