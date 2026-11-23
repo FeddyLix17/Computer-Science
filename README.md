@@ -15,7 +15,7 @@ Raggruppamento delle risorse personali per il percorso di laurea triennale in [I
 <table align="center">
     <tr>
         <td colspan="2" align="center">
-            <h3>Primo Anno - A. A. 2022/2023</h3>
+            <h3> Primo Anno </h3>
         </td>
     </tr>
     <tr>
@@ -63,7 +63,7 @@ Raggruppamento delle risorse personali per il percorso di laurea triennale in [I
 <table align="center">
     <tr>
         <td colspan="2" align="center">
-            <h3>Secondo Anno - A. A. 2023/2024</h3>
+            <h3> Secondo Anno </h3>
         </td>
     </tr>
     <tr>
@@ -113,12 +113,12 @@ Raggruppamento delle risorse personali per il percorso di laurea triennale in [I
 > - [Automi, Calcolabilità e Complessità](./terzo%20anno/primo%20semestre/Automi,%20Calcolabilità%20e%20Complessità/) 
 > - ed [Ingegneria del Software](./terzo%20anno/primo%20semestre/Ingegneria%20del%20Software/)
 >
-> Gli esami successivamente riportati afferiscono ad un percorso formativo [tecnologico](https://sapienzastudents.net/it/info/terzo-anno/percorso-formativo/#legenda-curriculum).
+> Gli esami successivamente riportati afferiscono ad un percorso formativo [tecnologico](https://sapienzastudents.net/it/info/terzo-anno/percorso-formativo/presenza/#legenda-curriculum).
 
 <table align="center">
     <tr>
         <td colspan="2" align="center">
-            <h3>Terzo Anno - A. A. 2024/2025</h3>
+            <h3> Terzo Anno </h3>
         </td>
     </tr>
     <tr>
@@ -128,7 +128,7 @@ Raggruppamento delle risorse personali per il percorso di laurea triennale in [I
                     <td align="center">primo semestre</td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./terzo anno/primo semestre/Automi, Calcolabilità e Complessità/"> Automi, Calcolabilità e Complessità </a></td>
+                    <td align="center"><a href="./terzo anno/primo semestre/Automi, Calcolabilità e Complessità/"> Automi, Calcolabilità <br> e Complessità </a></td>
                 </tr>
                 <tr>
                     <td align="center"><a href="./terzo anno/primo semestre/Ingegneria del Software/"> Ingegneria del Software </a></td>
@@ -147,13 +147,13 @@ Raggruppamento delle risorse personali per il percorso di laurea triennale in [I
                     <td align="center">secondo semestre</td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./terzo anno/secondo semestre/AI Lab - Computer Vision and NLP"> AI Lab: Computer Vision and NLP </a></td>
+                    <td align="center"> <a href="./terzo anno/secondo semestre/Sicurezza"> Sicurezza </a> </td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./terzo anno/secondo semestre/Sicurezza"> Sicurezza </a> (aka Cybersecurity) </td>
+                    <td align="center"> <a href="./terzo anno/secondo semestre/Organizzazione e Gestione per lo Start-Up Aziendale"> Organizzazione e Gestione <br> per lo Start-Up Aziendale </a> </td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="./terzo anno/secondo semestre/Semantica"> Semantica </a></td>
+                    <td align="center"> <a href="./terzo anno/secondo semestre/AI Lab - Computer Vision and NLP"> AI Lab: Computer Vision and NLP </a> </td>
                 </tr>
                 <tr>
                     <td align="center"> Tesi / Tirocinio (WIP) </td>
